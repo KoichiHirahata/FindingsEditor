@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="admin_date" xml:space="preserve">
+    <value>投与日</value>
+  </data>
+  <data name="Birthday" xml:space="preserve">
+    <value>生年月日</value>
+  </data>
+  <data name="CanNotChangeId" xml:space="preserve">
+    <value>IDは変更できません。</value>
+  </data>
+  <data name="ConnClosed" xml:space="preserve">
+    <value>転送接続からデータを読み取れません: 既存の接続はリモート ホストに強制的に切断されました。</value>
+  </data>
+  <data name="ConnectFailed" xml:space="preserve">
+    <value>接続に失敗しました。</value>
+  </data>
+  <data name="ConnectSuccess" xml:space="preserve">
+    <value>接続に成功しました。</value>
+  </data>
+  <data name="CouldntOpenConn" xml:space="preserve">
+    <value>接続に失敗しました。コネクションがオープンできませんでした。</value>
+  </data>
+  <data name="DataBaseError" xml:space="preserve">
+    <value>データベースエラーです。</value>
+  </data>
+  <data name="end_date" xml:space="preserve">
+    <value>終了日</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>女性</value>
+  </data>
+  <data name="IDchanging" xml:space="preserve">
+    <value>IDを変更しようとしています。本当にIDを変更しますか？</value>
+  </data>
+  <data name="IdDuplicated" xml:space="preserve">
+    <value>そのIDはすでに存在しています。</value>
+  </data>
+  <data name="LockFailed" xml:space="preserve">
+    <value>ロック処理が失敗しました。</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>男性</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>データが見つかりませんでした。</value>
+  </data>
+  <data name="NoID" xml:space="preserve">
+    <value>IDが必要です。</value>
+  </data>
+  <data name="NoPatient" xml:space="preserve">
+    <value>該当する患者情報が見つかりませんでした。</value>
+  </data>
+  <data name="OpenFormFailed" xml:space="preserve">
+    <value>フォームが開けませんでした。</value>
+  </data>
+  <data name="portUnconfigured" xml:space="preserve">
+    <value>サーバーのポートが設定されていません。</value>
+  </data>
+  <data name="ptName" xml:space="preserve">
+    <value>患者氏名</value>
+  </data>
+  <data name="ptSelect" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="pwConfigured" xml:space="preserve">
+    <value>データベースパスワード：設定済み</value>
+  </data>
+  <data name="pwUnconfigured" xml:space="preserve">
+    <value>データベースパスワード：未設定</value>
+  </data>
+  <data name="selectProtocol" xml:space="preserve">
+    <value>プロトコルを選択してください。</value>
+  </data>
+  <data name="ServerIP" xml:space="preserve">
+    <value>サーバーのIPが設定されていません。</value>
+  </data>
+  <data name="start_date" xml:space="preserve">
+    <value>開始日</value>
+  </data>
+  <data name="SummarySaveYN" xml:space="preserve">
+    <value>サマリーが変更されています。保存しますか？</value>
+  </data>
+  <data name="t_categoryName" xml:space="preserve">
+    <value>プロトコル名</value>
+  </data>
+  <data name="UpdateDone" xml:space="preserve">
+    <value>正常に更新されました。</value>
+  </data>
+  <data name="UpdateFailed" xml:space="preserve">
+    <value>更新が失敗しました。</value>
+  </data>
+  <data name="WrongConnectingString" xml:space="preserve">
+    <value>不正な接続文字列です。</value>
+  </data>
+  <data name="WrongIDorPW" xml:space="preserve">
+    <value>IDかパスワードが間違っています。</value>
+  </data>
+  <data name="NoExam" xml:space="preserve">
+    <value>条件に該当する検査がありません。</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>科</value>
+  </data>
+  <data name="admin" xml:space="preserve">
+    <value>マネージャー</value>
+  </data>
+  <data name="allow_fc" xml:space="preserve">
+    <value>最終チェック可</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>カテゴリー</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>氏名</value>
+  </data>
+  <data name="NoOperator" xml:space="preserve">
+    <value>検査施行者が見つかりませんでした。</value>
+  </data>
+  <data name="Visible" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="ReadOnlyMode" xml:space="preserve">
+    <value>編集権限が得られませんでした。読み込み専用モードです。</value>
+  </data>
+  <data name="ConfirmPwIsWrong" xml:space="preserve">
+    <value>パスワード（確認用）が間違っています。</value>
+  </data>
+  <data name="NoCategory" xml:space="preserve">
+    <value>カテゴリーを決めてください。</value>
+  </data>
+  <data name="NoDepartment" xml:space="preserve">
+    <value>科を決めてください。</value>
+  </data>
+  <data name="NoName" xml:space="preserve">
+    <value>氏名が必要です。</value>
+  </data>
+  <data name="NoPw" xml:space="preserve">
+    <value>パスワードが設定されていません。</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="ConfirmDel" xml:space="preserve">
+    <value>本当に削除しますか？</value>
+  </data>
+  <data name="CouldntDelOp" xml:space="preserve">
+    <value>施行済み検査あり、削除できませんでした。</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日付</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>検査内容</value>
+  </data>
+  <data name="Ward" xml:space="preserve">
+    <value>病棟/外来</value>
+  </data>
+  <data name="Blank" xml:space="preserve">
+    <value>未記入</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>実施せず</value>
+  </data>
+  <data name="Checked" xml:space="preserve">
+    <value>チェック済</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>記入済</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>草稿</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>表示順</value>
+  </data>
+  <data name="PlaceName" xml:space="preserve">
+    <value>場所名（部屋名）</value>
+  </data>
+  <data name="BlankNotAllowed" xml:space="preserve">
+    <value>空欄は許可されていません。</value>
+  </data>
+  <data name="CouldntDelData" xml:space="preserve">
+    <value>すでに使われており、削除できませんでした。</value>
+  </data>
+  <data name="Duplicated" xml:space="preserve">
+    <value>重複しています。</value>
+  </data>
+  <data name="PlaceNo" xml:space="preserve">
+    <value>場所No.</value>
+  </data>
+  <data name="SoftwareError" xml:space="preserve">
+    <value>ソフトウェアエラーです。</value>
+  </data>
+  <data name="InformLogout" xml:space="preserve">
+    <value>ログアウトしますか？</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="ObjectName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="SideView" xml:space="preserve">
+    <value>側視</value>
+  </data>
+  <data name="SmallBowel" xml:space="preserve">
+    <value>小腸</value>
+  </data>
+  <data name="NotSelected" xml:space="preserve">
+    <value>選択されていません。</value>
+  </data>
+  <data name="Diagnosis" xml:space="preserve">
+    <value>診断</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="Suspect" xml:space="preserve">
+    <value>疑い</value>
+  </data>
+  <data name="ConfirmChanging" xml:space="preserve">
+    <value>変更してもよろしいですか？</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="ExcelNeeded" xml:space="preserve">
+    <value>Excelが必要です。</value>
+  </data>
+  <data name="SelectFolder" xml:space="preserve">
+    <value>フォルダを選択してください。</value>
+  </data>
+  <data name="FolderNotExist" xml:space="preserve">
+    <value>フォルダが存在していません。</value>
+  </data>
+  <data name="ClickInsPosition" xml:space="preserve">
+    <value>この語句を挿入したい場所をクリックしてください。</value>
+  </data>
+  <data name="Checker" xml:space="preserve">
+    <value>二次診断医</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="DiagnosedDr" xml:space="preserve">
+    <value>診断医</value>
+  </data>
+  <data name="NoDiagnosis" xml:space="preserve">
+    <value>診断名が存在しません。</value>
+  </data>
+  <data name="Findings" xml:space="preserve">
+    <value>所見</value>
+  </data>
+  <data name="ChangesWillLost" xml:space="preserve">
+    <value>変更点はすべて破棄されます。</value>
+  </data>
+  <data name="DetermineGender" xml:space="preserve">
+    <value>性別を選んでください。</value>
+  </data>
+  <data name="FileNotExist" xml:space="preserve">
+    <value>ファイルが存在しません。</value>
+  </data>
+  <data name="SettingFileBroken" xml:space="preserve">
+    <value>設定ファイルが壊れている可能性があります。設定ファイルを削除しますか？</value>
+  </data>
+  <data name="FileBeingUsed" xml:space="preserve">
+    <value>ファイルが使用中です。</value>
+  </data>
+  <data name="PermissionDenied" xml:space="preserve">
+    <value>権限がありません。</value>
+  </data>
+  <data name="SaveChangesYN" xml:space="preserve">
+    <value>変更点を保存しますか？</value>
+  </data>
+  <data name="Click2Update" xml:space="preserve">
+    <value>ここをクリックで更新。</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="Japanese" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="YouCanDelAfterUpdate" xml:space="preserve">
+    <value>データを更新してからでなければ削除できません。</value>
+  </data>
+  <data name="ChangesNotSavedDiscardOrNot" xml:space="preserve">
+    <value>保存されていない変更点があります。破棄しますか？</value>
+  </data>
+  <data name="NoIsNeeded" xml:space="preserve">
+    <value>Noが設定されていません。</value>
+  </data>
+  <data name="NoOutOfRange" xml:space="preserve">
+    <value>Noが範囲外に設定されています。</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="Diagnoses" xml:space="preserve">
+    <value>診断名</value>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>検査機器</value>
+  </data>
+  <data name="ExamDate" xml:space="preserve">
+    <value>検査日</value>
+  </data>
+  <data name="ExamReport" xml:space="preserve">
+    <value>検査結果報告書</value>
+  </data>
+  <data name="Operators" xml:space="preserve">
+    <value>施行医</value>
+  </data>
+  <data name="OrderedDr" xml:space="preserve">
+    <value>依頼医師</value>
+  </data>
+  <data name="Purpose" xml:space="preserve">
+    <value>目的</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>画像</value>
+  </data>
+</root>

@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6C51E1B-4ED1-4ACB-91AA-7A7BA8EACCEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>endoDB</RootNamespace>
+    <AssemblyName>endoDB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\..\..\Program Files\PostgreSQL\Npgsql\ms.net4.0\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\..\..\Program Files\PostgreSQL\Npgsql\ms.net4.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="policy.2.0.Npgsql">
+      <HintPath>..\..\..\..\..\..\Program Files\PostgreSQL\Npgsql\ms.net4.0\policy.2.0.Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDiagnosis.Designer.cs">
+      <DependentUpon>AddDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateExam.Designer.cs">
+      <DependentUpon>CreateExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="EditAllWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAllWords.Designer.cs">
+      <DependentUpon>EditAllWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDefaultFindings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDefaultFindings.Designer.cs">
+      <DependentUpon>EditDefaultFindings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDiagnoses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDiagnoses.Designer.cs">
+      <DependentUpon>EditDiagnoses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEquipments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEquipments.Designer.cs">
+      <DependentUpon>EditEquipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFindings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFindings.Designer.cs">
+      <DependentUpon>EditFindings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFormBase.Designer.cs">
+      <DependentUpon>EditFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOperator.Designer.cs">
+      <DependentUpon>EditOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPlace.Designer.cs">
+      <DependentUpon>EditPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPt.Designer.cs">
+      <DependentUpon>EditPt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWard.Designer.cs">
+      <DependentUpon>EditWard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWords.Designer.cs">
+      <DependentUpon>EditWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam.cs" />
+    <Compile Include="ExamList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamList.Designer.cs">
+      <DependentUpon>ExamList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamResult.Designer.cs">
+      <DependentUpon>ExamResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchByOp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchByOp.Designer.cs">
+      <DependentUpon>SearchByOp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDepart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDepart.Designer.cs">
+      <DependentUpon>SearchDepart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UseExcel.cs" />
+    <Compile Include="initialSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="initialSettings.Designer.cs">
+      <DependentUpon>initialSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operatorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operatorList.Designer.cs">
+      <DependentUpon>operatorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientMain.Designer.cs">
+      <DependentUpon>PatientMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchPt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchPt.Designer.cs">
+      <DependentUpon>SearchPt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucky.cs" />
+    <EmbeddedResource Include="AddDiagnosis.resx">
+      <DependentUpon>AddDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateExam.ja-JP.resx">
+      <DependentUpon>CreateExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateExam.ja.resx">
+      <DependentUpon>CreateExam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateExam.resx">
+      <DependentUpon>CreateExam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAllWords.resx">
+      <DependentUpon>EditAllWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDefaultFindings.ja.resx">
+      <DependentUpon>EditDefaultFindings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDefaultFindings.resx">
+      <DependentUpon>EditDefaultFindings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDiagnoses.ja-JP.resx">
+      <DependentUpon>EditDiagnoses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDiagnoses.resx">
+      <DependentUpon>EditDiagnoses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEquipments.resx">
+      <DependentUpon>EditEquipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFindings.ja-JP.resx">
+      <DependentUpon>EditFindings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFindings.ja.resx">
+      <DependentUpon>EditFindings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFindings.resx">
+      <DependentUpon>EditFindings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFormBase.resx">
+      <DependentUpon>EditFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOperator.ja-JP.resx">
+      <DependentUpon>EditOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOperator.resx">
+      <DependentUpon>EditOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPlace.resx">
+      <DependentUpon>EditPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPt.ja.resx">
+      <DependentUpon>EditPt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPt.resx">
+      <DependentUpon>EditPt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWard.resx">
+      <DependentUpon>EditWard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWords.resx">
+      <DependentUpon>EditWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamList.ja.resx">
+      <DependentUpon>ExamList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamList.resx">
+      <DependentUpon>ExamList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamResult.resx">
+      <DependentUpon>ExamResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="initialSettings.ja.resx">
+      <DependentUpon>initialSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="initialSettings.resx">
+      <DependentUpon>initialSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.ja.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operatorList.ja-JP.resx">
+      <DependentUpon>operatorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operatorList.resx">
+      <DependentUpon>operatorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientMain.ja-JP.resx">
+      <DependentUpon>PatientMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientMain.resx">
+      <DependentUpon>PatientMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="SearchByOp.resx">
+      <DependentUpon>SearchByOp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDepart.resx">
+      <DependentUpon>SearchDepart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPt.resx">
+      <DependentUpon>SearchPt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.ja.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
