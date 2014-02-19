@@ -191,8 +191,13 @@ namespace endoDB
         public string getWardName()
         {
             DataRow[] drs;
-            drs = CLocalDB.localDB.Tables["ward"].Select("ward_no='" + ward_id + "'");
-            return drs[0]["ward"].ToString();
+            if (String.IsNullOrWhiteSpace(ward_id))
+            { return ""; }
+            else
+            {
+                drs = CLocalDB.localDB.Tables["ward"].Select("ward_no='" + ward_id + "'");
+                return drs[0]["ward"].ToString();
+            }
         }
 
         public string getAllOperators()
@@ -249,9 +254,7 @@ namespace endoDB
         public string getDiagDr()
         {
             if (string.IsNullOrWhiteSpace(diag_dr))
-            {
-                return null;
-            }
+            { return null; }
             else
             {
                 DataRow[] drs;
@@ -263,9 +266,7 @@ namespace endoDB
         public string getFinalDiagDr()
         {
             if (string.IsNullOrWhiteSpace(final_diag_dr))
-            {
-                return null;
-            }
+            { return null; }
             else
             {
                 DataRow[] drs;
@@ -283,14 +284,13 @@ namespace endoDB
 
         public string getDiagnoses()
         {
+            #region Npgsql connection
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -301,16 +301,13 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql;
             if (Settings.isJP)
-            {
-                sql = "SELECT name_jp AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no";
-            }
+            { sql = "SELECT name_jp AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }
             else
-            {
-                sql = "SELECT name_eng AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no";
-            }
+            { sql = "SELECT name_eng AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -318,7 +315,7 @@ namespace endoDB
             conn.Close();
 
             if (dt.Rows.Count == 0)
-                return null;
+                return "";
 
             string str = null;
             foreach (DataRow dr in dt.Rows)
@@ -327,9 +324,7 @@ namespace endoDB
                 if (!string.IsNullOrWhiteSpace(dr["suspect"].ToString()))
                 {
                     if ((Boolean)dr["suspect"])
-                    {
-                        str += Properties.Resources.Suspect;
-                    }
+                    { str += Properties.Resources.Suspect; }
                 }
                 str += Environment.NewLine;
             }

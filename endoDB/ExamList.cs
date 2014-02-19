@@ -198,7 +198,9 @@ namespace endoDB
             else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
             {
                 if (System.IO.File.Exists(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe"))
-                { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", dgv.Rows[e.RowIndex].Cells["pt_id"].Value.ToString()); }
+                {
+                    System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", dgv.Rows[e.RowIndex].Cells["pt_id"].Value.ToString());
+                }
                 return;
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btDelColumn")
@@ -224,7 +226,7 @@ namespace endoDB
             else if (dgv.Columns[e.ColumnIndex].Name == "btPrint")
             {
                 #region Error Check
-                if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
+                if (!System.IO.File.Exists(Application.StartupPath+@"\result.html"))
                 {
                     MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
