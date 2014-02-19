@@ -50,9 +50,7 @@ namespace endoDB
                 timer.Start();
             }
             else
-            {
-                MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            { MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
         }
         //タイマー処理に必要な関数。ここでupdateLockTimeを呼び出す。
