@@ -56,7 +56,7 @@ namespace endoDB
             html = html.Replace("[[[Diagnoses]]]", exam.getDiagnoses().Replace("\n", "<br />"));
             html = html.Replace("[[[lbFindings]]]", Properties.Resources.Findings + ":");
             html = html.Replace("[[[Findings]]]", exam.findings.Replace("\n", "<br />"));
-            html = html.Replace("[[[lbCheckerComment]]]", Properties.Resources.Findings + ":");
+            html = html.Replace("[[[lbCheckerComment]]]", Properties.Resources.Comment + ":");
             html = html.Replace("[[[CheckerComment]]]", exam.comment.Replace("\n", "<br />"));
             #endregion
 
