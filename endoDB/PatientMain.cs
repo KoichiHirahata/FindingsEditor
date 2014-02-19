@@ -81,6 +81,7 @@ namespace endoDB
 
         private void readExams()
         {
+            #region Npgsql connection
             NpgsqlConnection conn;
 
             try
@@ -93,10 +94,8 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            #endregion
 
-            //
-            //ここから下がデータの読み込み部分。
-            //
             string sql;
             if (Settings.isJP)
             {
@@ -112,9 +111,7 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             try
-            {
-                da.Fill(dt);
-            }
+            { da.Fill(dt); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,29 +120,38 @@ namespace endoDB
             }
 
             if (dt.Rows.Count == 0)
-            {
-                return;
-            }
+            { return; }
             else
             {
                 this.dgvExams.Columns.Clear();    //これしとかないと検索するたびにボタンが増え続ける。
                 this.dgvExams.DataSource = dt;
 
-                //列名のテキストを変更する
-                this.dgvExams.Columns["exam_id"].Visible = false;
-                this.dgvExams.Columns["exam_name"].HeaderText = Properties.Resources.ExamType;
-                this.dgvExams.Columns["exam_day"].HeaderText = Properties.Resources.Date;
+                #region btEdit
+                DataGridViewButtonColumn btEdit = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
+                btEdit.Name = "btEdit";
+                btEdit.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
+                btEdit.Text = Properties.Resources.Edit;
+                dgvExams.Columns.Add(btEdit);
+                #endregion
 
-                DataGridViewButtonColumn btColumn = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
-                btColumn.Name = Properties.Resources.ptSelect;  //列の名前を設定
-                btColumn.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-                btColumn.Text = Properties.Resources.ptSelect;  //ボタンの表示テキスト設定
-                dgvExams.Columns.Add(btColumn);           //ボタン追加
+                #region Add btPrint
+                DataGridViewButtonColumn btPrint = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
+                btPrint.Name = "btPrint";
+                btPrint.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
+                btPrint.Text = Properties.Resources.Print;
+                dgvExams.Columns.Add(btPrint);
+                #endregion
+
+                #region Change columns header text
+                dgvExams.Columns["exam_id"].Visible = false;
+                dgvExams.Columns["exam_name"].HeaderText = Properties.Resources.ExamType;
+                dgvExams.Columns["exam_day"].HeaderText = Properties.Resources.Date;
+                dgvExams.Columns["btEdit"].HeaderText = Properties.Resources.Edit;
+                dgvExams.Columns["btPrint"].HeaderText = Properties.Resources.Print;
+                #endregion
 
                 foreach (DataGridViewColumn dc in dgvExams.Columns)
-                {
-                    dc.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;  //列幅自動調整
-                }
+                { dc.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 
                 this.dgvExams.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             }
@@ -154,13 +160,24 @@ namespace endoDB
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            //"Button"列ならば、ボタンがクリックされた
-            if (dgv.Columns[e.ColumnIndex].Name == Properties.Resources.ptSelect)
+            if (dgv.Columns[e.ColumnIndex].Name == "btEdit")
             {
-                //MessageBox.Show(e.RowIndex.ToString() + "行のボタンがクリックされました。");
                 EditFindings ef = new EditFindings(dgvExams.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
                 ef.ShowDialog(this);
                 ef.Dispose();
+            }
+            else if (dgv.Columns[e.ColumnIndex].Name == "btPrint")
+            {
+                #region Error Check
+                if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
+                {
+                    MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                #endregion
+                ExamResult er = new ExamResult(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
+                er.ShowDialog(this);
+                er.Dispose();
             }
         }
 
