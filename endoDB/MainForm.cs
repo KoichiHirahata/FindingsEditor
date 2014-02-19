@@ -113,7 +113,7 @@ namespace endoDB
             DateTime dt = DateTime.Now;
             ExamList el = new ExamList(dt.ToString("yyyy-MM-dd"), dt.ToString("yyyy-MM-dd"), null, null, null, false);
 
-            if (el.exam_list.Rows.Count == 0)//該当検査がなければそのままDispose
+            if (el.exam_list.Rows.Count == 0)//If there was no exam, dispose ExamList form.
             { MessageBox.Show(Properties.Resources.NoExam, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             { el.ShowDialog(this); }
@@ -149,7 +149,11 @@ namespace endoDB
         private void btDateSearch_Click(object sender, EventArgs e)
         {
             ExamList el = new ExamList(dtpExamDate.Value.ToString("yyyy-MM-dd"), dtpExamDate.Value.ToString("yyyy-MM-dd"), null, null, null, false);
-            el.ShowDialog(this);
+            if (el.exam_list.Rows.Count == 0)//If there was no exam, dispose ExamList form.
+            { MessageBox.Show(Properties.Resources.NoExam, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else
+            { el.ShowDialog(this); }
+            el.Dispose();
         }
 
         private void searchByDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
