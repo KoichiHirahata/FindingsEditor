@@ -64,13 +64,9 @@ namespace endoDB
             this.Pt_ID.Text = pt1.ptID;
             this.Pt_name.Text = pt1.ptName;
             if (pt1.ptGender == patient.gender.female)
-            {
-                this.Pt_gender.Text = Properties.Resources.Female;
-            }
+            { this.Pt_gender.Text = Properties.Resources.Female; }
             else
-            {
-                this.Pt_gender.Text = Properties.Resources.Male;
-            }
+            { this.Pt_gender.Text = Properties.Resources.Male; }
             DateTime bday = pt1.ptBirthday;
             this.Pt_birthday.Text = bday.ToShortDateString();
             this.Pt_age.Text = pt1.getPtAge().ToString();
@@ -121,8 +117,8 @@ namespace endoDB
             { return; }
             else
             {
-                this.dgvExams.Columns.Clear();    //これしとかないと検索するたびにボタンが増え続ける。
-                this.dgvExams.DataSource = dt;
+                dgvExams.Columns.Clear();    //これしとかないと検索するたびにボタンが増え続ける。
+                dgvExams.DataSource = dt;
 
                 #region btEdit
                 DataGridViewButtonColumn btEdit = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
@@ -130,6 +126,14 @@ namespace endoDB
                 btEdit.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
                 btEdit.Text = Properties.Resources.Edit;
                 dgvExams.Columns.Add(btEdit);
+                #endregion
+
+                #region Add btImage
+                DataGridViewButtonColumn btImage = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
+                btImage.Name = "btImage";  //列の名前を設定
+                btImage.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
+                btImage.Text = Properties.Resources.Image;  //ボタンの表示テキスト設定
+                dgvExams.Columns.Add(btImage);           //ボタン追加
                 #endregion
 
                 #region Add btPrint
@@ -145,6 +149,7 @@ namespace endoDB
                 dgvExams.Columns["exam_name"].HeaderText = Properties.Resources.ExamType;
                 dgvExams.Columns["exam_day"].HeaderText = Properties.Resources.Date;
                 dgvExams.Columns["btEdit"].HeaderText = Properties.Resources.Edit;
+                dgvExams.Columns["btImage"].HeaderText = Properties.Resources.Image;
                 dgvExams.Columns["btPrint"].HeaderText = Properties.Resources.Print;
                 #endregion
 
@@ -163,6 +168,11 @@ namespace endoDB
                 EditFindings ef = new EditFindings(dgvExams.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
                 ef.ShowDialog(this);
                 ef.Dispose();
+            }
+            else if(dgv.Columns[e.ColumnIndex].Name=="btImage")
+            {
+                if (System.IO.File.Exists(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe"))
+                { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", pt1.ptID); }
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btPrint")
             {
