@@ -286,6 +286,7 @@
             this.Controls.Add(this.bt2);
             this.Controls.Add(this.bt1);
             this.Name = "AddDiagnosis";
+            this.ShowInTaskbar = false;
             this.Text = "AddDiagnosis";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);

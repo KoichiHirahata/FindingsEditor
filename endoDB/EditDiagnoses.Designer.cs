@@ -71,6 +71,7 @@
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.dgv);
             this.Name = "EditDiagnoses";
+            this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditDiagnoses_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);

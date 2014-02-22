@@ -122,6 +122,7 @@
             this.Controls.Add(this.lbBirthday);
             this.Controls.Add(this.lbPatientID);
             this.Name = "EditPt";
+            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 

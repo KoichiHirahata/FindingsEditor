@@ -19,73 +19,12 @@ namespace endoDB
             CLocalDB.WriteToLocalDB();  //Write necessary data to DB.localDB
         }
 
-        private void btPtView_Click(object sender, EventArgs e)
-        {
-            ptView();
-        }
-
-        private void ptView()
-        {
-            if (string.IsNullOrWhiteSpace(tbPtID.Text))
-            {
-                MessageBox.Show(Properties.Resources.NoID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            patient pt1 = new patient(this.tbPtID.Text, false);
-            if (pt1.ptExist)
-            {
-                PatientMain pm = new PatientMain(this.tbPtID.Text);
-                pm.ShowDialog(this);
-            }
-            else
-            {
-                MessageBox.Show(Properties.Resources.OpenFormFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void tbPtID_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-                ptView();
-        }
-
-        private void btNewPt_Click(object sender, EventArgs e)
-        {
-            EditPt ep = new EditPt(getNewIDsample(), true);
-            ep.ShowDialog(this);
-        }
-
-        //IDのmaxを取り込み、それがintに変換できたら変換した上で+1し、文字列にして返す関数
-        private string getNewIDsample()
-        {
-            string maxID = uckyFunctions.getSelectString("SELECT max(pt_id) from patient", Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB"); //IDのmaxをゲットしてくる。
-            return uckyFunctions.maxPlus1(maxID); //maxに1足してreturn。
-        }
-
-        private void btSearchPt_Click(object sender, EventArgs e)
-        {
-            SearchPt spt = new SearchPt();
-            spt.Show();
-        }
-
-        private void operatorManagementToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            operatorList opl = new operatorList();
-            opl.Show();
-        }
-
-        private void btNewExamination_Click(object sender, EventArgs e)
-        {
-            CreateExam ce = new CreateExam();
-            ce.ShowDialog(this);
-        }
-
+        #region Login
         private void initLogin()
         {
             this.Visible = false;
             db_operator.authDone = false;
-            StartForm stf = new StartForm(this);
+            StartForm stf = new StartForm();
             stf.ShowDialog(this);
             stf.Dispose();
             if (!db_operator.authDone)
@@ -107,6 +46,63 @@ namespace endoDB
 
             this.tbPtID.Text = "";
         }
+        #endregion
+
+        #region PatientView
+        private void btPtView_Click(object sender, EventArgs e)
+        { ptView(); }
+
+        private void tbPtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                ptView();
+        }
+
+        private void ptView()
+        {
+            if (string.IsNullOrWhiteSpace(tbPtID.Text))
+            {
+                MessageBox.Show(Properties.Resources.NoID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            patient pt1 = new patient(this.tbPtID.Text, false);
+            if (pt1.ptExist)
+            {
+                PatientMain pm = new PatientMain(this.tbPtID.Text);
+                pm.ShowDialog(this);
+            }
+            else
+            { MessageBox.Show(Properties.Resources.OpenFormFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+        #endregion
+
+        #region New patient
+        private void btNewPt_Click(object sender, EventArgs e)
+        {
+            EditPt ep = new EditPt(getNewIDsample(), true);
+            ep.ShowDialog(this);
+        }
+
+        //IDのmaxを取り込み、それがintに変換できたら変換した上で+1し、文字列にして返す関数
+        private string getNewIDsample()
+        {
+            string maxID = uckyFunctions.getSelectString("SELECT max(pt_id) from patient", Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB"); //IDのmaxをゲットしてくる。
+            return uckyFunctions.maxPlus1(maxID); //maxに1足してreturn。
+        }
+        #endregion
+
+        private void btSearchPt_Click(object sender, EventArgs e)
+        {
+            SearchPt spt = new SearchPt();
+            spt.Show();
+        }
+
+        private void btNewExamination_Click(object sender, EventArgs e)
+        {
+            CreateExam ce = new CreateExam();
+            ce.ShowDialog(this);
+        }
 
         private void btSchedule_Click(object sender, EventArgs e)
         {
@@ -120,32 +116,6 @@ namespace endoDB
             el.Dispose();
         }
 
-        private void placeRoomToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EditPlace ep = new EditPlace();
-            ep.ShowDialog(this);
-        }
-
-        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(Properties.Resources.InformLogout, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-            {
-                initLogin();
-            }
-        }
-
-        private void scopeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EditEquipments ee = new EditEquipments();
-            ee.ShowDialog(this);
-        }
-
-        private void wardToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EditWard ew = new EditWard();
-            ew.ShowDialog(this);
-        }
-
         private void btDateSearch_Click(object sender, EventArgs e)
         {
             ExamList el = new ExamList(dtpExamDate.Value.ToString("yyyy-MM-dd"), dtpExamDate.Value.ToString("yyyy-MM-dd"), null, null, null, false);
@@ -156,6 +126,8 @@ namespace endoDB
             el.Dispose();
         }
 
+        #region MenuStrip
+        #region search exams
         private void searchByDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SearchDepart sd = new SearchDepart();
@@ -173,11 +145,19 @@ namespace endoDB
             SearchByOp sbo = new SearchByOp(true);
             sbo.ShowDialog(this);
         }
+        #endregion
 
-        private void defaultFindingsToolStripMenuItem_Click(object sender, EventArgs e)
+        #region option
+        private void myWordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditDefaultFindings edf = new EditDefaultFindings();
-            edf.ShowDialog(this);
+            EditWords ew = new EditWords();
+            ew.ShowDialog(this);
+        }
+
+        private void operatorManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            operatorList opl = new operatorList();
+            opl.Show();
         }
 
         private void wordsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,9 +166,27 @@ namespace endoDB
             eaw.ShowDialog(this);
         }
 
-        private void myWordsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void defaultFindingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditWords ew = new EditWords();
+            EditDefaultFindings edf = new EditDefaultFindings();
+            edf.ShowDialog(this);
+        }
+
+        private void equipmentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditEquipments ee = new EditEquipments();
+            ee.ShowDialog(this);
+        }
+
+        private void placeRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditPlace ep = new EditPlace();
+            ep.ShowDialog(this);
+        }
+
+        private void wardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditWard ew = new EditWard();
             ew.ShowDialog(this);
         }
 
@@ -197,5 +195,14 @@ namespace endoDB
             EditDiagnoses ed = new EditDiagnoses();
             ed.ShowDialog(this);
         }
+        #endregion
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Properties.Resources.InformLogout, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            { initLogin(); }
+        }
+        #endregion
+
     }
 }

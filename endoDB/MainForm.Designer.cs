@@ -40,7 +40,7 @@
             this.editOperatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultFindingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scopeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,7 +116,7 @@
             this.editOperatorToolStripMenuItem,
             this.wordsToolStripMenuItem,
             this.defaultFindingsToolStripMenuItem,
-            this.scopeToolStripMenuItem,
+            this.equipmentsToolStripMenuItem,
             this.placeRoomToolStripMenuItem,
             this.wardToolStripMenuItem,
             this.diagnosesToolStripMenuItem});
@@ -141,11 +141,11 @@
             resources.ApplyResources(this.defaultFindingsToolStripMenuItem, "defaultFindingsToolStripMenuItem");
             this.defaultFindingsToolStripMenuItem.Click += new System.EventHandler(this.defaultFindingsToolStripMenuItem_Click);
             // 
-            // scopeToolStripMenuItem
+            // equipmentsToolStripMenuItem
             // 
-            this.scopeToolStripMenuItem.Name = "scopeToolStripMenuItem";
-            resources.ApplyResources(this.scopeToolStripMenuItem, "scopeToolStripMenuItem");
-            this.scopeToolStripMenuItem.Click += new System.EventHandler(this.scopeToolStripMenuItem_Click);
+            this.equipmentsToolStripMenuItem.Name = "equipmentsToolStripMenuItem";
+            resources.ApplyResources(this.equipmentsToolStripMenuItem, "equipmentsToolStripMenuItem");
+            this.equipmentsToolStripMenuItem.Click += new System.EventHandler(this.equipmentsToolStripMenuItem_Click);
             // 
             // placeRoomToolStripMenuItem
             // 
@@ -295,7 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem myWordsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editOperatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scopeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem equipmentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wordsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defaultFindingsToolStripMenuItem;
         private System.Windows.Forms.Button btNewExamination;

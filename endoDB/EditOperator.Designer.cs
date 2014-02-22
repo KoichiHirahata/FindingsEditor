@@ -69,8 +69,8 @@
             // 
             // cbCategory
             // 
-            resources.ApplyResources(this.cbCategory, "cbCategory");
             this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbCategory, "cbCategory");
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Name = "cbCategory";
             // 
@@ -133,8 +133,8 @@
             // 
             // cbDepartment
             // 
-            resources.ApplyResources(this.cbDepartment, "cbDepartment");
             this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbDepartment, "cbDepartment");
             this.cbDepartment.FormattingEnabled = true;
             this.cbDepartment.Name = "cbDepartment";
             // 
@@ -166,6 +166,7 @@
             this.Controls.Add(this.tbOperatorID);
             this.Controls.Add(this.lbOperatorID);
             this.Name = "EditOperator";
+            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 

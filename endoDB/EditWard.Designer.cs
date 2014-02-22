@@ -37,6 +37,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 563);
             this.Name = "EditWard";
+            this.ShowInTaskbar = false;
             this.Text = "EditWard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditPlace_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dt)).EndInit();

@@ -13,75 +13,12 @@ namespace endoDB
 {
     public partial class StartForm : Form
     {
-        private MainForm mf;
-
-        public StartForm(MainForm mf1)
+        public StartForm()
         {
             InitializeComponent();
             Settings.settingFile_location = Application.StartupPath + "\\setting.config";
             Settings.readSettings();
             Settings.isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
-            mf = mf1;
-        }
-
-        private string IDpwCheck()
-        {
-            NpgsqlConnection conn;
-            try
-            {
-                conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-
-            try
-            {
-                conn.Open();
-            }
-            catch (NpgsqlException)
-            {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
-                return null;
-            }
-            catch (System.IO.IOException)
-            {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
-                return null;
-            }
-
-            string sql = "SELECT * FROM operator WHERE operator_id='" + this.tbID.Text + "'";
-
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count == 0)
-            {
-                conn.Close();
-                MessageBox.Show(Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-            else
-            {
-                DataRow row = dt.Rows[0];
-                if (this.tbPass.Text == row["pw"].ToString())
-                {
-                    string appUser = row["op_name"].ToString();
-                    conn.Close();
-                    return appUser;
-                }
-                else
-                {
-                    conn.Close();
-                    MessageBox.Show(Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return null;
-                }
-            }
         }
 
         private void fLogin()
@@ -109,9 +46,7 @@ namespace endoDB
         }
 
         private void btLogin_Click(object sender, EventArgs e)
-        {
-            fLogin();
-        }
+        { fLogin(); }
 
         private void tbPass_KeyDown(object sender, KeyEventArgs e)
         {

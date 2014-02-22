@@ -105,6 +105,7 @@
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.dgvExamList);
             this.Name = "ExamList";
+            this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamList)).EndInit();
             this.ResumeLayout(false);
 

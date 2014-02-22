@@ -70,8 +70,8 @@
             // 
             // cbExamType
             // 
-            resources.ApplyResources(this.cbExamType, "cbExamType");
             this.cbExamType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbExamType, "cbExamType");
             this.cbExamType.FormattingEnabled = true;
             this.cbExamType.Name = "cbExamType";
             // 
@@ -100,7 +100,6 @@
             // 
             // PatientBox
             // 
-            resources.ApplyResources(this.PatientBox, "PatientBox");
             this.PatientBox.Controls.Add(this.Pt_age);
             this.PatientBox.Controls.Add(this.lbAge);
             this.PatientBox.Controls.Add(this.Pt_gender);
@@ -109,6 +108,7 @@
             this.PatientBox.Controls.Add(this.Pt_birthday);
             this.PatientBox.Controls.Add(this.lbGender);
             this.PatientBox.Controls.Add(this.lbBirthday);
+            resources.ApplyResources(this.PatientBox, "PatientBox");
             this.PatientBox.Name = "PatientBox";
             this.PatientBox.TabStop = false;
             // 
@@ -159,8 +159,8 @@
             // 
             // cbDepartment
             // 
-            resources.ApplyResources(this.cbDepartment, "cbDepartment");
             this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbDepartment, "cbDepartment");
             this.cbDepartment.FormattingEnabled = true;
             this.cbDepartment.Name = "cbDepartment";
             // 
@@ -171,8 +171,8 @@
             // 
             // cbWard
             // 
-            resources.ApplyResources(this.cbWard, "cbWard");
             this.cbWard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbWard, "cbWard");
             this.cbWard.FormattingEnabled = true;
             this.cbWard.Name = "cbWard";
             // 
@@ -234,6 +234,7 @@
             this.Controls.Add(this.dtpExamDate);
             this.Controls.Add(this.lbExamDate);
             this.Name = "CreateExam";
+            this.ShowInTaskbar = false;
             this.PatientBox.ResumeLayout(false);
             this.PatientBox.PerformLayout();
             this.ResumeLayout(false);

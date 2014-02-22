@@ -181,6 +181,7 @@
             this.Controls.Add(this.lbDBSrv);
             this.Controls.Add(this.tbDBSrv);
             this.Name = "initialSettings";
+            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 

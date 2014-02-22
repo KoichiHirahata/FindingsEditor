@@ -119,6 +119,7 @@
             this.Controls.Add(this.cbOperator);
             this.Controls.Add(this.lbOperator);
             this.Name = "SearchByOp";
+            this.ShowInTaskbar = false;
             this.Text = "Search by operator";
             this.ResumeLayout(false);
             this.PerformLayout();

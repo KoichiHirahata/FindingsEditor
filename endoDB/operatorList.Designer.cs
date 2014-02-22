@@ -46,8 +46,8 @@
             // 
             // dgvOperatorList
             // 
-            resources.ApplyResources(this.dgvOperatorList, "dgvOperatorList");
             this.dgvOperatorList.AllowUserToAddRows = false;
+            resources.ApplyResources(this.dgvOperatorList, "dgvOperatorList");
             this.dgvOperatorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOperatorList.MultiSelect = false;
             this.dgvOperatorList.Name = "dgvOperatorList";
@@ -86,6 +86,7 @@
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.dgvOperatorList);
             this.Name = "operatorList";
+            this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperatorList)).EndInit();
             this.ResumeLayout(false);
 

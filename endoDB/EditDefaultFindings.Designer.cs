@@ -37,10 +37,10 @@
             // 
             // dgv
             // 
-            resources.ApplyResources(this.dgv, "dgv");
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AllowUserToOrderColumns = true;
+            resources.ApplyResources(this.dgv, "dgv");
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 21;
@@ -65,6 +65,7 @@
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.dgv);
             this.Name = "EditDefaultFindings";
+            this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

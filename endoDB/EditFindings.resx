@@ -915,438 +915,6 @@
   <data name="&gt;&gt;tpInformation.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;btSetNormal.Name" xml:space="preserve">
-    <value>btSetNormal</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.Name" xml:space="preserve">
-    <value>lbFindings</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Name" xml:space="preserve">
-    <value>cbChecker</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Name" xml:space="preserve">
-    <value>cbDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.Name" xml:space="preserve">
-    <value>lbDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Name" xml:space="preserve">
-    <value>btDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btChecked.Name" xml:space="preserve">
-    <value>btChecked</value>
-  </data>
-  <data name="&gt;&gt;btChecked.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btChecked.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btChecked.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Name" xml:space="preserve">
-    <value>lbChecker</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;tbComment.Name" xml:space="preserve">
-    <value>tbComment</value>
-  </data>
-  <data name="&gt;&gt;tbComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbComment.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;tbComment.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.Name" xml:space="preserve">
-    <value>lbCheckersComment</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.Name" xml:space="preserve">
-    <value>btReverseOrder</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.Name" xml:space="preserve">
-    <value>btCopyDiag</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.Name" xml:space="preserve">
-    <value>tbFindings</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Name" xml:space="preserve">
-    <value>btAddDiag</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Name" xml:space="preserve">
-    <value>dgvDiagnoses</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="tpFindings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFindings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFindings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFindings.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tpFindings.Text" xml:space="preserve">
-    <value>Findings</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.Name" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Name" xml:space="preserve">
-    <value>btErace1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Name" xml:space="preserve">
-    <value>cbBrushWidth1</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Name" xml:space="preserve">
-    <value>pbBrushWidth1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Name" xml:space="preserve">
-    <value>pbColor1</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Name" xml:space="preserve">
-    <value>btColorSelect1</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Name" xml:space="preserve">
-    <value>pbFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tpFigure1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFigure1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFigure1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFigure1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tpFigure1.Text" xml:space="preserve">
-    <value>Figure 1</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Name" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Name" xml:space="preserve">
-    <value>btErace2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Name" xml:space="preserve">
-    <value>cbBrushWidth2</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Name" xml:space="preserve">
-    <value>pbBrushWidth2</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Name" xml:space="preserve">
-    <value>pbColor2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Name" xml:space="preserve">
-    <value>btColorSelect2</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Name" xml:space="preserve">
-    <value>pbFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tpFigure2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFigure2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFigure2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFigure2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tpFigure2.Text" xml:space="preserve">
-    <value>Figure 2</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Name" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tcExam.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="tcExam.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 39</value>
-  </data>
-  <data name="tcExam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>541, 618</value>
-  </data>
-  <data name="tcExam.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Name" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tcExam.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="btSetNormal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1362,6 +930,9 @@
   <data name="btSetNormal.Text" xml:space="preserve">
     <value>Add "Normal"</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="btSetNormal.ToolTip" xml:space="preserve">
     <value>Click here to reverse diagnoses order.</value>
   </data>
@@ -1758,6 +1329,33 @@
   <data name="&gt;&gt;dgvDiagnoses.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="tpFindings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tpFindings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpFindings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="tpFindings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tpFindings.Text" xml:space="preserve">
+    <value>Findings</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.Name" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="btErace1.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 409</value>
   </data>
@@ -1889,6 +1487,33 @@
   </data>
   <data name="&gt;&gt;pbFigure1.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="tpFigure1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tpFigure1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpFigure1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="tpFigure1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tpFigure1.Text" xml:space="preserve">
+    <value>Figure 1</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Name" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="btErace2.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 409</value>
@@ -2022,6 +1647,57 @@
   <data name="&gt;&gt;pbFigure2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="tpFigure2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tpFigure2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpFigure2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="tpFigure2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tpFigure2.Text" xml:space="preserve">
+    <value>Figure 2</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Name" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tcExam.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="tcExam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 39</value>
+  </data>
+  <data name="tcExam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>541, 618</value>
+  </data>
+  <data name="tcExam.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Name" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tcExam.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="cbExamStatus.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2073,9 +1749,6 @@
   <data name="&gt;&gt;dgvWords.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="btCopy2ClipBoard.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
   </data>

@@ -104,6 +104,7 @@
             this.Controls.Add(this.tbSearchString);
             this.Controls.Add(this.lbSearch4);
             this.Name = "SearchPt";
+            this.ShowInTaskbar = false;
             this.Text = "SearchPt";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatientList)).EndInit();
             this.ResumeLayout(false);

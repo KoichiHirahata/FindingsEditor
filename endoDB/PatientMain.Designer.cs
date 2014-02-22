@@ -51,8 +51,8 @@
             // 
             // dgvExams
             // 
-            resources.ApplyResources(this.dgvExams, "dgvExams");
             this.dgvExams.AllowUserToAddRows = false;
+            resources.ApplyResources(this.dgvExams, "dgvExams");
             this.dgvExams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExams.Name = "dgvExams";
             this.dgvExams.RowHeadersVisible = false;
@@ -78,7 +78,6 @@
             // 
             // PatientBox
             // 
-            resources.ApplyResources(this.PatientBox, "PatientBox");
             this.PatientBox.Controls.Add(this.Pt_age);
             this.PatientBox.Controls.Add(this.lbAge);
             this.PatientBox.Controls.Add(this.Pt_gender);
@@ -87,6 +86,7 @@
             this.PatientBox.Controls.Add(this.Pt_birthday);
             this.PatientBox.Controls.Add(this.lbGender);
             this.PatientBox.Controls.Add(this.lbBirthday);
+            resources.ApplyResources(this.PatientBox, "PatientBox");
             this.PatientBox.Name = "PatientBox";
             this.PatientBox.TabStop = false;
             // 
@@ -160,6 +160,7 @@
             this.Controls.Add(this.Pt_ID);
             this.Controls.Add(this.lbPatientID);
             this.Name = "PatientMain";
+            this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PatientMain_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExams)).EndInit();
             this.PatientBox.ResumeLayout(false);

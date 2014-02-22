@@ -651,6 +651,7 @@
             this.Controls.Add(this.tcExam);
             this.Controls.Add(this.lbPatient);
             this.Name = "EditFindings";
+            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditFindings_FormClosing);

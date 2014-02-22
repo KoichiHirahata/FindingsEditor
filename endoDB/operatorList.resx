@@ -118,180 +118,180 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="btAddOperator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btAddOperator.Text" xml:space="preserve">
-    <value>Add new operator</value>
-  </data>
-  <data name="btDown.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 11pt</value>
-  </data>
-  <data name="btUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 27</value>
-  </data>
-  <data name="&gt;&gt;btAddOperator.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btAddOperator.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btClose.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
   <data name="btClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btClose.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 11pt</value>
+  </data>
+  <data name="btClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>593, 341</value>
   </data>
-  <data name="&gt;&gt;btUp.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="btClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
   </data>
-  <data name="btAddOperator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 27</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btClose.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;dgvOperatorList.Parent" xml:space="preserve">
+  <data name="btClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;btClose.Name" xml:space="preserve">
+    <value>btClose</value>
+  </data>
+  <data name="&gt;&gt;btClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btClose.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btClose.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;btUp.Name" xml:space="preserve">
-    <value>btUp</value>
-  </data>
-  <data name="&gt;&gt;dgvOperatorList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btDown.Text" xml:space="preserve">
-    <value>↓</value>
-  </data>
-  <data name="btAddOperator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;dgvOperatorList.Name" xml:space="preserve">
-    <value>dgvOperatorList</value>
+  <data name="dgvOperatorList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="dgvOperatorList.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
-  <data name="btDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>709, 165</value>
+  <data name="dgvOperatorList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 318</value>
   </data>
-  <data name="&gt;&gt;btClose.Parent" xml:space="preserve">
+  <data name="dgvOperatorList.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgvOperatorList.Name" xml:space="preserve">
+    <value>dgvOperatorList</value>
+  </data>
+  <data name="&gt;&gt;dgvOperatorList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvOperatorList.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="btUp.Text" xml:space="preserve">
-    <value>↑</value>
+  <data name="&gt;&gt;dgvOperatorList.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="btDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="btDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 27</value>
-  </data>
-  <data name="&gt;&gt;btAddOperator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btAddOperator.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btUp.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11pt</value>
+  </data>
+  <data name="btUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>709, 123</value>
+  </data>
+  <data name="btUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 27</value>
   </data>
   <data name="btUp.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="dgvOperatorList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>686, 318</value>
+  <data name="btUp.Text" xml:space="preserve">
+    <value>↑</value>
+  </data>
+  <data name="&gt;&gt;btUp.Name" xml:space="preserve">
+    <value>btUp</value>
+  </data>
+  <data name="&gt;&gt;btUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btUp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btUp.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 11pt</value>
   </data>
   <data name="btDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>operatorList</value>
+  <data name="btDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>709, 165</value>
   </data>
-  <data name="&gt;&gt;btUp.Type" xml:space="preserve">
+  <data name="btDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 27</value>
+  </data>
+  <data name="btDown.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btDown.Text" xml:space="preserve">
+    <value>↓</value>
+  </data>
+  <data name="&gt;&gt;btDown.Name" xml:space="preserve">
+    <value>btDown</value>
+  </data>
+  <data name="&gt;&gt;btDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btDown.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="dgvOperatorList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="&gt;&gt;btDown.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="btDown.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="btAddOperator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="&gt;&gt;btClose.Name" xml:space="preserve">
-    <value>btClose</value>
-  </data>
-  <data name="btClose.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btAddOperator.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11pt</value>
   </data>
-  <data name="&gt;&gt;btClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btAddOperator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btAddOperator.Location" type="System.Drawing.Point, System.Drawing">
     <value>425, 341</value>
   </data>
-  <data name="&gt;&gt;btDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btAddOperator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 27</value>
   </data>
-  <data name="&gt;&gt;btDown.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="btAddOperator.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;btDown.Name" xml:space="preserve">
-    <value>btDown</value>
-  </data>
-  <data name="&gt;&gt;dgvOperatorList.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>709, 123</value>
-  </data>
-  <data name="&gt;&gt;btAddOperator.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>751, 380</value>
-  </data>
-  <data name="btClose.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="btAddOperator.Text" xml:space="preserve">
+    <value>Add new operator</value>
   </data>
   <data name="&gt;&gt;btAddOperator.Name" xml:space="preserve">
     <value>btAddOperator</value>
   </data>
-  <data name="btClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
+  <data name="&gt;&gt;btAddOperator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btUp.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btAddOperator.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="dgvOperatorList.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Operators list</value>
-  </data>
-  <data name="btClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btUp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 11pt</value>
+  <data name="&gt;&gt;btAddOperator.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>751, 380</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Operators list</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>operatorList</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

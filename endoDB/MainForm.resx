@@ -146,7 +146,7 @@
     <value>Search examination</value>
   </data>
   <data name="myWordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="myWordsToolStripMenuItem.Text" xml:space="preserve">
     <value>My words</value>
@@ -169,10 +169,10 @@
   <data name="defaultFindingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Default findings</value>
   </data>
-  <data name="scopeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="equipmentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 22</value>
   </data>
-  <data name="scopeToolStripMenuItem.Text" xml:space="preserve">
+  <data name="equipmentsToolStripMenuItem.Text" xml:space="preserve">
     <value>Equipments</value>
   </data>
   <data name="placeRoomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -194,7 +194,7 @@
     <value>Diagnoses</value>
   </data>
   <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="managementToolStripMenuItem.Text" xml:space="preserve">
     <value>Management</value>
@@ -672,10 +672,10 @@
   <data name="&gt;&gt;defaultFindingsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;scopeToolStripMenuItem.Name" xml:space="preserve">
-    <value>scopeToolStripMenuItem</value>
+  <data name="&gt;&gt;equipmentsToolStripMenuItem.Name" xml:space="preserve">
+    <value>equipmentsToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;scopeToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;equipmentsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;placeRoomToolStripMenuItem.Name" xml:space="preserve">
