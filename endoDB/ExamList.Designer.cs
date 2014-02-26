@@ -50,6 +50,7 @@
             this.dgvExamList.ReadOnly = true;
             this.dgvExamList.RowTemplate.Height = 21;
             this.dgvExamList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExamList_CellContentClick);
+            this.dgvExamList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvExamList_KeyDown);
             // 
             // btClose
             // 
@@ -106,6 +107,7 @@
             this.Controls.Add(this.dgvExamList);
             this.Name = "ExamList";
             this.ShowInTaskbar = false;
+            this.Shown += new System.EventHandler(this.ExamList_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamList)).EndInit();
             this.ResumeLayout(false);
 

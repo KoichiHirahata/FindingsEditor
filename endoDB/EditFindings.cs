@@ -987,11 +987,17 @@ namespace endoDB
             {
                 tbFindings.Text = tbFindings.Text.ToString().Insert(selectionStart, @dgv[e.ColumnIndex, e.RowIndex].Value.ToString());
                 selectionStart += dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Length;
+                tbFindings.SelectionStart = selectionStart;
+                tbFindings.SelectionLength = 0;
+                tbFindings.Focus();
             }
             else if (selectedTb == "tbComment")
             {
                 tbComment.Text = tbComment.Text.ToString().Insert(selectionStart, @dgv[e.ColumnIndex, e.RowIndex].Value.ToString());
                 selectionStart += dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Length;
+                tbComment.SelectionStart = selectionStart;
+                tbComment.SelectionLength = 0;
+                tbComment.Focus();
             }
         }
         #endregion

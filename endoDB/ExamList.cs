@@ -27,7 +27,6 @@ namespace endoDB
 
             dgvExamList.RowHeadersVisible = false;
             dgvExamList.MultiSelect = false;
-            dgvExamList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvExamList.Font = new Font(dgvExamList.Font.Name, 12);
             dgvExamList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvExamList.DataSource = exam_list;
@@ -180,62 +179,115 @@ namespace endoDB
         private void btClose_Click(object sender, EventArgs e)
         { this.Close(); }
 
+        #region dgv Buttons
         private void dgvExamList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
 
-            //Open editing form.
             if (dgv.Columns[e.ColumnIndex].Name == "btSelect")
             {
-                EditFindings ef = new EditFindings(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
-                ef.ShowDialog(this);
-                ef.Dispose();
-                exam_list.Rows.Clear();
-                searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
-                resizeColumns();
+                selectExam(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
                 return;
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
             {
-                if (System.IO.File.Exists(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe"))
-                { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", dgv.Rows[e.RowIndex].Cells["pt_id"].Value.ToString()); }
+                showImages(dgv.Rows[e.RowIndex].Cells["pt_id"].Value.ToString());
                 return;
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btDelColumn")
             {
-                Exam exam = new Exam(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
-
-                //If findings was blank, delete exam.
-                //If findings was not blank, make exam invisible.
-                if (MessageBox.Show(Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    if (exam.findings.Length == 0)
-                    { exam.delExam(); }
-                    else
-                    { exam.makeInvisible(); }
-
-                    exam_list.Rows.Clear();
-                    searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
-                    resizeColumns();
-                }
-                //exam_visibleがfalseのexamを復活させる管理者用のメニューを作成。
-                //日付の範囲指定できるように。
+                delExam(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
+                return;
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btPrint")
             {
-                #region Error Check
-                if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
-                {
-                    MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                #endregion
-                ExamResult er = new ExamResult(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
-                er.ShowDialog(this);
-                er.Dispose();
+                printExam(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
+                return;
             }
         }
 
+        private void dgvExamList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                DataGridView dgv = (DataGridView)sender;
+
+                if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btSelect")
+                {
+                    selectExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString());
+                    return;
+                }
+                else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btImage")
+                {
+                    showImages(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["pt_id"].Value.ToString());
+                    return;
+                }
+                else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btDelColumn")
+                {
+                    delExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString());
+                    return;
+                }
+                else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btPrint")
+                {
+                    printExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString());
+                    return;
+                }
+            }
+        }
+
+        #region dgv buttons functions
+        private void selectExam(string exam_id_str)
+        {
+            EditFindings ef = new EditFindings(exam_id_str);
+            ef.ShowDialog(this);
+            ef.Dispose();
+            exam_list.Rows.Clear();
+            searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
+            resizeColumns();
+        }
+
+        private void showImages(string pt_id_str)
+        {
+            if (System.IO.File.Exists(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe"))
+            { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", pt_id_str); }
+        }
+
+        private void delExam(string exam_id_str)
+        {
+            Exam exam = new Exam(exam_id_str);
+
+            //If findings was blank, delete exam.
+            //If findings was not blank, make exam invisible.
+            if (MessageBox.Show(Properties.Resources.ConfirmDel, "Warning", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                if (exam.findings.Length == 0)
+                { exam.delExam(); }
+                else
+                { exam.makeInvisible(); }
+
+                exam_list.Rows.Clear();
+                searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
+                resizeColumns();
+            }
+        }
+
+        private void printExam(string exam_id_str)
+        {
+            #region Error Check
+            if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
+            {
+                MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            #endregion
+            ExamResult er = new ExamResult(exam_id_str);
+            er.ShowDialog(this);
+            er.Dispose();
+        }
+        #endregion
+        #endregion
+
+        #region Filters
         private void btBlankDraft_Click(object sender, EventArgs e)
         { exam_list.DefaultView.RowFilter = "exam_status < 2"; }//Show only blank/draft findings.
 
@@ -250,5 +302,12 @@ namespace endoDB
 
         private void btShowAll_Click(object sender, EventArgs e)
         { exam_list.DefaultView.RowFilter = "exam_status < 10"; }
+        #endregion
+
+        private void ExamList_Shown(object sender, EventArgs e)
+        {
+            dgvExamList.Focus();
+            dgvExamList.CurrentCell = dgvExamList["btSelect", 0];
+        }
     }
 }
