@@ -258,7 +258,7 @@ namespace endoDB
 
             //If findings was blank, delete exam.
             //If findings was not blank, make exam invisible.
-            if (MessageBox.Show(Properties.Resources.ConfirmDel, "Warning", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(Properties.Resources.ConfirmDel, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 if (exam.findings.Length == 0)
                 { exam.delExam(); }
@@ -307,7 +307,8 @@ namespace endoDB
         private void ExamList_Shown(object sender, EventArgs e)
         {
             dgvExamList.Focus();
-            dgvExamList.CurrentCell = dgvExamList["btSelect", 0];
+            if (dgvExamList.RowCount != 0)
+            { dgvExamList.CurrentCell = dgvExamList["btSelect", 0]; }
         }
     }
 }

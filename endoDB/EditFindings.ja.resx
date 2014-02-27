@@ -421,6 +421,9 @@
   <data name="btCopy2ClipBoard.Text" xml:space="preserve">
     <value>クリップボードにコピー</value>
   </data>
+  <data name="btSaveClose.Text" xml:space="preserve">
+    <value>保存して終了</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>所見編集</value>
   </data>

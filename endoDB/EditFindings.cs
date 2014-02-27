@@ -237,7 +237,7 @@ namespace endoDB
                 tbFindings.Text = uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB");
             }
             else
-            { this.tbFindings.Text = exam.findings.Replace("\n", "\r\n").Replace("\r\r","\r"); }//Replace code is necessary because we have data made with Linux machine.
+            { this.tbFindings.Text = exam.findings.Replace("\n", "\r\n").Replace("\r\r", "\r"); }//Replace code is necessary because we have data made with Linux machine.
             #endregion
 
             this.tbComment.Text = exam.comment.Replace("\n", "\r\n").Replace("\r\r", "\r");   //tbComment initialization
@@ -602,75 +602,90 @@ namespace endoDB
             {
                 if (MessageBox.Show(Properties.Resources.SaveChangesYN, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 { return; }
-
-                exam.purpose = tbPurpose.Text;
-                if (!string.IsNullOrWhiteSpace(cbDepartment.Text))
-                    exam.department = int.Parse(cbDepartment.SelectedValue.ToString());
-
-                exam.order_dr = cbOrderDr.Text;
-
-                if (!string.IsNullOrWhiteSpace(cbWard.Text))
-                    exam.ward_id = cbWard.SelectedValue.ToString();
-
-                if (!string.IsNullOrWhiteSpace(cbEquipment.Text))
-                    exam.equipment = int.Parse(cbEquipment.SelectedValue.ToString());
-
-                if (!string.IsNullOrWhiteSpace(cbPlace.Text))
-                    exam.place_no = int.Parse(cbPlace.SelectedValue.ToString());
-
-                #region operator
-                if (string.IsNullOrWhiteSpace(this.cbOperator1.Text))
-                { exam.operator1 = null; }
                 else
-                { exam.operator1 = cbOperator1.SelectedValue.ToString(); }
-
-                if (string.IsNullOrWhiteSpace(this.cbOperator2.Text))
-                { exam.operator2 = null; }
-                else
-                { exam.operator2 = cbOperator2.SelectedValue.ToString(); }
-
-                if (string.IsNullOrWhiteSpace(this.cbOperator3.Text))
-                { exam.operator3 = null; }
-                else
-                { exam.operator3 = cbOperator3.SelectedValue.ToString(); }
-
-                if (string.IsNullOrWhiteSpace(this.cbOperator4.Text))
-                { exam.operator4 = null; }
-                else
-                { exam.operator4 = cbOperator4.SelectedValue.ToString(); }
-
-                if (string.IsNullOrWhiteSpace(this.cbOperator5.Text))
-                { exam.operator5 = null; }
-                else
-                { exam.operator5 = cbOperator5.SelectedValue.ToString(); }
-                #endregion
-
-                for (int i = 0; i < stockedSQLs.Rows.Count; i++)//ストックしておいたDiagnosesのSQLを一気に処理する。
-                {
-                    if (uckyFunctions.ExeNonQuery(stockedSQLs.Rows[i]["SQL"].ToString()) == uckyFunctions.functionResult.failed)
-                    { MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-                }
-
-                exam.findings = tbFindings.Text;
-
-                if (string.IsNullOrWhiteSpace(this.cbDiagnosed.Text))
-                { exam.diag_dr = null; }
-                else
-                { exam.diag_dr = cbDiagnosed.SelectedValue.ToString(); }
-
-                exam.comment = tbComment.Text;
-
-                if (string.IsNullOrWhiteSpace(this.cbChecker.Text))
-                { exam.final_diag_dr = null; }
-                else
-                { exam.final_diag_dr = cbChecker.SelectedValue.ToString(); }
-
-                saveFigure(pbFigure1, "1");
-                saveFigure(pbFigure2, "2");
-
-                exam.exam_status = int.Parse(cbExamStatus.SelectedValue.ToString());
-                exam.saveFindingsEtc();
+                { saveFindingsData(); }
             }
+        }
+
+        private void btSaveClose_Click(object sender, EventArgs e)
+        {
+            if (edited == true)
+            {
+                saveFindingsData();
+                edited = false;
+            }
+            this.Close();
+        }
+
+        private void saveFindingsData()
+        {
+            exam.purpose = tbPurpose.Text;
+            if (!string.IsNullOrWhiteSpace(cbDepartment.Text))
+                exam.department = int.Parse(cbDepartment.SelectedValue.ToString());
+
+            exam.order_dr = cbOrderDr.Text;
+
+            if (!string.IsNullOrWhiteSpace(cbWard.Text))
+                exam.ward_id = cbWard.SelectedValue.ToString();
+
+            if (!string.IsNullOrWhiteSpace(cbEquipment.Text))
+                exam.equipment = int.Parse(cbEquipment.SelectedValue.ToString());
+
+            if (!string.IsNullOrWhiteSpace(cbPlace.Text))
+                exam.place_no = int.Parse(cbPlace.SelectedValue.ToString());
+
+            #region operator
+            if (string.IsNullOrWhiteSpace(this.cbOperator1.Text))
+            { exam.operator1 = null; }
+            else
+            { exam.operator1 = cbOperator1.SelectedValue.ToString(); }
+
+            if (string.IsNullOrWhiteSpace(this.cbOperator2.Text))
+            { exam.operator2 = null; }
+            else
+            { exam.operator2 = cbOperator2.SelectedValue.ToString(); }
+
+            if (string.IsNullOrWhiteSpace(this.cbOperator3.Text))
+            { exam.operator3 = null; }
+            else
+            { exam.operator3 = cbOperator3.SelectedValue.ToString(); }
+
+            if (string.IsNullOrWhiteSpace(this.cbOperator4.Text))
+            { exam.operator4 = null; }
+            else
+            { exam.operator4 = cbOperator4.SelectedValue.ToString(); }
+
+            if (string.IsNullOrWhiteSpace(this.cbOperator5.Text))
+            { exam.operator5 = null; }
+            else
+            { exam.operator5 = cbOperator5.SelectedValue.ToString(); }
+            #endregion
+
+            for (int i = 0; i < stockedSQLs.Rows.Count; i++)//Run all stocked SQLs for diagnoses.
+            {
+                if (uckyFunctions.ExeNonQuery(stockedSQLs.Rows[i]["SQL"].ToString()) == uckyFunctions.functionResult.failed)
+                { MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+
+            exam.findings = tbFindings.Text;
+
+            if (string.IsNullOrWhiteSpace(this.cbDiagnosed.Text))
+            { exam.diag_dr = null; }
+            else
+            { exam.diag_dr = cbDiagnosed.SelectedValue.ToString(); }
+
+            exam.comment = tbComment.Text;
+
+            if (string.IsNullOrWhiteSpace(this.cbChecker.Text))
+            { exam.final_diag_dr = null; }
+            else
+            { exam.final_diag_dr = cbChecker.SelectedValue.ToString(); }
+
+            saveFigure(pbFigure1, "1");
+            saveFigure(pbFigure2, "2");
+
+            exam.exam_status = int.Parse(cbExamStatus.SelectedValue.ToString());
+            exam.saveFindingsEtc();
         }
         #endregion
 
