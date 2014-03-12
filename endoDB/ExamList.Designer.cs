@@ -41,9 +41,9 @@
             // 
             // dgvExamList
             // 
+            resources.ApplyResources(this.dgvExamList, "dgvExamList");
             this.dgvExamList.AllowUserToAddRows = false;
             this.dgvExamList.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.dgvExamList, "dgvExamList");
             this.dgvExamList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExamList.MultiSelect = false;
             this.dgvExamList.Name = "dgvExamList";
@@ -105,9 +105,11 @@
             this.Controls.Add(this.btBlankDraft);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.dgvExamList);
+            this.KeyPreview = true;
             this.Name = "ExamList";
             this.ShowInTaskbar = false;
             this.Shown += new System.EventHandler(this.ExamList_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ExamList_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamList)).EndInit();
             this.ResumeLayout(false);
 

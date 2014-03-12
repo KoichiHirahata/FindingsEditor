@@ -121,9 +121,18 @@
     <value>閉じる</value>
   </data>
   <data name="btBlankDraft.Text" xml:space="preserve">
-    <value>未記入/草稿</value>
+    <value>未記入/草稿(B)</value>
+  </data>
+  <data name="btDone.Text" xml:space="preserve">
+    <value>記入済(D)</value>
+  </data>
+  <data name="btChecked.Text" xml:space="preserve">
+    <value>チェック済(C)</value>
+  </data>
+  <data name="btCanceled.Text" xml:space="preserve">
+    <value>実施せず(E)</value>
   </data>
   <data name="btShowAll.Text" xml:space="preserve">
-    <value>全て</value>
+    <value>全て(A)</value>
   </data>
 </root>

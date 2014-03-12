@@ -82,10 +82,6 @@ namespace endoDB
             dgvExamList.Columns["btImage"].SortMode = DataGridViewColumnSortMode.NotSortable;
             dgvExamList.Columns["btDelColumn"].SortMode = DataGridViewColumnSortMode.NotSortable;
             dgvExamList.Columns["btPrint"].SortMode = DataGridViewColumnSortMode.NotSortable;
-
-            btDone.Text = Properties.Resources.Done;
-            btChecked.Text = Properties.Resources.Checked;
-            btCanceled.Text = Properties.Resources.Canceled;
             #endregion
 
             #region Change columns header text
@@ -302,6 +298,20 @@ namespace endoDB
 
         private void btShowAll_Click(object sender, EventArgs e)
         { exam_list.DefaultView.RowFilter = "exam_status < 10"; }
+
+        private void ExamList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A && e.Alt == true)
+            { exam_list.DefaultView.RowFilter = "exam_status < 10"; }
+            else if (e.KeyCode == Keys.B && e.Alt == true)
+            { exam_list.DefaultView.RowFilter = "exam_status < 2"; }
+            else if (e.KeyCode == Keys.D && e.Alt == true)
+            { exam_list.DefaultView.RowFilter = "exam_status = 2"; }
+            else if (e.KeyCode == Keys.C && e.Alt == true)
+            { exam_list.DefaultView.RowFilter = "exam_status = 3"; }
+            else if (e.KeyCode == Keys.E && e.Alt == true)
+            { exam_list.DefaultView.RowFilter = "exam_status = 9"; }
+        }
         #endregion
 
         private void ExamList_Shown(object sender, EventArgs e)
