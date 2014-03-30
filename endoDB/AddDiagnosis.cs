@@ -75,8 +75,8 @@ namespace endoDB
             this.dgv.Columns[2].Visible = false;
 
             this.dgv.Columns[1].HeaderText = Properties.Resources.Diagnosis;
-            this.dgv.Columns[3].HeaderText = Properties.Resources.Suspect;
-            this.dgv.Columns[4].HeaderText = null;
+            this.dgv.Columns["chbSusp"].HeaderText = Properties.Resources.Suspect;
+            this.dgv.Columns["btSelect"].HeaderText = "";
             #endregion
 
             setButtons(_examType);

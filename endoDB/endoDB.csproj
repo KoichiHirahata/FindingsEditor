@@ -198,6 +198,9 @@
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ucky.cs" />
+    <EmbeddedResource Include="AddDiagnosis.ja.resx">
+      <DependentUpon>AddDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDiagnosis.resx">
       <DependentUpon>AddDiagnosis.cs</DependentUpon>
     </EmbeddedResource>

@@ -285,36 +285,69 @@ namespace endoDB
 
         #region Filters
         private void btBlankDraft_Click(object sender, EventArgs e)
-        { exam_list.DefaultView.RowFilter = "exam_status < 2"; }//Show only blank/draft findings.
+        {
+            exam_list.DefaultView.RowFilter = "exam_status < 2";
+            setFocus2Select();
+        }//Show only blank/draft findings.
 
         private void btDone_Click(object sender, EventArgs e)
-        { exam_list.DefaultView.RowFilter = "exam_status = 2"; }
+        {
+            exam_list.DefaultView.RowFilter = "exam_status = 2";
+            setFocus2Select();
+        }
 
         private void btChecked_Click(object sender, EventArgs e)
-        { exam_list.DefaultView.RowFilter = "exam_status = 3"; }
+        {
+            exam_list.DefaultView.RowFilter = "exam_status = 3";
+            setFocus2Select();
+        }
 
         private void btCanceled_Click(object sender, EventArgs e)
-        { exam_list.DefaultView.RowFilter = "exam_status = 9"; }
+        {
+            exam_list.DefaultView.RowFilter = "exam_status = 9";
+            setFocus2Select();
+        }
 
         private void btShowAll_Click(object sender, EventArgs e)
-        { exam_list.DefaultView.RowFilter = "exam_status < 10"; }
+        {
+            exam_list.DefaultView.RowFilter = "exam_status < 10";
+            setFocus2Select();
+        }
 
         private void ExamList_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.A && e.Alt == true)
-            { exam_list.DefaultView.RowFilter = "exam_status < 10"; }
+            {
+                exam_list.DefaultView.RowFilter = "exam_status < 10";
+                setFocus2Select();
+            }
             else if (e.KeyCode == Keys.B && e.Alt == true)
-            { exam_list.DefaultView.RowFilter = "exam_status < 2"; }
+            {
+                exam_list.DefaultView.RowFilter = "exam_status < 2";
+                setFocus2Select();
+            }
             else if (e.KeyCode == Keys.D && e.Alt == true)
-            { exam_list.DefaultView.RowFilter = "exam_status = 2"; }
+            {
+                exam_list.DefaultView.RowFilter = "exam_status = 2";
+                setFocus2Select();
+            }
             else if (e.KeyCode == Keys.C && e.Alt == true)
-            { exam_list.DefaultView.RowFilter = "exam_status = 3"; }
+            {
+                exam_list.DefaultView.RowFilter = "exam_status = 3";
+                setFocus2Select();
+            }
             else if (e.KeyCode == Keys.E && e.Alt == true)
-            { exam_list.DefaultView.RowFilter = "exam_status = 9"; }
+            {
+                exam_list.DefaultView.RowFilter = "exam_status = 9";
+                setFocus2Select();
+            }
         }
         #endregion
 
         private void ExamList_Shown(object sender, EventArgs e)
+        { setFocus2Select(); }
+
+        private void setFocus2Select()
         {
             dgvExamList.Focus();
             if (dgvExamList.RowCount != 0)
