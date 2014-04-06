@@ -79,11 +79,11 @@ namespace endoDB
     #region Settings
     public class Settings
     {
-        public static string DBSrvIP { get; set; } //データベースサーバーのIPアドレスを格納するプロパティ
-        public static string DBSrvPort { get; set; } //データベースサーバーのポート番号を格納するプロパティ
-        public static string DBconnectID { get; set; } //データベースに接続するためのIDを格納するプロパティ
-        public static string DBconnectPw { get; set; } //データベースに接続するためのパスワードを格納するプロパティ
-        public static string settingFile_location { get; set; } //実行フォルダを格納するプロパティ
+        public static string DBSrvIP { get; set; } //IP address of DB server
+        public static string DBSrvPort { get; set; } //Port number of DB server
+        public static string DBconnectID { get; set; } //ID of DB user
+        public static string DBconnectPw { get; set; } //Pw of DB user
+        public static string settingFile_location { get; set; } //Config file path
         public static Boolean isJP { get; set; } //Property for storing that machine's language is Japanese or not.
         public static string endoPrintFile { get; set; } //Template xls file for endoscopy conclusion.
         public static string figureFolder { get; set; } //Root folder of figures.
@@ -104,7 +104,6 @@ namespace endoDB
             st.DBSrvPort = Settings.DBSrvPort;
             st.DBconnectID = Settings.DBconnectID;
             st.DBconnectPw = PasswordEncoder.Encrypt(Settings.DBconnectPw);
-            st.endoPrintFile = Settings.endoPrintFile;
             st.figureFolder = Settings.figureFolder;
 
             //＜バイナリファイルに書き込む＞

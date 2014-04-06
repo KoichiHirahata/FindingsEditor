@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbDBsrvPort.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="lbDBsrvPort.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -175,7 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbDBsrvPort.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="tbDbID.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -199,7 +199,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbDbID.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="lbDbID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -232,7 +232,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbDbID.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>6</value>
   </data>
   <data name="btTestConnect.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -262,7 +262,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btTestConnect.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="btCancel.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -271,7 +271,7 @@
     <value>NoControl</value>
   </data>
   <data name="btCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 453</value>
+    <value>368, 372</value>
   </data>
   <data name="btCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 31</value>
@@ -292,7 +292,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btCancel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>8</value>
   </data>
   <data name="btSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -301,7 +301,7 @@
     <value>NoControl</value>
   </data>
   <data name="btSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 453</value>
+    <value>250, 372</value>
   </data>
   <data name="btSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 31</value>
@@ -322,7 +322,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btSave.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>9</value>
   </data>
   <data name="btPwSet.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -352,7 +352,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btPwSet.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>10</value>
   </data>
   <data name="tbDBpw.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -382,7 +382,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbDBpw.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>11</value>
   </data>
   <data name="pwState.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -415,7 +415,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pwState.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>12</value>
   </data>
   <data name="lbSrvSample.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -448,7 +448,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbSrvSample.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>13</value>
   </data>
   <data name="lbDBSrv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,7 +481,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbDBSrv.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>14</value>
   </data>
   <data name="tbDBSrv.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -505,94 +505,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbDBSrv.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="btSelectEndoFile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="btSelectEndoFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btSelectEndoFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 303</value>
-  </data>
-  <data name="btSelectEndoFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
-  </data>
-  <data name="btSelectEndoFile.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btSelectEndoFile.Text" xml:space="preserve">
-    <value>Select</value>
-  </data>
-  <data name="&gt;&gt;btSelectEndoFile.Name" xml:space="preserve">
-    <value>btSelectEndoFile</value>
-  </data>
-  <data name="&gt;&gt;btSelectEndoFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btSelectEndoFile.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btSelectEndoFile.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="tbEndoPrintFile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="tbEndoPrintFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 307</value>
-  </data>
-  <data name="tbEndoPrintFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 23</value>
-  </data>
-  <data name="tbEndoPrintFile.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbEndoPrintFile.Name" xml:space="preserve">
-    <value>tbEndoPrintFile</value>
-  </data>
-  <data name="&gt;&gt;tbEndoPrintFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbEndoPrintFile.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tbEndoPrintFile.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbEndoPrintFile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbEndoPrintFile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbEndoPrintFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbEndoPrintFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 277</value>
-  </data>
-  <data name="lbEndoPrintFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 16</value>
-  </data>
-  <data name="lbEndoPrintFile.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="lbEndoPrintFile.Text" xml:space="preserve">
-    <value>Template file of endoscopy result:</value>
-  </data>
-  <data name="&gt;&gt;lbEndoPrintFile.Name" xml:space="preserve">
-    <value>lbEndoPrintFile</value>
-  </data>
-  <data name="&gt;&gt;lbEndoPrintFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbEndoPrintFile.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbEndoPrintFile.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>15</value>
   </data>
   <data name="lbFigureFolder.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -604,7 +517,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbFigureFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 354</value>
+    <value>17, 273</value>
   </data>
   <data name="lbFigureFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 16</value>
@@ -634,13 +547,13 @@
     <value>NoControl</value>
   </data>
   <data name="btFigureFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 380</value>
+    <value>374, 299</value>
   </data>
   <data name="btFigureFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 31</value>
   </data>
   <data name="btFigureFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+    <value>7</value>
   </data>
   <data name="btFigureFolder.Text" xml:space="preserve">
     <value>Select</value>
@@ -661,13 +574,13 @@
     <value>MS UI Gothic, 12pt</value>
   </data>
   <data name="tbFigureFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 384</value>
+    <value>68, 303</value>
   </data>
   <data name="tbFigureFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>290, 23</value>
   </data>
   <data name="tbFigureFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;tbFigureFolder.Name" xml:space="preserve">
     <value>tbFigureFolder</value>
@@ -688,7 +601,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>487, 496</value>
+    <value>487, 427</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>initialSettings</value>

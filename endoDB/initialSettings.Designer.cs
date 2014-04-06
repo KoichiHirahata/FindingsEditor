@@ -42,9 +42,6 @@
             this.lbSrvSample = new System.Windows.Forms.Label();
             this.lbDBSrv = new System.Windows.Forms.Label();
             this.tbDBSrv = new System.Windows.Forms.TextBox();
-            this.btSelectEndoFile = new System.Windows.Forms.Button();
-            this.tbEndoPrintFile = new System.Windows.Forms.TextBox();
-            this.lbEndoPrintFile = new System.Windows.Forms.Label();
             this.lbFigureFolder = new System.Windows.Forms.Label();
             this.btFigureFolder = new System.Windows.Forms.Button();
             this.tbFigureFolder = new System.Windows.Forms.TextBox();
@@ -123,23 +120,6 @@
             resources.ApplyResources(this.tbDBSrv, "tbDBSrv");
             this.tbDBSrv.Name = "tbDBSrv";
             // 
-            // btSelectEndoFile
-            // 
-            resources.ApplyResources(this.btSelectEndoFile, "btSelectEndoFile");
-            this.btSelectEndoFile.Name = "btSelectEndoFile";
-            this.btSelectEndoFile.UseVisualStyleBackColor = true;
-            this.btSelectEndoFile.Click += new System.EventHandler(this.btSelectEndoFile_Click);
-            // 
-            // tbEndoPrintFile
-            // 
-            resources.ApplyResources(this.tbEndoPrintFile, "tbEndoPrintFile");
-            this.tbEndoPrintFile.Name = "tbEndoPrintFile";
-            // 
-            // lbEndoPrintFile
-            // 
-            resources.ApplyResources(this.lbEndoPrintFile, "lbEndoPrintFile");
-            this.lbEndoPrintFile.Name = "lbEndoPrintFile";
-            // 
             // lbFigureFolder
             // 
             resources.ApplyResources(this.lbFigureFolder, "lbFigureFolder");
@@ -164,9 +144,6 @@
             this.Controls.Add(this.lbFigureFolder);
             this.Controls.Add(this.btFigureFolder);
             this.Controls.Add(this.tbFigureFolder);
-            this.Controls.Add(this.lbEndoPrintFile);
-            this.Controls.Add(this.btSelectEndoFile);
-            this.Controls.Add(this.tbEndoPrintFile);
             this.Controls.Add(this.tbDBsrvPort);
             this.Controls.Add(this.lbDBsrvPort);
             this.Controls.Add(this.tbDbID);
@@ -202,9 +179,6 @@
         private System.Windows.Forms.Label lbSrvSample;
         private System.Windows.Forms.Label lbDBSrv;
         private System.Windows.Forms.TextBox tbDBSrv;
-        private System.Windows.Forms.Button btSelectEndoFile;
-        private System.Windows.Forms.TextBox tbEndoPrintFile;
-        private System.Windows.Forms.Label lbEndoPrintFile;
         private System.Windows.Forms.Label lbFigureFolder;
         private System.Windows.Forms.Button btFigureFolder;
         private System.Windows.Forms.TextBox tbFigureFolder;

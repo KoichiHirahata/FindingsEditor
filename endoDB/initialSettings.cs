@@ -32,11 +32,6 @@ namespace endoDB
             }
             this.tbDBpw.Visible = false;
 
-            if (!String.IsNullOrWhiteSpace(Settings.endoPrintFile))
-            {
-                this.tbEndoPrintFile.Text = Settings.endoPrintFile;
-            }
-
             if (!String.IsNullOrWhiteSpace(Settings.figureFolder))
             {
                 tbFigureFolder.Text = Settings.figureFolder;
@@ -45,26 +40,16 @@ namespace endoDB
 
 
         private void btCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        { this.Close(); }
 
         private void btPwSet_Click(object sender, EventArgs e)
         {
             this.tbDBpw.Visible = true;
+            tbDBpw.Focus();
         }
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(tbEndoPrintFile.Text))
-            {
-                if (!File.Exists(tbEndoPrintFile.Text))
-                {
-                    MessageBox.Show("[Endoscopy template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-
             if (!string.IsNullOrWhiteSpace(tbFigureFolder.Text))
             {
                 if (!Directory.Exists(tbFigureFolder.Text))
@@ -73,15 +58,12 @@ namespace endoDB
                     return;
                 }
             }
-            Settings.endoPrintFile = tbEndoPrintFile.Text;
             Settings.figureFolder = tbFigureFolder.Text;
             Settings.DBSrvIP = this.tbDBSrv.Text;
             Settings.DBSrvPort = this.tbDBsrvPort.Text;
             Settings.DBconnectID = this.tbDbID.Text;
             if (this.tbDBpw.Visible == true)
-            {
-                Settings.DBconnectPw = this.tbDBpw.Text;
-            }
+            { Settings.DBconnectPw = this.tbDBpw.Text; }
             Settings.saveSettings();
             this.Close();
         }
@@ -128,6 +110,7 @@ namespace endoDB
                 temp_pw = Settings.DBconnectPw;
             }
 
+            #region Npgsql
             // ログ取得を有効にする。
             /*NpgsqlEventLog.Level = LogLevel.Debug;
             NpgsqlEventLog.LogName = "NpgsqlTests.LogFile";
@@ -145,11 +128,10 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.WrongConnectingString, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            #endregion
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -164,59 +146,23 @@ namespace endoDB
             }
 
             if (conn.State == ConnectionState.Open)
-            {
-                MessageBox.Show(Properties.Resources.ConnectSuccess, "Successfully connected.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            { MessageBox.Show(Properties.Resources.ConnectSuccess, "Successfully connected.", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
-            {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            { MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
-        }
-
-        private void btSelectEndoFile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();  //OpenFileDialogクラスのインスタンスを作成
-            //はじめのファイル名を指定する
-            //はじめに「ファイル名」で表示される文字列を指定する
-            //ofd.FileName = "default.html";
-
-            //はじめに表示されるフォルダを指定する
-            //指定しない（空の文字列）の時は、現在のディレクトリが表示される
-            ofd.InitialDirectory = Application.StartupPath.ToString();
-            //[ファイルの種類]に表示される選択肢を指定する
-            //指定しないとすべてのファイルが表示される
-            ofd.Filter ="Xlsファイル(*.xls)|*.xls|すべてのファイル(*.*)|*.*";
-            ofd.FilterIndex = 1; //[ファイルの種類]ではじめに「Xlsファイル」が選択されているようにする
-            ofd.Title = Properties.Resources.Select;   //タイトルを設定する
-            ofd.RestoreDirectory = true; //ダイアログボックスを閉じる前に現在のディレクトリを復元するようにする
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                tbEndoPrintFile.Text = ofd.FileName;
-            }
         }
 
         private void btFigureFolder_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();  //OpenFileDialogクラスのインスタンスを作成
+            FolderBrowserDialog fbd = new FolderBrowserDialog();  //Make instance of OpenFileDialog class
 
-            //上部に表示する説明テキストを指定する
-            fbd.Description = "フォルダを指定してください。";
-            //ルートフォルダを指定する
-            //デフォルトでDesktop
-            fbd.RootFolder = Environment.SpecialFolder.Desktop;
-            //最初に選択するフォルダを指定する
-            //RootFolder以下にあるフォルダである必要がある
-            fbd.SelectedPath = @"C:\";
-            //ユーザーが新しいフォルダを作成できるようにする
-            //デフォルトでTrue
-            fbd.ShowNewFolderButton = true;
+            fbd.Description = Properties.Resources.SelectFolder; //Set description of dialog
+            fbd.RootFolder = Environment.SpecialFolder.Desktop; //Set root folder. Deault is desktop
+            fbd.SelectedPath = @"C:\"; //Set default pass
+            fbd.ShowNewFolderButton = true; //Allow user to make new folder. Default is true
 
             if (fbd.ShowDialog() == DialogResult.OK)
-            {
-                tbFigureFolder.Text = fbd.SelectedPath;
-            }
+            { tbFigureFolder.Text = fbd.SelectedPath; }
         }
     }
 }
