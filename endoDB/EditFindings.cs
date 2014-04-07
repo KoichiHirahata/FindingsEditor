@@ -603,7 +603,20 @@ namespace endoDB
                 if (MessageBox.Show(Properties.Resources.SaveChangesYN, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 { return; }
                 else
-                { saveFindingsData(); }
+                {
+                    saveFindingsData();
+
+                    if (cbExamStatus.SelectedValue.ToString() == "1")
+                    {
+                        if (MessageBox.Show(Properties.Resources.StillDraftWant2Change, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            tcExam.SelectedTab = tpFindings;
+                            btDiagnosed.Focus();
+                            e.Cancel = true;
+                            return;
+                        }
+                    }
+                }
             }
         }
 
@@ -613,6 +626,16 @@ namespace endoDB
             {
                 saveFindingsData();
                 edited = false;
+
+                if (cbExamStatus.SelectedValue.ToString() == "1")
+                {
+                    if (MessageBox.Show(Properties.Resources.StillDraftWant2Change, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        tcExam.SelectedTab = tpFindings;
+                        btDiagnosed.Focus();
+                        return;
+                    }
+                }
             }
             this.Close();
         }

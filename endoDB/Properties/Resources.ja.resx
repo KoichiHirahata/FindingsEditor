@@ -444,4 +444,7 @@
   <data name="Image" xml:space="preserve">
     <value>画像</value>
   </data>
+  <data name="StillDraftWant2Change" xml:space="preserve">
+    <value>草稿のままになっています。変更しますか？</value>
+  </data>
 </root>

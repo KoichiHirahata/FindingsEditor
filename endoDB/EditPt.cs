@@ -23,19 +23,13 @@ namespace endoDB
             pt1 = new patient(PtID, newPt);
             pNewPt = newPt;
             if (newPt)
-            {
-                this.tbPtID.Text = pt1.ptID;
-            }
+            { this.tbPtID.Text = pt1.ptID; }
             else
             {
                 if (patient.numberOfPatients(PtID) == 1)
-                {
-                    readPtData();
-                }
+                { readPtData(); }
                 else
-                {
-                    MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                { MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -44,20 +38,14 @@ namespace endoDB
             this.tbPtID.Text = pt1.ptID;
             this.tbPtName.Text = pt1.ptName;
             if (pt1.ptGender == patient.gender.female)
-            {
-                this.rbFemale.Checked = true;
-            }
+            { this.rbFemale.Checked = true; }
             else
-            {
-                this.rbMale.Checked = true;
-            }
+            { this.rbMale.Checked = true; }
             this.dateTimePicker1.Text = pt1.ptBirthday.ToShortDateString();
         }
 
         private void btSave_Click(object sender, EventArgs e)
-        {
-            savePt();
-        }
+        { savePt(); }
 
         private void savePt()
         {
@@ -152,14 +140,15 @@ namespace endoDB
         }
 
         private void btCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        { this.Close(); }
 
         private void dateTimePicker1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
-            { savePt(); }
+            {
+                btSave.Focus();
+                savePt();
+            }
         }
     }
 }
