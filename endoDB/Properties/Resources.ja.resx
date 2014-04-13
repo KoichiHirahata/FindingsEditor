@@ -447,4 +447,13 @@
   <data name="StillDraftWant2Change" xml:space="preserve">
     <value>草稿のままになっています。変更しますか？</value>
   </data>
+  <data name="Location2Long" xml:space="preserve">
+    <value>部位のテキストが長すぎます。（最大：255文字）</value>
+  </data>
+  <data name="ExamsAlreadyExist" xml:space="preserve">
+    <value>すでに検査が存在しています。</value>
+  </data>
+  <data name="ProcedureCancelled" xml:space="preserve">
+    <value>処理は中止されました。</value>
+  </data>
 </root>

@@ -259,6 +259,14 @@ namespace endoDB
 
             if (temp_dgv.Columns[e.ColumnIndex].Name == "btSelect")
             {
+                #region Error check
+                if (cbLocation.Text.Length > 255)
+                {
+                    MessageBox.Show(Properties.Resources.Location2Long, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                #endregion
+
                 add_diag = true;
 
                 diag_code = (int)temp_dgv.Rows[e.RowIndex].Cells["no"].Value;

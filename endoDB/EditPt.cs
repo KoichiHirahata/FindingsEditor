@@ -16,7 +16,7 @@ namespace endoDB
         private Boolean pNewPt { get; set; }
         private patient pt1;
 
-        public EditPt(string PtID, Boolean newPt)
+        public EditPt(string PtID, Boolean newPt, Boolean ID_editable)
         {
             InitializeComponent();
 
@@ -31,6 +31,11 @@ namespace endoDB
                 else
                 { MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
+
+            if (ID_editable)
+            { tbPtID.Enabled = true; }
+            else
+            { tbPtID.Enabled = false; }
         }
 
         private void readPtData()
@@ -45,7 +50,20 @@ namespace endoDB
         }
 
         private void btSave_Click(object sender, EventArgs e)
-        { savePt(); }
+        {
+            if (pt1.ptID == tbPtID.Text)
+            { savePt(); }
+            else
+            {
+                int ret = pt1.getNumOfExams();
+                if (ret == -1)
+                { MessageBox.Show(Properties.Resources.ProcedureCancelled, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                else if (ret == 0)
+                { savePt(); }
+                else if (ret > 0)
+                { MessageBox.Show(Properties.Resources.ExamsAlreadyExist + Properties.Resources.ProcedureCancelled, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+        }
 
         private void savePt()
         {

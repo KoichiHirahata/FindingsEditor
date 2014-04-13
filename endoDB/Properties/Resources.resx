@@ -447,4 +447,13 @@
   <data name="StillDraftWant2Change" xml:space="preserve">
     <value>It's still draft. Do you want to change?</value>
   </data>
+  <data name="Location2Long" xml:space="preserve">
+    <value>Location text is too long. (Max: 255 characters)</value>
+  </data>
+  <data name="ExamsAlreadyExist" xml:space="preserve">
+    <value>Exam(s) already exist.</value>
+  </data>
+  <data name="ProcedureCancelled" xml:space="preserve">
+    <value>Procedure has been cancelled.</value>
+  </data>
 </root>

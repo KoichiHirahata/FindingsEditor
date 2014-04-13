@@ -56,7 +56,7 @@ namespace endoDB
             {
                 case 0:
                     MessageBox.Show(Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    EditPt ep = new EditPt(this.tbPtId.Text, true);
+                    EditPt ep = new EditPt(this.tbPtId.Text, true, false);
                     ep.ShowDialog(this);
                     if (patient.numberOfPatients(this.tbPtId.Text) == 1)
                         ptLoad();
@@ -157,13 +157,15 @@ namespace endoDB
 
         private void btPtEdit_Click(object sender, EventArgs e)
         {
+            #region Error check
             if (this.tbPtId.Text.Length == 0)
             {
                 MessageBox.Show(Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            #endregion
 
-            EditPt ep = new EditPt(tbPtId.Text, false);
+            EditPt ep = new EditPt(tbPtId.Text, false, false);
             ep.ShowDialog(this);
             //Show new data.
             ptLoad();

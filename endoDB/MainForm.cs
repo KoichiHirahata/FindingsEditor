@@ -80,7 +80,7 @@ namespace endoDB
         #region New patient
         private void btNewPt_Click(object sender, EventArgs e)
         {
-            EditPt ep = new EditPt(getNewIDsample(), true);
+            EditPt ep = new EditPt(getNewIDsample(), true, true);
             ep.ShowDialog(this);
         }
 

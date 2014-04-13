@@ -195,14 +195,6 @@ namespace endoDB
             pt1.writePtInfo(pt1);
         }
 
-        private void btEditPtData_Click(object sender, EventArgs e)
-        {
-            EditPt ep = new EditPt(pt1.ptID, false);
-            ep.ShowDialog(this);
-            pt1.readPtData(pt1.ptID);
-            readPtData();
-        }
-
         private void PatientMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (this.tbPtInfo.Text != pt1.ptInfo)
@@ -223,9 +215,9 @@ namespace endoDB
             uckyFunctions.delLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'");
         }
 
-        private void btEditPtData_Click_1(object sender, EventArgs e)
+        private void btEditPtData_Click(object sender, EventArgs e)
         {
-            EditPt ep = new EditPt(Pt_ID.Text, false);
+            EditPt ep = new EditPt(Pt_ID.Text, false, true);
             ep.ShowDialog(this);
             //Show new data.
             pt1 = new patient(Pt_ID.Text, false);

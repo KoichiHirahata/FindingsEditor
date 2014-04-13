@@ -135,7 +135,7 @@
             resources.ApplyResources(this.btEditPtData, "btEditPtData");
             this.btEditPtData.Name = "btEditPtData";
             this.btEditPtData.UseVisualStyleBackColor = true;
-            this.btEditPtData.Click += new System.EventHandler(this.btEditPtData_Click_1);
+            this.btEditPtData.Click += new System.EventHandler(this.btEditPtData_Click);
             // 
             // Pt_ID
             // 

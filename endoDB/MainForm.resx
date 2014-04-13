@@ -146,7 +146,7 @@
     <value>Search examination</value>
   </data>
   <data name="myWordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="myWordsToolStripMenuItem.Text" xml:space="preserve">
     <value>My words</value>
@@ -194,7 +194,7 @@
     <value>Diagnoses</value>
   </data>
   <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="managementToolStripMenuItem.Text" xml:space="preserve">
     <value>Management</value>
