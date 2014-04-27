@@ -221,6 +221,8 @@ namespace endoDB
             dgvDiagnoses.Columns["diag_code"].Visible = false;
             dgvDiagnoses.Columns["suspect"].Visible = false;
             dgvDiagnoses.Columns["SQL_index"].Visible = false;
+            dgvDiagnoses.Columns["location"].Visible = false;
+            dgvDiagnoses.Columns["locate_str_after_diag"].Visible = false;
             #endregion
             #endregion
 
@@ -415,18 +417,18 @@ namespace endoDB
             string sql;
             if (Settings.isJP)
             {
-                sql = "SELECT diag_no, diag_code, name_jp AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
+                sql = "SELECT diag_no, diag_code, name_jp AS name, suspect, location, locate_str_after_diag FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
                     + " WHERE exam_no = " + exam.exam_id.ToString();
             }
             else
             {
-                sql = "SELECT diag_no, diag_code, name_eng AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
+                sql = "SELECT diag_no, diag_code, name_eng AS name, suspect, location, locate_str_after_diag FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
                     + " WHERE exam_no = " + exam.exam_id.ToString();
             }
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(dt);
-            dt.Columns.Add("SQL_index", Type.GetType("System.Int32"));//Add index column that necessary for delete.
+            dt.Columns.Add("SQL_index", Type.GetType("System.Int32"));//Add index column for delete row.
             setDiagnosesStr(); //Generate diagnoses string.
             DataView dv = dt.DefaultView;
             dv.Sort = "diag_no ASC";
@@ -447,7 +449,21 @@ namespace endoDB
                     else
                     { susp = ""; }
 
-                    dr.Cells["name"].Value = dr.Cells["name"].Value.ToString() + susp;
+                    string locationText;
+                    if (string.IsNullOrWhiteSpace(dr.Cells["location"].Value.ToString()))
+                    { locationText = ""; }
+                    else
+                    { locationText = dr.Cells["location"].Value.ToString(); }
+
+                    string display_str;
+                    if (string.IsNullOrWhiteSpace(dr.Cells["locate_str_after_diag"].Value.ToString()))
+                    { display_str = locationText + dr.Cells["name"].Value.ToString(); }
+                    else if ((Boolean)dr.Cells["locate_str_after_diag"].Value)
+                    { display_str = dr.Cells["name"].Value.ToString() + locationText; }
+                    else
+                    { display_str = locationText + dr.Cells["name"].Value.ToString(); }
+
+                    dr.Cells["name"].Value = display_str + susp;
                 }
             }
         }
@@ -464,13 +480,22 @@ namespace endoDB
                 #region dt
                 DataRow newRow = dt.NewRow();
                 newRow["diag_code"] = ad.diag_code;
+                newRow["location"] = ad.locationText;
+                newRow["locate_str_after_diag"] = ad.locate_str_after_diag;
                 DataRow[] drs;
                 drs = CLocalDB.localDB.Tables["diag_name"].Select("no=" + ad.diag_code);
+                string diagText = drs[0]["name"].ToString();
+                if (ad.locate_str_after_diag)
+                { diagText = diagText + ad.locationText; }
+                else
+                { diagText = ad.locationText + diagText; }
+
                 newRow["suspect"] = ad.suspect;
                 if (ad.suspect)
-                { newRow["name"] = drs[0]["name"].ToString() + Properties.Resources.Suspect; }
+                { newRow["name"] = diagText + Properties.Resources.Suspect; }
                 else
-                { newRow["name"] = drs[0]["name"].ToString(); }
+                { newRow["name"] = diagText; }
+
                 newRow["SQL_index"] = no4SqlIndex;
                 dt.Rows.Add(newRow);
                 resizeColumns();
@@ -500,12 +525,14 @@ namespace endoDB
             drs = CLocalDB.localDB.Tables["diag_name"].Select("no=0");
             newRow["name"] = drs[0]["name"].ToString();
             newRow["suspect"] = false;
+            newRow["location"] = "";
+            newRow["locate_str_after_diag"] = false;
             newRow["SQL_index"] = no4SqlIndex;
             dt.Rows.Add(newRow);
             #endregion
 
             #region stockedSQLs
-            string sql = "INSERT INTO diag(exam_no, diag_code, suspect) " + "VALUES(" + exam.exam_id + ", 0, false);";
+            string sql = "INSERT INTO diag(exam_no, diag_code, suspect, location, locate_str_after_diag) " + "VALUES(" + exam.exam_id + ", 0, false, '', false);";
 
             DataRow newStock = stockedSQLs.NewRow();
             newStock["SQL"] = sql;

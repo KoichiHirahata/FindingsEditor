@@ -264,12 +264,12 @@ namespace endoDB
                     command.Transaction = transaction;
                     command.ExecuteNonQuery();
 
-                    //トランザクションをコミットします。
+                    //Commit transaction
                     transaction.Commit();
                 }
                 catch (System.Exception) // ex)
                 {
-                    //トランザクションをロールバックします。
+                    //Roll back transaction
                     transaction.Rollback();
                     conn.Close();
                     //throw ex;

@@ -42,6 +42,8 @@ namespace endoDB
         public Boolean add_diag { get; set; }//default: false  EditFindings needs this property to know this form added diagnosis or not. 
         public int diag_code { get; set; }
         public Boolean suspect { get; set; }
+        public string locationText { get; set; }
+        public Boolean locate_str_after_diag { get; set; }
         public string stockSQL { get; set; }
 
         public AddDiagnosis(int _exam_id, int _examType)
@@ -275,9 +277,16 @@ namespace endoDB
                 else
                 { suspect = false; }
 
-                stockSQL = "INSERT INTO diag(exam_no, diag_code, suspect) "
+                if (cbLocation.Text.Length == 0)
+                { locationText = ""; }
+                else
+                { locationText = cbLocation.Text; }
+
+                locate_str_after_diag = cbLocateAfter.Checked;
+
+                stockSQL = "INSERT INTO diag(exam_no, diag_code, suspect, location, locate_str_after_diag) "
                     + "VALUES(" + exam_id + "," + temp_dgv.Rows[e.RowIndex].Cells["no"].Value.ToString() + ","
-                    + suspect.ToString() + ");";
+                    + suspect.ToString() + ",'" + locationText + "'," + locate_str_after_diag.ToString() + ");";
 
                 this.Close();
             }

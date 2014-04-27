@@ -124,6 +124,9 @@
   <data name="lb2.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
   </data>
+  <data name="&gt;&gt;cbLocateAfter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="bt4.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 28</value>
   </data>
@@ -134,7 +137,7 @@
     <value>MS UI Gothic, 11.25pt</value>
   </data>
   <data name="&gt;&gt;bt6.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="bt10.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
@@ -149,33 +152,35 @@
   <data name="bt11.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
   </data>
-  <data name="bt3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 84</value>
-  </data>
-  <data name="lb1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="cbLocateAfter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 651</value>
   </data>
   <data name="bt4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="bt12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 84</value>
   </data>
   <data name="dgv.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="&gt;&gt;bt1.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
+  </data>
+  <data name="cbLocateAfter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="bt10.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 28</value>
   </data>
+  <data name="lb1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
   <data name="bt3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dgv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;lbLocation.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="bt10.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="lb4.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
@@ -192,8 +197,8 @@
   <data name="&gt;&gt;bt3.Name" xml:space="preserve">
     <value>bt3</value>
   </data>
-  <data name="bt12.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;lbLocation.Name" xml:space="preserve">
+    <value>lbLocation</value>
   </data>
   <data name="&gt;&gt;bt4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -208,7 +213,7 @@
     <value>cbLocation</value>
   </data>
   <data name="&gt;&gt;bt8.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="bt6.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 84</value>
@@ -219,38 +224,39 @@
   <data name="bt2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 56</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
-  </data>
-  <data name="bt9.Text" xml:space="preserve">
-    <value>bt9</value>
   </data>
   <data name="&gt;&gt;bt2.Name" xml:space="preserve">
     <value>bt2</value>
   </data>
-  <data name="&gt;&gt;lb3.Name" xml:space="preserve">
-    <value>lb3</value>
-  </data>
   <data name="&gt;&gt;bt3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="bt1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 28</value>
+  <data name="&gt;&gt;bt6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
+  </data>
+  <data name="lbLocation.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
   <data name="bt10.Text" xml:space="preserve">
     <value>bt10</value>
   </data>
   <data name="&gt;&gt;bt7.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
+  </data>
+  <data name="cbLocateAfter.Text" xml:space="preserve">
+    <value>After diag</value>
   </data>
   <data name="bt7.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;bt1.Name" xml:space="preserve">
-    <value>bt1</value>
+  <data name="bt12.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="lb4.Text" xml:space="preserve">
     <value>lb4</value>
@@ -264,14 +270,14 @@
   <data name="cbLocation.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="bt10.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;bt1.Name" xml:space="preserve">
+    <value>bt1</value>
   </data>
   <data name="lb1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
   </data>
-  <data name="cbLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 649</value>
+  <data name="bt2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="bt8.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 56</value>
@@ -291,8 +297,8 @@
   <data name="&gt;&gt;cbLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bt7.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbLocation.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;bt8.Name" xml:space="preserve">
     <value>bt8</value>
@@ -304,7 +310,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;bt2.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="&gt;&gt;dgv.Parent" xml:space="preserve">
     <value>$this</value>
@@ -321,17 +327,26 @@
   <data name="bt10.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11.25pt</value>
   </data>
-  <data name="bt1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddDiagnosis</value>
   </data>
   <data name="&gt;&gt;bt5.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;bt4.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <data name="&gt;&gt;bt7.Name" xml:space="preserve">
     <value>bt7</value>
+  </data>
+  <data name="lbLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;bt10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbLocateAfter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lb4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -345,17 +360,14 @@
   <data name="lb1.Text" xml:space="preserve">
     <value>lb1</value>
   </data>
-  <data name="lbLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 652</value>
+  <data name="bt1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 28</value>
   </data>
-  <data name="lbLocation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
+  <data name="&gt;&gt;lb3.Name" xml:space="preserve">
+    <value>lb3</value>
   </data>
-  <data name="&gt;&gt;bt10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bt5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="bt9.Text" xml:space="preserve">
+    <value>bt9</value>
   </data>
   <data name="bt8.Text" xml:space="preserve">
     <value>bt8</value>
@@ -364,6 +376,9 @@
     <value>bt6</value>
   </data>
   <data name="&gt;&gt;bt4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bt10.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="lb3.Font" type="System.Drawing.Font, System.Drawing">
@@ -378,6 +393,9 @@
   <data name="bt1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="cbLocateAfter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
   <data name="&gt;&gt;lb3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -386,6 +404,9 @@
   </data>
   <data name="&gt;&gt;bt12.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="cbLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
   </data>
   <data name="&gt;&gt;lb2.Name" xml:space="preserve">
     <value>lb2</value>
@@ -417,20 +438,23 @@
   <data name="&gt;&gt;lbLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="cbLocateAfter.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
   <data name="&gt;&gt;lb2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;bt12.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="bt12.Text" xml:space="preserve">
     <value>bt12</value>
   </data>
-  <data name="lbLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 16</value>
+  <data name="&gt;&gt;lb1.Name" xml:space="preserve">
+    <value>lb1</value>
   </data>
   <data name="&gt;&gt;bt11.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="dgv.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 112</value>
@@ -459,62 +483,65 @@
   <data name="&gt;&gt;lb1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bt10.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bt12.Type" xml:space="preserve">
+  <data name="&gt;&gt;bt5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="bt4.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
   </data>
   <data name="&gt;&gt;dgv.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lb4.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 9</value>
   </data>
-  <data name="bt7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
-  </data>
-  <data name="&gt;&gt;bt1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="bt12.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
+  </data>
+  <data name="&gt;&gt;cbLocateAfter.Name" xml:space="preserve">
+    <value>cbLocateAfter</value>
+  </data>
+  <data name="cbLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 649</value>
   </data>
   <data name="bt5.Text" xml:space="preserve">
     <value>bt5</value>
   </data>
   <data name="&gt;&gt;bt9.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
   </data>
   <data name="bt5.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 56</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;bt1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lbLocation.Text" xml:space="preserve">
     <value>Location:</value>
   </data>
   <data name="&gt;&gt;cbLocation.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;bt10.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;lb3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="bt3.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11.25pt</value>
-  </data>
-  <data name="&gt;&gt;lb4.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="bt2.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11.25pt</value>
@@ -525,6 +552,9 @@
   <data name="lb3.Text" xml:space="preserve">
     <value>lb3</value>
   </data>
+  <data name="&gt;&gt;bt12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="bt8.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
   </data>
@@ -534,8 +564,11 @@
   <data name="bt11.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="bt2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="cbLocateAfter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 20</value>
+  </data>
+  <data name="lb1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="bt6.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -546,11 +579,11 @@
   <data name="bt6.Text" xml:space="preserve">
     <value>bt6</value>
   </data>
-  <data name="bt12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 84</value>
+  <data name="bt7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 22</value>
   </data>
-  <data name="cbLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="&gt;&gt;lb3.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="bt6.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
@@ -558,14 +591,14 @@
   <data name="&gt;&gt;lb2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bt6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dgv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="lbLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="bt1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 22</value>
   </data>
-  <data name="&gt;&gt;lb3.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;bt5.Name" xml:space="preserve">
+    <value>bt5</value>
   </data>
   <data name="&gt;&gt;bt9.Name" xml:space="preserve">
     <value>bt9</value>
@@ -582,8 +615,8 @@
   <data name="&gt;&gt;lbLocation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bt4.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;bt7.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="bt2.Text" xml:space="preserve">
     <value>bt2</value>
@@ -594,8 +627,8 @@
   <data name="lb3.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 9</value>
   </data>
-  <data name="lb1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+  <data name="bt3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 84</value>
   </data>
   <data name="bt5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -604,7 +637,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="lb1.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -612,17 +645,20 @@
   <data name="&gt;&gt;dgv.Name" xml:space="preserve">
     <value>dgv</value>
   </data>
-  <data name="&gt;&gt;lb1.Name" xml:space="preserve">
-    <value>lb1</value>
+  <data name="lbLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 652</value>
   </data>
   <data name="&gt;&gt;bt10.Name" xml:space="preserve">
     <value>bt10</value>
+  </data>
+  <data name="&gt;&gt;cbLocateAfter.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>442, 685</value>
   </data>
   <data name="&gt;&gt;bt3.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;bt11.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -633,23 +669,17 @@
   <data name="cbLocation.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="bt11.Text" xml:space="preserve">
-    <value>bt11</value>
-  </data>
   <data name="&gt;&gt;lb1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;bt9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbLocation.Name" xml:space="preserve">
-    <value>lbLocation</value>
+  <data name="bt11.Text" xml:space="preserve">
+    <value>bt11</value>
   </data>
   <data name="bt11.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 56</value>
-  </data>
-  <data name="&gt;&gt;bt5.Name" xml:space="preserve">
-    <value>bt5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

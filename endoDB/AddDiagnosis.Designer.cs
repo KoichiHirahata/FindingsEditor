@@ -48,6 +48,7 @@
             this.bt10 = new System.Windows.Forms.Button();
             this.cbLocation = new System.Windows.Forms.ComboBox();
             this.lbLocation = new System.Windows.Forms.Label();
+            this.cbLocateAfter = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,10 +184,17 @@
             resources.ApplyResources(this.lbLocation, "lbLocation");
             this.lbLocation.Name = "lbLocation";
             // 
+            // cbLocateAfter
+            // 
+            resources.ApplyResources(this.cbLocateAfter, "cbLocateAfter");
+            this.cbLocateAfter.Name = "cbLocateAfter";
+            this.cbLocateAfter.UseVisualStyleBackColor = true;
+            // 
             // AddDiagnosis
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbLocateAfter);
             this.Controls.Add(this.lbLocation);
             this.Controls.Add(this.cbLocation);
             this.Controls.Add(this.bt12);
@@ -235,5 +243,6 @@
         private System.Windows.Forms.Button bt10;
         private System.Windows.Forms.ComboBox cbLocation;
         private System.Windows.Forms.Label lbLocation;
+        private System.Windows.Forms.CheckBox cbLocateAfter;
     }
 }
