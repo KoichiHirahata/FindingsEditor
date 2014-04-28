@@ -55,9 +55,7 @@ namespace endoDB
         }
         //タイマー処理に必要な関数。ここでupdateLockTimeを呼び出す。
         private void timer_Tick(object sender, EventArgs e)
-        {
-            uckyFunctions.updateLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'");
-        }
+        { uckyFunctions.updateLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'"); }
 
         private void readPtData()
         {
@@ -169,7 +167,7 @@ namespace endoDB
                 ef.ShowDialog(this);
                 ef.Dispose();
             }
-            else if(dgv.Columns[e.ColumnIndex].Name=="btImage")
+            else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
             {
                 if (System.IO.File.Exists(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe"))
                 { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", pt1.ptID); }
@@ -212,7 +210,6 @@ namespace endoDB
                         break;
                 }
             }
-            uckyFunctions.delLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'");
         }
 
         private void btEditPtData_Click(object sender, EventArgs e)
@@ -222,6 +219,12 @@ namespace endoDB
             //Show new data.
             pt1 = new patient(Pt_ID.Text, false);
             readPtData();
+        }
+
+        private void PatientMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer.Stop();
+            uckyFunctions.delLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'");
         }
     }
 }
