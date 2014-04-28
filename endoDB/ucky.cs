@@ -200,7 +200,6 @@ namespace endoDB
     }
     #endregion
 
-    //便利関数入れとこう。
     public class uckyFunctions
     {
         #region 便利関数
@@ -413,7 +412,7 @@ namespace endoDB
         }
         #endregion
 
-        #region 低汎用性関数
+        #region Low versatility functions
         public static Boolean canEdit(string tableName, string columnName, string symbol, string keyString)
         {
             #region Npgsql
@@ -433,18 +432,13 @@ namespace endoDB
             }
             #endregion
 
-            //
-            //ここから下がデータの読み込み部分。
-            //
             string sql =
                 "SELECT lock_time, terminal_ip FROM " + tableName + " WHERE " + columnName + " " + symbol + " " + keyString;
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             try
-            {
-                da.Fill(dt);
-            }
+            { da.Fill(dt); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -471,8 +465,8 @@ namespace endoDB
             else
             {
                 //check IP address.
-                string hostname = Dns.GetHostName();  // ホスト名を取得する
-                IPAddress[] ip = Dns.GetHostAddresses(hostname);  // ホスト名からIPアドレスを取得する
+                string hostname = Dns.GetHostName();
+                IPAddress[] ip = Dns.GetHostAddresses(hostname);
 
                 if (dt.Rows[0]["terminal_ip"].ToString() == ip[0].ToString())
                 { return true; }
@@ -483,11 +477,10 @@ namespace endoDB
 
         public static void updateLockTimeIP(string tableName, string columnName, string symbol, string keyString)
         {
-            string hostname = Dns.GetHostName();  // ホスト名を取得する
-            IPAddress[] ip = Dns.GetHostAddresses(hostname);  // ホスト名からIPアドレスを取得する
+            string hostname = Dns.GetHostName();
+            IPAddress[] ip = Dns.GetHostAddresses(hostname);
             string SQL = "UPDATE " + tableName + " SET lock_time=current_timestamp, terminal_ip='" + ip[0].ToString() +
                 "' WHERE " + columnName + " " + symbol + " " + keyString;
-            //MessageBox.Show(SQL);
             switch (uckyFunctions.ExeNonQuery(SQL))
             {
                 case uckyFunctions.functionResult.success:
@@ -538,6 +531,7 @@ namespace endoDB
             if (sql == null)
                 return -1;
 
+            #region Npgsql
             NpgsqlConnection conn;
 
             try
@@ -551,9 +545,7 @@ namespace endoDB
                 return -1;
             }
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -566,10 +558,7 @@ namespace endoDB
                 conn.Close();
                 return -1;
             }
-
-            //
-            //ここから下がデータの読み込み部分。
-            //
+            #endregion
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -578,7 +567,7 @@ namespace endoDB
 
             return int.Parse(dt.Rows.Count.ToString());
         }
-        #endregion
+            #endregion
     }
 
     #region db_operator //this class means user.
@@ -1083,9 +1072,7 @@ namespace endoDB
                 return -1;
             }
             #endregion
-            //
-            //ここから下がデータの読み込み部分。
-            //
+
             string sql = "SELECT COUNT(*) FROM exam WHERE operator1='" + operator_id + "' OR operator2='" + operator_id
                 + "' OR operator3='" + operator_id + "' OR operator4='" + operator_id
                 + "' OR operator5='" + operator_id + "'";
@@ -1128,9 +1115,7 @@ namespace endoDB
                 return -1;
             }
             #endregion
-            //
-            //ここから下がデータの読み込み部分。
-            //
+
             string sql = "SELECT * FROM operator WHERE operator_id='" + opID + "'";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);

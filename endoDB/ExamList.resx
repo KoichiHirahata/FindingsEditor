@@ -117,14 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btDone.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btChecked.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 12</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btClose.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -149,6 +146,9 @@
   </data>
   <data name="&gt;&gt;btCanceled.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 561</value>
   </data>
   <data name="btClose.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11pt</value>
@@ -195,6 +195,9 @@
   <data name="&gt;&gt;btDone.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="btCanceled.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="btClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -225,8 +228,8 @@
   <data name="btCanceled.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11pt</value>
   </data>
-  <data name="btCanceled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
+  <data name="&gt;&gt;btBlankDraft.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="btCanceled.Location" type="System.Drawing.Point, System.Drawing">
     <value>667, 12</value>
@@ -263,9 +266,6 @@
   </data>
   <data name="&gt;&gt;btDone.Name" xml:space="preserve">
     <value>btDone</value>
-  </data>
-  <data name="&gt;&gt;btCanceled.Name" xml:space="preserve">
-    <value>btCanceled</value>
   </data>
   <data name="btBlankDraft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -342,25 +342,22 @@
   <data name="&gt;&gt;btChecked.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btCanceled.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="btCanceled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 561</value>
+  <data name="btDone.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btBlankDraft.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;btCanceled.Name" xml:space="preserve">
+    <value>btCanceled</value>
   </data>
   <data name="btShowAll.Text" xml:space="preserve">
     <value>All (A)</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ja</value>
   </metadata>
 </root>

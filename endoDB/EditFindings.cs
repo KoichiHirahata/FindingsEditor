@@ -43,8 +43,8 @@ namespace endoDB
             {
                 uckyFunctions.updateLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
 
-                //以下、タイマー処理
-                timer.Interval = 30000;  //単位はmsec。
+                //Timer procedure
+                timer.Interval = 30000;  //Unit is msec
                 timer.Tick += new EventHandler(timer_Tick);
                 timer.Start();
 
@@ -1105,9 +1105,17 @@ namespace endoDB
             Clipboard.SetDataObject(str);
         }
 
+        #region Timer
         //This function necessary for timer procedure. Call updateLockTime.
         private void timer_Tick(object sender, EventArgs e)
         { uckyFunctions.updateLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'"); }
+
+        private void EditFindings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer.Stop();
+            uckyFunctions.delLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
+        }
+        #endregion
 
         #region edited to true
         private void tbPurpose_TextChanged(object sender, EventArgs e)
