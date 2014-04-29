@@ -129,6 +129,12 @@ namespace endoDB
             //Open EditOperator form
             if (dgv.Columns[e.ColumnIndex].Name == Properties.Resources.Edit)
             {
+                if (!uckyFunctions.canEdit("operator", "operator_id", "LIKE", "'" + dgv.Rows[e.RowIndex].Cells[2].Value.ToString() + "'"))
+                {
+                    MessageBox.Show(Properties.Resources.PermissionDenied, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 EditOperator eo = new EditOperator(false, dgv.Rows[e.RowIndex].Cells[2].Value.ToString());
                 eo.ShowDialog(this);
                 opList.Rows.Clear();

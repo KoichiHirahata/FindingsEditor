@@ -53,7 +53,7 @@ namespace endoDB
             { MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
         }
-        //タイマー処理に必要な関数。ここでupdateLockTimeを呼び出す。
+        //This function is necessary for lock
         private void timer_Tick(object sender, EventArgs e)
         { uckyFunctions.updateLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'"); }
 
@@ -224,7 +224,8 @@ namespace endoDB
         private void PatientMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             timer.Stop();
-            uckyFunctions.delLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'");
+            if (pCanEdit)
+            { uckyFunctions.delLockTimeIP("patient", "pt_id", "LIKE", "'" + this.Pt_ID.Text + "'"); }
         }
     }
 }

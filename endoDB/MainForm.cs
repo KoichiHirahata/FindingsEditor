@@ -157,7 +157,7 @@ namespace endoDB
         private void operatorManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             operatorList opl = new operatorList();
-            opl.Show();
+            opl.ShowDialog(this);
         }
 
         private void wordsToolStripMenuItem_Click(object sender, EventArgs e)

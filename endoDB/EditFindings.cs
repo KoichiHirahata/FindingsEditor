@@ -1113,7 +1113,8 @@ namespace endoDB
         private void EditFindings_FormClosed(object sender, FormClosedEventArgs e)
         {
             timer.Stop();
-            uckyFunctions.delLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
+            if (canEdit)
+            { uckyFunctions.delLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'"); }
         }
         #endregion
 

@@ -167,6 +167,7 @@
             this.Controls.Add(this.lbOperatorID);
             this.Name = "EditOperator";
             this.ShowInTaskbar = false;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditOperator_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

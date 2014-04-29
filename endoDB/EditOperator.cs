@@ -14,6 +14,7 @@ namespace endoDB
     {
         private Boolean isNew { get; set; }
         private examOperator examOp { get; set; }
+        Timer timer = new Timer();
 
         public EditOperator(Boolean _isNew, string _operator_id)
         {
@@ -52,11 +53,21 @@ namespace endoDB
                 this.cbAdminOp.Checked = examOp.admin_op;
                 this.tbOperatorPw.Text = examOp.pw;
                 this.tbConfirmPw.Text = examOp.pw;
+
+                #region timer
+                uckyFunctions.updateLockTimeIP("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'");
+
+                //Below timer procedure
+                timer.Interval = 30000;  //Unit is msec
+                timer.Tick += new EventHandler(timer_Tick);
+                timer.Start();
+                #endregion
             }
         }
 
         private void btSave_Click(object sender, EventArgs e)
         {
+            #region Error check
             if (this.tbOperatorID.TextLength == 0)
             {
                 MessageBox.Show(Properties.Resources.NoID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,6 +120,7 @@ namespace endoDB
                     return;
                 }
             }
+            #endregion
 
             switch (examOp.saveOperatorData(this.tbOperatorID.Text, this.tbOperatorName.Text, (short)this.cbDepartment.SelectedValue,
                 this.tbOperatorPw.Text, this.cbAdminOp.Checked, (short)this.cbCategory.SelectedValue,
@@ -127,9 +139,16 @@ namespace endoDB
         }
 
         private void btCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        { this.Close(); }
 
+        private void timer_Tick(object sender, EventArgs e)
+        { uckyFunctions.updateLockTimeIP("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'"); }
+
+        private void EditOperator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer.Stop();
+            if (uckyFunctions.canEdit("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'"))
+            { uckyFunctions.delLockTimeIP("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'"); }
+        }
     }
 }
