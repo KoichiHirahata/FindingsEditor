@@ -158,7 +158,6 @@
     <Compile Include="SearchDepart.Designer.cs">
       <DependentUpon>SearchDepart.cs</DependentUpon>
     </Compile>
-    <Compile Include="UseExcel.cs" />
     <Compile Include="initialSettings.cs">
       <SubType>Form</SubType>
     </Compile>
