@@ -117,595 +117,610 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="searchByDepartmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="searchByDepartmentToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search by department</value>
-  </data>
-  <data name="searchByOperator1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="searchByOperator1ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search by operator 1</value>
-  </data>
-  <data name="searchByOperator15ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 22</value>
-  </data>
-  <data name="searchByOperator15ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search by operator 1-5</value>
-  </data>
-  <data name="searchExaminationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 20</value>
-  </data>
-  <data name="searchExaminationToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search examination</value>
-  </data>
-  <data name="myWordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 22</value>
-  </data>
-  <data name="myWordsToolStripMenuItem.Text" xml:space="preserve">
-    <value>My words</value>
-  </data>
-  <data name="editOperatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="editOperatorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Operator</value>
-  </data>
-  <data name="wordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="wordsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Words</value>
-  </data>
-  <data name="defaultFindingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="defaultFindingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Default findings</value>
-  </data>
-  <data name="equipmentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="equipmentsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Equipments</value>
-  </data>
-  <data name="placeRoomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="placeRoomToolStripMenuItem.Text" xml:space="preserve">
-    <value>Place (Room)</value>
-  </data>
-  <data name="wardToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="wardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ward</value>
-  </data>
-  <data name="diagnosesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="diagnosesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Diagnoses</value>
-  </data>
-  <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 22</value>
-  </data>
-  <data name="managementToolStripMenuItem.Text" xml:space="preserve">
-    <value>Management</value>
-  </data>
-  <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
-  </data>
-  <data name="optionToolStripMenuItem.Text" xml:space="preserve">
-    <value>Option</value>
-  </data>
-  <data name="logOutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="logOutToolStripMenuItem.Text" xml:space="preserve">
-    <value>LogOut</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>645, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lbUserName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbUserName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbUserName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 35</value>
-  </data>
-  <data name="lbUserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 16</value>
-  </data>
-  <data name="lbUserName.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lbUserName.Text" xml:space="preserve">
-    <value>UserName</value>
-  </data>
-  <data name="&gt;&gt;lbUserName.Name" xml:space="preserve">
-    <value>lbUserName</value>
-  </data>
-  <data name="&gt;&gt;lbUserName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbUserName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbUserName.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lbUser.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbUser.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbUser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbUser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 35</value>
-  </data>
-  <data name="lbUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 16</value>
-  </data>
-  <data name="lbUser.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lbUser.Text" xml:space="preserve">
-    <value>User:</value>
-  </data>
-  <data name="&gt;&gt;lbUser.Name" xml:space="preserve">
-    <value>lbUser</value>
-  </data>
-  <data name="&gt;&gt;lbUser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbUser.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbUser.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="btSearchPt.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="btSearchPt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btSearchPt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 174</value>
-  </data>
-  <data name="btSearchPt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 27</value>
-  </data>
-  <data name="btSearchPt.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btSearchPt.Text" xml:space="preserve">
-    <value>Search patient</value>
-  </data>
-  <data name="&gt;&gt;btSearchPt.Name" xml:space="preserve">
-    <value>btSearchPt</value>
+  <data name="btNewPt.Text" xml:space="preserve">
+    <value>New patient</value>
   </data>
   <data name="&gt;&gt;btSearchPt.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btSearchPt.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btSearchPt.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btSchedule.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 15.75pt</value>
-  </data>
-  <data name="btSchedule.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btSchedule.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 74</value>
-  </data>
-  <data name="btSchedule.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 51</value>
-  </data>
-  <data name="btSchedule.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btSchedule.Text" xml:space="preserve">
-    <value>Today's examination</value>
-  </data>
-  <data name="&gt;&gt;btSchedule.Name" xml:space="preserve">
-    <value>btSchedule</value>
-  </data>
-  <data name="&gt;&gt;btSchedule.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btSchedule.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btSchedule.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btNewPt.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 11pt</value>
-  </data>
-  <data name="btNewPt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btNewPt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 174</value>
-  </data>
-  <data name="btNewPt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
-  </data>
-  <data name="btNewPt.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btNewPt.Text" xml:space="preserve">
-    <value>New patient</value>
-  </data>
-  <data name="&gt;&gt;btNewPt.Name" xml:space="preserve">
-    <value>btNewPt</value>
-  </data>
-  <data name="&gt;&gt;btNewPt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btNewPt.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btNewPt.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btPtView.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="btPtView.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btPtView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 174</value>
-  </data>
-  <data name="btPtView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 27</value>
-  </data>
-  <data name="btPtView.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btPtView.Text" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="&gt;&gt;btPtView.Name" xml:space="preserve">
-    <value>btPtView</value>
-  </data>
-  <data name="&gt;&gt;btPtView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btPtView.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btPtView.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbPtID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbPtID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbPtID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbPtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 179</value>
-  </data>
-  <data name="lbPtID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 16</value>
-  </data>
-  <data name="lbPtID.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="lbPtID.Text" xml:space="preserve">
-    <value>Patient ID:</value>
-  </data>
-  <data name="&gt;&gt;lbPtID.Name" xml:space="preserve">
-    <value>lbPtID</value>
-  </data>
-  <data name="&gt;&gt;lbPtID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPtID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbPtID.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="tbPtID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="tbPtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 176</value>
-  </data>
-  <data name="tbPtID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 23</value>
-  </data>
-  <data name="tbPtID.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tbPtID.Name" xml:space="preserve">
-    <value>tbPtID</value>
-  </data>
-  <data name="&gt;&gt;tbPtID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPtID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tbPtID.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btNewExamination.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 15.75pt</value>
-  </data>
-  <data name="btNewExamination.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btNewExamination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>331, 74</value>
-  </data>
-  <data name="btNewExamination.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 51</value>
-  </data>
-  <data name="btNewExamination.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btNewExamination.Text" xml:space="preserve">
-    <value>New examination</value>
-  </data>
-  <data name="&gt;&gt;btNewExamination.Name" xml:space="preserve">
-    <value>btNewExamination</value>
-  </data>
-  <data name="&gt;&gt;btNewExamination.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btNewExamination.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btNewExamination.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btDateSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="btDateSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btDateSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 233</value>
-  </data>
-  <data name="btDateSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 27</value>
-  </data>
-  <data name="btDateSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btDateSearch.Text" xml:space="preserve">
-    <value>Search by date</value>
-  </data>
-  <data name="&gt;&gt;btDateSearch.Name" xml:space="preserve">
-    <value>btDateSearch</value>
-  </data>
-  <data name="&gt;&gt;btDateSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btDateSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btDateSearch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbDate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 238</value>
-  </data>
-  <data name="lbDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 16</value>
-  </data>
-  <data name="lbDate.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="lbDate.Text" xml:space="preserve">
-    <value>Date:</value>
-  </data>
-  <data name="&gt;&gt;lbDate.Name" xml:space="preserve">
-    <value>lbDate</value>
+  <data name="&gt;&gt;optionToolStripMenuItem.Name" xml:space="preserve">
+    <value>optionToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;lbDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbDate.Parent" xml:space="preserve">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="defaultFindingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbUser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="lbDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btSearchPt.Name" xml:space="preserve">
+    <value>btSearchPt</value>
+  </data>
+  <data name="tbPtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 176</value>
+  </data>
+  <data name="searchByOperator15ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search by operator 1-5</value>
+  </data>
+  <data name="equipmentsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Equipments</value>
+  </data>
+  <data name="wardToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="&gt;&gt;btDateSearch.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbDate.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dtpExamDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="dtpExamDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="dtpExamDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 236</value>
-  </data>
-  <data name="dtpExamDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
-  </data>
-  <data name="dtpExamDate.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;dtpExamDate.Name" xml:space="preserve">
-    <value>dtpExamDate</value>
-  </data>
-  <data name="&gt;&gt;dtpExamDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpExamDate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dtpExamDate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>645, 288</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>MainForm</value>
-  </data>
-  <data name="&gt;&gt;searchExaminationToolStripMenuItem.Name" xml:space="preserve">
-    <value>searchExaminationToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;searchExaminationToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchByDepartmentToolStripMenuItem.Name" xml:space="preserve">
-    <value>searchByDepartmentToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;searchByDepartmentToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;searchByOperator1ToolStripMenuItem.Name" xml:space="preserve">
     <value>searchByOperator1ToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;searchByOperator1ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="&gt;&gt;searchByOperator15ToolStripMenuItem.Name" xml:space="preserve">
-    <value>searchByOperator15ToolStripMenuItem</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dtpExamDate.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;searchByOperator15ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbUser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 16</value>
   </data>
-  <data name="&gt;&gt;optionToolStripMenuItem.Name" xml:space="preserve">
-    <value>optionToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;optionToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;myWordsToolStripMenuItem.Name" xml:space="preserve">
-    <value>myWordsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;myWordsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;managementToolStripMenuItem.Name" xml:space="preserve">
-    <value>managementToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;managementToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;editOperatorToolStripMenuItem.Name" xml:space="preserve">
-    <value>editOperatorToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;editOperatorToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;wordsToolStripMenuItem.Name" xml:space="preserve">
-    <value>wordsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;wordsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;defaultFindingsToolStripMenuItem.Name" xml:space="preserve">
-    <value>defaultFindingsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;defaultFindingsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentsToolStripMenuItem.Name" xml:space="preserve">
-    <value>equipmentsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;equipmentsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;placeRoomToolStripMenuItem.Name" xml:space="preserve">
-    <value>placeRoomToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;placeRoomToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;wardToolStripMenuItem.Name" xml:space="preserve">
-    <value>wardToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;wardToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btNewPt.Name" xml:space="preserve">
+    <value>btNewPt</value>
   </data>
   <data name="&gt;&gt;diagnosesToolStripMenuItem.Name" xml:space="preserve">
     <value>diagnosesToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;diagnosesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dtpExamDate.Name" xml:space="preserve">
+    <value>dtpExamDate</value>
   </data>
-  <data name="&gt;&gt;logOutToolStripMenuItem.Name" xml:space="preserve">
-    <value>logOutToolStripMenuItem</value>
+  <data name="&gt;&gt;searchByDepartmentToolStripMenuItem.Name" xml:space="preserve">
+    <value>searchByDepartmentToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;logOutToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>645, 24</value>
+  </data>
+  <data name="&gt;&gt;lbUserName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btNewExamination.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 15.75pt</value>
+  </data>
+  <data name="lbUserName.Text" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="btDateSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 27</value>
+  </data>
+  <data name="searchExaminationToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search examination</value>
+  </data>
+  <data name="lbDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 238</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btSchedule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 51</value>
+  </data>
+  <data name="&gt;&gt;dtpExamDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbDate.Text" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="placeRoomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="lbUserName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="wardToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ward</value>
+  </data>
+  <data name="btPtView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 27</value>
+  </data>
+  <data name="lbUser.Text" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btSchedule.Name" xml:space="preserve">
+    <value>btSchedule</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
+  <data name="&gt;&gt;wordsToolStripMenuItem.Name" xml:space="preserve">
+    <value>wordsToolStripMenuItem</value>
+  </data>
+  <data name="searchByOperator1ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search by operator 1</value>
+  </data>
+  <data name="&gt;&gt;lbUserName.Name" xml:space="preserve">
+    <value>lbUserName</value>
+  </data>
+  <data name="searchExaminationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 20</value>
+  </data>
+  <data name="&gt;&gt;lbDate.Name" xml:space="preserve">
+    <value>lbDate</value>
+  </data>
+  <data name="&gt;&gt;btNewPt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbUserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 16</value>
+  </data>
+  <data name="&gt;&gt;btSchedule.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myWordsToolStripMenuItem.Name" xml:space="preserve">
+    <value>myWordsToolStripMenuItem</value>
+  </data>
+  <data name="btSchedule.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="wordsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Words</value>
+  </data>
+  <data name="editOperatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="&gt;&gt;dtpExamDate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btPtView.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="logOutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="btSchedule.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 74</value>
+  </data>
+  <data name="&gt;&gt;btSchedule.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbUser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btNewExamination.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;placeRoomToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btSchedule.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;equipmentsToolStripMenuItem.Name" xml:space="preserve">
+    <value>equipmentsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;lbPtID.Name" xml:space="preserve">
+    <value>lbPtID</value>
+  </data>
+  <data name="departmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="&gt;&gt;searchByOperator15ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="diagnosesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Diagnoses</value>
+  </data>
+  <data name="lbPtID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btSchedule.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btSearchPt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btNewPt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="tbPtID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 23</value>
+  </data>
+  <data name="&gt;&gt;optionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbUser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbPtID.Name" xml:space="preserve">
+    <value>tbPtID</value>
+  </data>
+  <data name="lbUser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 35</value>
+  </data>
+  <data name="&gt;&gt;searchByOperator1ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbUserName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btSearchPt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 27</value>
+  </data>
+  <data name="&gt;&gt;lbUser.Name" xml:space="preserve">
+    <value>lbUser</value>
+  </data>
+  <data name="&gt;&gt;editOperatorToolStripMenuItem.Name" xml:space="preserve">
+    <value>editOperatorToolStripMenuItem</value>
+  </data>
+  <data name="placeRoomToolStripMenuItem.Text" xml:space="preserve">
+    <value>Place (Room)</value>
+  </data>
+  <data name="lbDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;placeRoomToolStripMenuItem.Name" xml:space="preserve">
+    <value>placeRoomToolStripMenuItem</value>
+  </data>
+  <data name="lbDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 16</value>
+  </data>
+  <data name="btDateSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 233</value>
+  </data>
+  <data name="lbUserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 35</value>
+  </data>
+  <data name="&gt;&gt;lbPtID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="searchByDepartmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search by department</value>
+  </data>
+  <data name="btNewExamination.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lbPtID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editOperatorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPtID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btNewPt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
+  </data>
+  <data name="lbPtID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 16</value>
+  </data>
+  <data name="&gt;&gt;myWordsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btNewExamination.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dtpExamDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 236</value>
+  </data>
+  <data name="dtpExamDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btPtView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btNewPt.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btDateSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;searchExaminationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbPtID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btDateSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;searchExaminationToolStripMenuItem.Name" xml:space="preserve">
+    <value>searchExaminationToolStripMenuItem</value>
+  </data>
+  <data name="managementToolStripMenuItem.Text" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="&gt;&gt;btPtView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;logOutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;managementToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btDateSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="btNewExamination.Text" xml:space="preserve">
+    <value>New examination</value>
+  </data>
+  <data name="lbUser.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;searchByDepartmentToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wordsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpExamDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchByOperator15ToolStripMenuItem.Name" xml:space="preserve">
+    <value>searchByOperator15ToolStripMenuItem</value>
+  </data>
+  <data name="logOutToolStripMenuItem.Text" xml:space="preserve">
+    <value>LogOut</value>
+  </data>
+  <data name="myWordsToolStripMenuItem.Text" xml:space="preserve">
+    <value>My words</value>
+  </data>
+  <data name="&gt;&gt;btPtView.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbUserName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btNewExamination.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 51</value>
+  </data>
+  <data name="&gt;&gt;tbPtID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logOutToolStripMenuItem.Name" xml:space="preserve">
+    <value>logOutToolStripMenuItem</value>
+  </data>
+  <data name="lbDate.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btPtView.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="&gt;&gt;defaultFindingsToolStripMenuItem.Name" xml:space="preserve">
+    <value>defaultFindingsToolStripMenuItem</value>
+  </data>
+  <data name="defaultFindingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Default findings</value>
+  </data>
+  <data name="&gt;&gt;lbUserName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="diagnosesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="&gt;&gt;defaultFindingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPtID.Text" xml:space="preserve">
+    <value>Patient ID:</value>
+  </data>
+  <data name="btDateSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="btDateSearch.Text" xml:space="preserve">
+    <value>Search by date</value>
+  </data>
+  <data name="&gt;&gt;lbPtID.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="optionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="&gt;&gt;departmentToolStripMenuItem.Name" xml:space="preserve">
+    <value>departmentToolStripMenuItem</value>
+  </data>
+  <data name="btNewExamination.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbPtID.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="equipmentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="&gt;&gt;equipmentsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btPtView.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dtpExamDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="departmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="lbPtID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btSearchPt.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="searchByDepartmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="&gt;&gt;btSchedule.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btPtView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btSearchPt.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="myWordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="&gt;&gt;btDateSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btSchedule.Text" xml:space="preserve">
+    <value>Today's examination</value>
+  </data>
+  <data name="btSearchPt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lbUser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dtpExamDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 23</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="btNewPt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 174</value>
+  </data>
+  <data name="btNewPt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 11pt</value>
+  </data>
+  <data name="&gt;&gt;lbDate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="searchByOperator15ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="&gt;&gt;wardToolStripMenuItem.Name" xml:space="preserve">
+    <value>wardToolStripMenuItem</value>
+  </data>
+  <data name="searchByOperator1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="btSearchPt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btNewExamination.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>645, 288</value>
+  </data>
+  <data name="btNewPt.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;departmentToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btPtView.Name" xml:space="preserve">
+    <value>btPtView</value>
+  </data>
+  <data name="&gt;&gt;btNewPt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btSearchPt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 174</value>
+  </data>
+  <data name="lbPtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 179</value>
+  </data>
+  <data name="wordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="btSearchPt.Text" xml:space="preserve">
+    <value>Search patient</value>
+  </data>
+  <data name="btNewExamination.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 74</value>
+  </data>
+  <data name="btPtView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 174</value>
+  </data>
+  <data name="lbUser.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btNewExamination.Name" xml:space="preserve">
+    <value>btNewExamination</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;lbDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;diagnosesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbUserName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;managementToolStripMenuItem.Name" xml:space="preserve">
+    <value>managementToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;lbUser.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;btDateSearch.Name" xml:space="preserve">
+    <value>btDateSearch</value>
+  </data>
+  <data name="editOperatorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="&gt;&gt;wardToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPtID.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;tbPtID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbPtID.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ja</value>
+  </metadata>
 </root>

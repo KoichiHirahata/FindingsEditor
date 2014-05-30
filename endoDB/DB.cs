@@ -38,25 +38,6 @@ namespace endoDB
             getWords(); //words table
         }
 
-        public static void updateLockTime(string tableName, string columnName, string symbol, string keyString)
-        {
-            string hostname = Dns.GetHostName();  // ホスト名を取得する
-            IPAddress[] ip = Dns.GetHostAddresses(hostname);  // ホスト名からIPアドレスを取得する
-            string SQL = "UPDATE " + tableName + " SET lock_time=current_timestamp, terminal_ip='" + ip[0].ToString() +
-                "' WHERE " + columnName + " " + symbol + " " + keyString;
-            switch (uckyFunctions.ExeNonQuery(SQL))
-            {
-                case uckyFunctions.functionResult.success:
-                    return;
-                case uckyFunctions.functionResult.failed:
-                    MessageBox.Show(Properties.Resources.LockFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                case uckyFunctions.functionResult.connectionError:
-                    MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-            }
-        }
-
         #region ExamType
         private static void getExamType()
         {
@@ -139,14 +120,13 @@ namespace endoDB
 
         private static void getWard()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -157,6 +137,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT ward_no, ward FROM ward WHERE ward_visible = true ORDER BY ward_order";
 
@@ -169,14 +150,13 @@ namespace endoDB
 
         private static void getDepartment()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -187,6 +167,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT code, name1 FROM department WHERE dp_visible = true ORDER BY dp_order";
 

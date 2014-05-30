@@ -11,11 +11,11 @@ using Npgsql;
 
 namespace endoDB
 {
-    public partial class EditWard : EditFormBase
+    public partial class EditDepartment : EditFormBase
     {
-        private string sql = "SELECT ward_no, ward, ward_order, ward_visible FROM ward ORDER BY ward_no"; //***This code have to be changed when reuse
+        private string sql = "SELECT code, name1, dp_order, dp_visible FROM department ORDER BY code"; //***This code have to be changed when reuse
 
-        public EditWard()
+        public EditDepartment()
         {
             InitializeComponent();
             this.Width = 500;
@@ -89,7 +89,7 @@ namespace endoDB
                 saveDataTable(); //Without this code, deleting new record will call error;
 
                 //If object was used, refuse delete.
-                int i = uckyFunctions.CountTimes("exam", "ward_id", temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString(), "string"); //***This code have to be changed when reuse
+                int i = uckyFunctions.CountTimes("exam", "department", temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString(), "int"); //***This code have to be changed when reuse
                 if (i > 0)
                 { MessageBox.Show(Properties.Resources.CouldntDelData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 else if (i == -1)
@@ -149,7 +149,7 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
 
             //InsertCommand
-            da.InsertCommand = new NpgsqlCommand("INSERT INTO ward(ward_no, ward, ward_order, ward_visible) " +
+            da.InsertCommand = new NpgsqlCommand("INSERT INTO department(code, name1, dp_order, dp_visible) " +
                         " values (:a, :b, :c, :d)", conn);
 
             da.InsertCommand.Parameters.Add(new NpgsqlParameter("a", DbType.Int16));
@@ -162,17 +162,17 @@ namespace endoDB
             da.InsertCommand.Parameters[2].Direction = ParameterDirection.Input;
             da.InsertCommand.Parameters[3].Direction = ParameterDirection.Input;
 
-            da.InsertCommand.Parameters[0].SourceColumn = "ward_no";
-            da.InsertCommand.Parameters[1].SourceColumn = "ward";
-            da.InsertCommand.Parameters[2].SourceColumn = "ward_order";
-            da.InsertCommand.Parameters[3].SourceColumn = "ward_visible";
+            da.InsertCommand.Parameters[0].SourceColumn = "code";
+            da.InsertCommand.Parameters[1].SourceColumn = "name1";
+            da.InsertCommand.Parameters[2].SourceColumn = "dp_order";
+            da.InsertCommand.Parameters[3].SourceColumn = "dp_visible";
 
             //UpdateCommand
-            da.UpdateCommand = new NpgsqlCommand("UPDATE ward SET ward = :ub, ward_order = :uc,"
-                + " ward_visible = :ud"
-                + " WHERE ward_no = :UKey", conn);
+            da.UpdateCommand = new NpgsqlCommand("UPDATE department SET name1 = :ub, dp_order = :uc,"
+                + " dp_visible = :ud"
+                + " WHERE code = :UKey", conn);
 
-            da.UpdateCommand.Parameters.Add(new NpgsqlParameter("UKey", DbType.String));
+            da.UpdateCommand.Parameters.Add(new NpgsqlParameter("UKey", DbType.Int16));
             da.UpdateCommand.Parameters.Add(new NpgsqlParameter("ub", DbType.String));
             da.UpdateCommand.Parameters.Add(new NpgsqlParameter("uc", DbType.Int16));
             da.UpdateCommand.Parameters.Add(new NpgsqlParameter("ud", DbType.Boolean));
@@ -182,27 +182,26 @@ namespace endoDB
             da.UpdateCommand.Parameters[2].Direction = ParameterDirection.Input;
             da.UpdateCommand.Parameters[3].Direction = ParameterDirection.Input;
 
-            da.UpdateCommand.Parameters[0].SourceColumn = "ward_no";
-            da.UpdateCommand.Parameters[1].SourceColumn = "ward";
-            da.UpdateCommand.Parameters[2].SourceColumn = "ward_order";
-            da.UpdateCommand.Parameters[3].SourceColumn = "ward_visible";
+            da.UpdateCommand.Parameters[0].SourceColumn = "code";
+            da.UpdateCommand.Parameters[1].SourceColumn = "name1";
+            da.UpdateCommand.Parameters[2].SourceColumn = "dp_order";
+            da.UpdateCommand.Parameters[3].SourceColumn = "dp_visible";
 
             //DeleteCommand
-            da.DeleteCommand = new NpgsqlCommand("DELETE FROM ward WHERE ward_no = :DelKey", conn);
-            da.DeleteCommand.Parameters.Add(new NpgsqlParameter("DelKey", DbType.String));
-            da.DeleteCommand.Parameters[0].SourceColumn = "ward_no";
+            da.DeleteCommand = new NpgsqlCommand("DELETE FROM department WHERE code = :DelKey", conn);
+            da.DeleteCommand.Parameters.Add(new NpgsqlParameter("DelKey", DbType.Int16));
+            da.DeleteCommand.Parameters[0].SourceColumn = "code";
 
             da.Update(dt2);
             conn.Close();
         }
 
-        private void EditPlace_FormClosing(object sender, FormClosingEventArgs e) //This function have to be resistered in form property when reuse
+        private void EditDepartment_FormClosing(object sender, FormClosingEventArgs e) //This function have to be resistered in form property when reuse
         {
             this.Validate(); //Without this code, new data will disappear.
             DataTable dt2 = dt.GetChanges();
             if (dt2 != null)
             {
-                //int d;  //For TryParse.
                 foreach (DataRow dr in dt2.Rows)
                 {
                     if (string.IsNullOrWhiteSpace(dr[0].ToString()) == true)
@@ -237,12 +236,10 @@ namespace endoDB
         protected override void dgv_CellLeave(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView temp_dgv = (DataGridView)sender;
-            if (temp_dgv.Columns[e.ColumnIndex].Name == "ward_no") //***This code have to be changed when reuse
+            if (temp_dgv.Columns[e.ColumnIndex].Name == "code") //***This code have to be changed when reuse
             {
                 if (!temp_dgv.Rows[e.RowIndex].IsNewRow)
-                {
-                    checkDuplicate(temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString());
-                }
+                { checkDuplicate(temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString()); }
             }
         }
 

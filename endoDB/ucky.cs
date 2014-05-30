@@ -512,7 +512,7 @@ namespace endoDB
             }
         }
 
-        //使った回数を調べる関数
+        //Research how many times object used
         public static int CountTimes(string table, string column, string searchStr, string type)
         {
             string sql = null;

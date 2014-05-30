@@ -79,6 +79,12 @@
     <Compile Include="EditDefaultFindings.Designer.cs">
       <DependentUpon>EditDefaultFindings.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDepartment.Designer.cs">
+      <DependentUpon>EditDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditDiagnoses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditDefaultFindings.resx">
       <DependentUpon>EditDefaultFindings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDepartment.resx">
+      <DependentUpon>EditDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditDiagnoses.ja-JP.resx">
       <DependentUpon>EditDiagnoses.cs</DependentUpon>

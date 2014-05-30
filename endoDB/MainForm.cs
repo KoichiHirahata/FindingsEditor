@@ -195,6 +195,12 @@ namespace endoDB
             EditDiagnoses ed = new EditDiagnoses();
             ed.ShowDialog(this);
         }
+
+        private void departmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditDepartment ed = new EditDepartment();
+            ed.ShowDialog(this);
+        }
         #endregion
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -203,6 +209,5 @@ namespace endoDB
             { initLogin(); }
         }
         #endregion
-
     }
 }
