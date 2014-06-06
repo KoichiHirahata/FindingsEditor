@@ -635,7 +635,7 @@ namespace endoDB
 
                     if (cbExamStatus.SelectedValue.ToString() == "1")
                     {
-                        if (MessageBox.Show(Properties.Resources.StillDraftWant2Change, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        if (MessageBox.Show(Properties.Resources.StillDraft, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                         {
                             tcExam.SelectedTab = tpFindings;
                             btDiagnosed.Focus();
@@ -656,7 +656,7 @@ namespace endoDB
 
                 if (cbExamStatus.SelectedValue.ToString() == "1")
                 {
-                    if (MessageBox.Show(Properties.Resources.StillDraftWant2Change, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show(Properties.Resources.StillDraft, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                     {
                         tcExam.SelectedTab = tpFindings;
                         btDiagnosed.Focus();

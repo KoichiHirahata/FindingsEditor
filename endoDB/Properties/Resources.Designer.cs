@@ -970,11 +970,11 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   It&apos;s still draft. Do you want to change? に類似しているローカライズされた文字列を検索します。
+        ///   It&apos;s still draft. Continue? [To change this exam &quot;Diagnosed&quot;, click &quot;Diagnosed&quot; button.] に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string StillDraftWant2Change {
+        internal static string StillDraft {
             get {
-                return ResourceManager.GetString("StillDraftWant2Change", resourceCulture);
+                return ResourceManager.GetString("StillDraft", resourceCulture);
             }
         }
         

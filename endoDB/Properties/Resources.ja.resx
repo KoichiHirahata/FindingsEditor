@@ -444,8 +444,8 @@
   <data name="Image" xml:space="preserve">
     <value>画像</value>
   </data>
-  <data name="StillDraftWant2Change" xml:space="preserve">
-    <value>草稿のままになっています。変更しますか？</value>
+  <data name="StillDraft" xml:space="preserve">
+    <value>草稿のままになっていますが、よろしいですか？（変えるには「診断済」ボタンをクリック）</value>
   </data>
   <data name="Location2Long" xml:space="preserve">
     <value>部位のテキストが長すぎます。（最大：255文字）</value>

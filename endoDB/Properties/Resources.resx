@@ -444,8 +444,8 @@
   <data name="Image" xml:space="preserve">
     <value>Image</value>
   </data>
-  <data name="StillDraftWant2Change" xml:space="preserve">
-    <value>It's still draft. Do you want to change?</value>
+  <data name="StillDraft" xml:space="preserve">
+    <value>It's still draft. Continue? [To change this exam "Diagnosed", click "Diagnosed" button.]</value>
   </data>
   <data name="Location2Long" xml:space="preserve">
     <value>Location text is too long. (Max: 255 characters)</value>
