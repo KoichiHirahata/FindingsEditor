@@ -48,6 +48,7 @@ namespace endoDB
 
         private void showList()
         {
+            #region Npgsql
             NpgsqlConnection conn;
 
             try
@@ -76,10 +77,7 @@ namespace endoDB
                 conn.Close();
                 return;
             }
-
-            //
-            //ここから下がデータの読み込み部分。
-            //
+            #endregion
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(dt);

@@ -147,8 +147,11 @@ namespace endoDB
         private void EditOperator_FormClosed(object sender, FormClosedEventArgs e)
         {
             timer.Stop();
-            if (uckyFunctions.canEdit("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'"))
-            { uckyFunctions.delLockTimeIP("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'"); }
+            if (isNew == false)
+            {
+                if (uckyFunctions.canEdit("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'"))
+                { uckyFunctions.delLockTimeIP("operator", "operator_id", "LIKE", "'" + examOp.operator_id + "'"); }
+            }
         }
     }
 }

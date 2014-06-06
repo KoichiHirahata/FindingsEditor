@@ -243,7 +243,6 @@ namespace endoDB
             }
             #endregion
 
-            //ここから下がデータの読み込み部分。
             string sql = "SELECT no, name_eng, name_jp, diag_order, diag_visible FROM diag_name";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
