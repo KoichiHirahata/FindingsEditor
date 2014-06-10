@@ -31,13 +31,12 @@ namespace endoDB
         private void tbSearchString_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
-            {
-                searchPt();
-            }
+            { searchPt(); }
         }
 
         private void searchPt()
         {
+            #region Npgsql
             NpgsqlConnection conn;
 
             try
@@ -50,19 +49,15 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            #endregion
 
-            //
-            //ここから下がデータの読み込み部分。
-            //
             string sql = "SELECT pt_id, pt_name, birthday FROM patient WHERE pt_name like '%" + tbSearchString.Text + "%'";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataSet ds = new DataSet("t_patient");
             da.Fill(ds, "t_patient");
             if (ds.Tables["t_patient"].Rows.Count == 0)
-            {
-                MessageBox.Show(Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            { MessageBox.Show(Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             {
                 this.dgvPatientList.Columns.Clear();    //これしとかないと検索するたびにボタンが増え続ける。
@@ -116,8 +111,6 @@ namespace endoDB
         }
 
         private void btClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        { this.Close(); }
     }
 }

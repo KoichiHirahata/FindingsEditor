@@ -251,6 +251,9 @@
     <EmbeddedResource Include="EditFindings.resx">
       <DependentUpon>EditFindings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditFormBase.ja.resx">
+      <DependentUpon>EditFormBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditFormBase.resx">
       <DependentUpon>EditFormBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditPt.resx">
       <DependentUpon>EditPt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWard.ja.resx">
+      <DependentUpon>EditWard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditWard.resx">
       <DependentUpon>EditWard.cs</DependentUpon>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchDepart.resx">
       <DependentUpon>SearchDepart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPt.ja.resx">
+      <DependentUpon>SearchPt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPt.resx">
       <DependentUpon>SearchPt.cs</DependentUpon>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditFormBase));
             this.btClose = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -35,41 +36,28 @@
             // 
             // btClose
             // 
-            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.Font = new System.Drawing.Font("MS UI Gothic", 11F);
-            this.btClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btClose.Location = new System.Drawing.Point(474, 524);
+            resources.ApplyResources(this.btClose, "btClose");
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(105, 27);
-            this.btClose.TabIndex = 9;
-            this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // dgv
             // 
+            resources.ApplyResources(this.dgv, "dgv");
             this.dgv.AllowUserToDeleteRows = false;
-            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 21;
-            this.dgv.Size = new System.Drawing.Size(591, 518);
-            this.dgv.TabIndex = 8;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             this.dgv.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellLeave);
             // 
             // EditFormBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 563);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.dgv);
             this.Name = "EditFormBase";
-            this.Text = "EditFormBase";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 

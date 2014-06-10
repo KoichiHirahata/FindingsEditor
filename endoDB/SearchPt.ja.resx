@@ -117,29 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btSearchPt.Text" xml:space="preserve">
+    <value>検索</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+  <data name="lbSearch4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 16</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>endoDB.EditFormBase, endoDB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="lbSearch4.Text" xml:space="preserve">
+    <value>検索文字:</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>591, 563</value>
-  </data>
-  <data name="&gt;&gt;dt.Name" xml:space="preserve">
-    <value>dt</value>
-  </data>
-  <data name="&gt;&gt;dt.Type" xml:space="preserve">
-    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>EditWard</value>
+  <data name="btClose.Text" xml:space="preserve">
+    <value>閉じる</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Ward/Out patient</value>
+    <value>患者検索</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>
