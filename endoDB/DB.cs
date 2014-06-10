@@ -479,6 +479,7 @@ namespace endoDB
 
         private static void getPlaceEndo()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
@@ -497,6 +498,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT place_no, name1 FROM place WHERE place_visible = true ORDER BY place_order_endo";
 
@@ -507,6 +509,7 @@ namespace endoDB
 
         private static void getPlaceUS()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
@@ -525,6 +528,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT place_no, name1 FROM place WHERE place_visible = true ORDER BY place_order_us";
 
@@ -535,7 +539,7 @@ namespace endoDB
 
         private static void getDiagnoses()
         {
-            #region Npgsql connection
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
@@ -571,6 +575,7 @@ namespace endoDB
 
         private static void getDiagCategory()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
@@ -589,6 +594,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql;
             if (Settings.isJP)
@@ -609,6 +615,7 @@ namespace endoDB
 
         private static void getExamStatus()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
@@ -627,6 +634,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql;
             if (Settings.isJP)
@@ -648,6 +656,7 @@ namespace endoDB
         #region words
         public static void getWords()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
@@ -666,6 +675,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT no, words1, words2, words3, operator, word_order FROM words ORDER BY word_order";
 

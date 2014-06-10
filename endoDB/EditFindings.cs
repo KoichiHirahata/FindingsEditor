@@ -739,6 +739,34 @@ namespace endoDB
         }
         #endregion
 
+        #region tbPurpose
+        private void getSelectionStartOfPurpose()
+        {
+            selectedTb = "tbPurpose";
+            selectionStart = tbPurpose.SelectionStart;
+        }
+
+        private void tbPurpose_KeyUp(object sender, KeyEventArgs e)
+        {
+            getSelectionStartOfPurpose();
+        }
+
+        private void tbPurpose_Click(object sender, EventArgs e)
+        {
+            getSelectionStartOfPurpose();
+        }
+
+        private void tbPurpose_Enter(object sender, EventArgs e)
+        {
+            getSelectionStartOfPurpose();
+        }
+
+        private void tbPurpose_Leave(object sender, EventArgs e)
+        {
+            getSelectionStartOfPurpose();
+        }
+        #endregion
+
         #region tbFindings
         private void getSelectionStartOfFindings()
         {
@@ -1036,7 +1064,7 @@ namespace endoDB
         private void dgvWords_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (tcExam.SelectedIndex != 1)
+            if (tcExam.SelectedIndex > 1)
             {
                 MessageBox.Show(Properties.Resources.ClickInsPosition, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -1063,6 +1091,14 @@ namespace endoDB
                 tbComment.SelectionStart = selectionStart;
                 tbComment.SelectionLength = 0;
                 tbComment.Focus();
+            }
+            else if (selectedTb=="tbPurpose")
+            {
+                tbPurpose.Text = tbPurpose.Text.ToString().Insert(selectionStart, @dgv[e.ColumnIndex, e.RowIndex].Value.ToString());
+                selectionStart += dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Length;
+                tbPurpose.SelectionStart = selectionStart;
+                tbPurpose.SelectionLength = 0;
+                tbPurpose.Focus();
             }
         }
         #endregion

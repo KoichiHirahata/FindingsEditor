@@ -338,7 +338,11 @@
             // 
             resources.ApplyResources(this.tbPurpose, "tbPurpose");
             this.tbPurpose.Name = "tbPurpose";
+            this.tbPurpose.Click += new System.EventHandler(this.tbPurpose_Click);
             this.tbPurpose.TextChanged += new System.EventHandler(this.tbPurpose_TextChanged);
+            this.tbPurpose.Enter += new System.EventHandler(this.tbPurpose_Enter);
+            this.tbPurpose.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbPurpose_KeyUp);
+            this.tbPurpose.Leave += new System.EventHandler(this.tbPurpose_Leave);
             // 
             // lbPurpose
             // 

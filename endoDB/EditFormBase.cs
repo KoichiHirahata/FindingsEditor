@@ -29,9 +29,7 @@ namespace endoDB
         protected void resizeColumns()
         {
             foreach (DataGridViewColumn dc in dgv.Columns)
-            {
-                dc.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            }
+            { dc.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
         }
 
         protected void setKeyReadOnly()
@@ -39,18 +37,15 @@ namespace endoDB
             foreach (DataGridViewRow dr in dgv.Rows)
             {
                 if (!dr.IsNewRow)
-                {
-                    dr.Cells[1].ReadOnly = true;
-                }
+                { dr.Cells[1].ReadOnly = true; }
             }
         }
 
         protected void btClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        { this.Close(); }
 
         protected enum Duplication { NotDuplicated, Duplicated, Error }
+        protected enum funcResult { Success, failed }
 
         protected virtual void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

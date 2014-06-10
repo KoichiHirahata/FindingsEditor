@@ -86,36 +86,52 @@ namespace endoDB
             if (temp_dgv.Columns[e.ColumnIndex].Name == Properties.Resources.Delete)
             {
                 this.Validate(); //Without this code, new data will disappear.
-                saveDataTable(); //Without this code, deleting new record will call error;
+                if (string.IsNullOrWhiteSpace(temp_dgv.Rows[e.RowIndex].Cells["ward_no"].Value.ToString()))
+                {
+                    MessageBox.Show("[" + Properties.Resources.Number + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (saveDataTable() == funcResult.failed) //Without this code, deleting new record will call error;
+                {
+                    MessageBox.Show(Properties.Resources.DataMayNotBeAppropriate, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                dt.Rows.Clear();
+                showList();
 
                 //If object was used, refuse delete.
-                int i = uckyFunctions.CountTimes("exam", "ward_id", temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString(), "string"); //***This code have to be changed when reuse
-                if (i > 0)
-                { MessageBox.Show(Properties.Resources.CouldntDelData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-                else if (i == -1)
-                { MessageBox.Show("[dgv_CellContentClick]Error was occured.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-                else
+                if (temp_dgv.RowCount > 1)
                 {
-                    if (!temp_dgv.Rows[e.RowIndex].IsNewRow)
+                    int i = uckyFunctions.CountTimes("exam", "ward_id", temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString(), "string"); //***This code have to be changed when reuse
+                    if (i > 0)
+                    { MessageBox.Show(Properties.Resources.CouldntDelData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    else if (i == -1)
+                    { MessageBox.Show("[dgv_CellContentClick]Error was occured.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    else
                     {
-                        if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        if (!temp_dgv.Rows[e.RowIndex].IsNewRow)
                         {
-                            temp_dgv.Rows.Remove(temp_dgv.Rows[e.RowIndex]);
-                            saveDataTable();
-                            dt.Rows.Clear();
-                            showList();
-                            resizeColumns();
+                            if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                            {
+                                temp_dgv.Rows.Remove(temp_dgv.Rows[e.RowIndex]);
+                                saveDataTable();
+                                dt.Rows.Clear();
+                                showList();
+                                resizeColumns();
+                            }
                         }
                     }
                 }
             }
         }
 
-        private void saveDataTable() //***This code have to be changed when reuse
+        private funcResult saveDataTable() //***This code have to be changed when reuse
         {
             DataTable dt2 = dt.GetChanges();
             if (dt2 == null)
-                return;
+                return funcResult.Success;
 
             #region Npgsql
             NpgsqlConnection conn;
@@ -128,7 +144,7 @@ namespace endoDB
             catch (ArgumentException)
             {
                 MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return funcResult.failed;
             }
             try
             { conn.Open(); }
@@ -136,13 +152,13 @@ namespace endoDB
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
-                return;
+                return funcResult.failed;
             }
             catch (System.IO.IOException)
             {
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
-                return;
+                return funcResult.failed;
             }
             #endregion
 
@@ -192,8 +208,16 @@ namespace endoDB
             da.DeleteCommand.Parameters.Add(new NpgsqlParameter("DelKey", DbType.String));
             da.DeleteCommand.Parameters[0].SourceColumn = "ward_no";
 
-            da.Update(dt2);
+            try
+            { da.Update(dt2); }
+            catch (NpgsqlException)
+            {
+                MessageBox.Show(Properties.Resources.SaveFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+                return funcResult.failed;
+            }
             conn.Close();
+            return funcResult.Success;
         }
 
         private void EditPlace_FormClosing(object sender, FormClosingEventArgs e) //This function have to be resistered in form property when reuse

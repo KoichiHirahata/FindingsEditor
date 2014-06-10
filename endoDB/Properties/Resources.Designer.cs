@@ -295,6 +295,15 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
+        ///   Data may not be appropriate. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DataMayNotBeAppropriate {
+            get {
+                return ResourceManager.GetString("DataMayNotBeAppropriate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Date に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Date {
@@ -876,6 +885,15 @@ namespace endoDB.Properties {
         internal static string SaveChangesYN {
             get {
                 return ResourceManager.GetString("SaveChangesYN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save failed. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SaveFailed {
+            get {
+                return ResourceManager.GetString("SaveFailed", resourceCulture);
             }
         }
         

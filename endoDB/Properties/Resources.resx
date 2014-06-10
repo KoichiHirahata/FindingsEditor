@@ -456,4 +456,10 @@
   <data name="ProcedureCancelled" xml:space="preserve">
     <value>Procedure has been cancelled.</value>
   </data>
+  <data name="DataMayNotBeAppropriate" xml:space="preserve">
+    <value>Data may not be appropriate.</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Save failed.</value>
+  </data>
 </root>

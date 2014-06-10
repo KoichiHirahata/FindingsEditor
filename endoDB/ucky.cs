@@ -217,7 +217,7 @@ namespace endoDB
             (birthDate.Year * 10000 + birthDate.Month * 100 + birthDate.Day)) / 10000;
         }
 
-        /// SQLをトランザクションで実行する関数
+        /// Run transaction
         public static functionResult ExeNonQuery(string sql, params string[] p_str)
         {
             using (NpgsqlCommand command = new NpgsqlCommand())
@@ -279,20 +279,64 @@ namespace endoDB
             return functionResult.success;
         }
 
-        //中身がstringなカラムについて、SELECT文で一意な結果を取得するSQLを放り込むとstringで結果を返してくれる関数
-        public static string getSelectString(string sql, string DBserver, string DBport, string DBuser, string DBpw, string DBname)
+        /// This function runs SQL without transaction log for test.
+        public static functionResult RunSQLWithoutTransactionLog(string sql, params string[] p_str)
         {
-            string resultStr;
             using (NpgsqlCommand command = new NpgsqlCommand())
             {
+                #region Npgsql connection
                 NpgsqlConnection conn = new NpgsqlConnection();
-                conn.ConnectionString = @"Server=" + DBserver + ";Port=" + DBport + ";User Id=" + DBuser + ";Password=" + DBpw + ";Database=" + DBname + ";";
+
+                conn.ConnectionString = @"Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort
+                    + ";User Id=" + Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;";
 
                 // トランザクションを開始します。
                 try
                 {
                     conn.Open();
                 }
+                catch (NpgsqlException)
+                {
+                    conn.Close();
+                    return functionResult.connectionError;
+                }
+                catch (System.IO.IOException)
+                {
+                    conn.Close();
+                    return functionResult.connectionError;
+                }
+                #endregion
+
+                NpgsqlTransaction transaction = conn.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
+
+                command.CommandText = sql;
+                command.Connection = conn;
+
+                string p;
+                for (int i = 0; i < p_str.Length; i++)
+                {
+                    p = ":p" + i.ToString();
+                    //MessageBox.Show(p + " to " + p_str[i]);
+                    command.Parameters.Add(new NpgsqlParameter(p, p_str[i]));
+                }
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            return functionResult.success;
+        }
+
+        ///中身がstringなカラムについて、SELECT文で一意な結果を取得するSQLを放り込むとstringで結果を返してくれる関数。If there was no data, return null.
+        public static string getSelectString(string sql, string DBserver, string DBport, string DBuser, string DBpw, string DBname)
+        {
+            string resultStr;
+            using (NpgsqlCommand command = new NpgsqlCommand())
+            {
+                #region Npgsql
+                NpgsqlConnection conn = new NpgsqlConnection();
+                conn.ConnectionString = @"Server=" + DBserver + ";Port=" + DBport + ";User Id=" + DBuser + ";Password=" + DBpw + ";Database=" + DBname + ";";
+
+                try
+                { conn.Open(); }
                 catch (NpgsqlException)
                 {
                     conn.Close();
@@ -303,6 +347,7 @@ namespace endoDB
                     conn.Close();
                     return null;
                 }
+                #endregion
 
                 try
                 {
@@ -321,20 +366,18 @@ namespace endoDB
             return resultStr;
         }
 
-        //中身がintなカラムについて、SELECT文で一意な結果を取得するSQLを放り込むとintで結果を返してくれる関数
+        //中身がintなカラムについて、SELECT文で一意な結果を取得するSQLを放り込むとintで結果を返してくれる関数.If there was no data, or error occured, return -1.
         public static int getSelectInt(string sql, string DBserver, string DBport, string DBuser, string DBpw, string DBname)
         {
             int resultInt;
             using (NpgsqlCommand command = new NpgsqlCommand())
             {
+                #region Npgsql
                 NpgsqlConnection conn = new NpgsqlConnection();
                 conn.ConnectionString = @"Server=" + DBserver + ";Port=" + DBport + ";User Id=" + DBuser + ";Password=" + DBpw + ";Database=" + DBname + ";";
 
-                // トランザクションを開始します。
                 try
-                {
-                    conn.Open();
-                }
+                { conn.Open(); }
                 catch (NpgsqlException)
                 {
                     conn.Close();
@@ -347,6 +390,7 @@ namespace endoDB
                     MessageBox.Show("[IOException]Error was occured.");
                     return -1;
                 }
+                #endregion
 
                 try
                 {
@@ -567,7 +611,7 @@ namespace endoDB
 
             return int.Parse(dt.Rows.Count.ToString());
         }
-            #endregion
+        #endregion
     }
 
     #region db_operator //this class means user.
