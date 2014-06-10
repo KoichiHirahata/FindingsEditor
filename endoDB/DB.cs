@@ -144,7 +144,7 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "ward");
             if (localDB.Tables["ward"].Rows.Count == 0)
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            { MessageBox.Show("[ward]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -174,21 +174,20 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "department");
             if (localDB.Tables["department"].Rows.Count == 0)
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("[department]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             conn.Close();
         }
 
         #region operators
         private static void getOperators()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -199,15 +198,14 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT operator_id, op_name FROM operator WHERE op_visible = true ORDER BY op_order";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "orderDr");
             if (localDB.Tables["orderDr"].Rows.Count == 0)
-            {
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            { MessageBox.Show("[orderDr]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             else
             {
                 DataTable operator1;
@@ -244,14 +242,13 @@ namespace endoDB
 
         private static void getAllOp()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -262,28 +259,26 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT operator_id, op_name FROM operator ORDER BY op_order";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "allOp");
             if (localDB.Tables["allOp"].Rows.Count == 0)
-            {
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            { MessageBox.Show("[allOp]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
         private static void getOpCategory()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -294,13 +289,14 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT opc_no, opc_name FROM op_category WHERE opc_visible = true ORDER BY opc_order";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "op_category");
             if (localDB.Tables["op_category"].Rows.Count == 0)
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            { MessageBox.Show("[op_category]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
         #endregion
@@ -308,14 +304,13 @@ namespace endoDB
         #region Equipment
         private static void getEquipmentType()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -326,26 +321,26 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT type_no, name FROM equipment_type WHERE type_visible = true ORDER BY type_order";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "equipment_type");
             if (localDB.Tables["equipment_type"].Rows.Count == 0)
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            { MessageBox.Show("[equipment_type]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
         private static void getEquipmentGF()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -356,6 +351,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT equipment_no, name FROM equipment WHERE equipment_visible = true AND scope = true ORDER BY gf_order";
 
@@ -366,14 +362,13 @@ namespace endoDB
 
         private static void getEquipmentCF()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -384,6 +379,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT equipment_no, name FROM equipment WHERE equipment_visible = true AND scope = true ORDER BY cf_order";
 
@@ -394,14 +390,13 @@ namespace endoDB
 
         private static void getEquipmentSV()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -412,6 +407,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT equipment_no, name FROM equipment WHERE equipment_visible = true AND scope = true ORDER BY sv_order";
 
@@ -422,14 +418,13 @@ namespace endoDB
 
         private static void getEquipmentS()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -440,6 +435,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT equipment_no, name FROM equipment WHERE equipment_visible = true AND scope = true ORDER BY s_order";
 
@@ -450,14 +446,13 @@ namespace endoDB
 
         private static void getEquipmentUS()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -468,6 +463,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql = "SELECT equipment_no, name FROM equipment WHERE equipment_visible = true AND us = true ORDER BY us_order";
 
@@ -569,7 +565,7 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "diag_name");
             if (localDB.Tables["diag_name"].Rows.Count == 0)
-                MessageBox.Show("[localDB diag_name]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            { MessageBox.Show("[localDB diag_name]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -598,18 +594,14 @@ namespace endoDB
 
             string sql;
             if (Settings.isJP)
-            {
-                sql = "SELECT id, start_no, end_no, name_jp AS name, bt_order, visible FROM diag_category";
-            }
+            { sql = "SELECT id, start_no, end_no, name_jp AS name, bt_order, visible FROM diag_category"; }
             else
-            {
-                sql = "SELECT id, start_no, end_no, name_eng AS name, bt_order, visible FROM diag_category";
-            }
+            { sql = "SELECT id, start_no, end_no, name_eng AS name, bt_order, visible FROM diag_category"; }
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "diag_category");
             if (localDB.Tables["diag_category"].Rows.Count == 0)
-                MessageBox.Show("[localDB diag_category]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            { MessageBox.Show("[localDB diag_category]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -638,18 +630,14 @@ namespace endoDB
 
             string sql;
             if (Settings.isJP)
-            {
-                sql = "SELECT status_no,name_jp AS status_name FROM status WHERE status_visible=true ORDER BY status_order";
-            }
+            { sql = "SELECT status_no,name_jp AS status_name FROM status WHERE status_visible=true ORDER BY status_order"; }
             else
-            {
-                sql = "SELECT status_no,name_eng AS status_name FROM status WHERE status_visible=true ORDER BY status_order";
-            }
+            { sql = "SELECT status_no,name_eng AS status_name FROM status WHERE status_visible=true ORDER BY status_order"; }
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "exam_status");
             if (localDB.Tables["exam_status"].Rows.Count == 0)
-                MessageBox.Show("[exam_status]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            { MessageBox.Show("[exam_status]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -682,7 +670,7 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "words");
             if (localDB.Tables["words"].Rows.Count == 0)
-                MessageBox.Show("[words]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            { MessageBox.Show("[words]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 

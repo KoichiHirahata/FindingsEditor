@@ -355,7 +355,7 @@
     <value>フォルダが存在していません。</value>
   </data>
   <data name="ClickInsPosition" xml:space="preserve">
-    <value>この語句を挿入したい場所をクリックしてください。</value>
+    <value>この語句を挿入したい場所をクリックしてください。[目的、所見、コメント]</value>
   </data>
   <data name="Checker" xml:space="preserve">
     <value>二次診断医</value>
@@ -461,5 +461,8 @@
   </data>
   <data name="SaveFailed" xml:space="preserve">
     <value>データの保存に失敗しました。</value>
+  </data>
+  <data name="NoRecord" xml:space="preserve">
+    <value>データが0件です。</value>
   </data>
 </root>

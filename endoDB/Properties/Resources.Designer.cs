@@ -187,7 +187,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Click position where you want to insert this word. に類似しているローカライズされた文字列を検索します。
+        ///   Click position where you want to insert this word.[Purpose, Findings, or Checker&apos;s comment] に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ClickInsPosition {
             get {
@@ -705,6 +705,15 @@ namespace endoDB.Properties {
         internal static string NoPw {
             get {
                 return ResourceManager.GetString("NoPw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   No record. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NoRecord {
+            get {
+                return ResourceManager.GetString("NoRecord", resourceCulture);
             }
         }
         

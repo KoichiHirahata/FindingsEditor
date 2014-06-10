@@ -358,7 +358,7 @@
     <value>Folder is not exist.</value>
   </data>
   <data name="ClickInsPosition" xml:space="preserve">
-    <value>Click position where you want to insert this word.</value>
+    <value>Click position where you want to insert this word.[Purpose, Findings, or Checker's comment]</value>
   </data>
   <data name="Checker" xml:space="preserve">
     <value>Checker</value>
@@ -461,5 +461,8 @@
   </data>
   <data name="SaveFailed" xml:space="preserve">
     <value>Save failed.</value>
+  </data>
+  <data name="NoRecord" xml:space="preserve">
+    <value>No record.</value>
   </data>
 </root>
