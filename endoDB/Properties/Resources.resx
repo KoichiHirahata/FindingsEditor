@@ -358,7 +358,7 @@
     <value>Folder is not exist.</value>
   </data>
   <data name="ClickInsPosition" xml:space="preserve">
-    <value>Click position where you want to insert this word.[Purpose, Findings, or Checker's comment]</value>
+    <value>Click position where you want to insert this word on Purpose, Findings, or Checker's comment. Then click the word again.</value>
   </data>
   <data name="Checker" xml:space="preserve">
     <value>Checker</value>

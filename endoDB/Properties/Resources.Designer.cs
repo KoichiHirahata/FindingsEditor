@@ -187,7 +187,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Click position where you want to insert this word.[Purpose, Findings, or Checker&apos;s comment] に類似しているローカライズされた文字列を検索します。
+        ///   Click position where you want to insert this word on Purpose, Findings, or Checker&apos;s comment. Then click the word again. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ClickInsPosition {
             get {
