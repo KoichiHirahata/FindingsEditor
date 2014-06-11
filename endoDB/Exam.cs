@@ -41,6 +41,12 @@ namespace endoDB
         public Exam(string _exam_id)
         {
             exam_id = int.Parse(_exam_id);
+            #region initial settings
+            //These settings are needed for notice these properties were changed or not.
+            department = 0;
+            equipment = 0;
+            place_no = 0;
+            #endregion
             readExamData(exam_id);
         }
 
@@ -136,26 +142,198 @@ namespace endoDB
 
         public void saveFindingsEtc()
         {
-            string sql = "UPDATE exam SET purpose=:p0, department=:p1, order_dr=:p2, ward_id=:p3, "
-                + "pathology=:p4, patho_no=:p5, reply_patho=:p6, "
-                + "operator1=:p7, operator2=:p8, operator3=:p9, operator4=:p10, operator5=:p11, "
-                + "diag_dr=:p12, final_diag_dr=:p13, equipment=:p14, place_no=:p15, "
-                + "findings=:p16, comment=:p17, exam_status=:p18, explanation=:p19 "
+            string sql = "UPDATE exam SET purpose=:p0, order_dr=:p1, pathology=:p2, patho_no=:p3, reply_patho=:p4, "
+                + "findings=:p5, comment=:p6, exam_status=:p7, explanation=:p8 "
                 + "WHERE exam_id=" + exam_id.ToString();
-            switch (uckyFunctions.ExeNonQuery(sql, purpose, department.ToString(), order_dr, ward_id,
-                pathology.ToString(), patho_no, reply_patho.ToString(),
-                operator1, operator2, operator3, operator4, operator5,
-                diag_dr, final_diag_dr, equipment.ToString(), place_no.ToString(),
-                findings, comment, exam_status.ToString(), explanation.ToString()))
+
+            uckyFunctions.ExeNonQuery(sql, purpose, order_dr, pathology.ToString(), patho_no, reply_patho.ToString(),
+                findings, comment, exam_status.ToString(), explanation.ToString());
+
+            string column;
+            if (department != 0)
             {
-                case uckyFunctions.functionResult.connectionError:
-                    MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
-                case uckyFunctions.functionResult.failed:
-                    MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
-                case uckyFunctions.functionResult.success:
-                    break;
+                column = "department";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, department.ToString()))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(ward_id))
+            {
+                column = "ward_id";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, ward_id))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(operator1))
+            {
+                column = "operator1";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, operator1))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(operator2))
+            {
+                column = "operator2";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, operator2))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(operator3))
+            {
+                column = "operator3";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, operator3))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(operator4))
+            {
+                column = "operator4";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, operator4))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(operator5))
+            {
+                column = "operator5";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, operator5))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(diag_dr))
+            {
+                column = "diag_dr";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, diag_dr))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(final_diag_dr))
+            {
+                column = "final_diag_dr";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, final_diag_dr))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+
+            if (equipment != 0)
+            {
+                column = "equipment";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, equipment.ToString()))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
+            }
+            if (place_no != 0)
+            {
+                column = "place_no";
+                sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
+                switch (uckyFunctions.ExeNonQuery(sql, place_no.ToString()))
+                {
+                    case uckyFunctions.functionResult.connectionError:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.failed:
+                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case uckyFunctions.functionResult.success:
+                        break;
+                }
             }
         }
 
