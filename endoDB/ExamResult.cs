@@ -54,6 +54,10 @@ namespace endoDB
             html = html.Replace("[[[Checker]]]", exam.getFinalDiagDr());
             html = html.Replace("[[[lbDiagnoses]]]", Properties.Resources.Diagnoses + ":");
             html = html.Replace("[[[Diagnoses]]]", exam.getDiagnoses().Replace("\n", "<br />"));
+            html = html.Replace("img src=\"\" alt=\"image1\"",
+                "img src=\"" + Settings.figureFolder + "\\" + exam.exam_day.Year.ToString()+"\\"+exam.exam_id+"_1.png\"");
+            html = html.Replace("img src=\"\" alt=\"image2\"",
+                "img src=\"" + Settings.figureFolder + "\\" + exam.exam_day.Year.ToString() + "\\" + exam.exam_id + "_2.png\"");
             html = html.Replace("[[[lbFindings]]]", Properties.Resources.Findings + ":");
             html = html.Replace("[[[Findings]]]", exam.findings.Replace("\n", "<br />"));
             html = html.Replace("[[[lbCheckerComment]]]", Properties.Resources.Comment + ":");
