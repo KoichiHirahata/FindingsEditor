@@ -19,6 +19,8 @@ namespace endoDB
             Settings.settingFile_location = Application.StartupPath + "\\setting.config";
             Settings.readSettings();
             Settings.isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
+            //Settings.sslSetting = "";
+            Settings.sslSetting = "SSL=true;SslMode=Prefer;"; //Use this when you want to connect using SSL
         }
 
         private void fLogin()

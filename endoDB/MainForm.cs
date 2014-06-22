@@ -28,21 +28,15 @@ namespace endoDB
             stf.ShowDialog(this);
             stf.Dispose();
             if (!db_operator.authDone)
-            {
-                Environment.Exit(0);
-            }
+            { Environment.Exit(0); }
 
             this.Visible = true;
             this.lbUserName.Text = db_operator.operatorName;
 
             if (db_operator.admin_user)
-            {
-                this.managementToolStripMenuItem.Visible = true;
-            }
+            { this.managementToolStripMenuItem.Visible = true; }
             else
-            {
-                this.managementToolStripMenuItem.Visible = false;
-            }
+            { this.managementToolStripMenuItem.Visible = false; }
 
             this.tbPtID.Text = "";
         }

@@ -87,6 +87,7 @@ namespace endoDB
         public static Boolean isJP { get; set; } //Property for storing that machine's language is Japanese or not.
         public static string endoPrintFile { get; set; } //Template xls file for endoscopy conclusion.
         public static string figureFolder { get; set; } //Root folder of figures.
+        public static string sslSetting { get; set; } //SSL setting string
 
         Settings()
         {
@@ -226,7 +227,7 @@ namespace endoDB
                 NpgsqlConnection conn = new NpgsqlConnection();
 
                 conn.ConnectionString = @"Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort
-                    + ";User Id=" + Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;";
+                    + ";User Id=" + Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting;
 
                 // トランザクションを開始します。
                 try
@@ -288,7 +289,7 @@ namespace endoDB
                 NpgsqlConnection conn = new NpgsqlConnection();
 
                 conn.ConnectionString = @"Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort
-                    + ";User Id=" + Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;";
+                    + ";User Id=" + Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting;
 
                 // トランザクションを開始します。
                 try
@@ -465,7 +466,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
 
                 conn.Open();
             }
@@ -581,7 +582,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
@@ -646,7 +647,7 @@ namespace endoDB
             #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
 
             try
             {
@@ -733,7 +734,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
@@ -839,7 +840,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
@@ -900,7 +901,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
@@ -971,7 +972,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
@@ -1091,7 +1092,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
@@ -1134,7 +1135,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {

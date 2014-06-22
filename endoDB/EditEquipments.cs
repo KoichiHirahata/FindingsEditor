@@ -74,7 +74,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
@@ -163,7 +163,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;");
+                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {

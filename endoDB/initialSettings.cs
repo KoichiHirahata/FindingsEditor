@@ -23,19 +23,13 @@ namespace endoDB
             this.tbDbID.Text = Settings.DBconnectID;
             //this.tbDBpw.Text = Settings.DBconnectPw; //I don't recomend to use this code.
             if (Settings.DBconnectPw == null)
-            {
-                this.pwState.Text = Properties.Resources.pwUnconfigured;
-            }
+            { this.pwState.Text = Properties.Resources.pwUnconfigured; }
             else
-            {
-                this.pwState.Text = Properties.Resources.pwConfigured;
-            }
+            { this.pwState.Text = Properties.Resources.pwConfigured; }
             this.tbDBpw.Visible = false;
 
             if (!String.IsNullOrWhiteSpace(Settings.figureFolder))
-            {
-                tbFigureFolder.Text = Settings.figureFolder;
-            }
+            { tbFigureFolder.Text = Settings.figureFolder; }
         }
 
 
@@ -121,7 +115,7 @@ namespace endoDB
             try
             {
                 conn = new NpgsqlConnection("Server=" + this.tbDBSrv.Text + ";Port=" + this.tbDBsrvPort.Text + ";User Id=" +
-                    this.tbDbID.Text + ";Password=" + temp_pw + ";Database=endoDB;");
+                    this.tbDbID.Text + ";Password=" + temp_pw + ";Database=endoDB;" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
