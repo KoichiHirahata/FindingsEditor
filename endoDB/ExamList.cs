@@ -244,8 +244,8 @@ namespace endoDB
 
         private void showImages(string pt_id_str)
         {
-            if (System.IO.File.Exists(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe"))
-            { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", pt_id_str); }
+            if (System.IO.File.Exists(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe"))
+            { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe", pt_id_str); }
         }
 
         private void delExam(string exam_id_str)

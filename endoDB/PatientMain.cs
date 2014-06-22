@@ -169,8 +169,8 @@ namespace endoDB
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
             {
-                if (System.IO.File.Exists(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe"))
-                { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtJpgViewer\PtJpgViewer.exe", pt1.ptID); }
+                if (System.IO.File.Exists(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe"))
+                { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe", pt1.ptID); }
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btPrint")
             {
