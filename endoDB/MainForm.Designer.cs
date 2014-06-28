@@ -46,6 +46,8 @@
             this.diagnosesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbUserName = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.btSearchPt = new System.Windows.Forms.Button();
@@ -67,7 +69,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.searchExaminationToolStripMenuItem,
             this.optionToolStripMenuItem,
-            this.logOutToolStripMenuItem});
+            this.logOutToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.versionToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // searchExaminationToolStripMenuItem
@@ -178,6 +182,18 @@
             resources.ApplyResources(this.logOutToolStripMenuItem, "logOutToolStripMenuItem");
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            // 
+            // versionToolStripMenuItem
+            // 
+            resources.ApplyResources(this.versionToolStripMenuItem, "versionToolStripMenuItem");
+            this.versionToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
+            this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
             // 
             // lbUserName
             // 
@@ -320,5 +336,7 @@
         private System.Windows.Forms.ToolStripMenuItem searchByOperator15ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diagnosesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem departmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem versionToolStripMenuItem;
     }
 }

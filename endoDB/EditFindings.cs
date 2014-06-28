@@ -37,8 +37,21 @@ namespace endoDB
             InitializeComponent();
             exam = new Exam(_exam_id);
 
+            #region canEdit & Timer
+            canEdit = true;
+
+            #region editorial control
+            if (db_operator.canDiag == false)
+            { canEdit = false; }
+            else if (db_operator.allowFC == false && exam.exam_status == 3)
+            { canEdit = false; }
+            #endregion
+
             #region Timer
-            canEdit = uckyFunctions.canEdit("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
+            //Check locktime after checking of editorial control above
+            if (canEdit == true)
+            { canEdit = uckyFunctions.canEdit("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'"); }
+
             if (canEdit)
             {
                 uckyFunctions.updateLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
@@ -58,6 +71,8 @@ namespace endoDB
                 btExamCanceled.Visible = false;
                 btAddDiag.Visible = false;
             }
+            #endregion
+
             #endregion
 
             #region Header
@@ -649,7 +664,7 @@ namespace endoDB
 
         private void btSaveClose_Click(object sender, EventArgs e)
         {
-            if (edited == true)
+            if (canEdit && edited)
             {
                 saveFindingsData();
                 edited = false;
@@ -1092,7 +1107,7 @@ namespace endoDB
                 tbComment.SelectionLength = 0;
                 tbComment.Focus();
             }
-            else if (selectedTb=="tbPurpose")
+            else if (selectedTb == "tbPurpose")
             {
                 tbPurpose.Text = tbPurpose.Text.ToString().Insert(selectionStart, @dgv[e.ColumnIndex, e.RowIndex].Value.ToString());
                 selectionStart += dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Length;

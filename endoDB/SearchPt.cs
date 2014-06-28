@@ -24,9 +24,7 @@ namespace endoDB
         }
 
         private void btSearchPt_Click(object sender, EventArgs e)
-        {
-            searchPt();
-        }
+        { searchPt(); }
 
         private void tbSearchString_KeyDown(object sender, KeyEventArgs e)
         {

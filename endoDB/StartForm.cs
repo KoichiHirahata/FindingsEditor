@@ -16,11 +16,7 @@ namespace endoDB
         public StartForm()
         {
             InitializeComponent();
-            Settings.settingFile_location = Application.StartupPath + "\\setting.config";
-            Settings.readSettings();
-            Settings.isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
-            //Settings.sslSetting = ""; //Use this when you want to connect without using SSL
-            Settings.sslSetting = "SSL=true;SslMode=Require;"; //Use this when you want to connect using SSL
+            Settings.initiateSettings();
         }
 
         private void fLogin()

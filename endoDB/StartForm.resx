@@ -189,6 +189,9 @@
   <data name="tbPass.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
   </data>
+  <data name="tbPass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
+  </data>
   <data name="tbPass.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 120</value>
   </data>
@@ -215,6 +218,9 @@
   </data>
   <data name="tbID.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="tbID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
   </data>
   <data name="tbID.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 83</value>

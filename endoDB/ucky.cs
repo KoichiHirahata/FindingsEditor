@@ -97,7 +97,15 @@ namespace endoDB
             Settings.DBconnectPw = "";
         }
 
-        //ファイルに書き込む
+        public static void initiateSettings()
+        {
+            Settings.settingFile_location = Application.StartupPath + "\\setting.config";
+            Settings.readSettings();
+            Settings.isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
+            //Settings.sslSetting = ""; //Use this when you want to connect without using SSL
+            Settings.sslSetting = "SSL=true;SslMode=Require;"; //Use this when you want to connect using SSL
+        }
+
         public static void saveSettings()
         {
             Settings4file st = new Settings4file();
@@ -120,7 +128,6 @@ namespace endoDB
 
         }
 
-        //ファイルから読み込む
         public static void readSettings()
         {
             if (System.IO.File.Exists(Settings.settingFile_location) == true)
@@ -723,13 +730,12 @@ namespace endoDB
             this.ptExist = false;
             newPt = NewPatient;
             if (newPt == false)
-            {
-                readPtData(patientID);
-            }
+            { readPtData(patientID); }
         }
 
         public void readPtData(string patientID)
         {
+            #region Npgsql
             NpgsqlConnection conn;
             try
             {
@@ -743,9 +749,7 @@ namespace endoDB
             }
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -758,10 +762,8 @@ namespace endoDB
                 conn.Close();
                 return;
             }
+            #endregion
 
-            //
-            //ここから下がデータの読み込み部分。
-            //
             string sql = "SELECT * FROM patient WHERE pt_id='" + patientID + "'";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
@@ -849,9 +851,7 @@ namespace endoDB
             }
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -938,6 +938,7 @@ namespace endoDB
     }
     #endregion
 
+    #region examOperator
     public sealed class examOperator
     {
         public string operator_id { get; set; }
@@ -1176,4 +1177,5 @@ namespace endoDB
             uckyFunctions.ExeNonQuery(sql);
         }
     }
+    #endregion
 }

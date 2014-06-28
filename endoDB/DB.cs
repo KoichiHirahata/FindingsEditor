@@ -41,14 +41,13 @@ namespace endoDB
         #region ExamType
         private static void getExamType()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -59,6 +58,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql;
 
@@ -80,14 +80,13 @@ namespace endoDB
 
         private static void getAllExamType()
         {
+            #region Npgsql
             NpgsqlConnection conn;
             conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
                 Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -98,6 +97,7 @@ namespace endoDB
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            #endregion
 
             string sql;
 
@@ -473,6 +473,7 @@ namespace endoDB
         }
         #endregion
 
+        #region Place
         private static void getPlaceEndo()
         {
             #region Npgsql
@@ -532,7 +533,9 @@ namespace endoDB
             da.Fill(localDB, "placeUS");
             conn.Close();
         }
+        #endregion
 
+        #region Diag
         private static void getDiagnoses()
         {
             #region Npgsql
@@ -604,6 +607,7 @@ namespace endoDB
             { MessageBox.Show("[localDB diag_category]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
+        #endregion
 
         private static void getExamStatus()
         {

@@ -119,94 +119,106 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="searchByDepartmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>191, 22</value>
   </data>
   <data name="searchByDepartmentToolStripMenuItem.Text" xml:space="preserve">
     <value>診療科で検索</value>
   </data>
   <data name="searchByOperator1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>191, 22</value>
   </data>
   <data name="searchByOperator1ToolStripMenuItem.Text" xml:space="preserve">
     <value>施行医１で検索</value>
   </data>
   <data name="searchByOperator15ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>191, 22</value>
   </data>
   <data name="searchByOperator15ToolStripMenuItem.Text" xml:space="preserve">
     <value>施行医１～５で検索</value>
   </data>
   <data name="searchExaminationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 20</value>
+    <value>72, 21</value>
   </data>
   <data name="searchExaminationToolStripMenuItem.Text" xml:space="preserve">
     <value>検査検索</value>
+  </data>
+  <data name="myWordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
   </data>
   <data name="myWordsToolStripMenuItem.Text" xml:space="preserve">
     <value>マイワード</value>
   </data>
   <data name="editOperatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="editOperatorToolStripMenuItem.Text" xml:space="preserve">
     <value>施行者</value>
   </data>
   <data name="wordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="wordsToolStripMenuItem.Text" xml:space="preserve">
     <value>クイックワード</value>
   </data>
   <data name="defaultFindingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="defaultFindingsToolStripMenuItem.Text" xml:space="preserve">
     <value>既定の所見</value>
   </data>
   <data name="equipmentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="equipmentsToolStripMenuItem.Text" xml:space="preserve">
     <value>検査機器</value>
   </data>
   <data name="placeRoomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="placeRoomToolStripMenuItem.Text" xml:space="preserve">
     <value>検査場所</value>
   </data>
   <data name="wardToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="wardToolStripMenuItem.Text" xml:space="preserve">
     <value>病棟/外来</value>
   </data>
   <data name="diagnosesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="diagnosesToolStripMenuItem.Text" xml:space="preserve">
     <value>診断名</value>
   </data>
   <data name="departmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="departmentToolStripMenuItem.Text" xml:space="preserve">
     <value>科</value>
+  </data>
+  <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
   </data>
   <data name="managementToolStripMenuItem.Text" xml:space="preserve">
     <value>管理</value>
   </data>
   <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
+    <value>68, 21</value>
   </data>
   <data name="optionToolStripMenuItem.Text" xml:space="preserve">
     <value>オプション</value>
   </data>
   <data name="logOutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 20</value>
+    <value>68, 21</value>
   </data>
   <data name="logOutToolStripMenuItem.Text" xml:space="preserve">
     <value>ログアウト</value>
+  </data>
+  <data name="versionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 21</value>
+  </data>
+  <data name="versionToolStripMenuItem.Text" xml:space="preserve">
+    <value>バージョン</value>
   </data>
   <data name="lbUserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>79, 35</value>

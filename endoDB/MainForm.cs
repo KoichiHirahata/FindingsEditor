@@ -197,11 +197,22 @@ namespace endoDB
         }
         #endregion
 
+        #region Logout
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Properties.Resources.InformLogout, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             { initLogin(); }
         }
+        #endregion
+
+        #region Version
+        private void versionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Version v = new Version();
+            v.ShowDialog(this);
+        }
+        #endregion
+
         #endregion
     }
 }
