@@ -66,9 +66,7 @@ namespace endoDB
             }
 
             try
-            {
-                conn.Open();
-            }
+            { conn.Open(); }
             catch (NpgsqlException)
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

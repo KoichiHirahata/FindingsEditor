@@ -83,13 +83,9 @@ namespace endoDB
             this.cbExamStatus.ValueMember = "status_no";
             this.cbExamStatus.DisplayMember = "status_name";
             if (string.IsNullOrWhiteSpace(exam.exam_status.ToString()) || (exam.exam_status == 0))
-            {
-                this.cbExamStatus.SelectedValue = 1;
-            }
+            { this.cbExamStatus.SelectedValue = 1; }
             else
-            {
-                this.cbExamStatus.SelectedValue = exam.exam_status;
-            }
+            { this.cbExamStatus.SelectedValue = exam.exam_status; }
             #endregion
 
             #region information

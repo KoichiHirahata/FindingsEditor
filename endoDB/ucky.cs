@@ -341,7 +341,7 @@ namespace endoDB
             {
                 #region Npgsql
                 NpgsqlConnection conn = new NpgsqlConnection();
-                conn.ConnectionString = @"Server=" + DBserver + ";Port=" + DBport + ";User Id=" + DBuser + ";Password=" + DBpw + ";Database=" + DBname + ";";
+                conn.ConnectionString = @"Server=" + DBserver + ";Port=" + DBport + ";User Id=" + DBuser + ";Password=" + DBpw + ";Database=" + DBname + ";" + Settings.sslSetting;
 
                 try
                 { conn.Open(); }
@@ -382,7 +382,7 @@ namespace endoDB
             {
                 #region Npgsql
                 NpgsqlConnection conn = new NpgsqlConnection();
-                conn.ConnectionString = @"Server=" + DBserver + ";Port=" + DBport + ";User Id=" + DBuser + ";Password=" + DBpw + ";Database=" + DBname + ";";
+                conn.ConnectionString = @"Server=" + DBserver + ";Port=" + DBport + ";User Id=" + DBuser + ";Password=" + DBpw + ";Database=" + DBname + ";" + Settings.sslSetting;
 
                 try
                 { conn.Open(); }
