@@ -88,6 +88,7 @@ namespace endoDB
         public static string endoPrintFile { get; set; } //Template xls file for endoscopy conclusion.
         public static string figureFolder { get; set; } //Root folder of figures.
         public static string sslSetting { get; set; } //SSL setting string
+        public static string ptInfoPlugin { get; set; } //File location of the plug-in to get patient information
 
         Settings()
         {
@@ -99,11 +100,12 @@ namespace endoDB
 
         public static void initiateSettings()
         {
-            Settings.settingFile_location = Application.StartupPath + "\\setting.config";
-            Settings.readSettings();
-            Settings.isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
+            settingFile_location = Application.StartupPath + "\\setting.config";
+            readSettings();
+            isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
             //Settings.sslSetting = ""; //Use this when you want to connect without using SSL
-            Settings.sslSetting = "SSL=true;SslMode=Require;"; //Use this when you want to connect using SSL
+            sslSetting = "SSL=true;SslMode=Require;"; //Use this when you want to connect using SSL
+            ptInfoPlugin = checkPtInfoPlugin();
         }
 
         public static void saveSettings()
@@ -165,6 +167,21 @@ namespace endoDB
                 Settings.figureFolder = st.figureFolder;
             }
         }
+
+        public static string checkPtInfoPlugin()
+        {
+            if (File.Exists(Application.StartupPath + "\\plugins.ini"))
+            {
+                string text = file_control.readFromFile(Application.StartupPath + "\\plugins.ini");
+                string plugin_location = file_control.readItemSettingFromText(text, "Patient information=");
+                if(File.Exists(plugin_location))
+                { return plugin_location; }
+                else
+                { return ""; }
+            }
+            else
+            { return ""; }
+        }
     }
     #endregion
 
@@ -204,6 +221,62 @@ namespace endoDB
             {
                 MessageBox.Show(Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public static string readFromFile(string fileName)
+        {
+            string text = "";
+            try
+            {
+                using (StreamReader sr = new StreamReader(fileName))
+                { text = sr.ReadToEnd(); }
+            }
+            catch (Exception e)
+            { MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            return text;
+        }
+
+        public static string readItemSettingFromText(string text, string itemName)
+        {
+            int index;
+            index = text.IndexOf(itemName);
+            if (index == -1)
+            {
+                MessageBox.Show("[settings.ini]サポートされていないファイルタイプです。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
+            }
+            else
+            { return getUntilNewLine(text, index + itemName.Length); }
+        }
+
+        public static string getUntilNewLine(string text, int strPoint)
+        {
+            string ret = "";
+            for (int i = strPoint; i < text.Length; i++)
+            {
+                if ((text[i].ToString() != "\r") && (text[i].ToString() != "\n"))
+                { ret += text[i].ToString(); }
+                else
+                { break; }
+            }
+
+            for (int i = 0; i < ret.Length; i++)
+            {
+                if (ret.Substring(0, 1) == "\t" || ret.Substring(0, 1) == " " || ret.Substring(0, 1) == "　")
+                { ret = ret.Substring(1); }
+                else
+                { break; }
+            }
+
+            for (int i = 0; i < ret.Length; i++)
+            {
+                if (ret.Substring(ret.Length - 1) == "\t" || ret.Substring(ret.Length - 1) == " " || ret.Substring(ret.Length - 1) == "　")
+                { ret = ret.Substring(0, ret.Length - 1); }
+                else
+                { break; }
+            }
+
+            return ret;
         }
     }
     #endregion

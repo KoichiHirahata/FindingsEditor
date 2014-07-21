@@ -143,7 +143,7 @@
     <value>検査検索</value>
   </data>
   <data name="myWordsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="myWordsToolStripMenuItem.Text" xml:space="preserve">
     <value>マイワード</value>
@@ -197,10 +197,16 @@
     <value>科</value>
   </data>
   <data name="managementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="managementToolStripMenuItem.Text" xml:space="preserve">
     <value>管理</value>
+  </data>
+  <data name="pluginToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="pluginToolStripMenuItem.Text" xml:space="preserve">
+    <value>プラグイン</value>
   </data>
   <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 21</value>

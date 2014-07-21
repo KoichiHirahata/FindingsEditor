@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btCancel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btSave.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tbPtID.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -202,7 +202,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbPtID.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="rbFemale.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -235,7 +235,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rbFemale.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="rbMale.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -268,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rbMale.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="dateTimePicker1.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -295,7 +295,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tbPtName.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
@@ -319,7 +319,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbPtName.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lbPatientName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -352,7 +352,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbPatientName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lbGender.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -385,7 +385,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbGender.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lbBirthday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -418,7 +418,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbBirthday.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="lbPatientID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -451,7 +451,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbPatientID.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
+  </data>
+  <data name="btLoad.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="btLoad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 152</value>
+  </data>
+  <data name="btLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 29</value>
+  </data>
+  <data name="btLoad.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btLoad.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="&gt;&gt;btLoad.Name" xml:space="preserve">
+    <value>btLoad</value>
+  </data>
+  <data name="&gt;&gt;btLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btLoad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btLoad.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

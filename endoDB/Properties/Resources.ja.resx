@@ -465,4 +465,10 @@
   <data name="NoRecord" xml:space="preserve">
     <value>データが0件です。</value>
   </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>ファイルを選択してください。</value>
+  </data>
+  <data name="PluginCouldntGetPtName" xml:space="preserve">
+    <value>プラグインで患者名が取得できませんでした。</value>
+  </data>
 </root>

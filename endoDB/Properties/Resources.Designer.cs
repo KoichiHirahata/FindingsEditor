@@ -808,6 +808,15 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
+        ///   Plug-in couldn&apos;t get patient&apos;s name. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PluginCouldntGetPtName {
+            get {
+                return ResourceManager.GetString("PluginCouldntGetPtName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Server port has not been configured. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string portUnconfigured {
@@ -912,6 +921,15 @@ namespace endoDB.Properties {
         internal static string Select {
             get {
                 return ResourceManager.GetString("Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Select file. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SelectFile {
+            get {
+                return ResourceManager.GetString("SelectFile", resourceCulture);
             }
         }
         

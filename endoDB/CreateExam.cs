@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace endoDB
 {
@@ -55,6 +56,86 @@ namespace endoDB
             switch (patient.numberOfPatients(this.tbPtId.Text))
             {
                 case 0:
+                    if (Settings.ptInfoPlugin != "")
+                    {
+                        #region Get patient's information with plug-in
+                        string command = Settings.ptInfoPlugin;
+
+                        ProcessStartInfo psInfo = new ProcessStartInfo();
+
+                        psInfo.FileName = command;
+                        psInfo.Arguments = tbPtId.Text;
+                        psInfo.CreateNoWindow = true; // Do not open console window
+                        psInfo.UseShellExecute = false; // Do not use shell
+
+                        psInfo.RedirectStandardOutput = true;
+
+                        Process p = Process.Start(psInfo);
+                        string output = p.StandardOutput.ReadToEnd();
+
+                        output = output.Replace("\r\r\n", "\n"); // Replace new line code
+                        #endregion
+
+                        if (MessageBox.Show(output, "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                        {
+                            #region Make new patient data
+                            pt1 = new patient(this.tbPtId.Text, true);
+                            string ptName = file_control.readItemSettingFromText(output, "Patient Name:");
+                            if (ptName != "")
+                            {
+                                pt1.ptName = file_control.readItemSettingFromText(output, "Patient Name:");
+                                this.Pt_name.Text = pt1.ptName;
+
+                                #region Patient's birthdate
+                                string ptBirthDay = file_control.readItemSettingFromText(output, "Birth date:");
+
+                                if (ptBirthDay != "")
+                                { pt1.ptBirthday = DateTime.Parse(ptBirthDay); }
+                                else
+                                { pt1.ptBirthday = DateTime.Now; }
+
+                                this.Pt_birthday.Text = pt1.ptBirthday.ToShortDateString();
+                                this.Pt_age.Text = pt1.getPtAge().ToString();
+                                #endregion
+
+                                #region Gender
+                                string ptGender = file_control.readItemSettingFromText(output, "Gender:");
+                                switch (ptGender)
+                                {
+                                    case "0":
+                                        pt1.ptGender = patient.gender.female;
+                                        this.Pt_gender.Text = Properties.Resources.Female;
+                                        break;
+                                    case "1":
+                                        pt1.ptGender = patient.gender.male;
+                                        this.Pt_gender.Text = Properties.Resources.Male;
+                                        break;
+                                    default:
+                                        pt1.ptGender = patient.gender.male;
+                                        this.Pt_gender.Text = Properties.Resources.Male;
+                                        break;
+                                }
+                                #endregion
+
+                                #region Save patient's information
+                                uckyFunctions.functionResult save_res = pt1.writePtAllData(pt1);
+                                if (save_res == uckyFunctions.functionResult.success)
+                                { break; }
+                                else if (save_res == uckyFunctions.functionResult.failed)
+                                { MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                                else if (save_res == uckyFunctions.functionResult.connectionError)
+                                { MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                                #endregion
+                            }
+                            else if (ptName == "")
+                            { MessageBox.Show(Properties.Resources.PluginCouldntGetPtName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                            #endregion
+                        }
+                        else
+                        { MessageBox.Show(Properties.Resources.ProcedureCancelled); }
+                    }
+
+                    // If plug-in procedure was canseled, or plug-in not exist, codes below will be run
                     MessageBox.Show(Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     EditPt ep = new EditPt(this.tbPtId.Text, true, false);
                     ep.ShowDialog(this);

@@ -465,4 +465,10 @@
   <data name="NoRecord" xml:space="preserve">
     <value>No record.</value>
   </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Select file.</value>
+  </data>
+  <data name="PluginCouldntGetPtName" xml:space="preserve">
+    <value>Plug-in couldn't get patient's name.</value>
+  </data>
 </root>

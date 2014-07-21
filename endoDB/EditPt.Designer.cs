@@ -40,6 +40,7 @@
             this.lbGender = new System.Windows.Forms.Label();
             this.lbBirthday = new System.Windows.Forms.Label();
             this.lbPatientID = new System.Windows.Forms.Label();
+            this.btLoad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btCancel
@@ -106,10 +107,18 @@
             resources.ApplyResources(this.lbPatientID, "lbPatientID");
             this.lbPatientID.Name = "lbPatientID";
             // 
+            // btLoad
+            // 
+            resources.ApplyResources(this.btLoad, "btLoad");
+            this.btLoad.Name = "btLoad";
+            this.btLoad.UseVisualStyleBackColor = true;
+            this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
+            // 
             // EditPt
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btLoad);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.tbPtID);
@@ -123,6 +132,7 @@
             this.Controls.Add(this.lbPatientID);
             this.Name = "EditPt";
             this.ShowInTaskbar = false;
+            this.Shown += new System.EventHandler(this.EditPt_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +151,6 @@
         private System.Windows.Forms.Label lbGender;
         private System.Windows.Forms.Label lbBirthday;
         private System.Windows.Forms.Label lbPatientID;
+        private System.Windows.Forms.Button btLoad;
     }
 }

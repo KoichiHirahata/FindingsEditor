@@ -15,5 +15,11 @@ namespace endoDB
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start(linkLabel1.Text);
+        }
     }
 }

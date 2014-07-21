@@ -45,6 +45,7 @@
             this.wardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pluginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,48 +77,48 @@
             // 
             // searchExaminationToolStripMenuItem
             // 
-            resources.ApplyResources(this.searchExaminationToolStripMenuItem, "searchExaminationToolStripMenuItem");
             this.searchExaminationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.searchByDepartmentToolStripMenuItem,
             this.searchByOperator1ToolStripMenuItem,
             this.searchByOperator15ToolStripMenuItem});
             this.searchExaminationToolStripMenuItem.Name = "searchExaminationToolStripMenuItem";
+            resources.ApplyResources(this.searchExaminationToolStripMenuItem, "searchExaminationToolStripMenuItem");
             // 
             // searchByDepartmentToolStripMenuItem
             // 
-            resources.ApplyResources(this.searchByDepartmentToolStripMenuItem, "searchByDepartmentToolStripMenuItem");
             this.searchByDepartmentToolStripMenuItem.Name = "searchByDepartmentToolStripMenuItem";
+            resources.ApplyResources(this.searchByDepartmentToolStripMenuItem, "searchByDepartmentToolStripMenuItem");
             this.searchByDepartmentToolStripMenuItem.Click += new System.EventHandler(this.searchByDepartmentToolStripMenuItem_Click);
             // 
             // searchByOperator1ToolStripMenuItem
             // 
-            resources.ApplyResources(this.searchByOperator1ToolStripMenuItem, "searchByOperator1ToolStripMenuItem");
             this.searchByOperator1ToolStripMenuItem.Name = "searchByOperator1ToolStripMenuItem";
+            resources.ApplyResources(this.searchByOperator1ToolStripMenuItem, "searchByOperator1ToolStripMenuItem");
             this.searchByOperator1ToolStripMenuItem.Click += new System.EventHandler(this.searchByOperator1ToolStripMenuItem_Click);
             // 
             // searchByOperator15ToolStripMenuItem
             // 
-            resources.ApplyResources(this.searchByOperator15ToolStripMenuItem, "searchByOperator15ToolStripMenuItem");
             this.searchByOperator15ToolStripMenuItem.Name = "searchByOperator15ToolStripMenuItem";
+            resources.ApplyResources(this.searchByOperator15ToolStripMenuItem, "searchByOperator15ToolStripMenuItem");
             this.searchByOperator15ToolStripMenuItem.Click += new System.EventHandler(this.searchByOperator15ToolStripMenuItem_Click);
             // 
             // optionToolStripMenuItem
             // 
-            resources.ApplyResources(this.optionToolStripMenuItem, "optionToolStripMenuItem");
             this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.myWordsToolStripMenuItem,
-            this.managementToolStripMenuItem});
+            this.managementToolStripMenuItem,
+            this.pluginToolStripMenuItem});
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
+            resources.ApplyResources(this.optionToolStripMenuItem, "optionToolStripMenuItem");
             // 
             // myWordsToolStripMenuItem
             // 
-            resources.ApplyResources(this.myWordsToolStripMenuItem, "myWordsToolStripMenuItem");
             this.myWordsToolStripMenuItem.Name = "myWordsToolStripMenuItem";
+            resources.ApplyResources(this.myWordsToolStripMenuItem, "myWordsToolStripMenuItem");
             this.myWordsToolStripMenuItem.Click += new System.EventHandler(this.myWordsToolStripMenuItem_Click);
             // 
             // managementToolStripMenuItem
             // 
-            resources.ApplyResources(this.managementToolStripMenuItem, "managementToolStripMenuItem");
             this.managementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editOperatorToolStripMenuItem,
             this.wordsToolStripMenuItem,
@@ -128,71 +129,78 @@
             this.diagnosesToolStripMenuItem,
             this.departmentToolStripMenuItem});
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
+            resources.ApplyResources(this.managementToolStripMenuItem, "managementToolStripMenuItem");
             // 
             // editOperatorToolStripMenuItem
             // 
-            resources.ApplyResources(this.editOperatorToolStripMenuItem, "editOperatorToolStripMenuItem");
             this.editOperatorToolStripMenuItem.Name = "editOperatorToolStripMenuItem";
+            resources.ApplyResources(this.editOperatorToolStripMenuItem, "editOperatorToolStripMenuItem");
             this.editOperatorToolStripMenuItem.Click += new System.EventHandler(this.operatorManagementToolStripMenuItem_Click);
             // 
             // wordsToolStripMenuItem
             // 
-            resources.ApplyResources(this.wordsToolStripMenuItem, "wordsToolStripMenuItem");
             this.wordsToolStripMenuItem.Name = "wordsToolStripMenuItem";
+            resources.ApplyResources(this.wordsToolStripMenuItem, "wordsToolStripMenuItem");
             this.wordsToolStripMenuItem.Click += new System.EventHandler(this.wordsToolStripMenuItem_Click);
             // 
             // defaultFindingsToolStripMenuItem
             // 
-            resources.ApplyResources(this.defaultFindingsToolStripMenuItem, "defaultFindingsToolStripMenuItem");
             this.defaultFindingsToolStripMenuItem.Name = "defaultFindingsToolStripMenuItem";
+            resources.ApplyResources(this.defaultFindingsToolStripMenuItem, "defaultFindingsToolStripMenuItem");
             this.defaultFindingsToolStripMenuItem.Click += new System.EventHandler(this.defaultFindingsToolStripMenuItem_Click);
             // 
             // equipmentsToolStripMenuItem
             // 
-            resources.ApplyResources(this.equipmentsToolStripMenuItem, "equipmentsToolStripMenuItem");
             this.equipmentsToolStripMenuItem.Name = "equipmentsToolStripMenuItem";
+            resources.ApplyResources(this.equipmentsToolStripMenuItem, "equipmentsToolStripMenuItem");
             this.equipmentsToolStripMenuItem.Click += new System.EventHandler(this.equipmentsToolStripMenuItem_Click);
             // 
             // placeRoomToolStripMenuItem
             // 
-            resources.ApplyResources(this.placeRoomToolStripMenuItem, "placeRoomToolStripMenuItem");
             this.placeRoomToolStripMenuItem.Name = "placeRoomToolStripMenuItem";
+            resources.ApplyResources(this.placeRoomToolStripMenuItem, "placeRoomToolStripMenuItem");
             this.placeRoomToolStripMenuItem.Click += new System.EventHandler(this.placeRoomToolStripMenuItem_Click);
             // 
             // wardToolStripMenuItem
             // 
-            resources.ApplyResources(this.wardToolStripMenuItem, "wardToolStripMenuItem");
             this.wardToolStripMenuItem.Name = "wardToolStripMenuItem";
+            resources.ApplyResources(this.wardToolStripMenuItem, "wardToolStripMenuItem");
             this.wardToolStripMenuItem.Click += new System.EventHandler(this.wardToolStripMenuItem_Click);
             // 
             // diagnosesToolStripMenuItem
             // 
-            resources.ApplyResources(this.diagnosesToolStripMenuItem, "diagnosesToolStripMenuItem");
             this.diagnosesToolStripMenuItem.Name = "diagnosesToolStripMenuItem";
+            resources.ApplyResources(this.diagnosesToolStripMenuItem, "diagnosesToolStripMenuItem");
             this.diagnosesToolStripMenuItem.Click += new System.EventHandler(this.diagnosesToolStripMenuItem_Click);
             // 
             // departmentToolStripMenuItem
             // 
-            resources.ApplyResources(this.departmentToolStripMenuItem, "departmentToolStripMenuItem");
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
+            resources.ApplyResources(this.departmentToolStripMenuItem, "departmentToolStripMenuItem");
             this.departmentToolStripMenuItem.Click += new System.EventHandler(this.departmentToolStripMenuItem_Click);
+            // 
+            // pluginToolStripMenuItem
+            // 
+            this.pluginToolStripMenuItem.Name = "pluginToolStripMenuItem";
+            resources.ApplyResources(this.pluginToolStripMenuItem, "pluginToolStripMenuItem");
+            this.pluginToolStripMenuItem.Click += new System.EventHandler(this.pluginToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
-            resources.ApplyResources(this.logOutToolStripMenuItem, "logOutToolStripMenuItem");
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            resources.ApplyResources(this.logOutToolStripMenuItem, "logOutToolStripMenuItem");
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             // 
             // versionToolStripMenuItem
             // 
-            resources.ApplyResources(this.versionToolStripMenuItem, "versionToolStripMenuItem");
             this.versionToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
+            resources.ApplyResources(this.versionToolStripMenuItem, "versionToolStripMenuItem");
             this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
             // 
             // lbUserName
@@ -207,32 +215,32 @@
             // 
             // btSearchPt
             // 
-            resources.ApplyResources(this.btSearchPt, "btSearchPt");
             this.btSearchPt.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.btSearchPt, "btSearchPt");
             this.btSearchPt.Name = "btSearchPt";
             this.btSearchPt.UseVisualStyleBackColor = false;
             this.btSearchPt.Click += new System.EventHandler(this.btSearchPt_Click);
             // 
             // btSchedule
             // 
-            resources.ApplyResources(this.btSchedule, "btSchedule");
             this.btSchedule.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.btSchedule, "btSchedule");
             this.btSchedule.Name = "btSchedule";
             this.btSchedule.UseVisualStyleBackColor = false;
             this.btSchedule.Click += new System.EventHandler(this.btSchedule_Click);
             // 
             // btNewPt
             // 
-            resources.ApplyResources(this.btNewPt, "btNewPt");
             this.btNewPt.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.btNewPt, "btNewPt");
             this.btNewPt.Name = "btNewPt";
             this.btNewPt.UseVisualStyleBackColor = false;
             this.btNewPt.Click += new System.EventHandler(this.btNewPt_Click);
             // 
             // btPtView
             // 
-            resources.ApplyResources(this.btPtView, "btPtView");
             this.btPtView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.btPtView, "btPtView");
             this.btPtView.Name = "btPtView";
             this.btPtView.UseVisualStyleBackColor = false;
             this.btPtView.Click += new System.EventHandler(this.btPtView_Click);
@@ -250,16 +258,16 @@
             // 
             // btNewExamination
             // 
-            resources.ApplyResources(this.btNewExamination, "btNewExamination");
             this.btNewExamination.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.btNewExamination, "btNewExamination");
             this.btNewExamination.Name = "btNewExamination";
             this.btNewExamination.UseVisualStyleBackColor = false;
             this.btNewExamination.Click += new System.EventHandler(this.btNewExamination_Click);
             // 
             // btDateSearch
             // 
-            resources.ApplyResources(this.btDateSearch, "btDateSearch");
             this.btDateSearch.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.btDateSearch, "btDateSearch");
             this.btDateSearch.Name = "btDateSearch";
             this.btDateSearch.UseVisualStyleBackColor = false;
             this.btDateSearch.Click += new System.EventHandler(this.btDateSearch_Click);
@@ -338,5 +346,6 @@
         private System.Windows.Forms.ToolStripMenuItem departmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem versionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pluginToolStripMenuItem;
     }
 }

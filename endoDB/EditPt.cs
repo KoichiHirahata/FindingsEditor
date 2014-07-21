@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using System.Diagnostics;
 
 namespace endoDB
 {
@@ -49,6 +50,7 @@ namespace endoDB
             this.dateTimePicker1.Text = pt1.ptBirthday.ToShortDateString();
         }
 
+        #region Save
         private void btSave_Click(object sender, EventArgs e)
         {
             if (pt1.ptID == tbPtID.Text)
@@ -156,6 +158,7 @@ namespace endoDB
                 }
             }
         }
+        #endregion
 
         private void btCancel_Click(object sender, EventArgs e)
         { this.Close(); }
@@ -167,6 +170,68 @@ namespace endoDB
                 btSave.Focus();
                 savePt();
             }
+        }
+
+        private void btLoad_Click(object sender, EventArgs e)
+        {
+            #region Get patient's information with plug-in
+            string command = Settings.ptInfoPlugin;
+
+            ProcessStartInfo psInfo = new ProcessStartInfo();
+
+            psInfo.FileName = command;
+            psInfo.Arguments = tbPtID.Text;
+            psInfo.CreateNoWindow = true; // Do not open console window
+            psInfo.UseShellExecute = false; // Do not use shell
+
+            psInfo.RedirectStandardOutput = true;
+
+            Process p = Process.Start(psInfo);
+            string output = p.StandardOutput.ReadToEnd();
+
+            output = output.Replace("\r\r\n", "\n"); // Replace new line code
+            #endregion
+
+            #region Make new patient data
+            string ptName = file_control.readItemSettingFromText(output, "Patient Name:");
+            if (ptName != "")
+            {
+                this.tbPtName.Text= file_control.readItemSettingFromText(output, "Patient Name:");
+
+                #region Patient's birthdate
+                string ptBirthDay = file_control.readItemSettingFromText(output, "Birth date:");
+
+                if (ptBirthDay != "")
+                { this.dateTimePicker1.Value = DateTime.Parse(ptBirthDay); }
+                #endregion
+
+                #region Gender
+                string ptGender = file_control.readItemSettingFromText(output, "Gender:");
+                switch (ptGender)
+                {
+                    case "0":
+                        rbFemale.Checked = true;
+                        break;
+                    case "1":
+                        rbMale.Checked = true;
+                        break;
+                    default:
+                        break;
+                }
+                #endregion
+
+            #endregion
+            }
+            else if (ptName == "")
+            { MessageBox.Show(Properties.Resources.PluginCouldntGetPtName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void EditPt_Shown(object sender, EventArgs e)
+        {
+            if (Settings.ptInfoPlugin == "")
+            { btLoad.Visible = false; }
+            else
+            { btLoad.Visible = true; }
         }
     }
 }

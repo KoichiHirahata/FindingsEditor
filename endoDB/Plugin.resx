@@ -117,65 +117,159 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btCancel.Text" xml:space="preserve">
-    <value>キャンセル</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbPtInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="tbPtInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 39</value>
+  </data>
+  <data name="tbPtInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>426, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbPtInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.Name" xml:space="preserve">
+    <value>tbPtInfo</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btPtInfoSelect.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="btPtInfoSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 39</value>
+  </data>
+  <data name="btPtInfoSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btPtInfoSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btPtInfoSelect.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="&gt;&gt;btPtInfoSelect.Name" xml:space="preserve">
+    <value>btPtInfoSelect</value>
+  </data>
+  <data name="&gt;&gt;btPtInfoSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btPtInfoSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btPtInfoSelect.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbPtInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPtInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbPtInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="lbPtInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 16</value>
+  </data>
+  <data name="lbPtInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lbPtInfo.Text" xml:space="preserve">
+    <value>Patient information:</value>
+  </data>
+  <data name="&gt;&gt;lbPtInfo.Name" xml:space="preserve">
+    <value>lbPtInfo</value>
+  </data>
+  <data name="&gt;&gt;lbPtInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPtInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbPtInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="btSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 108</value>
+  </data>
+  <data name="btSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 28</value>
+  </data>
+  <data name="btSave.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="btSave.Text" xml:space="preserve">
-    <value>保存</value>
+    <value>Save</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="rbFemale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
+  <data name="&gt;&gt;btSave.Name" xml:space="preserve">
+    <value>btSave</value>
   </data>
-  <data name="rbFemale.Text" xml:space="preserve">
-    <value>女性</value>
+  <data name="&gt;&gt;btSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="rbMale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
+  <data name="&gt;&gt;btSave.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="rbMale.Text" xml:space="preserve">
-    <value>男性</value>
+  <data name="&gt;&gt;btSave.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="lbPatientName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 72</value>
+  <data name="btCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="lbPatientName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 16</value>
+  <data name="btCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 108</value>
   </data>
-  <data name="lbPatientName.Text" xml:space="preserve">
-    <value>患者氏名：</value>
+  <data name="btCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 28</value>
   </data>
-  <data name="lbGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 115</value>
+  <data name="btCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="lbGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+  <data name="btCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="lbGender.Text" xml:space="preserve">
-    <value>性別：</value>
+  <data name="&gt;&gt;btCancel.Name" xml:space="preserve">
+    <value>btCancel</value>
   </data>
-  <data name="lbBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 158</value>
+  <data name="&gt;&gt;btCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbBirthday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 16</value>
+  <data name="&gt;&gt;btCancel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lbBirthday.Text" xml:space="preserve">
-    <value>生年月日：</value>
+  <data name="&gt;&gt;btCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="lbPatientID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 26</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
   </data>
-  <data name="lbPatientID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 16</value>
-  </data>
-  <data name="lbPatientID.Text" xml:space="preserve">
-    <value>患者ID：</value>
-  </data>
-  <data name="btLoad.Text" xml:space="preserve">
-    <value>読込</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>534, 160</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>患者編集</value>
+    <value>Plug-in</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Plugin</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

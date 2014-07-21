@@ -117,65 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btCancel.Text" xml:space="preserve">
-    <value>キャンセル</value>
+  <data name="btPtInfoSelect.Text" xml:space="preserve">
+    <value>参照...</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbPtInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 16</value>
+  </data>
+  <data name="lbPtInfo.Text" xml:space="preserve">
+    <value>患者情報プラグイン：</value>
   </data>
   <data name="btSave.Text" xml:space="preserve">
     <value>保存</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="rbFemale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
-  </data>
-  <data name="rbFemale.Text" xml:space="preserve">
-    <value>女性</value>
-  </data>
-  <data name="rbMale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
-  </data>
-  <data name="rbMale.Text" xml:space="preserve">
-    <value>男性</value>
-  </data>
-  <data name="lbPatientName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 72</value>
-  </data>
-  <data name="lbPatientName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 16</value>
-  </data>
-  <data name="lbPatientName.Text" xml:space="preserve">
-    <value>患者氏名：</value>
-  </data>
-  <data name="lbGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 115</value>
-  </data>
-  <data name="lbGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
-  </data>
-  <data name="lbGender.Text" xml:space="preserve">
-    <value>性別：</value>
-  </data>
-  <data name="lbBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 158</value>
-  </data>
-  <data name="lbBirthday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 16</value>
-  </data>
-  <data name="lbBirthday.Text" xml:space="preserve">
-    <value>生年月日：</value>
-  </data>
-  <data name="lbPatientID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 26</value>
-  </data>
-  <data name="lbPatientID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 16</value>
-  </data>
-  <data name="lbPatientID.Text" xml:space="preserve">
-    <value>患者ID：</value>
-  </data>
-  <data name="btLoad.Text" xml:space="preserve">
-    <value>読込</value>
+  <data name="btCancel.Text" xml:space="preserve">
+    <value>キャンセル</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>患者編集</value>
+    <value>プラグイン</value>
   </data>
 </root>

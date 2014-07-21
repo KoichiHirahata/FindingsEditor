@@ -34,9 +34,15 @@ namespace endoDB
             this.lbUserName.Text = db_operator.operatorName;
 
             if (db_operator.admin_user)
-            { this.managementToolStripMenuItem.Visible = true; }
+            {
+                managementToolStripMenuItem.Visible = true;
+                pluginToolStripMenuItem.Visible = true;
+            }
             else
-            { this.managementToolStripMenuItem.Visible = false; }
+            {
+                this.managementToolStripMenuItem.Visible = false;
+                pluginToolStripMenuItem.Visible = false;
+            }
 
             this.tbPtID.Text = "";
         }
@@ -194,6 +200,12 @@ namespace endoDB
         {
             EditDepartment ed = new EditDepartment();
             ed.ShowDialog(this);
+        }
+
+        private void pluginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Plugin p = new Plugin();
+            p.ShowDialog(this);
         }
         #endregion
 

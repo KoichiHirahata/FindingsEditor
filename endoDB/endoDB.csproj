@@ -155,6 +155,12 @@
     <Compile Include="ExamResult.Designer.cs">
       <DependentUpon>ExamResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plugin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plugin.Designer.cs">
+      <DependentUpon>Plugin.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchByOp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientMain.resx">
       <DependentUpon>PatientMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugin.ja.resx">
+      <DependentUpon>Plugin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugin.resx">
+      <DependentUpon>Plugin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
