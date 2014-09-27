@@ -196,6 +196,15 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
+        ///   Close に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Comment に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Comment {

@@ -60,16 +60,11 @@ namespace endoDB
                 timer.Interval = 30000;  //Unit is msec
                 timer.Tick += new EventHandler(timer_Tick);
                 timer.Start();
-
-                btExamCanceled.Visible = true;
-                btAddDiag.Visible = true;
             }
             else
             {
-                MessageBox.Show(Properties.Resources.ReadOnlyMode + Environment.NewLine + Properties.Resources.ChangesWillLost,
-                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btExamCanceled.Visible = false;
-                btAddDiag.Visible = false;
+                //MessageBox.Show(Properties.Resources.ReadOnlyMode + Environment.NewLine + Properties.Resources.ChangesWillLost, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Properties.Resources.ReadOnlyMode, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             #endregion
 
@@ -77,6 +72,9 @@ namespace endoDB
 
             #region Header
             this.lbPatient.Text = "ID: " + exam.pt_id + "   " + Properties.Resources.Name + ": " + exam.pt_name;
+
+            if(!canEdit)
+            { btSaveClose.Text = Properties.Resources.Close; }
 
             //cbExamStatus initialization
             this.cbExamStatus.DataSource = CLocalDB.localDB.Tables["exam_status"];
@@ -91,14 +89,25 @@ namespace endoDB
             #region information
             this.lbDate.Text = Properties.Resources.Date + ": " + exam.exam_day.ToLongDateString()
                 + "    " + Properties.Resources.ExamType + ": " + exam.getExamTypeName();
-            this.tbPurpose.Text = exam.purpose;
 
-            //cbDepartment initialization
+            #region tbPurpose initialization
+            this.tbPurpose.Text = exam.purpose;
+            if (canEdit)
+            { tbPurpose.ReadOnly = false; }
+            else
+            { tbPurpose.ReadOnly = true; }
+            #endregion
+
+            #region cbDepartment initialization
             this.cbDepartment.DataSource = CLocalDB.localDB.Tables["department"];
             this.cbDepartment.ValueMember = "code";
             this.cbDepartment.DisplayMember = "name1";
             this.cbDepartment.SelectedValue = exam.department;
-            //cbOrderDr initialization
+            if (!canEdit)
+            { cbDepartment.Enabled = false; }
+            #endregion
+
+            #region cbOrderDr initialization
             this.cbOrderDr.DataSource = CLocalDB.localDB.Tables["orderDr"];
             this.cbOrderDr.DisplayMember = "op_name";
             if (string.IsNullOrWhiteSpace(exam.order_dr))
@@ -108,12 +117,20 @@ namespace endoDB
                 cbOrderDr.SelectedIndex = -1;//これをしないと項目にないテキストがちゃんと反映されない。
                 this.cbOrderDr.Text = exam.order_dr;
             }
-            //cbWard initialization
+            if (!canEdit)
+            { cbOrderDr.Enabled = false; }
+            #endregion
+
+            #region cbWard initialization
             this.cbWard.DataSource = CLocalDB.localDB.Tables["ward"];
             this.cbWard.ValueMember = "ward_no";
             this.cbWard.DisplayMember = "ward";
             this.cbWard.SelectedValue = exam.ward_id;
-            //cbEquipment initialization
+            if (!canEdit)
+            { cbWard.Enabled = false; }
+            #endregion
+
+            #region cbEquipment initialization
             switch (exam.exam_type)
             {
                 case 1:
@@ -135,7 +152,11 @@ namespace endoDB
             this.cbEquipment.ValueMember = "equipment_no";
             this.cbEquipment.DisplayMember = "name";
             this.cbEquipment.SelectedValue = exam.equipment;
-            //cbPlace initialization
+            if (!canEdit)
+            { cbEquipment.Enabled = false; }
+            #endregion
+
+            #region cbPlace initialization
             switch (exam.exam_type)
             {
                 case 99:
@@ -151,55 +172,75 @@ namespace endoDB
             { this.cbPlace.SelectedIndex = -1; }
             else
             { this.cbPlace.SelectedValue = exam.place_no; }
-            //cbOperator1 initialization
+            if (!canEdit)
+            { cbPlace.Enabled = false; }
+            #endregion
+
+            #region cbOperator1 initialization
             this.cbOperator1.DataSource = CLocalDB.localDB.Tables["operator1"];
             this.cbOperator1.ValueMember = "operator_id";
             this.cbOperator1.DisplayMember = "op_name";
             if (string.IsNullOrWhiteSpace(exam.operator1))
-            {
-                this.cbOperator1.SelectedIndex = -1;
-            }
+            { this.cbOperator1.SelectedIndex = -1; }
             else
+            { this.cbOperator1.SelectedValue = exam.operator1; }
+
+            if (!canEdit)
             {
-                this.cbOperator1.SelectedValue = exam.operator1;
+                cbOperator1.Enabled = false;
+                btClearOp1.Visible = false;
             }
-            //cbOperator2 initialization
+            #endregion
+
+            #region cbOperator2 initialization
             this.cbOperator2.DataSource = CLocalDB.localDB.Tables["operator2"];
             this.cbOperator2.ValueMember = "operator_id";
             this.cbOperator2.DisplayMember = "op_name";
             if (string.IsNullOrWhiteSpace(exam.operator2))
-            {
-                this.cbOperator2.SelectedIndex = -1;
-            }
+            { this.cbOperator2.SelectedIndex = -1; }
             else
+            { this.cbOperator2.SelectedValue = exam.operator2; }
+
+            if (!canEdit)
             {
-                this.cbOperator2.SelectedValue = exam.operator2;
+                cbOperator2.Enabled = false;
+                btClearOp2.Visible = false;
             }
-            //cbOperator3 initialization
+            #endregion
+
+            #region cbOperator3 initialization
             this.cbOperator3.DataSource = CLocalDB.localDB.Tables["operator3"];
             this.cbOperator3.ValueMember = "operator_id";
             this.cbOperator3.DisplayMember = "op_name";
             if (string.IsNullOrWhiteSpace(exam.operator3))
-            {
-                this.cbOperator3.SelectedIndex = -1;
-            }
+            { this.cbOperator3.SelectedIndex = -1; }
             else
+            { this.cbOperator3.SelectedValue = exam.operator3; }
+
+            if (!canEdit)
             {
-                this.cbOperator3.SelectedValue = exam.operator3;
+                cbOperator3.Enabled = false;
+                btClearOp3.Visible = false;
             }
-            //cbOperator4 initialization
+            #endregion
+
+            #region cbOperator4 initialization
             this.cbOperator4.DataSource = CLocalDB.localDB.Tables["operator4"];
             this.cbOperator4.ValueMember = "operator_id";
             this.cbOperator4.DisplayMember = "op_name";
             if (string.IsNullOrWhiteSpace(exam.operator4))
-            {
-                this.cbOperator4.SelectedIndex = -1;
-            }
+            { this.cbOperator4.SelectedIndex = -1; }
             else
+            { this.cbOperator4.SelectedValue = exam.operator4; }
+
+            if (!canEdit)
             {
-                this.cbOperator4.SelectedValue = exam.operator4;
+                cbOperator4.Enabled = false;
+                btClearOp4.Visible = false;
             }
-            //cbOperator5 initialization
+            #endregion
+
+            #region cbOperator5 initialization
             this.cbOperator5.DataSource = CLocalDB.localDB.Tables["operator5"];
             this.cbOperator5.ValueMember = "operator_id";
             this.cbOperator5.DisplayMember = "op_name";
@@ -207,6 +248,17 @@ namespace endoDB
             { this.cbOperator5.SelectedIndex = -1; }
             else
             { this.cbOperator5.SelectedValue = exam.operator5; }
+
+            if (!canEdit)
+            {
+                cbOperator5.Enabled = false;
+                btClearOp5.Visible = false;
+            }
+            #endregion
+
+            if (!canEdit)
+            { btExamCanceled.Visible = false; }
+
             #endregion
 
             #region Findings
@@ -218,11 +270,14 @@ namespace endoDB
             initiateDt();
 
             #region Add btDelColumn
-            DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
-            btDelColumn.Name = Properties.Resources.Delete;  //列の名前を設定
-            btDelColumn.UseColumnTextForButtonValue = true;  //ボタンにテキスト表示
-            btDelColumn.Text = Properties.Resources.Delete;  //ボタンの表示テキスト設定
-            dgvDiagnoses.Columns.Add(btDelColumn);     //ボタン追加
+            if (canEdit)
+            {
+                DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //Create DataGridViewButtonColumn
+                btDelColumn.Name = Properties.Resources.Delete;  //Set column name
+                btDelColumn.UseColumnTextForButtonValue = true;  //Show text on the button
+                btDelColumn.Text = Properties.Resources.Delete;  //Set text on the button
+                dgvDiagnoses.Columns.Add(btDelColumn);     //Add the button
+            }
             #endregion
 
             resizeColumns();
@@ -235,6 +290,16 @@ namespace endoDB
             dgvDiagnoses.Columns["location"].Visible = false;
             dgvDiagnoses.Columns["locate_str_after_diag"].Visible = false;
             #endregion
+            #endregion
+
+            #region Initialize buttons beside dgvDiagnoses
+            if (!canEdit)
+            {
+                btSetNormal.Visible = false;
+                btAddDiag.Visible = false;
+                btReverseOrder.Visible = false;
+                btCopyDiag.Visible = false;
+            }
             #endregion
 
             #region Initialize stockedSQLs
@@ -251,14 +316,29 @@ namespace endoDB
             }
             else
             { this.tbFindings.Text = exam.findings.Replace("\n", "\r\n").Replace("\r\r", "\r"); }//Replace code is necessary because we have data made with Linux machine.
+
+            if (canEdit)
+            { tbFindings.ReadOnly = false; }
+            else
+            { tbFindings.ReadOnly = true; }
             #endregion
 
-            this.tbComment.Text = exam.comment.Replace("\n", "\r\n").Replace("\r\r", "\r");   //tbComment initialization
+            #region tbComment initialization
+            this.tbComment.Text = exam.comment.Replace("\n", "\r\n").Replace("\r\r", "\r");
+
+            if (canEdit)
+            { tbComment.ReadOnly = false; }
+            else
+            { tbComment.ReadOnly = true; }
+            #endregion
 
             #region btDiagnosed initialization
             if (db_operator.canDiag)
             { btDiagnosed.Visible = true; }
             else
+            { btDiagnosed.Visible = false; }
+
+            if (!canEdit)
             { btDiagnosed.Visible = false; }
             #endregion
 
@@ -277,6 +357,9 @@ namespace endoDB
             { btChecked.Visible = true; }
             else
             { btChecked.Visible = false; }
+
+            if (!canEdit)
+            { btChecked.Visible = false; }
             #endregion
 
             #region cbChecker initialization
@@ -293,22 +376,26 @@ namespace endoDB
             #region Figure
             checkFigureFolder(); //Check figure folder exist or not, and if folder not existed, create folder.
             figureFileNameBase = Settings.figureFolder + @"\" + exam.exam_day.Year.ToString() + @"\" + exam.exam_id.ToString();
-            //pbFigure1 initialization
+
+            #region pbFigure1 initialization
             if (!System.IO.File.Exists(figureFileNameBase + "_1.png"))//If there is no figure file, fill pbFigure1 with white.
-            {
-                fillPicBoxWhite(pbFigure1);
-            }
+            { fillPicBoxWhite(pbFigure1); }
             else
             {
                 fs = File.Open(figureFileNameBase + "_1.png", FileMode.Open, FileAccess.ReadWrite);
                 pbFigure1.Image = System.Drawing.Image.FromStream(fs);
                 fs.Close();
             }
-            //pbFigure2 initialization
+
+            if (canEdit)
+            { pbFigure1.Enabled = true; }
+            else
+            { pbFigure1.Enabled = false; }
+            #endregion
+
+            #region pbFigure2 initialization
             if (!System.IO.File.Exists(figureFileNameBase + "_2.png"))//If there is no figure file, fill pbFigure1 with white.
-            {
-                fillPicBoxWhite(pbFigure2);
-            }
+            { fillPicBoxWhite(pbFigure2); }
             else
             {
                 fs = File.Open(figureFileNameBase + "_2.png", FileMode.Open, FileAccess.ReadWrite);
@@ -316,17 +403,23 @@ namespace endoDB
                 fs.Close();
             }
 
-            //pbColor initialization
+            if (canEdit)
+            { pbFigure2.Enabled = true; }
+            else
+            { pbFigure2.Enabled = false; }
+            #endregion
+
+            #region pbColor initialization
             this.pbColor1.BackColor = currentColor;
             this.pbColor2.BackColor = currentColor;
-            //cbBrushWidth initialization
+            #endregion
+
+            #region cbBrushWidth initialization
             DataTable dtBrushWidth = new DataTable();
             dtBrushWidth.Columns.Add("width", Type.GetType("System.Int16"));
             dtBrushWidth.Columns.Add("WidthStr", Type.GetType("System.String"));
             for (int i = 2; i < 16; i++)
-            {
-                dtBrushWidth.Rows.Add(i, i.ToString() + " px");
-            }
+            { dtBrushWidth.Rows.Add(i, i.ToString() + " px"); }
             cbBrushWidth1.DataSource = dtBrushWidth;
             cbBrushWidth2.DataSource = dtBrushWidth;
             cbBrushWidth1.ValueMember = "width";
@@ -336,7 +429,14 @@ namespace endoDB
             setPbBrushWidth();
             #endregion
 
+            #endregion
+
             #region Words
+            if (canEdit)
+            { dgvWords.Visible = true; }
+            else
+            { dgvWords.Visible = false; }
+
             selectedTb = "";
             switch (exam.exam_type)
             {

@@ -471,4 +471,7 @@
   <data name="PluginCouldntGetPtName" xml:space="preserve">
     <value>プラグインで患者名が取得できませんでした。</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
 </root>

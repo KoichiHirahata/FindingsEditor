@@ -41,7 +41,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Findings Editor Ver. 1.02";
+            this.label1.Text = "Findings Editor Ver. 1.03";
             // 
             // label2
             // 

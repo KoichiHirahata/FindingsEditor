@@ -471,4 +471,7 @@
   <data name="PluginCouldntGetPtName" xml:space="preserve">
     <value>Plug-in couldn't get patient's name.</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

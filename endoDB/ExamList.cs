@@ -207,6 +207,8 @@ namespace endoDB
             if (e.KeyCode == Keys.Enter)
             {
                 DataGridView dgv = (DataGridView)sender;
+                if(dgv.RowCount==0)
+                { return; }
 
                 if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btSelect")
                 {
