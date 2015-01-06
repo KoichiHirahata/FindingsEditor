@@ -92,10 +92,14 @@ namespace endoDB
             this.dgvExamList.Columns["name1"].HeaderText = Properties.Resources.Department;
             this.dgvExamList.Columns["ward"].HeaderText = Properties.Resources.Ward;
             this.dgvExamList.Columns["status_name"].HeaderText = Properties.Resources.Status;
-            dgvExamList.Columns["btSelect"].HeaderText = Properties.Resources.ptSelect;
-            dgvExamList.Columns["btImage"].HeaderText = Properties.Resources.Image;
-            dgvExamList.Columns["btDelColumn"].HeaderText = Properties.Resources.Delete;
-            dgvExamList.Columns["btPrint"].HeaderText = Properties.Resources.Print;
+            //dgvExamList.Columns["btSelect"].HeaderText = Properties.Resources.ptSelect; //If this code is enabled, this application will stop with clicking at columnheader.
+            //dgvExamList.Columns["btImage"].HeaderText = Properties.Resources.Image; //Same as above.
+            //dgvExamList.Columns["btDelColumn"].HeaderText = Properties.Resources.Delete; //Same as above.
+            //dgvExamList.Columns["btPrint"].HeaderText = Properties.Resources.Print; //Same as above.
+            dgvExamList.Columns["btSelect"].HeaderText = "";
+            dgvExamList.Columns["btImage"].HeaderText = "";
+            dgvExamList.Columns["btDelColumn"].HeaderText = "";
+            dgvExamList.Columns["btPrint"].HeaderText = "";
             #endregion
 
             resizeColumns();
