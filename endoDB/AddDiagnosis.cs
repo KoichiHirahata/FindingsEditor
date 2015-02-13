@@ -203,6 +203,46 @@ namespace endoDB
                     break;
                 case 5:
                     break;
+                case 1001:
+                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1000000");
+                    lb1.Text = drs[0]["name"].ToString();
+                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1010000");
+                    bt1.Text = drs[0]["name"].ToString();
+                    bt1start = int.Parse(drs[0]["start_no"].ToString());
+                    bt1end = int.Parse(drs[0]["end_no"].ToString());
+                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1020000");
+                    bt2.Text = drs[0]["name"].ToString();
+                    bt2start = int.Parse(drs[0]["start_no"].ToString());
+                    bt2end = int.Parse(drs[0]["end_no"].ToString());
+                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1030000");
+                    bt3.Text = drs[0]["name"].ToString();
+                    bt3start = int.Parse(drs[0]["start_no"].ToString());
+                    bt3end = int.Parse(drs[0]["end_no"].ToString());
+
+                    lb2.Text = "";
+                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1040000");
+                    bt4.Text = drs[0]["name"].ToString();
+                    bt4start = int.Parse(drs[0]["start_no"].ToString());
+                    bt4end = int.Parse(drs[0]["end_no"].ToString());
+                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1050000");
+                    bt5.Text = drs[0]["name"].ToString();
+                    bt5start = int.Parse(drs[0]["start_no"].ToString());
+                    bt5end = int.Parse(drs[0]["end_no"].ToString());
+                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1060000");
+                    bt6.Text = drs[0]["name"].ToString();
+                    bt6start = int.Parse(drs[0]["start_no"].ToString());
+                    bt6end = int.Parse(drs[0]["end_no"].ToString());
+
+                    lb3.Text = "";
+                    bt7.Visible = false;
+                    bt8.Visible = false;
+                    bt9.Visible = false;
+
+                    lb4.Text = "";
+                    bt10.Visible = false;
+                    bt11.Visible = false;
+                    bt12.Visible = false;
+                    break;
             }
         }
 
