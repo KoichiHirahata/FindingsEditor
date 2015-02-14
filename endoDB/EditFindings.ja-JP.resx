@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lbOperator1.Text" xml:space="preserve">
+    <value>施行者1:</value>
+  </data>
   <data name="btSetNormal.Text" xml:space="preserve">
     <value>「正常」追加</value>
   </data>
