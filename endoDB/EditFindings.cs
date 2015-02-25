@@ -18,6 +18,7 @@ namespace endoDB
     {
         private Exam exam;
         private Boolean canEdit;
+        private Boolean canEditPatho; //This will control the right of edit pathology results.
         private DataTable dt = new DataTable();//Temporary datatable for diagnoses.
         private DataTable stockedSQLs = new DataTable();
         private int no4SqlIndex = 0;
@@ -39,6 +40,7 @@ namespace endoDB
 
             #region canEdit & Timer
             canEdit = true;
+            canEditPatho = true;
 
             #region editorial control
             if (db_operator.canDiag == false)
@@ -49,10 +51,12 @@ namespace endoDB
 
             #region Timer
             //Check locktime after checking of editorial control above
-            if (canEdit == true)
-            { canEdit = uckyFunctions.canEdit("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'"); }
+            canEditPatho = uckyFunctions.canEdit("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
 
             if (canEdit)
+            { canEdit = canEditPatho; }
+
+            if (canEditPatho)
             {
                 uckyFunctions.updateLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
 
@@ -60,6 +64,9 @@ namespace endoDB
                 timer.Interval = 30000;  //Unit is msec
                 timer.Tick += new EventHandler(timer_Tick);
                 timer.Start();
+
+                if (!canEdit)
+                { MessageBox.Show(Properties.Resources.YouCanMakeChangesOnlyToPatho, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             }
             else
             {
@@ -73,7 +80,7 @@ namespace endoDB
             #region Header
             this.lbPatient.Text = "ID: " + exam.pt_id + "   " + Properties.Resources.Name + ": " + exam.pt_name;
 
-            if(!canEdit)
+            if (!canEdit)
             { btSaveClose.Text = Properties.Resources.Close; }
 
             //cbExamStatus initialization
@@ -381,6 +388,15 @@ namespace endoDB
             { this.cbChecker.SelectedIndex = -1; }
             else
             { this.cbChecker.SelectedValue = exam.final_diag_dr; }
+            #endregion
+
+            #region tbPatho initialization
+            this.tbPatho.Text = exam.patho_result.Replace("\n", "\r\n").Replace("\r\r", "\r");
+
+            if (canEditPatho)
+            { tbPatho.ReadOnly = false; }
+            else
+            { tbPatho.ReadOnly = true; }
             #endregion
             #endregion
 
@@ -751,7 +767,7 @@ namespace endoDB
         #region saveData
         private void EditFindings_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (canEdit && edited)
+            if (canEditPatho && edited)
             {
                 if (MessageBox.Show(Properties.Resources.SaveChangesYN, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 { return; }
@@ -775,7 +791,7 @@ namespace endoDB
 
         private void btSaveClose_Click(object sender, EventArgs e)
         {
-            if (canEdit && edited)
+            if (canEditPatho && edited)
             {
                 saveFindingsData();
                 edited = false;
@@ -851,6 +867,7 @@ namespace endoDB
             { exam.diag_dr = cbDiagnosed.SelectedValue.ToString(); }
 
             exam.comment = tbComment.Text;
+            exam.patho_result = tbPatho.Text;
 
             if (string.IsNullOrWhiteSpace(this.cbChecker.Text))
             { exam.final_diag_dr = null; }
@@ -1326,6 +1343,9 @@ namespace endoDB
         { edited = true; }
 
         private void tbComment_TextChanged(object sender, EventArgs e)
+        { edited = true; }
+
+        private void tbPatho_TextChanged(object sender, EventArgs e)
         { edited = true; }
         #endregion
     }

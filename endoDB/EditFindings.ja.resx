@@ -117,56 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbPatient.ToolTip" xml:space="preserve">
-    <value />
+  <data name="tpInformation.Text" xml:space="preserve">
+    <value>基本情報</value>
   </data>
   <data name="btExamCanceled.Text" xml:space="preserve">
     <value>この検査をキャンセル（実施せず）</value>
-  </data>
-  <data name="btExamCanceled.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btClearOp5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbOperator5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbOperator5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btClearOp4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbOperator4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbOperator4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btClearOp3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbOperator3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbOperator3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btClearOp2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbOperator2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbOperator2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btClearOp1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbOperator1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbOperator1.Location" type="System.Drawing.Point, System.Drawing">
@@ -178,12 +133,6 @@
   <data name="lbOperator1.Text" xml:space="preserve">
     <value>施行医1:</value>
   </data>
-  <data name="lbOperator1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbPlace.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbPlace.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 227</value>
   </data>
@@ -192,12 +141,6 @@
   </data>
   <data name="lbPlace.Text" xml:space="preserve">
     <value>検査場所:</value>
-  </data>
-  <data name="lbPlace.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbEquipment.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="lbEquipment.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 189</value>
@@ -208,12 +151,6 @@
   <data name="lbEquipment.Text" xml:space="preserve">
     <value>検査機器:</value>
   </data>
-  <data name="lbEquipment.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbWard.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbWard.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 189</value>
   </data>
@@ -222,9 +159,6 @@
   </data>
   <data name="lbWard.Text" xml:space="preserve">
     <value>病棟/外来:</value>
-  </data>
-  <data name="lbWard.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 154</value>
@@ -235,15 +169,6 @@
   <data name="label2.Text" xml:space="preserve">
     <value>オーダー医:</value>
   </data>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbOrderDr.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbDepartment.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbDepartment.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 154</value>
   </data>
@@ -252,12 +177,6 @@
   </data>
   <data name="lbDepartment.Text" xml:space="preserve">
     <value>科:</value>
-  </data>
-  <data name="lbDepartment.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tbPurpose.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="lbPurpose.Location" type="System.Drawing.Point, System.Drawing">
     <value>29, 51</value>
@@ -268,26 +187,14 @@
   <data name="lbPurpose.Text" xml:space="preserve">
     <value>目的:</value>
   </data>
-  <data name="lbPurpose.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbDate.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tpInformation.Text" xml:space="preserve">
-    <value>基本情報</value>
-  </data>
-  <data name="tpInformation.ToolTip" xml:space="preserve">
-    <value />
+  <data name="tpFindings.Text" xml:space="preserve">
+    <value>所見</value>
   </data>
   <data name="lbFindings.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 16</value>
   </data>
   <data name="lbFindings.Text" xml:space="preserve">
     <value>所見</value>
-  </data>
-  <data name="lbFindings.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="lbDiagnosed.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 477</value>
@@ -297,9 +204,6 @@
   </data>
   <data name="lbDiagnosed.Text" xml:space="preserve">
     <value>診断医:</value>
-  </data>
-  <data name="lbDiagnosed.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="btDiagnosed.Text" xml:space="preserve">
     <value>診断済</value>
@@ -322,17 +226,8 @@
   <data name="lbChecker.Text" xml:space="preserve">
     <value>２次診断医</value>
   </data>
-  <data name="lbChecker.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tbComment.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbCheckersComment.Text" xml:space="preserve">
     <value>２次診断医のコメント</value>
-  </data>
-  <data name="lbCheckersComment.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="btReverseOrder.Text" xml:space="preserve">
     <value>順番反転</value>
@@ -343,80 +238,32 @@
   <data name="btAddDiag.Text" xml:space="preserve">
     <value>診断追加</value>
   </data>
-  <data name="dgvDiagnoses.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tpFindings.Text" xml:space="preserve">
-    <value>所見</value>
-  </data>
-  <data name="tpFindings.ToolTip" xml:space="preserve">
-    <value />
+  <data name="tpFigure1.Text" xml:space="preserve">
+    <value>シェーマ１</value>
   </data>
   <data name="btErace1.Text" xml:space="preserve">
     <value>白</value>
   </data>
-  <data name="btErace1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbBrushWidth1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pbBrushWidth1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pbColor1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="btColorSelect1.Text" xml:space="preserve">
     <value>色選択</value>
-  </data>
-  <data name="btColorSelect1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pbFigure1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tpFigure1.Text" xml:space="preserve">
-    <value>シェーマ１</value>
-  </data>
-  <data name="tpFigure1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btErace2.Text" xml:space="preserve">
-    <value>白</value>
-  </data>
-  <data name="btErace2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbBrushWidth2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pbBrushWidth2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pbColor2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btColorSelect2.Text" xml:space="preserve">
-    <value>色選択</value>
-  </data>
-  <data name="btColorSelect2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pbFigure2.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="tpFigure2.Text" xml:space="preserve">
     <value>シェーマ2</value>
   </data>
-  <data name="tpFigure2.ToolTip" xml:space="preserve">
-    <value />
+  <data name="btErace2.Text" xml:space="preserve">
+    <value>白</value>
   </data>
-  <data name="tcExam.ToolTip" xml:space="preserve">
-    <value />
+  <data name="btColorSelect2.Text" xml:space="preserve">
+    <value>色選択</value>
   </data>
-  <data name="cbExamStatus.ToolTip" xml:space="preserve">
-    <value />
+  <data name="tpPatho.Text" xml:space="preserve">
+    <value>病理</value>
+  </data>
+  <data name="lbPatho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 16</value>
+  </data>
+  <data name="lbPatho.Text" xml:space="preserve">
+    <value>病理結果</value>
   </data>
   <data name="btCopy2ClipBoard.Text" xml:space="preserve">
     <value>クリップボードにコピー</value>

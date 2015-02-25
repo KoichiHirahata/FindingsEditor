@@ -24,6 +24,7 @@ namespace endoDB
         public int pathology { get; set; }  //0 means no pathology test. 1 means pathology test exist.
         public string patho_no { get; set; }  //pathology report ID.
         public int reply_patho { get; set; }  //reply exist or not.
+        public string patho_result { get; set; } //Pathology results
         public string operator1 { get; set; }
         public string operator2 { get; set; }
         public string operator3 { get; set; }
@@ -85,7 +86,7 @@ namespace endoDB
             string sql = "SELECT exam_id, exam.pt_id AS ptID, pt_name, purpose, department, order_dr, ward_id, exam_day, exam_type,"
                 + " pathology, patho_no, reply_patho,"
                 + " operator1, operator2, operator3, operator4, operator5, diag_dr, final_diag_dr,"
-                + " equipment, place_no, findings, comment, exam_status, explanation"
+                + " equipment, place_no, findings, comment, exam_status, explanation, patho_result"
                 + " FROM exam"
                 + " INNER JOIN patient ON exam.pt_id = patient.pt_id"
                 + " WHERE exam_id = " + _exam_id.ToString();
@@ -134,6 +135,7 @@ namespace endoDB
                     this.exam_status = int.Parse(row["exam_status"].ToString());
                 if (row["explanation"].ToString().Length != 0)
                     this.explanation = int.Parse(row["explanation"].ToString());
+                this.patho_result = row["patho_result"].ToString();
                 conn.Close();
             }
         }
@@ -141,11 +143,11 @@ namespace endoDB
         public void saveFindingsEtc()
         {
             string sql = "UPDATE exam SET purpose=:p0, order_dr=:p1, pathology=:p2, patho_no=:p3, reply_patho=:p4, "
-                + "findings=:p5, comment=:p6, exam_status=:p7, explanation=:p8 "
+                + "findings=:p5, comment=:p6, exam_status=:p7, explanation=:p8, patho_result=:p9 "
                 + "WHERE exam_id=" + exam_id.ToString();
 
             uckyFunctions.ExeNonQuery(sql, purpose, order_dr, pathology.ToString(), patho_no, reply_patho.ToString(),
-                findings, comment, exam_status.ToString(), explanation.ToString());
+                findings, comment, exam_status.ToString(), explanation.ToString(), patho_result.ToString());
 
             string column;
             if (department != 0)

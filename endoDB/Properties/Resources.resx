@@ -474,4 +474,7 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="YouCanMakeChangesOnlyToPatho" xml:space="preserve">
+    <value>You can make changes only to pathology result.</value>
+  </data>
 </root>
