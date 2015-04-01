@@ -55,7 +55,7 @@ namespace endoDB
             html = html.Replace("[[[lbDiagnoses]]]", Properties.Resources.Diagnoses + ":");
             html = html.Replace("[[[Diagnoses]]]", exam.getDiagnoses().Replace("\n", "<br />"));
             html = html.Replace("img src=\"\" alt=\"image1\"",
-                "img src=\"" + Settings.figureFolder + "\\" + exam.exam_day.Year.ToString()+"\\"+exam.exam_id+"_1.png\"");
+                "img src=\"" + Settings.figureFolder + "\\" + exam.exam_day.Year.ToString() + "\\" + exam.exam_id + "_1.png\"");
             html = html.Replace("img src=\"\" alt=\"image2\"",
                 "img src=\"" + Settings.figureFolder + "\\" + exam.exam_day.Year.ToString() + "\\" + exam.exam_id + "_2.png\"");
             html = html.Replace("[[[lbFindings]]]", Properties.Resources.Findings + ":");
@@ -72,5 +72,11 @@ namespace endoDB
 
         private void pageSetupToolStripMenuItem_Click(object sender, EventArgs e)
         { webBrowser1.ShowPageSetupDialog(); }
+
+        private void ExamResult_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.P && e.Control == true)
+            { webBrowser1.ShowPrintPreviewDialog(); }
+        }
     }
 }

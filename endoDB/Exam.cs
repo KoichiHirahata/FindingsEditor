@@ -483,9 +483,9 @@ namespace endoDB
 
             string sql;
             if (Settings.isJP)
-            { sql = "SELECT name_jp AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }
+            { sql = "SELECT name_jp AS name, suspect, location, locate_str_after_diag FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }
             else
-            { sql = "SELECT name_eng AS name, suspect FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }
+            { sql = "SELECT name_eng AS name, suspect, location, locate_str_after_diag FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -498,7 +498,24 @@ namespace endoDB
             string str = null;
             foreach (DataRow dr in dt.Rows)
             {
-                str += dr["name"].ToString();
+                if (string.IsNullOrWhiteSpace(dr["location"].ToString()))
+                {
+                    str += dr["name"].ToString();
+                }
+                else
+                {
+                    if ((Boolean)dr["locate_str_after_diag"])
+                    {
+                        str += dr["name"].ToString();
+                        str += dr["location"].ToString();
+                    }
+                    else
+                    {
+                        str += dr["location"].ToString();
+                        str += dr["name"].ToString();
+                    }
+
+                }
                 if (!string.IsNullOrWhiteSpace(dr["suspect"].ToString()))
                 {
                     if ((Boolean)dr["suspect"])

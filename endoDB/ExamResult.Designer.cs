@@ -81,6 +81,7 @@
             this.Name = "ExamResult";
             this.ShowInTaskbar = false;
             this.Text = "ExamResult";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ExamResult_KeyUp);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
