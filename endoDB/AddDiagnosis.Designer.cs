@@ -46,9 +46,10 @@
             this.lb4 = new System.Windows.Forms.Label();
             this.bt11 = new System.Windows.Forms.Button();
             this.bt10 = new System.Windows.Forms.Button();
-            this.cbLocation = new System.Windows.Forms.ComboBox();
-            this.lbLocation = new System.Windows.Forms.Label();
-            this.cbLocateAfter = new System.Windows.Forms.CheckBox();
+            this.cbPremodifier = new System.Windows.Forms.ComboBox();
+            this.lbPremodifier = new System.Windows.Forms.Label();
+            this.cbPostmodifier = new System.Windows.Forms.ComboBox();
+            this.lbPostmodifier = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,30 +174,36 @@
             this.bt10.UseVisualStyleBackColor = true;
             this.bt10.Click += new System.EventHandler(this.bt10_Click);
             // 
-            // cbLocation
+            // cbPremodifier
             // 
-            resources.ApplyResources(this.cbLocation, "cbLocation");
-            this.cbLocation.FormattingEnabled = true;
-            this.cbLocation.Name = "cbLocation";
+            resources.ApplyResources(this.cbPremodifier, "cbPremodifier");
+            this.cbPremodifier.FormattingEnabled = true;
+            this.cbPremodifier.Name = "cbPremodifier";
             // 
-            // lbLocation
+            // lbPremodifier
             // 
-            resources.ApplyResources(this.lbLocation, "lbLocation");
-            this.lbLocation.Name = "lbLocation";
+            resources.ApplyResources(this.lbPremodifier, "lbPremodifier");
+            this.lbPremodifier.Name = "lbPremodifier";
             // 
-            // cbLocateAfter
+            // cbPostmodifier
             // 
-            resources.ApplyResources(this.cbLocateAfter, "cbLocateAfter");
-            this.cbLocateAfter.Name = "cbLocateAfter";
-            this.cbLocateAfter.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.cbPostmodifier, "cbPostmodifier");
+            this.cbPostmodifier.FormattingEnabled = true;
+            this.cbPostmodifier.Name = "cbPostmodifier";
+            // 
+            // lbPostmodifier
+            // 
+            resources.ApplyResources(this.lbPostmodifier, "lbPostmodifier");
+            this.lbPostmodifier.Name = "lbPostmodifier";
             // 
             // AddDiagnosis
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cbLocateAfter);
-            this.Controls.Add(this.lbLocation);
-            this.Controls.Add(this.cbLocation);
+            this.Controls.Add(this.lbPostmodifier);
+            this.Controls.Add(this.cbPostmodifier);
+            this.Controls.Add(this.lbPremodifier);
+            this.Controls.Add(this.cbPremodifier);
             this.Controls.Add(this.bt12);
             this.Controls.Add(this.lb4);
             this.Controls.Add(this.bt11);
@@ -241,8 +248,9 @@
         private System.Windows.Forms.Label lb4;
         private System.Windows.Forms.Button bt11;
         private System.Windows.Forms.Button bt10;
-        private System.Windows.Forms.ComboBox cbLocation;
-        private System.Windows.Forms.Label lbLocation;
-        private System.Windows.Forms.CheckBox cbLocateAfter;
+        private System.Windows.Forms.ComboBox cbPremodifier;
+        private System.Windows.Forms.Label lbPremodifier;
+        private System.Windows.Forms.ComboBox cbPostmodifier;
+        private System.Windows.Forms.Label lbPostmodifier;
     }
 }

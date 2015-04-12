@@ -117,526 +117,529 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;dgvExams.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Pt_age.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btEditPtData.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="&gt;&gt;tbPtInfo.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="dgvExams.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Pt_age.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbPatientID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;Pt_gender.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Pt_birthday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PatientBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 147</value>
-  </data>
-  <data name="&gt;&gt;lbBirthday.Name" xml:space="preserve">
-    <value>lbBirthday</value>
-  </data>
-  <data name="&gt;&gt;btConfirm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbInfomation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;tbPtInfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Pt_ID.Text" xml:space="preserve">
-    <value>Pt_ID</value>
-  </data>
-  <data name="&gt;&gt;lbBirthday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbPtInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;Pt_age.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbPatientID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="&gt;&gt;Pt_name.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lbPatientName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbInfomation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 217</value>
-  </data>
-  <data name="btEditPtData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 185</value>
-  </data>
-  <data name="Pt_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;btEditPtData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pt_birthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 80</value>
-  </data>
-  <data name="lbInfomation.Text" xml:space="preserve">
-    <value>Infomation:</value>
-  </data>
-  <data name="lbBirthday.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>PatientMain</value>
-  </data>
-  <data name="&gt;&gt;Pt_gender.Parent" xml:space="preserve">
-    <value>PatientBox</value>
-  </data>
-  <data name="Pt_age.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tbPtInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="&gt;&gt;Pt_name.Parent" xml:space="preserve">
-    <value>PatientBox</value>
-  </data>
-  <data name="lbGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 16</value>
-  </data>
-  <data name="lbGender.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btEditPtData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbInfomation.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="btEditPtData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 25</value>
-  </data>
-  <data name="&gt;&gt;Pt_ID.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lbPatientName.Text" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="PatientBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 32</value>
-  </data>
-  <data name="lbBirthday.Text" xml:space="preserve">
-    <value>Birthday:</value>
-  </data>
-  <data name="btConfirm.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="tbPtInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="dgvExams.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="tbPtInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 236</value>
-  </data>
-  <data name="&gt;&gt;tbPtInfo.Name" xml:space="preserve">
-    <value>tbPtInfo</value>
-  </data>
-  <data name="Pt_gender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 48</value>
-  </data>
-  <data name="btConfirm.Text" xml:space="preserve">
-    <value>Confirm patient information</value>
-  </data>
-  <data name="lbPatientName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lbPatientName.Name" xml:space="preserve">
-    <value>lbPatientName</value>
-  </data>
-  <data name="&gt;&gt;lbGender.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="dgvExams.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 13</value>
   </data>
-  <data name="lbPatientID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 16</value>
+  <data name="dgvExams.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 488</value>
   </data>
-  <data name="Pt_birthday.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgvExams.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
-  <data name="lbPatientID.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;dgvExams.Name" xml:space="preserve">
+    <value>dgvExams</value>
   </data>
-  <data name="&gt;&gt;lbGender.Name" xml:space="preserve">
-    <value>lbGender</value>
-  </data>
-  <data name="Pt_ID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 16</value>
-  </data>
-  <data name="Pt_gender.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;Pt_age.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbGender.Text" xml:space="preserve">
-    <value>Gender:</value>
-  </data>
-  <data name="&gt;&gt;lbAge.Parent" xml:space="preserve">
-    <value>PatientBox</value>
-  </data>
-  <data name="Pt_gender.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="Pt_birthday.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="Pt_birthday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 16</value>
-  </data>
-  <data name="lbBirthday.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbPatientName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Pt_name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="tbPtInfo.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lbPatientID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btConfirm.Name" xml:space="preserve">
-    <value>btConfirm</value>
-  </data>
-  <data name="Pt_ID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 13</value>
-  </data>
-  <data name="lbPatientName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 15</value>
-  </data>
-  <data name="Pt_age.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PatientMain</value>
-  </data>
-  <data name="lbGender.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;dgvExams.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dgvExams.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Pt_name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dgvExams.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;btEditPtData.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="btConfirm.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="lbAge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 16</value>
+  <data name="btConfirm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="btConfirm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btConfirm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 476</value>
+  </data>
+  <data name="btConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 25</value>
+  </data>
+  <data name="btConfirm.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btConfirm.Text" xml:space="preserve">
+    <value>Confirm patient information</value>
+  </data>
+  <data name="&gt;&gt;btConfirm.Name" xml:space="preserve">
+    <value>btConfirm</value>
+  </data>
+  <data name="&gt;&gt;btConfirm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btConfirm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btConfirm.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lbInfomation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Pt_ID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lbInfomation.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="&gt;&gt;lbPatientID.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="lbInfomation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;btEditPtData.Parent" xml:space="preserve">
+  <data name="lbInfomation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 217</value>
+  </data>
+  <data name="lbInfomation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="lbInfomation.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lbInfomation.Text" xml:space="preserve">
+    <value>Infomation:</value>
+  </data>
+  <data name="&gt;&gt;lbInfomation.Name" xml:space="preserve">
+    <value>lbInfomation</value>
+  </data>
+  <data name="&gt;&gt;lbInfomation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbInfomation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbBirthday.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbBirthday.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;lbInfomation.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;lbPatientID.Name" xml:space="preserve">
-    <value>lbPatientID</value>
+  <data name="tbPtInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;lbBirthday.Parent" xml:space="preserve">
-    <value>PatientBox</value>
+  <data name="tbPtInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="tbPtInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 236</value>
+  </data>
+  <data name="tbPtInfo.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="tbPtInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 234</value>
   </data>
-  <data name="&gt;&gt;Pt_birthday.Parent" xml:space="preserve">
+  <data name="tbPtInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.Name" xml:space="preserve">
+    <value>tbPtInfo</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbPtInfo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Pt_age.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Pt_age.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="Pt_age.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Pt_age.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 114</value>
+  </data>
+  <data name="Pt_age.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 16</value>
+  </data>
+  <data name="Pt_age.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Pt_age.Text" xml:space="preserve">
+    <value>Pt_age</value>
+  </data>
+  <data name="&gt;&gt;Pt_age.Name" xml:space="preserve">
+    <value>Pt_age</value>
+  </data>
+  <data name="&gt;&gt;Pt_age.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pt_age.Parent" xml:space="preserve">
+    <value>PatientBox</value>
+  </data>
+  <data name="&gt;&gt;Pt_age.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbAge.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbAge.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbAge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbAge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 114</value>
+  </data>
+  <data name="lbAge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 16</value>
+  </data>
+  <data name="lbAge.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lbAge.Text" xml:space="preserve">
+    <value>Age:</value>
+  </data>
+  <data name="&gt;&gt;lbAge.Name" xml:space="preserve">
+    <value>lbAge</value>
+  </data>
+  <data name="&gt;&gt;lbAge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbAge.Parent" xml:space="preserve">
     <value>PatientBox</value>
   </data>
   <data name="&gt;&gt;lbAge.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;Pt_ID.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="Pt_gender.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;Pt_age.Name" xml:space="preserve">
-    <value>Pt_age</value>
-  </data>
-  <data name="lbBirthday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Pt_age.Text" xml:space="preserve">
-    <value>Pt_age</value>
-  </data>
-  <data name="&gt;&gt;Pt_age.Parent" xml:space="preserve">
-    <value>PatientBox</value>
-  </data>
-  <data name="Pt_ID.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="Pt_gender.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="Pt_gender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 16</value>
-  </data>
-  <data name="lbPatientName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="Pt_name.Text" xml:space="preserve">
-    <value>Pt_name</value>
-  </data>
-  <data name="lbPatientName.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lbGender.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lbPatientID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;Pt_birthday.Name" xml:space="preserve">
-    <value>Pt_birthday</value>
   </data>
   <data name="Pt_gender.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;PatientBox.ZOrder" xml:space="preserve">
+  <data name="Pt_gender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 48</value>
+  </data>
+  <data name="Pt_gender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 16</value>
+  </data>
+  <data name="Pt_gender.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="Pt_gender.Text" xml:space="preserve">
+    <value>Pt_gender</value>
+  </data>
+  <data name="&gt;&gt;Pt_gender.Name" xml:space="preserve">
+    <value>Pt_gender</value>
+  </data>
+  <data name="&gt;&gt;Pt_gender.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pt_gender.Parent" xml:space="preserve">
+    <value>PatientBox</value>
+  </data>
+  <data name="&gt;&gt;Pt_gender.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Pt_name.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Pt_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="Pt_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Pt_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 15</value>
+  </data>
+  <data name="Pt_name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 16</value>
+  </data>
+  <data name="Pt_name.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Pt_name.Text" xml:space="preserve">
+    <value>Pt_name</value>
+  </data>
+  <data name="&gt;&gt;Pt_name.Name" xml:space="preserve">
+    <value>Pt_name</value>
+  </data>
+  <data name="&gt;&gt;Pt_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pt_name.Parent" xml:space="preserve">
+    <value>PatientBox</value>
+  </data>
+  <data name="&gt;&gt;Pt_name.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbPatientName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPatientName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbPatientName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbPatientName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 15</value>
+  </data>
+  <data name="lbPatientName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="lbPatientName.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lbPatientName.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="&gt;&gt;lbPatientName.Name" xml:space="preserve">
+    <value>lbPatientName</value>
+  </data>
+  <data name="&gt;&gt;lbPatientName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPatientName.Parent" xml:space="preserve">
+    <value>PatientBox</value>
+  </data>
+  <data name="&gt;&gt;lbPatientName.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="Pt_birthday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Pt_birthday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="Pt_birthday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Pt_birthday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 80</value>
+  </data>
+  <data name="Pt_birthday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 16</value>
+  </data>
+  <data name="Pt_birthday.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="Pt_birthday.Text" xml:space="preserve">
+    <value>Pt_birthday</value>
+  </data>
+  <data name="&gt;&gt;Pt_birthday.Name" xml:space="preserve">
     <value>Pt_birthday</value>
   </data>
   <data name="&gt;&gt;Pt_birthday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btConfirm.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lbPatientName.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Pt_birthday.Parent" xml:space="preserve">
     <value>PatientBox</value>
-  </data>
-  <data name="Pt_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 15</value>
-  </data>
-  <data name="Pt_ID.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="lbAge.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btConfirm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 25</value>
-  </data>
-  <data name="lbGender.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="&gt;&gt;dgvExams.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dgvExams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 488</value>
-  </data>
-  <data name="&gt;&gt;tbPtInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pt_age.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 16</value>
-  </data>
-  <data name="PatientBox.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
   </data>
   <data name="&gt;&gt;Pt_birthday.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;btConfirm.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lbGender.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="lbInfomation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 16</value>
+  <data name="lbGender.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="btConfirm.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="lbGender.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbGender.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 48</value>
   </data>
-  <data name="dgvExams.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
+  <data name="lbGender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 16</value>
   </data>
-  <data name="Pt_gender.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
+  <data name="lbGender.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="btEditPtData.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="lbGender.Text" xml:space="preserve">
+    <value>Gender:</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbAge.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;Pt_gender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lbGender.Name" xml:space="preserve">
+    <value>lbGender</value>
   </data>
   <data name="&gt;&gt;lbGender.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btConfirm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;lbGender.Parent" xml:space="preserve">
     <value>PatientBox</value>
   </data>
-  <data name="lbAge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;lbGender.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="Pt_name.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbBirthday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lbInfomation.Name" xml:space="preserve">
-    <value>lbInfomation</value>
-  </data>
-  <data name="&gt;&gt;Pt_ID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Pt_name.Name" xml:space="preserve">
-    <value>Pt_name</value>
-  </data>
-  <data name="lbBirthday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 16</value>
-  </data>
-  <data name="&gt;&gt;btEditPtData.Name" xml:space="preserve">
-    <value>btEditPtData</value>
-  </data>
-  <data name="Pt_gender.Text" xml:space="preserve">
-    <value>Pt_gender</value>
-  </data>
-  <data name="lbPatientID.Text" xml:space="preserve">
-    <value>Patient ID:</value>
-  </data>
-  <data name="lbAge.Text" xml:space="preserve">
-    <value>Age:</value>
-  </data>
-  <data name="Pt_birthday.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Pt_ID.Name" xml:space="preserve">
-    <value>Pt_ID</value>
-  </data>
-  <data name="&gt;&gt;PatientBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pt_age.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 114</value>
-  </data>
-  <data name="lbAge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 114</value>
-  </data>
-  <data name="&gt;&gt;dgvExams.Name" xml:space="preserve">
-    <value>dgvExams</value>
-  </data>
-  <data name="&gt;&gt;lbInfomation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btEditPtData.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbBirthday.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="Pt_name.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lbInfomation.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Pt_gender.Name" xml:space="preserve">
-    <value>Pt_gender</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>681, 512</value>
-  </data>
-  <data name="&gt;&gt;lbPatientID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pt_name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 16</value>
-  </data>
-  <data name="btConfirm.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="Pt_ID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbBirthday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lbAge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbPatientID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 13</value>
-  </data>
-  <data name="btConfirm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 476</value>
-  </data>
-  <data name="&gt;&gt;lbPatientName.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbInfomation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbAge.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="&gt;&gt;PatientBox.Name" xml:space="preserve">
-    <value>PatientBox</value>
-  </data>
-  <data name="&gt;&gt;lbInfomation.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lbAge.Name" xml:space="preserve">
-    <value>lbAge</value>
-  </data>
-  <data name="lbPatientName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 16</value>
   </data>
   <data name="lbBirthday.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 80</value>
   </data>
+  <data name="lbBirthday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 16</value>
+  </data>
+  <data name="lbBirthday.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lbBirthday.Text" xml:space="preserve">
+    <value>Birthday:</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.Name" xml:space="preserve">
+    <value>lbBirthday</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.Parent" xml:space="preserve">
+    <value>PatientBox</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="PatientBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 32</value>
+  </data>
+  <data name="PatientBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 147</value>
+  </data>
+  <data name="PatientBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;PatientBox.Name" xml:space="preserve">
+    <value>PatientBox</value>
+  </data>
+  <data name="&gt;&gt;PatientBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;PatientBox.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PatientBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btEditPtData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="btEditPtData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btEditPtData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 185</value>
+  </data>
+  <data name="btEditPtData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 25</value>
+  </data>
+  <data name="btEditPtData.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btEditPtData.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="&gt;&gt;btEditPtData.Name" xml:space="preserve">
+    <value>btEditPtData</value>
+  </data>
+  <data name="&gt;&gt;btEditPtData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btEditPtData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btEditPtData.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Pt_ID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Pt_ID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="Pt_ID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Pt_ID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="Pt_ID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 16</value>
+  </data>
+  <data name="Pt_ID.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Pt_ID.Text" xml:space="preserve">
+    <value>Pt_ID</value>
+  </data>
+  <data name="&gt;&gt;Pt_ID.Name" xml:space="preserve">
+    <value>Pt_ID</value>
+  </data>
+  <data name="&gt;&gt;Pt_ID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pt_ID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Pt_ID.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbPatientID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPatientID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbPatientID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbPatientID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="lbPatientID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 16</value>
+  </data>
+  <data name="lbPatientID.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lbPatientID.Text" xml:space="preserve">
+    <value>Patient ID:</value>
+  </data>
+  <data name="&gt;&gt;lbPatientID.Name" xml:space="preserve">
+    <value>lbPatientID</value>
+  </data>
+  <data name="&gt;&gt;lbPatientID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPatientID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbPatientID.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>681, 512</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PatientMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PatientMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

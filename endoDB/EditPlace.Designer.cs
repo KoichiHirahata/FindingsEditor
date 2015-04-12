@@ -68,6 +68,7 @@
             this.Controls.Add(this.dgv);
             this.Name = "EditPlace";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditPlace";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditPlace_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();

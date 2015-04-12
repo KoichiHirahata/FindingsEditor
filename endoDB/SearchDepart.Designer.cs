@@ -123,6 +123,7 @@
             this.Name = "SearchDepart";
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Search by department";
             this.ResumeLayout(false);
             this.PerformLayout();

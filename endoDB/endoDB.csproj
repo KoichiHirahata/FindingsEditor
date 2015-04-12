@@ -218,6 +218,9 @@
     <Compile Include="Version.Designer.cs">
       <DependentUpon>Version.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddDiagnosis.ja-JP.resx">
+      <DependentUpon>AddDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDiagnosis.ja.resx">
       <DependentUpon>AddDiagnosis.cs</DependentUpon>
     </EmbeddedResource>

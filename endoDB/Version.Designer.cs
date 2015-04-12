@@ -41,7 +41,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Findings Editor Ver. 1.09";
+            this.label1.Text = "Findings Editor Ver. 1.10";
             // 
             // label2
             // 
@@ -74,6 +74,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Version";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Version";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -43,6 +43,7 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(704, 733);
             this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.webBrowser1_PreviewKeyDown);
             // 
             // menuStrip1
             // 
@@ -59,15 +60,15 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.printToolStripMenuItem.Text = "Print preview(&P)";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // pageSetupToolStripMenuItem
             // 
             this.pageSetupToolStripMenuItem.Name = "pageSetupToolStripMenuItem";
-            this.pageSetupToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
-            this.pageSetupToolStripMenuItem.Text = "Page setup";
+            this.pageSetupToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.pageSetupToolStripMenuItem.Text = "Page setup(&S)";
             this.pageSetupToolStripMenuItem.Click += new System.EventHandler(this.pageSetupToolStripMenuItem_Click);
             // 
             // ExamResult
@@ -77,11 +78,12 @@
             this.ClientSize = new System.Drawing.Size(704, 761);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ExamResult";
             this.ShowInTaskbar = false;
-            this.Text = "ExamResult";
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ExamResult_KeyUp);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Exam Result";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

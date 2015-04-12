@@ -73,10 +73,11 @@ namespace endoDB
         private void pageSetupToolStripMenuItem_Click(object sender, EventArgs e)
         { webBrowser1.ShowPageSetupDialog(); }
 
-        private void ExamResult_KeyUp(object sender, KeyEventArgs e)
+        private void webBrowser1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.P && e.Control == true)
-            { webBrowser1.ShowPrintPreviewDialog(); }
+            { webBrowser1.Print(); }
         }
+
     }
 }

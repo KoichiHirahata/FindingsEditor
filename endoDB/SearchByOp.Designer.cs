@@ -120,6 +120,7 @@
             this.Controls.Add(this.lbOperator);
             this.Name = "SearchByOp";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Search by operator";
             this.ResumeLayout(false);
             this.PerformLayout();

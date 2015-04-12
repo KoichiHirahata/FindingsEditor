@@ -42,8 +42,8 @@ namespace endoDB
         public Boolean add_diag { get; set; }//default: false  EditFindings needs this property to know this form added diagnosis or not. 
         public int diag_code { get; set; }
         public Boolean suspect { get; set; }
-        public string locationText { get; set; }
-        public Boolean locate_str_after_diag { get; set; }
+        public string premodifier { get; set; }
+        public string postmodifier { get; set; }
         public string stockSQL { get; set; }
 
         public AddDiagnosis(int _exam_id, int _examType)
@@ -203,6 +203,8 @@ namespace endoDB
                     break;
                 case 5:
                     break;
+
+                #region abdominal US
                 case 1001:
                     drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1000000");
                     lb1.Text = drs[0]["name"].ToString();
@@ -243,6 +245,7 @@ namespace endoDB
                     bt11.Visible = false;
                     bt12.Visible = false;
                     break;
+                #endregion
             }
         }
 
@@ -302,7 +305,7 @@ namespace endoDB
             if (temp_dgv.Columns[e.ColumnIndex].Name == "btSelect")
             {
                 #region Error check
-                if (cbLocation.Text.Length > 255)
+                if (cbPremodifier.Text.Length > 255)
                 {
                     MessageBox.Show(Properties.Resources.Location2Long, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -317,16 +320,19 @@ namespace endoDB
                 else
                 { suspect = false; }
 
-                if (cbLocation.Text.Length == 0)
-                { locationText = ""; }
+                if (cbPremodifier.Text.Length == 0)
+                { premodifier = ""; }
                 else
-                { locationText = cbLocation.Text; }
+                { premodifier = cbPremodifier.Text; }
 
-                locate_str_after_diag = cbLocateAfter.Checked;
+                if (cbPostmodifier.Text.Length == 0)
+                { postmodifier = ""; }
+                else
+                { postmodifier = cbPostmodifier.Text; }
 
-                stockSQL = "INSERT INTO diag(exam_no, diag_code, suspect, location, locate_str_after_diag) "
+                stockSQL = "INSERT INTO diag(exam_no, diag_code, suspect, premodifier, postmodifier) "
                     + "VALUES(" + exam_id + "," + temp_dgv.Rows[e.RowIndex].Cells["no"].Value.ToString() + ","
-                    + suspect.ToString() + ",'" + locationText + "'," + locate_str_after_diag.ToString() + ");";
+                    + suspect.ToString() + ",'" + premodifier + "','" + postmodifier + "');";
 
                 this.Close();
             }

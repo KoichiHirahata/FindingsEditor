@@ -117,10 +117,178 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lbPatient.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btExamCanceled.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btClearOp5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOperator5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btClearOp4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOperator4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btClearOp3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOperator3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btClearOp2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOperator2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btClearOp1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOperator1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="lbOperator1.Text" xml:space="preserve">
     <value>施行者1:</value>
   </data>
+  <data name="lbOperator1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbPlace.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbPlace.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbEquipment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbEquipment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbWard.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbWard.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOrderDr.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbDepartment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbDepartment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbPurpose.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbPurpose.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpInformation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btSetNormal.Text" xml:space="preserve">
     <value>「正常」追加</value>
+  </data>
+  <data name="lbFindings.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbDiagnosed.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbChecker.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbComment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbCheckersComment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvDiagnoses.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpFindings.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btErace1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbBrushWidth1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbBrushWidth1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbColor1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btColorSelect1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbFigure1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpFigure1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btErace2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbBrushWidth2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbBrushWidth2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbColor2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btColorSelect2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbFigure2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpFigure2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbPatho.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpPatho.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tcExam.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbExamStatus.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

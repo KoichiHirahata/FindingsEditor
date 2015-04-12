@@ -38,6 +38,7 @@
             this.ClientSize = new System.Drawing.Size(591, 563);
             this.Name = "EditEquipments";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditEquipments";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditPlace_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dt)).EndInit();

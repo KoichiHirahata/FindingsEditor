@@ -305,8 +305,8 @@ namespace endoDB
             dgvDiagnoses.Columns["diag_code"].Visible = false;
             dgvDiagnoses.Columns["suspect"].Visible = false;
             dgvDiagnoses.Columns["SQL_index"].Visible = false;
-            dgvDiagnoses.Columns["location"].Visible = false;
-            dgvDiagnoses.Columns["locate_str_after_diag"].Visible = false;
+            dgvDiagnoses.Columns["premodifier"].Visible = false;
+            dgvDiagnoses.Columns["postmodifier"].Visible = false;
             #endregion
             #endregion
 
@@ -559,12 +559,12 @@ namespace endoDB
             string sql;
             if (Settings.isJP)
             {
-                sql = "SELECT diag_no, diag_code, name_jp AS name, suspect, location, locate_str_after_diag FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
+                sql = "SELECT diag_no, diag_code, name_jp AS name, suspect, premodifier, postmodifier FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
                     + " WHERE exam_no = " + exam.exam_id.ToString();
             }
             else
             {
-                sql = "SELECT diag_no, diag_code, name_eng AS name, suspect, location, locate_str_after_diag FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
+                sql = "SELECT diag_no, diag_code, name_eng AS name, suspect, premodifier, postmodifier FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
                     + " WHERE exam_no = " + exam.exam_id.ToString();
             }
 
@@ -580,6 +580,7 @@ namespace endoDB
         private void setDiagnosesStr()
         {
             string susp;
+            string display_str;
             foreach (DataGridViewRow dr in dgvDiagnoses.Rows)
             {
                 if (!dr.IsNewRow)
@@ -591,19 +592,14 @@ namespace endoDB
                     else
                     { susp = ""; }
 
-                    string locationText;
-                    if (string.IsNullOrWhiteSpace(dr.Cells["location"].Value.ToString()))
-                    { locationText = ""; }
-                    else
-                    { locationText = dr.Cells["location"].Value.ToString(); }
+                    display_str = "";
+                    if (!string.IsNullOrWhiteSpace(dr.Cells["premodifier"].Value.ToString()))
+                    { display_str = dr.Cells["premodifier"].Value.ToString(); }
 
-                    string display_str;
-                    if (string.IsNullOrWhiteSpace(dr.Cells["locate_str_after_diag"].Value.ToString()))
-                    { display_str = locationText + dr.Cells["name"].Value.ToString(); }
-                    else if ((Boolean)dr.Cells["locate_str_after_diag"].Value)
-                    { display_str = dr.Cells["name"].Value.ToString() + locationText; }
-                    else
-                    { display_str = locationText + dr.Cells["name"].Value.ToString(); }
+                    display_str += dr.Cells["name"].Value.ToString();
+
+                    if (!string.IsNullOrWhiteSpace(dr.Cells["postmodifier"].Value.ToString()))
+                    { display_str += dr.Cells["postmodifier"].Value.ToString(); }
 
                     dr.Cells["name"].Value = display_str + susp;
                 }
@@ -622,15 +618,20 @@ namespace endoDB
                 #region dt
                 DataRow newRow = dt.NewRow();
                 newRow["diag_code"] = ad.diag_code;
-                newRow["location"] = ad.locationText;
-                newRow["locate_str_after_diag"] = ad.locate_str_after_diag;
+                newRow["premodifier"] = ad.premodifier;
+                newRow["postmodifier"] = ad.postmodifier;
                 DataRow[] drs;
                 drs = CLocalDB.localDB.Tables["diag_name"].Select("no=" + ad.diag_code);
-                string diagText = drs[0]["name"].ToString();
-                if (ad.locate_str_after_diag)
-                { diagText = diagText + ad.locationText; }
-                else
-                { diagText = ad.locationText + diagText; }
+
+                string diagText = "";
+
+                if (!String.IsNullOrWhiteSpace(ad.premodifier))
+                { diagText = ad.premodifier; }
+
+                diagText += drs[0]["name"].ToString();
+
+                if (!String.IsNullOrWhiteSpace(ad.postmodifier))
+                { diagText += ad.postmodifier; }
 
                 newRow["suspect"] = ad.suspect;
                 if (ad.suspect)
@@ -667,14 +668,14 @@ namespace endoDB
             drs = CLocalDB.localDB.Tables["diag_name"].Select("no=0");
             newRow["name"] = drs[0]["name"].ToString();
             newRow["suspect"] = false;
-            newRow["location"] = "";
-            newRow["locate_str_after_diag"] = false;
+            newRow["premodifier"] = "";
+            newRow["postmodifier"] = "";
             newRow["SQL_index"] = no4SqlIndex;
             dt.Rows.Add(newRow);
             #endregion
 
             #region stockedSQLs
-            string sql = "INSERT INTO diag(exam_no, diag_code, suspect, location, locate_str_after_diag) " + "VALUES(" + exam.exam_id + ", 0, false, '', false);";
+            string sql = "INSERT INTO diag(exam_no, diag_code, suspect, premodifier, postmodifier) " + "VALUES(" + exam.exam_id + ", 0, false, '', '');";
 
             DataRow newStock = stockedSQLs.NewRow();
             newStock["SQL"] = sql;

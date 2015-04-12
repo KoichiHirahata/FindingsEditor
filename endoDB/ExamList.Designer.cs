@@ -41,9 +41,9 @@
             // 
             // dgvExamList
             // 
-            resources.ApplyResources(this.dgvExamList, "dgvExamList");
             this.dgvExamList.AllowUserToAddRows = false;
             this.dgvExamList.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.dgvExamList, "dgvExamList");
             this.dgvExamList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExamList.MultiSelect = false;
             this.dgvExamList.Name = "dgvExamList";

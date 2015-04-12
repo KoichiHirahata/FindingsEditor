@@ -117,143 +117,143 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgvExamList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btChecked.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 12</value>
+  <data name="dgvExamList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 45</value>
+  </data>
+  <data name="dgvExamList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 468</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btClose.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btClose.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btShowAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btChecked.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btBlankDraft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 27</value>
-  </data>
-  <data name="btDone.Text" xml:space="preserve">
-    <value>Done (D)</value>
-  </data>
-  <data name="&gt;&gt;btShowAll.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btCanceled.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 561</value>
-  </data>
-  <data name="btClose.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 11pt</value>
-  </data>
-  <data name="&gt;&gt;btChecked.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ExamList</value>
-  </data>
-  <data name="&gt;&gt;btCanceled.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btBlankDraft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 12</value>
-  </data>
-  <data name="&gt;&gt;btClose.Name" xml:space="preserve">
-    <value>btClose</value>
-  </data>
-  <data name="btChecked.Text" xml:space="preserve">
-    <value>Checked (C)</value>
-  </data>
-  <data name="btClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
-  </data>
-  <data name="btShowAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <data name="dgvExamList.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+  <data name="&gt;&gt;dgvExamList.Name" xml:space="preserve">
+    <value>dgvExamList</value>
   </data>
-  <data name="&gt;&gt;btChecked.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dgvExamList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvExamList.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btShowAll.Name" xml:space="preserve">
-    <value>btShowAll</value>
-  </data>
-  <data name="btDone.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 11pt</value>
-  </data>
-  <data name="&gt;&gt;btDone.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btCanceled.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;btDone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btCanceled.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="btDone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
-  </data>
-  <data name="&gt;&gt;btShowAll.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btBlankDraft.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;btBlankDraft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btBlankDraft.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 11pt</value>
   </data>
   <data name="&gt;&gt;dgvExamList.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="btCanceled.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btClose.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11pt</value>
   </data>
-  <data name="&gt;&gt;btBlankDraft.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btCanceled.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 12</value>
-  </data>
-  <data name="btShowAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 12</value>
-  </data>
-  <data name="btShowAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="dgvExamList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="btClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>667, 522</value>
   </data>
-  <data name="btDone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
+  </data>
+  <data name="btClose.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;btClose.Name" xml:space="preserve">
+    <value>btClose</value>
+  </data>
+  <data name="&gt;&gt;btClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btClose.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btBlankDraft.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btBlankDraft.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 11pt</value>
+  </data>
+  <data name="btBlankDraft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btCanceled.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btBlankDraft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>319, 12</value>
+  </data>
+  <data name="btBlankDraft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 27</value>
+  </data>
+  <data name="btBlankDraft.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btBlankDraft.Text" xml:space="preserve">
+    <value>Blank/Draft(B)</value>
   </data>
   <data name="&gt;&gt;btBlankDraft.Name" xml:space="preserve">
     <value>btBlankDraft</value>
   </data>
-  <data name="btShowAll.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;btBlankDraft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btBlankDraft.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btBlankDraft.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btDone.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btDone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 11pt</value>
+  </data>
+  <data name="btDone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btDone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>445, 12</value>
+  </data>
+  <data name="btDone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
+  </data>
+  <data name="btDone.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btDone.Text" xml:space="preserve">
+    <value>Done (D)</value>
+  </data>
+  <data name="&gt;&gt;btDone.Name" xml:space="preserve">
+    <value>btDone</value>
+  </data>
+  <data name="&gt;&gt;btDone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btDone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btDone.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btChecked.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btChecked.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 11pt</value>
+  </data>
+  <data name="btChecked.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btChecked.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 12</value>
   </data>
   <data name="btChecked.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 27</value>
@@ -261,103 +261,106 @@
   <data name="btChecked.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;btShowAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btDone.Name" xml:space="preserve">
-    <value>btDone</value>
-  </data>
-  <data name="btBlankDraft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;btClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btCanceled.Text" xml:space="preserve">
-    <value>Canceled (E)</value>
-  </data>
-  <data name="btBlankDraft.Text" xml:space="preserve">
-    <value>Blank/Draft(B)</value>
-  </data>
-  <data name="btChecked.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btChecked.Text" xml:space="preserve">
+    <value>Checked (C)</value>
   </data>
   <data name="&gt;&gt;btChecked.Name" xml:space="preserve">
     <value>btChecked</value>
   </data>
-  <data name="dgvExamList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>760, 468</value>
+  <data name="&gt;&gt;btChecked.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dgvExamList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 45</value>
-  </data>
-  <data name="btDone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 12</value>
-  </data>
-  <data name="btClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 522</value>
-  </data>
-  <data name="btBlankDraft.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="btChecked.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 11pt</value>
-  </data>
-  <data name="&gt;&gt;btBlankDraft.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btChecked.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ExamList</value>
+  <data name="&gt;&gt;btChecked.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="btClose.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="btDone.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btCanceled.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;btClose.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="btCanceled.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 11pt</value>
   </data>
-  <data name="&gt;&gt;dgvExamList.Name" xml:space="preserve">
-    <value>dgvExamList</value>
+  <data name="btCanceled.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;dgvExamList.Parent" xml:space="preserve">
+  <data name="btCanceled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>667, 12</value>
+  </data>
+  <data name="btCanceled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
+  </data>
+  <data name="btCanceled.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btCanceled.Text" xml:space="preserve">
+    <value>Canceled (E)</value>
+  </data>
+  <data name="&gt;&gt;btCanceled.Name" xml:space="preserve">
+    <value>btCanceled</value>
+  </data>
+  <data name="&gt;&gt;btCanceled.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btCanceled.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btCanceled.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;btDone.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dgvExamList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btShowAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="btShowAll.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 11pt</value>
   </data>
-  <data name="&gt;&gt;btChecked.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btShowAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="btCanceled.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btShowAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 12</value>
+  </data>
+  <data name="btShowAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 27</value>
   </data>
-  <data name="btDone.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btCanceled.Name" xml:space="preserve">
-    <value>btCanceled</value>
+  <data name="btShowAll.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="btShowAll.Text" xml:space="preserve">
     <value>All (A)</value>
   </data>
+  <data name="&gt;&gt;btShowAll.Name" xml:space="preserve">
+    <value>btShowAll</value>
+  </data>
+  <data name="&gt;&gt;btShowAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btShowAll.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btShowAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 561</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ExamList</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ExamList</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
