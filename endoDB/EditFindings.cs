@@ -919,24 +919,16 @@ namespace endoDB
         }
 
         private void tbFindings_KeyUp(object sender, KeyEventArgs e)
-        {
-            getSelectionStartOfFindings();
-        }
+        { getSelectionStartOfFindings(); }
 
         private void tbFindings_Click(object sender, EventArgs e)
-        {
-            getSelectionStartOfFindings();
-        }
+        { getSelectionStartOfFindings(); }
 
         private void tbFindings_Enter(object sender, EventArgs e)
-        {
-            getSelectionStartOfFindings();
-        }
+        { getSelectionStartOfFindings(); }
 
         private void tbFindings_Leave(object sender, EventArgs e)
-        {
-            getSelectionStartOfFindings();
-        }
+        { getSelectionStartOfFindings(); }
         #endregion
 
         #region tbComment
@@ -965,6 +957,26 @@ namespace endoDB
         {
             getSelectionStartOfComment();
         }
+        #endregion
+
+        #region tbPatho
+        private void getSelectionStartOfPathology()
+        {
+            selectedTb = "tbPatho";
+            selectionStart = tbPatho.SelectionStart;
+        }
+
+        private void tbPatho_KeyUp(object sender, KeyEventArgs e)
+        { getSelectionStartOfPathology(); }
+
+        private void tbPatho_Click(object sender, EventArgs e)
+        { getSelectionStartOfPathology(); }
+
+        private void tbPatho_Enter(object sender, EventArgs e)
+        { getSelectionStartOfPathology(); }
+
+        private void tbPatho_Leave(object sender, EventArgs e)
+        { getSelectionStartOfPathology(); }
         #endregion
 
         #region ExamStatus
@@ -1208,7 +1220,7 @@ namespace endoDB
         private void dgvWords_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (tcExam.SelectedIndex > 1)
+            if (tcExam.SelectedIndex == 2 || tcExam.SelectedIndex == 3)
             {
                 MessageBox.Show(Properties.Resources.ClickInsPosition, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -1243,6 +1255,14 @@ namespace endoDB
                 tbPurpose.SelectionStart = selectionStart;
                 tbPurpose.SelectionLength = 0;
                 tbPurpose.Focus();
+            }
+            else if (selectedTb == "tbPatho")
+            {
+                tbPatho.Text = tbPatho.Text.ToString().Insert(selectionStart, @dgv[e.ColumnIndex, e.RowIndex].Value.ToString());
+                selectionStart += dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Length;
+                tbPatho.SelectionStart = selectionStart;
+                tbPatho.SelectionLength = 0;
+                tbPatho.Focus();
             }
         }
         #endregion
