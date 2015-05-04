@@ -332,12 +332,13 @@ namespace endoDB
                 {
                     command.CommandText = sql;
                     command.Connection = conn;
+                    //MessageBox.Show(sql);
 
                     string p;
                     for (int i = 0; i < p_str.Length; i++)
                     {
                         p = ":p" + i.ToString();
-                        //MessageBox.Show(p + " to " + p_str[i]);
+                        MessageBox.Show(p + " to " + p_str[i]);
                         command.Parameters.Add(new NpgsqlParameter(p, p_str[i]));
                     }
 

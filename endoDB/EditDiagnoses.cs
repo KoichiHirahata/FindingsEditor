@@ -146,6 +146,55 @@ namespace endoDB
             tv.Nodes.Add(Broncho);
             #endregion
 
+            #region Abdomen
+            #region Gallbladder
+            i = 1010000;
+            drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + i.ToString());
+            NodeWithId Gallbladder = new NodeWithId(drs[0]["name"].ToString(), i);
+            #endregion
+
+            #region ExtrahepaticBileDuct
+            i = 1020000;
+            drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + i.ToString());
+            NodeWithId ExtrahepaticBileDuct = new NodeWithId(drs[0]["name"].ToString(), i);
+            #endregion
+
+            #region Liver
+            i = 1030000;
+            drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + i.ToString());
+            NodeWithId Liver = new NodeWithId(drs[0]["name"].ToString(), i);
+            #endregion
+
+            #region Spleen
+            i = 1040000;
+            drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + i.ToString());
+            NodeWithId Spleen = new NodeWithId(drs[0]["name"].ToString(), i);
+            #endregion
+
+            #region Pancreas
+            i = 1050000;
+            drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + i.ToString());
+            NodeWithId Pancreas = new NodeWithId(drs[0]["name"].ToString(), i);
+            #endregion
+
+            #region Kidney
+            i = 1060000;
+            drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + i.ToString());
+            NodeWithId Kidney = new NodeWithId(drs[0]["name"].ToString(), i);
+            #endregion
+
+            i = 1000000;
+            drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + i.ToString());
+            NodeWithId Abdmen = new NodeWithId(drs[0]["name"].ToString(), i);
+            Abdmen.Nodes.Add(Gallbladder);
+            Abdmen.Nodes.Add(ExtrahepaticBileDuct);
+            Abdmen.Nodes.Add(Liver);
+            Abdmen.Nodes.Add(Spleen);
+            Abdmen.Nodes.Add(Pancreas);
+            Abdmen.Nodes.Add(Kidney);
+            tv.Nodes.Add(Abdmen);
+            #endregion
+
             #endregion
 
             #region dgv
@@ -279,7 +328,10 @@ namespace endoDB
                     if (uckyFunctions.ExeNonQuery(sql) == uckyFunctions.functionResult.failed)
                     { MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     else
-                    { dgv.Rows.RemoveAt(e.RowIndex); }
+                    {
+                        dgv.Rows.RemoveAt(e.RowIndex);
+                        dgv.Refresh();
+                    }
                 }
             }
             #endregion
@@ -292,6 +344,12 @@ namespace endoDB
                     if (string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["no"].Value.ToString()))
                     {
                         MessageBox.Show(Properties.Resources.NoIsNeeded, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    if (string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString()) && string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString()))
+                    {
+                        MessageBox.Show(Properties.Resources.DiagnosisIsRequired, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -321,11 +379,18 @@ namespace endoDB
 
                     if (dgv.Rows[e.RowIndex].Cells["noInsert"].Value.ToString() == "True")
                     {
-                        sql = "UPDATE diag_name SET name_eng=:p0, "
-                            + "name_jp=:p1, "
-                            + "diag_order=:p2, "
-                            + "diag_visible=:p3 "
-                            + "WHERE no=:p4";
+                        sql = "UPDATE diag_name SET ";
+                        if (!String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString()))
+                        { sql += "name_eng=:p0, "; }
+
+                        if (!String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString()))
+                        { sql += "name_jp=:p1, "; }
+
+                        if (!String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString()))
+                        { sql += "diag_order=:p2, "; }
+
+                        sql += "diag_visible=:p3 WHERE no=:p4"; //Exist of "no" has already checked above.
+
                         switch (uckyFunctions.ExeNonQuery(sql, dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString(),
                             dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString(),
                             dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString(),
@@ -381,6 +446,7 @@ namespace endoDB
                                 break;
                             case uckyFunctions.functionResult.success:
                                 dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = "";
+                                dgv.Refresh();
                                 break;
                         }
                     }

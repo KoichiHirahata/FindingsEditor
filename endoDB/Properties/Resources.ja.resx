@@ -433,7 +433,7 @@
     <value>検査結果報告書</value>
   </data>
   <data name="Operators" xml:space="preserve">
-    <value>施行医</value>
+    <value>施行者</value>
   </data>
   <data name="OrderedDr" xml:space="preserve">
     <value>依頼医師</value>
@@ -476,5 +476,8 @@
   </data>
   <data name="YouCanMakeChangesOnlyToPatho" xml:space="preserve">
     <value>病理結果のみ変更できます。</value>
+  </data>
+  <data name="DiagnosisIsRequired" xml:space="preserve">
+    <value>診断名が空欄です。</value>
   </data>
 </root>

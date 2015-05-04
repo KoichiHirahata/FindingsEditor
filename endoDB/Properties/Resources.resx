@@ -477,4 +477,7 @@
   <data name="YouCanMakeChangesOnlyToPatho" xml:space="preserve">
     <value>You can make changes only to pathology result.</value>
   </data>
+  <data name="DiagnosisIsRequired" xml:space="preserve">
+    <value>Dianosis is required.</value>
+  </data>
 </root>

@@ -376,6 +376,15 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
+        ///   Dianosis is required. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DiagnosisIsRequired {
+            get {
+                return ResourceManager.GetString("DiagnosisIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Done に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Done {
