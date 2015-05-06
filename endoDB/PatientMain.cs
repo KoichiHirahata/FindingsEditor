@@ -71,6 +71,7 @@ namespace endoDB
             this.tbPtInfo.Text = pt1.ptInfo;
         }
 
+        #region DataGridView
         private void readExams()
         {
             #region Npgsql connection
@@ -89,7 +90,7 @@ namespace endoDB
             #endregion
 
             string sql;
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             {
                 sql = "SELECT exam_id, exam_day, name_jp AS exam_name FROM exam INNER JOIN exam_type ON exam.exam_type = exam_type.type_no"
                 + " WHERE pt_id ='" + pt1.ptID + "' ORDER BY exam_day DESC";
@@ -162,30 +163,60 @@ namespace endoDB
         {
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex].Name == "btEdit")
-            {
-                EditFindings ef = new EditFindings(dgvExams.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
-                ef.ShowDialog(this);
-                ef.Dispose();
-            }
+            { editExam(dgvExams.Rows[e.RowIndex].Cells["exam_id"].Value.ToString()); }
             else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
-            {
-                if (System.IO.File.Exists(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe"))
-                { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe", pt1.ptID); }
-            }
+            { uckyFunctions.showImages(pt1.ptID, uckyFunctions.dateTo8char(dgv.Rows[e.RowIndex].Cells["exam_day"].Value.ToString(), Settings.lang)); }
             else if (dgv.Columns[e.ColumnIndex].Name == "btPrint")
+            { printExam(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString()); }
+        }
+
+        private void dgvExams_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                #region Error Check
-                if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
+                DataGridView dgv = (DataGridView)sender;
+                if (dgv.RowCount == 0)
+                { return; }
+
+                if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btEdit")
                 {
-                    MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    editExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString());
                     return;
                 }
-                #endregion
-                ExamResult er = new ExamResult(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
-                er.ShowDialog(this);
-                er.Dispose();
+                else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btImage")
+                {
+                    uckyFunctions.showImages(pt1.ptID, uckyFunctions.dateTo8char(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_day"].Value.ToString(), Settings.lang));
+                    return;
+                }
+                else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btPrint")
+                {
+                    printExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString());
+                    return;
+                }
             }
         }
+
+        private void editExam(string exam_id_str)
+        {
+            EditFindings ef = new EditFindings(exam_id_str);
+            ef.ShowDialog(this);
+            ef.Dispose();
+        }
+
+        private void printExam(string exam_id_str)
+        {
+            #region Error Check
+            if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
+            {
+                MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            #endregion
+            ExamResult er = new ExamResult(exam_id_str);
+            er.ShowDialog(this);
+            er.Dispose();
+        }
+        #endregion
 
         private void btConfirm_Click(object sender, EventArgs e)
         {

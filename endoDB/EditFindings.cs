@@ -557,7 +557,7 @@ namespace endoDB
             #endregion
 
             string sql;
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             {
                 sql = "SELECT diag_no, diag_code, name_jp AS name, suspect, premodifier, postmodifier FROM diag INNER JOIN diag_name ON diag.diag_code = diag_name.no"
                     + " WHERE exam_no = " + exam.exam_id.ToString();

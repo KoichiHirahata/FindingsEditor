@@ -352,7 +352,7 @@ namespace endoDB
         public string getExamTypeName()
         {
             string sql;
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             { sql = "SELECT name_jp FROM exam_type WHERE type_no=" + exam_type.ToString(); }
             else
             { sql = "SELECT name_eng FROM exam_type WHERE type_no=" + exam_type.ToString(); }
@@ -482,7 +482,7 @@ namespace endoDB
             #endregion
 
             string sql;
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             { sql = "SELECT name_jp AS name, suspect, premodifier, postmodifier FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }
             else
             { sql = "SELECT name_eng AS name, suspect, premodifier, postmodifier FROM diag INNER JOIN diag_name ON diag.diag_code=diag_name.no WHERE exam_no=" + exam_id + " ORDER BY diag_no"; }

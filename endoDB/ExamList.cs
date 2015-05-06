@@ -124,7 +124,7 @@ namespace endoDB
 
             string status_name;
             string exam_type_name;
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             {
                 status_name = "name_jp";
                 exam_type_name = "name_jp";
@@ -191,7 +191,8 @@ namespace endoDB
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
             {
-                showImages(dgv.Rows[e.RowIndex].Cells["pt_id"].Value.ToString());
+                uckyFunctions.showImages(dgv.Rows[e.RowIndex].Cells["pt_id"].Value.ToString(),
+                    uckyFunctions.dateTo8char(dgv.Rows[e.RowIndex].Cells["exam_day"].Value.ToString(), Settings.lang));
                 return;
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btDelColumn")
@@ -211,7 +212,7 @@ namespace endoDB
             if (e.KeyCode == Keys.Enter)
             {
                 DataGridView dgv = (DataGridView)sender;
-                if(dgv.RowCount==0)
+                if (dgv.RowCount == 0)
                 { return; }
 
                 if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btSelect")
@@ -221,7 +222,8 @@ namespace endoDB
                 }
                 else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btImage")
                 {
-                    showImages(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["pt_id"].Value.ToString());
+                    uckyFunctions.showImages(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["pt_id"].Value.ToString(),
+                        uckyFunctions.dateTo8char(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_day"].Value.ToString(), Settings.lang));
                     return;
                 }
                 else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btDelColumn")
@@ -246,12 +248,6 @@ namespace endoDB
             exam_list.Rows.Clear();
             searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
             resizeColumns();
-        }
-
-        private void showImages(string pt_id_str)
-        {
-            if (System.IO.File.Exists(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe"))
-            { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe", pt_id_str); }
         }
 
         private void delExam(string exam_id_str)

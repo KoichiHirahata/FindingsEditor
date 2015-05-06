@@ -58,6 +58,7 @@
             this.dgvExams.RowHeadersVisible = false;
             this.dgvExams.RowTemplate.Height = 21;
             this.dgvExams.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.dgvExams.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvExams_KeyDown);
             // 
             // btConfirm
             // 

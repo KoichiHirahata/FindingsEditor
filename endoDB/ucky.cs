@@ -84,7 +84,8 @@ namespace endoDB
         public static string DBconnectID { get; set; } //ID of DB user
         public static string DBconnectPw { get; set; } //Pw of DB user
         public static string settingFile_location { get; set; } //Config file path
-        public static Boolean isJP { get; set; } //Property for storing that machine's language is Japanese or not.
+        //public static Boolean isJP { get; set; } //Property for storing that machine's language is Japanese or not.
+        public static string lang { get; set; } //language
         public static string endoPrintFile { get; set; } //Template xls file for endoscopy conclusion.
         public static string figureFolder { get; set; } //Root folder of figures.
         public static string sslSetting { get; set; } //SSL setting string
@@ -102,7 +103,8 @@ namespace endoDB
         {
             settingFile_location = Application.StartupPath + "\\setting.config";
             readSettings();
-            isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
+            //isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
+            lang = Application.CurrentCulture.TwoLetterISOLanguageName;
             //Settings.sslSetting = ""; //Use this when you want to connect without using SSL
             sslSetting = "SSL=true;SslMode=Require;"; //Use this when you want to connect using SSL
             ptInfoPlugin = checkPtInfoPlugin();
@@ -174,7 +176,7 @@ namespace endoDB
             {
                 string text = file_control.readFromFile(Application.StartupPath + "\\plugins.ini");
                 string plugin_location = file_control.readItemSettingFromText(text, "Patient information=");
-                if(File.Exists(plugin_location))
+                if (File.Exists(plugin_location))
                 { return plugin_location; }
                 else
                 { return ""; }
@@ -298,6 +300,17 @@ namespace endoDB
             (birthDate.Year * 10000 + birthDate.Month * 100 + birthDate.Day)) / 10000;
         }
 
+        public static string dateTo8char(string date_str, string lang)
+        {
+            switch (lang)
+            {
+                case "ja":
+                    return date_str.Substring(0, 4) + date_str.Substring(5, 2) + date_str.Substring(8, 2);
+                default:
+                    return date_str.Substring(6, 4) + date_str.Substring(0, 2) + date_str.Substring(3, 2);
+            }
+        }
+
         /// Run transaction
         public static functionResult ExeNonQuery(string sql, params string[] p_str)
         {
@@ -338,7 +351,7 @@ namespace endoDB
                     for (int i = 0; i < p_str.Length; i++)
                     {
                         p = ":p" + i.ToString();
-                        MessageBox.Show(p + " to " + p_str[i]);
+                        //MessageBox.Show(p + " to " + p_str[i]);
                         command.Parameters.Add(new NpgsqlParameter(p, p_str[i]));
                     }
 
@@ -692,6 +705,14 @@ namespace endoDB
             conn.Close();
 
             return int.Parse(dt.Rows.Count.ToString());
+        }
+
+        //Start PtGraViewer with options of patient's ID, date of examination
+        public static void showImages(string pt_id_str, string exam_date)
+        {
+            //MessageBox.Show("/pt:" + pt_id_str + " /date:" + exam_date);
+            if (System.IO.File.Exists(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe"))
+            { System.Diagnostics.Process.Start(Application.StartupPath + @"\PtGraViewer\PtGraViewer.exe", "/pt:" + pt_id_str + " /date:" + exam_date); }
         }
         #endregion
     }

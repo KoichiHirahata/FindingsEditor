@@ -62,7 +62,7 @@ namespace endoDB
 
             string sql;
 
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             {
                 sql = "SELECT type_no, name_jp AS exam_name FROM exam_type WHERE type_visible = true ORDER BY type_order";
             }
@@ -101,7 +101,7 @@ namespace endoDB
 
             string sql;
 
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             {
                 sql = "SELECT type_no, name_jp AS exam_name FROM exam_type ORDER BY type_order";
             }
@@ -560,7 +560,7 @@ namespace endoDB
             #endregion
 
             string sql;
-            if (Settings.isJP)
+            if (Settings.lang=="ja")
             { sql = "SELECT no, name_jp as name, diag_visible FROM diag_name ORDER BY diag_order"; }
             else
             { sql = "SELECT no, name_eng as name, diag_visible FROM diag_name ORDER BY diag_order"; }
@@ -596,7 +596,7 @@ namespace endoDB
             #endregion
 
             string sql;
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             { sql = "SELECT id, start_no, end_no, name_jp AS name, bt_order, visible FROM diag_category"; }
             else
             { sql = "SELECT id, start_no, end_no, name_eng AS name, bt_order, visible FROM diag_category"; }
@@ -633,7 +633,7 @@ namespace endoDB
             #endregion
 
             string sql;
-            if (Settings.isJP)
+            if (Settings.lang == "ja")
             { sql = "SELECT status_no,name_jp AS status_name FROM status WHERE status_visible=true ORDER BY status_order"; }
             else
             { sql = "SELECT status_no,name_eng AS status_name FROM status WHERE status_visible=true ORDER BY status_order"; }
