@@ -208,6 +208,9 @@ namespace endoDB
                 cbOperator1.Enabled = false;
                 btClearOp1.Visible = false;
             }
+
+            if (shouldFillOperatorWithUser(canEdit, exam.exam_status))
+            { cbOperator1.SelectedValue = db_operator.operatorID; }
             #endregion
 
             #region cbOperator2 initialization
@@ -490,6 +493,15 @@ namespace endoDB
             edited = false;
         }
 
+        #region information
+        public static Boolean shouldFillOperatorWithUser(Boolean can_edit, int exam_status)
+        {
+            if (can_edit && exam_status == 0)
+            { return true; }
+            else
+            { return false; }
+        }
+
         #region ClearOperatorButton
         private void btClearOp1_Click(object sender, EventArgs e)
         {
@@ -520,6 +532,7 @@ namespace endoDB
             edited = true;
             this.cbOperator5.SelectedIndex = -1;
         }
+        #endregion
         #endregion
 
         #region Diagnoses
