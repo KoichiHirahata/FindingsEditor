@@ -101,7 +101,7 @@ namespace endoDB
 
         public static void initiateSettings()
         {
-            settingFile_location = Application.StartupPath + "\\setting.config";
+            settingFile_location = Application.StartupPath + "\\settings.config";
             readSettings();
             //isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
             lang = Application.CurrentCulture.TwoLetterISOLanguageName;

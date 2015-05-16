@@ -70,16 +70,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Administration date に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string admin_date {
-            get {
-                return ResourceManager.GetString("admin_date", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Can final check に類似しているローカライズされた文字列を検索します。
+        ///   Allow final check に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string allow_fc {
             get {
@@ -106,7 +97,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Blank is not allowed. に類似しているローカライズされた文字列を検索します。
+        ///   Requested information must be provided. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string BlankNotAllowed {
             get {
@@ -124,7 +115,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Can not change ID. に類似しているローカライズされた文字列を検索します。
+        ///   ID may not be changed. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CanNotChangeId {
             get {
@@ -142,7 +133,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Your changes have not been saved. Discard changes? に類似しているローカライズされた文字列を検索します。
+        ///   Your changes have not been saved! Do you wish to proceed? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ChangesNotSavedDiscardOrNot {
             get {
@@ -232,7 +223,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Confirm password is wrong. に類似しているローカライズされた文字列を検索します。
+        ///   Password incorrect. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ConfirmPwIsWrong {
             get {
@@ -241,7 +232,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Connection has been closed by server. に類似しているローカライズされた文字列を検索します。
+        ///   Connection closed by server. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ConnClosed {
             get {
@@ -250,7 +241,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Connect failed に類似しているローカライズされた文字列を検索します。
+        ///   Connection failed. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ConnectFailed {
             get {
@@ -259,7 +250,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Successfully connected. に類似しているローカライズされた文字列を検索します。
+        ///   Connection successful. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ConnectSuccess {
             get {
@@ -268,7 +259,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   This object already used, so couldn&apos;t delete. に類似しているローカライズされた文字列を検索します。
+        ///   Data is in use and may not be deleted. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CouldntDelData {
             get {
@@ -286,7 +277,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Couldn&apos;t open connection. に類似しているローカライズされた文字列を検索します。
+        ///   Could not establish connection. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CouldntOpenConn {
             get {
@@ -340,7 +331,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Please determine gender. に類似しているローカライズされた文字列を検索します。
+        ///   Select gender. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DetermineGender {
             get {
@@ -349,7 +340,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Diagnosed Dr. に類似しているローカライズされた文字列を検索します。
+        ///   Name of diagnosing Doctor に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DiagnosedDr {
             get {
@@ -466,7 +457,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Exam(s) already exist. に類似しているローカライズされた文字列を検索します。
+        ///   Exam record(s) already exist. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExamsAlreadyExist {
             get {
@@ -502,7 +493,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   The file is being used. に類似しているローカライズされた文字列を検索します。
+        ///   File in use. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string FileBeingUsed {
             get {
@@ -511,7 +502,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   File not exist. に類似しているローカライズされた文字列を検索します。
+        ///   File does not exist. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string FileNotExist {
             get {
@@ -529,7 +520,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Folder is not exist. に類似しているローカライズされた文字列を検索します。
+        ///   Folder does not exist. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string FolderNotExist {
             get {
@@ -547,7 +538,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   This ID already exists. に類似しているローカライズされた文字列を検索します。
+        ///   ID already exists. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string IdDuplicated {
             get {
@@ -565,7 +556,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Do you want to log out? に類似しているローカライズされた文字列を検索します。
+        ///   Do you wish to log out? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InformLogout {
             get {
@@ -592,7 +583,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Lock procedure failed. Call administrator. に類似しているローカライズされた文字列を検索します。
+        ///   Lock procedure failed. Please contact your administrator. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LockFailed {
             get {
@@ -637,7 +628,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Please determine department. に類似しているローカライズされた文字列を検索します。
+        ///   Department required. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NoDepartment {
             get {
@@ -646,7 +637,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   There is no diagnosis. に類似しているローカライズされた文字列を検索します。
+        ///   Diagnosis required. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NoDiagnosis {
             get {
@@ -655,7 +646,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   No exam. に類似しているローカライズされた文字列を検索します。
+        ///   No exam on record. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NoExam {
             get {
@@ -664,7 +655,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   ID is needed. に類似しているローカライズされた文字列を検索します。
+        ///   ID required. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NoID {
             get {
@@ -673,7 +664,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   No is needed. に類似しているローカライズされた文字列を検索します。
+        ///   Number required. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NoIsNeeded {
             get {
@@ -682,7 +673,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Name is needed. に類似しているローカライズされた文字列を検索します。
+        ///   Name required. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NoName {
             get {
@@ -700,7 +691,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   No out of range. に類似しているローカライズされた文字列を検索します。
+        ///   Number is out of range. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NoOutOfRange {
             get {
@@ -763,7 +754,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Openning form was failed. に類似しているローカライズされた文字列を検索します。
+        ///   Opening form failed. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string OpenFormFailed {
             get {
@@ -808,7 +799,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Name of place (Room name) に類似しているローカライズされた文字列を検索します。
+        ///   Place name (Room name) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PlaceName {
             get {
@@ -817,7 +808,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Place No. に類似しているローカライズされた文字列を検索します。
+        ///   Place Number に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PlaceNo {
             get {
@@ -1042,7 +1033,7 @@ namespace endoDB.Properties {
         }
         
         /// <summary>
-        ///   Summary has changed. Do you want save it? に類似しているローカライズされた文字列を検索します。
+        ///   Summary changed. Save changed? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SummarySaveYN {
             get {
