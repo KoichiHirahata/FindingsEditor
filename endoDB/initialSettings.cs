@@ -52,34 +52,44 @@ namespace endoDB
                     return;
                 }
             }
-            Settings.figureFolder = tbFigureFolder.Text;
-            Settings.DBSrvIP = this.tbDBSrv.Text;
-            Settings.DBSrvPort = this.tbDBsrvPort.Text;
-            Settings.DBconnectID = this.tbDbID.Text;
-            if (this.tbDBpw.Visible == true)
-            { Settings.DBconnectPw = this.tbDBpw.Text; }
-            Settings.saveSettings();
-            this.Close();
+
+            if(testConnect())
+            {
+                Settings.figureFolder = tbFigureFolder.Text;
+                Settings.DBSrvIP = this.tbDBSrv.Text;
+                Settings.DBSrvPort = this.tbDBsrvPort.Text;
+                Settings.DBconnectID = this.tbDbID.Text;
+                if (this.tbDBpw.Visible == true)
+                { Settings.DBconnectPw = this.tbDBpw.Text; }
+                Settings.saveSettings();
+                this.Close();
+            }
         }
 
         private void btTestConnect_Click(object sender, EventArgs e)
         {
+            if (testConnect())
+            { MessageBox.Show(Properties.Resources.ConnectSuccess, "Successfully connected.", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+        }
+
+        private Boolean testConnect()
+        {
             if (this.tbDBSrv.Text.Length == 0)
             {
                 MessageBox.Show(Properties.Resources.ServerIP, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             if (this.tbDBsrvPort.Text.Length == 0)
             {
                 MessageBox.Show(Properties.Resources.portUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             if (this.tbDbID.Text.Length == 0)
             {
                 MessageBox.Show(Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             string temp_pw;
@@ -89,7 +99,7 @@ namespace endoDB
                 if (this.tbDBpw.Text.Length == 0)
                 {
                     MessageBox.Show(Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    return false;
                 }
 
                 temp_pw = this.tbDBpw.Text;
@@ -99,7 +109,7 @@ namespace endoDB
                 if (Settings.DBconnectPw == null)
                 {
                     MessageBox.Show(Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    return false;
                 }
                 temp_pw = Settings.DBconnectPw;
             }
@@ -120,7 +130,7 @@ namespace endoDB
             catch (ArgumentException)
             {
                 MessageBox.Show(Properties.Resources.WrongConnectingString, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
             #endregion
 
@@ -130,20 +140,26 @@ namespace endoDB
             {
                 MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
-                return;
+                return false;
             }
             catch (System.IO.IOException)
             {
                 MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
-                return;
+                return false;
             }
 
             if (conn.State == ConnectionState.Open)
-            { MessageBox.Show(Properties.Resources.ConnectSuccess, "Successfully connected.", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            {
+                conn.Close();
+                return true;
+            }
             else
-            { MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            conn.Close();
+            {
+                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+                return false;
+            }
         }
 
         private void btFigureFolder_Click(object sender, EventArgs e)
