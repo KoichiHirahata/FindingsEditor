@@ -83,6 +83,14 @@ namespace endoDB
 
             setButtons(_examType);
             resizeColumns();
+
+            switch (Settings.lang)
+            {
+                case "ja":
+                    cbPremodifier.ImeMode = ImeMode.On;
+                    cbPostmodifier.ImeMode = ImeMode.On;
+                    break;
+            }
         }
 
         private void setButtons(int _examType)
