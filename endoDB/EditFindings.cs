@@ -761,14 +761,7 @@ namespace endoDB
                 return;
             }
 
-            if (selectionStart <= 0)
-            {
-                tbFindings.Text = tbFindings.Text.Insert(0, diagnoses);
-            }
-            else
-            {
-                tbFindings.Text = tbFindings.Text.Insert(selectionStart, diagnoses);
-            }
+            Clipboard.SetDataObject(diagnoses);
         }
 
         private void resizeColumns()
@@ -1280,6 +1273,7 @@ namespace endoDB
         }
         #endregion
 
+        #region btCopy2ClipBoard
         private void btCopy2ClipBoard_Click(object sender, EventArgs e)
         {
             string str = "";
@@ -1300,13 +1294,18 @@ namespace endoDB
             {
                 op_id = cbDiagnosed.SelectedValue.ToString();
                 temp_op = new examOperator(op_id);
+
+                string opNames = getOperatorNames();
+                if (temp_op.op_name != opNames)
+                { str += "<" + Properties.Resources.Operators + ">" + opNames; }
+
                 str += "<" + Properties.Resources.DiagnosedDr + ">" + temp_op.op_name + Environment.NewLine;
             }
+            else
+            { str += "<" + Properties.Resources.Operators + ">" + getOperatorNames(); }
 
             if (!string.IsNullOrWhiteSpace(tbComment.Text.ToString()))
-            {
-                str += Properties.Resources.Comment + ":" + Environment.NewLine + tbComment.Text.ToString() + Environment.NewLine;
-            }
+            { str += Properties.Resources.Comment + ":" + Environment.NewLine + tbComment.Text.ToString() + Environment.NewLine; }
 
             if (!string.IsNullOrWhiteSpace(cbChecker.Text.ToString()))
             {
@@ -1317,6 +1316,62 @@ namespace endoDB
 
             Clipboard.SetDataObject(str);
         }
+
+        private string getOperatorNames()
+        {
+            string op_id;
+            examOperator temp_op;
+            string operatorNames = "";
+            if (!String.IsNullOrWhiteSpace(cbOperator1.Text.ToString()))
+            {
+                op_id = cbOperator1.SelectedValue.ToString();
+                temp_op = new examOperator(op_id);
+                operatorNames += temp_op.op_name;
+            }
+
+            if (!String.IsNullOrWhiteSpace(cbOperator2.Text.ToString()))
+            {
+                if (!String.IsNullOrWhiteSpace(operatorNames))
+                { operatorNames += "/"; }
+
+                op_id = cbOperator2.SelectedValue.ToString();
+                temp_op = new examOperator(op_id);
+                operatorNames += temp_op.op_name;
+            }
+
+            if (!String.IsNullOrWhiteSpace(cbOperator3.Text.ToString()))
+            {
+                if (!String.IsNullOrWhiteSpace(operatorNames))
+                { operatorNames += "/"; }
+
+                op_id = cbOperator3.SelectedValue.ToString();
+                temp_op = new examOperator(op_id);
+                operatorNames += temp_op.op_name;
+            }
+
+            if (!String.IsNullOrWhiteSpace(cbOperator4.Text.ToString()))
+            {
+                if (!String.IsNullOrWhiteSpace(operatorNames))
+                { operatorNames += "/"; }
+
+                op_id = cbOperator4.SelectedValue.ToString();
+                temp_op = new examOperator(op_id);
+                operatorNames += temp_op.op_name;
+            }
+
+            if (!String.IsNullOrWhiteSpace(cbOperator5.Text.ToString()))
+            {
+                if (!String.IsNullOrWhiteSpace(operatorNames))
+                { operatorNames += "/"; }
+
+                op_id = cbOperator5.SelectedValue.ToString();
+                temp_op = new examOperator(op_id);
+                operatorNames += temp_op.op_name;
+            }
+
+            return operatorNames;
+        }
+        #endregion
 
         #region Timer
         //This function necessary for timer procedure. Call updateLockTime.

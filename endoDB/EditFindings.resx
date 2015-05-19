@@ -117,2497 +117,1990 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbPatient.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbPatient.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbPatient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="lbPatient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
-  </data>
-  <data name="lbPatient.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbPatient.Text" xml:space="preserve">
-    <value>ID: Name:</value>
-  </data>
-  <data name="&gt;&gt;lbPatient.Name" xml:space="preserve">
-    <value>lbPatient</value>
-  </data>
-  <data name="&gt;&gt;lbPatient.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPatient.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbPatient.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.Name" xml:space="preserve">
-    <value>btExamCanceled</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btClearOp5.Name" xml:space="preserve">
-    <value>btClearOp5</value>
-  </data>
-  <data name="&gt;&gt;btClearOp5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp5.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
   <data name="&gt;&gt;btClearOp5.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;cbOperator5.Name" xml:space="preserve">
-    <value>cbOperator5</value>
+  <data name="&gt;&gt;pbColor1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
   </data>
-  <data name="&gt;&gt;cbOperator5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator5.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.Name" xml:space="preserve">
-    <value>lbOperator5</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btClearOp4.Name" xml:space="preserve">
-    <value>btClearOp4</value>
-  </data>
-  <data name="&gt;&gt;btClearOp4.Type" xml:space="preserve">
+  <data name="&gt;&gt;btErace2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btClearOp4.Parent" xml:space="preserve">
-    <value>tpInformation</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tcExam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>541, 618</value>
   </data>
-  <data name="&gt;&gt;btClearOp4.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="btCopy2ClipBoard.ToolTip" xml:space="preserve">
+    <value>Click after diagnose.</value>
   </data>
-  <data name="&gt;&gt;cbOperator4.Name" xml:space="preserve">
-    <value>cbOperator4</value>
+  <data name="lbChecker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 16</value>
   </data>
-  <data name="&gt;&gt;cbOperator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator4.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.Name" xml:space="preserve">
-    <value>lbOperator4</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.Name" xml:space="preserve">
-    <value>btClearOp3</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.Type" xml:space="preserve">
+  <data name="&gt;&gt;btDiagnosed.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.Name" xml:space="preserve">
-    <value>cbOperator3</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.Name" xml:space="preserve">
-    <value>lbOperator3</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.Name" xml:space="preserve">
-    <value>btClearOp2</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.Name" xml:space="preserve">
-    <value>cbOperator2</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.Name" xml:space="preserve">
-    <value>lbOperator2</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.Name" xml:space="preserve">
-    <value>btClearOp1</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.Name" xml:space="preserve">
-    <value>cbOperator1</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.Name" xml:space="preserve">
-    <value>lbOperator1</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.Name" xml:space="preserve">
-    <value>cbPlace</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.Name" xml:space="preserve">
-    <value>lbPlace</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;cbEquipment.Name" xml:space="preserve">
-    <value>cbEquipment</value>
-  </data>
-  <data name="&gt;&gt;cbEquipment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cbEquipment.Parent" xml:space="preserve">
     <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;cbEquipment.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.Name" xml:space="preserve">
-    <value>lbEquipment</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;cbWard.Name" xml:space="preserve">
-    <value>cbWard</value>
-  </data>
-  <data name="&gt;&gt;cbWard.Type" xml:space="preserve">
+  <data name="&gt;&gt;cbOperator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cbWard.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbPatient.Name" xml:space="preserve">
+    <value>lbPatient</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbPatient.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pbBrushWidth2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="cbEquipment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btCopy2ClipBoard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>562, 4</value>
+  </data>
+  <data name="btDiagnosed.Text" xml:space="preserve">
+    <value>Diagnosed</value>
+  </data>
+  <data name="&gt;&gt;btReverseOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btReverseOrder.Name" xml:space="preserve">
+    <value>btReverseOrder</value>
+  </data>
+  <data name="lbOperator2.Text" xml:space="preserve">
+    <value>2:</value>
+  </data>
+  <data name="lbDepartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 16</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value>Data will saved when this form closed.</value>
+  </data>
+  <data name="btCopyDiag.Text" xml:space="preserve">
+    <value>Copy Diagnoses to Clipboard</value>
+  </data>
+  <data name="cbBrushWidth1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 446</value>
+  </data>
+  <data name="btClearOp5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 26</value>
+  </data>
+  <data name="dgvWords.Location" type="System.Drawing.Point, System.Drawing">
+    <value>562, 39</value>
+  </data>
+  <data name="tpFigure1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbOperator5.Parent" xml:space="preserve">
     <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;cbWard.ZOrder" xml:space="preserve">
-    <value>20</value>
+  <data name="&gt;&gt;cbDiagnosed.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;lbWard.Name" xml:space="preserve">
-    <value>lbWard</value>
+  <data name="&gt;&gt;btSaveClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbWard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbPurpose.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;lbWard.Parent" xml:space="preserve">
-    <value>tpInformation</value>
+  <data name="&gt;&gt;tbComment.Name" xml:space="preserve">
+    <value>tbComment</value>
   </data>
-  <data name="&gt;&gt;lbWard.ZOrder" xml:space="preserve">
-    <value>21</value>
+  <data name="&gt;&gt;cbOperator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;btExamCanceled.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tpPatho.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
+  <data name="tbPurpose.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>22</value>
+  <data name="lbCheckersComment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;cbOrderDr.Name" xml:space="preserve">
-    <value>cbOrderDr</value>
+  <data name="&gt;&gt;btChecked.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbBrushWidth2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="tpFindings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;cbOrderDr.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cbOrderDr.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbChecker.Name" xml:space="preserve">
+    <value>lbChecker</value>
+  </data>
+  <data name="btDiagnosed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 474</value>
+  </data>
+  <data name="&gt;&gt;lbOperator5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btSaveClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btSaveClose.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btColorSelect2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 28</value>
+  </data>
+  <data name="btSetNormal.ToolTip" xml:space="preserve">
+    <value>Click here to reverse diagnoses order.</value>
+  </data>
+  <data name="&gt;&gt;tpPatho.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="tbPurpose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 48</value>
+  </data>
+  <data name="lbPatient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="&gt;&gt;lbPurpose.Parent" xml:space="preserve">
     <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;cbOrderDr.ZOrder" xml:space="preserve">
-    <value>23</value>
+  <data name="&gt;&gt;cbOrderDr.Name" xml:space="preserve">
+    <value>cbOrderDr</value>
+  </data>
+  <data name="btDiagnosed.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
   <data name="&gt;&gt;cbDepartment.Name" xml:space="preserve">
     <value>cbDepartment</value>
   </data>
-  <data name="&gt;&gt;cbDepartment.Type" xml:space="preserve">
+  <data name="&gt;&gt;btClearOp5.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="cbDiagnosed.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="lbPurpose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 51</value>
+  </data>
+  <data name="cbPlace.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="tpFindings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="&gt;&gt;lbOperator4.Name" xml:space="preserve">
+    <value>lbOperator4</value>
+  </data>
+  <data name="btErace2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 28</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="btColorSelect2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cbOperator5.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;btClearOp2.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="lbOperator5.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;btSetNormal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="cbExamStatus.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="pbColor2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="btClearOp1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbChecker.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbCheckersComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 16</value>
+  </data>
+  <data name="&gt;&gt;lbOperator3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pbFigure1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;dgvDiagnoses.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="&gt;&gt;lbOperator2.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="cbExamStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 24</value>
+  </data>
+  <data name="cbOperator3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 334</value>
+  </data>
+  <data name="btChecked.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 558</value>
+  </data>
+  <data name="&gt;&gt;cbChecker.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbPlace.Name" xml:space="preserve">
+    <value>lbPlace</value>
+  </data>
+  <data name="lbOperator4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="cbDepartment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btClearOp3.Name" xml:space="preserve">
+    <value>btClearOp3</value>
+  </data>
+  <data name="&gt;&gt;cbWard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbColor2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btClearOp2.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btSaveClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 26</value>
+  </data>
+  <data name="&gt;&gt;lbOperator2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;tpInformation.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;lbEquipment.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cbOperator5.Name" xml:space="preserve">
+    <value>cbOperator5</value>
+  </data>
+  <data name="&gt;&gt;lbOperator5.Name" xml:space="preserve">
+    <value>lbOperator5</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>EditFindings</value>
+  </data>
+  <data name="btAddDiag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 39</value>
+  </data>
+  <data name="&gt;&gt;btClearOp4.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;lbDepartment.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;lbDepartment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btReverseOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 27</value>
+  </data>
+  <data name="&gt;&gt;lbOperator1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.Name" xml:space="preserve">
+    <value>btColorSelect1</value>
+  </data>
+  <data name="cbDiagnosed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
+  </data>
+  <data name="tpPatho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="&gt;&gt;btCopy2ClipBoard.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbOperator2.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;cbPlace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbOperator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPlace.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lbCheckersComment.Name" xml:space="preserve">
+    <value>lbCheckersComment</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btSetNormal.Text" xml:space="preserve">
+    <value>Add "Normal"</value>
+  </data>
+  <data name="cbBrushWidth2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;tpFigure2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btClearOp1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbWard.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbOperator1.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="cbEquipment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 186</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPurpose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.Name" xml:space="preserve">
+    <value>cbBrushWidth1</value>
+  </data>
+  <data name="lbDepartment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cbDepartment.Parent" xml:space="preserve">
     <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;cbDepartment.ZOrder" xml:space="preserve">
-    <value>24</value>
+  <data name="tbPurpose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 86</value>
   </data>
-  <data name="&gt;&gt;lbDepartment.Name" xml:space="preserve">
-    <value>lbDepartment</value>
+  <data name="dgvDiagnoses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
   </data>
-  <data name="&gt;&gt;lbDepartment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbDepartment.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbDepartment.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;tbPurpose.Name" xml:space="preserve">
-    <value>tbPurpose</value>
-  </data>
-  <data name="&gt;&gt;tbPurpose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPurpose.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;tbPurpose.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.Name" xml:space="preserve">
-    <value>lbPurpose</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;lbDate.Name" xml:space="preserve">
-    <value>lbDate</value>
-  </data>
-  <data name="&gt;&gt;lbDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbDate.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbDate.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="tpInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tpInformation.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
+  <data name="lbDiagnosed.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="tpInformation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tpInformation.Text" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="&gt;&gt;tpInformation.Name" xml:space="preserve">
+  <data name="&gt;&gt;cbOperator1.Parent" xml:space="preserve">
     <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;tpInformation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpInformation.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpInformation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Name" xml:space="preserve">
-    <value>btSetNormal</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.Name" xml:space="preserve">
-    <value>lbFindings</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbFindings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Name" xml:space="preserve">
-    <value>cbChecker</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Name" xml:space="preserve">
-    <value>cbDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbBrushWidth1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;cbDiagnosed.Parent" xml:space="preserve">
     <value>tpFindings</value>
   </data>
-  <data name="&gt;&gt;cbDiagnosed.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lbOperator3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="&gt;&gt;lbDiagnosed.Name" xml:space="preserve">
-    <value>lbDiagnosed</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
   </data>
-  <data name="&gt;&gt;lbDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Name" xml:space="preserve">
-    <value>btDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Type" xml:space="preserve">
+  <data name="&gt;&gt;btSetNormal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
+  <data name="&gt;&gt;tpPatho.Name" xml:space="preserve">
+    <value>tpPatho</value>
   </data>
-  <data name="&gt;&gt;btDiagnosed.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="lbFindings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="&gt;&gt;btChecked.Name" xml:space="preserve">
-    <value>btChecked</value>
+  <data name="lbOperator4.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;btChecked.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbOperator5.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
-  <data name="&gt;&gt;btChecked.Parent" xml:space="preserve">
-    <value>tpFindings</value>
+  <data name="pbBrushWidth2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;btChecked.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;lbOperator3.Parent" xml:space="preserve">
+    <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;lbChecker.Name" xml:space="preserve">
-    <value>lbChecker</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Parent" xml:space="preserve">
-    <value>tpFindings</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 16</value>
   </data>
   <data name="&gt;&gt;lbChecker.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;tbComment.Name" xml:space="preserve">
-    <value>tbComment</value>
+  <data name="lbPatho.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;tbComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbPatho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;tbComment.Parent" xml:space="preserve">
-    <value>tpFindings</value>
+  <data name="lbOperator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
   </data>
-  <data name="&gt;&gt;tbComment.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="&gt;&gt;lbCheckersComment.Name" xml:space="preserve">
-    <value>lbCheckersComment</value>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;lbCheckersComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cbBrushWidth2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lbCheckersComment.Parent" xml:space="preserve">
-    <value>tpFindings</value>
+  <data name="&gt;&gt;btExamCanceled.Parent" xml:space="preserve">
+    <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;lbCheckersComment.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="tbFindings.ToolTip" xml:space="preserve">
+    <value>Write findings to this box.</value>
   </data>
-  <data name="&gt;&gt;btReverseOrder.Name" xml:space="preserve">
-    <value>btReverseOrder</value>
+  <data name="&gt;&gt;lbWard.Parent" xml:space="preserve">
+    <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;btReverseOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dgvDiagnoses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 193</value>
   </data>
-  <data name="&gt;&gt;btReverseOrder.Parent" xml:space="preserve">
-    <value>tpFindings</value>
+  <data name="&gt;&gt;cbOperator4.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;btReverseOrder.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;cbOperator3.Name" xml:space="preserve">
+    <value>cbOperator3</value>
   </data>
-  <data name="&gt;&gt;btCopyDiag.Name" xml:space="preserve">
-    <value>btCopyDiag</value>
+  <data name="&gt;&gt;lbOperator3.Name" xml:space="preserve">
+    <value>lbOperator3</value>
   </data>
-  <data name="&gt;&gt;btCopyDiag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pbColor1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 407</value>
   </data>
-  <data name="&gt;&gt;btCopyDiag.Parent" xml:space="preserve">
-    <value>tpFindings</value>
+  <data name="&gt;&gt;pbColor2.Name" xml:space="preserve">
+    <value>pbColor2</value>
+  </data>
+  <data name="btErace1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;btCopyDiag.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;tbFindings.Name" xml:space="preserve">
-    <value>tbFindings</value>
+  <data name="&gt;&gt;cbPlace.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tpPatho.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbBrushWidth1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btErace2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;cbOperator3.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="btSetNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btColorSelect1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 409</value>
+  </data>
+  <data name="tbPatho.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btClearOp1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 26</value>
+  </data>
+  <data name="btClearOp4.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="pbBrushWidth2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btExamCanceled.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbCheckersComment.Text" xml:space="preserve">
+    <value>Checker's comment</value>
+  </data>
+  <data name="btClearOp2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 154</value>
+  </data>
+  <data name="&gt;&gt;btClearOp5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvWords.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btReverseOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbFindings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 202</value>
+  </data>
+  <data name="&gt;&gt;btErace2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="lbDepartment.Text" xml:space="preserve">
+    <value>Department:</value>
+  </data>
+  <data name="&gt;&gt;btClearOp3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btExamCanceled.Name" xml:space="preserve">
+    <value>btExamCanceled</value>
+  </data>
+  <data name="lbOperator1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btAddDiag.Name" xml:space="preserve">
+    <value>btAddDiag</value>
+  </data>
+  <data name="&gt;&gt;btAddDiag.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="pbColor1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btCopy2ClipBoard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
+  </data>
+  <data name="lbOperator1.Text" xml:space="preserve">
+    <value>Operator 1:</value>
+  </data>
+  <data name="btErace1.Text" xml:space="preserve">
+    <value>Erace</value>
   </data>
   <data name="&gt;&gt;tbFindings.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tbFindings.Parent" xml:space="preserve">
+  <data name="lbDiagnosed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 16</value>
+  </data>
+  <data name="lbEquipment.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbOperator5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cbExamStatus.Name" xml:space="preserve">
+    <value>cbExamStatus</value>
+  </data>
+  <data name="cbOperator4.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;tbFindings.Name" xml:space="preserve">
+    <value>tbFindings</value>
+  </data>
+  <data name="lbOperator5.Text" xml:space="preserve">
+    <value>5:</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbOperator4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbFindings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbOperator3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btClearOp2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btClearOp1.Name" xml:space="preserve">
+    <value>btClearOp1</value>
+  </data>
+  <data name="&gt;&gt;cbOperator1.Name" xml:space="preserve">
+    <value>cbOperator1</value>
+  </data>
+  <data name="cbWard.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;btClearOp4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 506</value>
+  </data>
+  <data name="lbOperator4.Text" xml:space="preserve">
+    <value>4:</value>
+  </data>
+  <data name="btClearOp3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 26</value>
+  </data>
+  <data name="&gt;&gt;dgvDiagnoses.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;cbExamStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tpFigure1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbOperator5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btAddDiag.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="pbFigure2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator3.Text" xml:space="preserve">
+    <value>3:</value>
+  </data>
+  <data name="lbDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 669</value>
+  </data>
+  <data name="tcExam.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbOperator3.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;lbDiagnosed.Parent" xml:space="preserve">
     <value>tpFindings</value>
   </data>
   <data name="&gt;&gt;tbFindings.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;btAddDiag.Name" xml:space="preserve">
-    <value>btAddDiag</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Name" xml:space="preserve">
-    <value>dgvDiagnoses</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="tpFindings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFindings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFindings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFindings.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tpFindings.Text" xml:space="preserve">
-    <value>Findings</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.Name" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFindings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Name" xml:space="preserve">
-    <value>btErace1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Name" xml:space="preserve">
-    <value>cbBrushWidth1</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Name" xml:space="preserve">
-    <value>pbBrushWidth1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Name" xml:space="preserve">
-    <value>pbColor1</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Name" xml:space="preserve">
-    <value>btColorSelect1</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Name" xml:space="preserve">
-    <value>pbFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tpFigure1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFigure1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFigure1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFigure1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tpFigure1.Text" xml:space="preserve">
-    <value>Figure 1</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Name" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Name" xml:space="preserve">
-    <value>btErace2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Name" xml:space="preserve">
-    <value>cbBrushWidth2</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Name" xml:space="preserve">
-    <value>pbBrushWidth2</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Name" xml:space="preserve">
-    <value>pbColor2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Name" xml:space="preserve">
-    <value>btColorSelect2</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Name" xml:space="preserve">
-    <value>pbFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tpFigure2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFigure2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFigure2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFigure2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tpFigure2.Text" xml:space="preserve">
-    <value>Figure 2</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Name" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbPatho.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbPatho.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbPatho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbPatho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 3</value>
-  </data>
-  <data name="lbPatho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 16</value>
-  </data>
-  <data name="lbPatho.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="lbPatho.Text" xml:space="preserve">
-    <value>Pathology results</value>
-  </data>
-  <data name="&gt;&gt;lbPatho.Name" xml:space="preserve">
-    <value>lbPatho</value>
-  </data>
-  <data name="&gt;&gt;lbPatho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPatho.Parent" xml:space="preserve">
-    <value>tpPatho</value>
-  </data>
-  <data name="&gt;&gt;lbPatho.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tbPatho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
-  </data>
-  <data name="tbPatho.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tbPatho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>521, 560</value>
-  </data>
-  <data name="tbPatho.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="tbPatho.ToolTip" xml:space="preserve">
-    <value>Write findings to this box.</value>
-  </data>
-  <data name="&gt;&gt;tbPatho.Name" xml:space="preserve">
-    <value>tbPatho</value>
-  </data>
-  <data name="&gt;&gt;tbPatho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPatho.Parent" xml:space="preserve">
-    <value>tpPatho</value>
-  </data>
-  <data name="&gt;&gt;tbPatho.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tpPatho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpPatho.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpPatho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpPatho.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tpPatho.Text" xml:space="preserve">
-    <value>Pathology</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.Name" xml:space="preserve">
-    <value>tpPatho</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="tcExam.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="tcExam.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 39</value>
-  </data>
-  <data name="tcExam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>541, 618</value>
-  </data>
-  <data name="tcExam.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Name" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tcExam.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btExamCanceled.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 462</value>
-  </data>
-  <data name="btExamCanceled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 40</value>
-  </data>
-  <data name="btExamCanceled.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="btExamCanceled.Text" xml:space="preserve">
-    <value>This exam was canceled.</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.Name" xml:space="preserve">
-    <value>btExamCanceled</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btExamCanceled.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btClearOp5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 394</value>
-  </data>
-  <data name="btClearOp5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 26</value>
-  </data>
-  <data name="btClearOp5.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="btClearOp5.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="&gt;&gt;btClearOp5.Name" xml:space="preserve">
-    <value>btClearOp5</value>
-  </data>
-  <data name="&gt;&gt;btClearOp5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp5.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cbOperator5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 394</value>
-  </data>
-  <data name="cbOperator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
-  </data>
-  <data name="cbOperator5.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;cbOperator5.Name" xml:space="preserve">
-    <value>cbOperator5</value>
-  </data>
-  <data name="&gt;&gt;cbOperator5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator5.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbOperator5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbOperator5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbOperator5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 397</value>
-  </data>
-  <data name="lbOperator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 16</value>
-  </data>
-  <data name="lbOperator5.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="lbOperator5.Text" xml:space="preserve">
-    <value>5:</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.Name" xml:space="preserve">
-    <value>lbOperator5</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btClearOp4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 364</value>
-  </data>
-  <data name="btClearOp4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 26</value>
-  </data>
-  <data name="btClearOp4.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="btClearOp4.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="&gt;&gt;btClearOp4.Name" xml:space="preserve">
-    <value>btClearOp4</value>
-  </data>
-  <data name="&gt;&gt;btClearOp4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp4.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp4.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cbOperator4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 364</value>
-  </data>
-  <data name="cbOperator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
-  </data>
-  <data name="cbOperator4.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;cbOperator4.Name" xml:space="preserve">
-    <value>cbOperator4</value>
-  </data>
-  <data name="&gt;&gt;cbOperator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator4.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbOperator4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbOperator4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbOperator4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 367</value>
-  </data>
-  <data name="lbOperator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 16</value>
-  </data>
-  <data name="lbOperator4.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="lbOperator4.Text" xml:space="preserve">
-    <value>4:</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.Name" xml:space="preserve">
-    <value>lbOperator4</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator4.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btClearOp3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 334</value>
-  </data>
-  <data name="btClearOp3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 26</value>
-  </data>
-  <data name="btClearOp3.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="btClearOp3.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.Name" xml:space="preserve">
-    <value>btClearOp3</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cbOperator3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 334</value>
-  </data>
-  <data name="cbOperator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
-  </data>
-  <data name="cbOperator3.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.Name" xml:space="preserve">
-    <value>cbOperator3</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lbOperator3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbOperator3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbOperator3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 337</value>
-  </data>
-  <data name="lbOperator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 16</value>
-  </data>
-  <data name="lbOperator3.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="lbOperator3.Text" xml:space="preserve">
-    <value>3:</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.Name" xml:space="preserve">
-    <value>lbOperator3</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator3.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btClearOp2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 304</value>
+  <data name="&gt;&gt;btSaveClose.Name" xml:space="preserve">
+    <value>btSaveClose</value>
   </data>
   <data name="btClearOp2.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 26</value>
   </data>
-  <data name="btClearOp2.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="btClearOp2.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.Name" xml:space="preserve">
-    <value>btClearOp2</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp2.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="cbOperator2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 304</value>
-  </data>
-  <data name="cbOperator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
-  </data>
-  <data name="cbOperator2.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.Name" xml:space="preserve">
-    <value>cbOperator2</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator2.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbOperator2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbOperator2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbOperator2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 307</value>
-  </data>
-  <data name="lbOperator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 16</value>
-  </data>
-  <data name="lbOperator2.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="lbOperator2.Text" xml:space="preserve">
-    <value>2:</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.Name" xml:space="preserve">
-    <value>lbOperator2</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="btClearOp1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 274</value>
-  </data>
-  <data name="btClearOp1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 26</value>
-  </data>
-  <data name="btClearOp1.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="btClearOp1.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.Name" xml:space="preserve">
-    <value>btClearOp1</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;btClearOp1.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="cbOperator1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 274</value>
-  </data>
-  <data name="cbOperator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 24</value>
-  </data>
-  <data name="cbOperator1.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.Name" xml:space="preserve">
-    <value>cbOperator1</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbOperator1.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="lbOperator1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbOperator1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbOperator1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 277</value>
-  </data>
-  <data name="lbOperator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 16</value>
-  </data>
-  <data name="lbOperator1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lbOperator1.Text" xml:space="preserve">
-    <value>Operator 1:</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.Name" xml:space="preserve">
-    <value>lbOperator1</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbOperator1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="cbPlace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 224</value>
-  </data>
-  <data name="cbPlace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
-  </data>
-  <data name="cbPlace.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.Name" xml:space="preserve">
-    <value>cbPlace</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbPlace.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="lbPlace.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbPlace.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbPlace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 227</value>
-  </data>
-  <data name="lbPlace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
-  </data>
-  <data name="lbPlace.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="lbPlace.Text" xml:space="preserve">
-    <value>Place:</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.Name" xml:space="preserve">
-    <value>lbPlace</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbPlace.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="cbEquipment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 186</value>
-  </data>
-  <data name="cbEquipment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 24</value>
-  </data>
-  <data name="cbEquipment.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;cbEquipment.Name" xml:space="preserve">
-    <value>cbEquipment</value>
-  </data>
-  <data name="&gt;&gt;cbEquipment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbEquipment.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbEquipment.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="lbEquipment.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbEquipment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbEquipment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 189</value>
-  </data>
-  <data name="lbEquipment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 16</value>
-  </data>
-  <data name="lbEquipment.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="lbEquipment.Text" xml:space="preserve">
-    <value>Equipment:</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.Name" xml:space="preserve">
-    <value>lbEquipment</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbEquipment.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="cbWard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 186</value>
-  </data>
-  <data name="cbWard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
-  </data>
-  <data name="cbWard.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;cbWard.Name" xml:space="preserve">
-    <value>cbWard</value>
-  </data>
-  <data name="&gt;&gt;cbWard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbWard.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbWard.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="lbWard.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbWard.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbWard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 186</value>
-  </data>
-  <data name="lbWard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 16</value>
-  </data>
-  <data name="lbWard.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="lbWard.Text" xml:space="preserve">
-    <value>Ward:</value>
-  </data>
-  <data name="&gt;&gt;lbWard.Name" xml:space="preserve">
-    <value>lbWard</value>
-  </data>
-  <data name="&gt;&gt;lbWard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbWard.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbWard.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 154</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 16</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Ordered Dr:</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="cbOrderDr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 151</value>
-  </data>
-  <data name="cbOrderDr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 24</value>
-  </data>
-  <data name="cbOrderDr.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;cbOrderDr.Name" xml:space="preserve">
-    <value>cbOrderDr</value>
-  </data>
-  <data name="&gt;&gt;cbOrderDr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbOperator5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 397</value>
   </data>
   <data name="&gt;&gt;cbOrderDr.Parent" xml:space="preserve">
     <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;cbOrderDr.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="cbDepartment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 151</value>
-  </data>
-  <data name="cbDepartment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 24</value>
-  </data>
-  <data name="cbDepartment.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cbDepartment.Name" xml:space="preserve">
-    <value>cbDepartment</value>
-  </data>
-  <data name="&gt;&gt;cbDepartment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbDepartment.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;cbDepartment.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="lbDepartment.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbDepartment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbDepartment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 154</value>
-  </data>
-  <data name="lbDepartment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 16</value>
-  </data>
-  <data name="lbDepartment.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lbDepartment.Text" xml:space="preserve">
-    <value>Department:</value>
-  </data>
-  <data name="&gt;&gt;lbDepartment.Name" xml:space="preserve">
-    <value>lbDepartment</value>
-  </data>
-  <data name="&gt;&gt;lbDepartment.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbPatho.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbDepartment.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbDepartment.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="tbPurpose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 48</value>
-  </data>
-  <data name="tbPurpose.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tbPurpose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 86</value>
-  </data>
-  <data name="tbPurpose.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tbPurpose.Name" xml:space="preserve">
-    <value>tbPurpose</value>
   </data>
   <data name="&gt;&gt;tbPurpose.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tbPurpose.Parent" xml:space="preserve">
-    <value>tpInformation</value>
+  <data name="&gt;&gt;btDiagnosed.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;tbPurpose.ZOrder" xml:space="preserve">
-    <value>26</value>
+  <data name="tbFindings.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
   </data>
-  <data name="lbPurpose.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="tpFigure2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
   </data>
-  <data name="lbPurpose.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
+  <data name="&gt;&gt;btClearOp4.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="lbPurpose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 51</value>
+  <data name="dgvWords.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 618</value>
   </data>
-  <data name="lbPurpose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 16</value>
+  <data name="lbOperator4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 367</value>
   </data>
-  <data name="lbPurpose.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lbPurpose.Text" xml:space="preserve">
-    <value>Purpose:</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.Name" xml:space="preserve">
-    <value>lbPurpose</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.Parent" xml:space="preserve">
-    <value>tpInformation</value>
-  </data>
-  <data name="&gt;&gt;lbPurpose.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="lbDate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="lbDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 16</value>
-  </data>
-  <data name="lbDate.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lbDate.Text" xml:space="preserve">
-    <value>Date: ExamType:</value>
-  </data>
-  <data name="&gt;&gt;lbDate.Name" xml:space="preserve">
-    <value>lbDate</value>
-  </data>
-  <data name="&gt;&gt;lbDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lbPatho.Name" xml:space="preserve">
+    <value>lbPatho</value>
   </data>
   <data name="&gt;&gt;lbDate.Parent" xml:space="preserve">
     <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;lbDate.ZOrder" xml:space="preserve">
-    <value>28</value>
+  <data name="cbChecker.ToolTip" xml:space="preserve">
+    <value>This box will automatically filled with right button.</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="btSetNormal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btSetNormal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 6</value>
-  </data>
-  <data name="btSetNormal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 27</value>
-  </data>
-  <data name="btSetNormal.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="btSetNormal.Text" xml:space="preserve">
-    <value>Add "Normal"</value>
-  </data>
-  <data name="btSetNormal.ToolTip" xml:space="preserve">
-    <value>Click here to reverse diagnoses order.</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Name" xml:space="preserve">
-    <value>btSetNormal</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btSetNormal.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbFindings.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbFindings.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="lbFindings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 202</value>
+  <data name="cbOperator2.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="lbFindings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 16</value>
+  <data name="btClearOp2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 304</value>
   </data>
-  <data name="lbFindings.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbOperator2.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;btDiagnosed.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="lbOperator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="dgvWords.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="lbFindings.Text" xml:space="preserve">
-    <value>Findings</value>
+  <data name="&gt;&gt;lbDate.Name" xml:space="preserve">
+    <value>lbDate</value>
   </data>
-  <data name="&gt;&gt;lbFindings.Name" xml:space="preserve">
-    <value>lbFindings</value>
+  <data name="btClearOp1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;lbFindings.Type" xml:space="preserve">
+  <data name="tpFigure2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="&gt;&gt;btClearOp1.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="pbColor2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="&gt;&gt;lbWard.Name" xml:space="preserve">
+    <value>lbWard</value>
+  </data>
+  <data name="tpFigure1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="btReverseOrder.ToolTip" xml:space="preserve">
+    <value>Click here to reverse diagnoses order.</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.Name" xml:space="preserve">
+    <value>btColorSelect2</value>
+  </data>
+  <data name="&gt;&gt;tpInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpPatho.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbEquipment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>262, 189</value>
+  </data>
+  <data name="&gt;&gt;lbWard.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbFindings.Parent" xml:space="preserve">
     <value>tpFindings</value>
   </data>
-  <data name="&gt;&gt;lbFindings.ZOrder" xml:space="preserve">
+  <data name="tpFigure1.Text" xml:space="preserve">
+    <value>Figure 1</value>
+  </data>
+  <data name="btColorSelect1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btColorSelect2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 409</value>
+  </data>
+  <data name="lbPatient.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator1.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lbPlace.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth2.Name" xml:space="preserve">
+    <value>cbBrushWidth2</value>
+  </data>
+  <data name="cbOrderDr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 151</value>
+  </data>
+  <data name="cbWard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 186</value>
+  </data>
+  <data name="lbDiagnosed.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lbOperator2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btErace2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 409</value>
+  </data>
+  <data name="&gt;&gt;cbExamStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btClearOp1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 274</value>
+  </data>
+  <data name="&gt;&gt;btCopy2ClipBoard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btErace2.Name" xml:space="preserve">
+    <value>btErace2</value>
+  </data>
+  <data name="lbWard.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tbPatho.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="cbChecker.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="cbChecker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 558</value>
+  <data name="lbWard.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="cbChecker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 24</value>
-  </data>
-  <data name="cbChecker.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="cbChecker.ToolTip" xml:space="preserve">
-    <value>This box will automatically filled with right button.</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Name" xml:space="preserve">
-    <value>cbChecker</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;cbChecker.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="cbDiagnosed.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cbDiagnosed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 474</value>
-  </data>
-  <data name="cbDiagnosed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 24</value>
-  </data>
-  <data name="cbDiagnosed.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="cbDiagnosed.ToolTip" xml:space="preserve">
-    <value>This box will automatically filled with right button.</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Name" xml:space="preserve">
-    <value>cbDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;cbDiagnosed.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbDiagnosed.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbDiagnosed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbDiagnosed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 477</value>
-  </data>
-  <data name="lbDiagnosed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 16</value>
-  </data>
-  <data name="lbDiagnosed.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="lbDiagnosed.Text" xml:space="preserve">
-    <value>Diagnosed:</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.Name" xml:space="preserve">
-    <value>lbDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbDiagnosed.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btDiagnosed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 474</value>
-  </data>
-  <data name="btDiagnosed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 26</value>
-  </data>
-  <data name="btDiagnosed.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="btDiagnosed.Text" xml:space="preserve">
-    <value>Diagnosed</value>
-  </data>
-  <data name="btDiagnosed.ToolTip" xml:space="preserve">
-    <value>Click after diagnose.</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Name" xml:space="preserve">
-    <value>btDiagnosed</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btDiagnosed.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btChecked.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 558</value>
-  </data>
-  <data name="btChecked.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 24</value>
-  </data>
-  <data name="btChecked.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="btChecked.Text" xml:space="preserve">
-    <value>Checked</value>
-  </data>
-  <data name="btChecked.ToolTip" xml:space="preserve">
-    <value>Click after checking.</value>
-  </data>
-  <data name="&gt;&gt;btChecked.Name" xml:space="preserve">
-    <value>btChecked</value>
-  </data>
-  <data name="&gt;&gt;btChecked.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btChecked.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btChecked.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lbChecker.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbChecker.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="lbChecker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 561</value>
-  </data>
-  <data name="lbChecker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 16</value>
-  </data>
-  <data name="lbChecker.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lbChecker.Text" xml:space="preserve">
-    <value>Checker:</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Name" xml:space="preserve">
-    <value>lbChecker</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbChecker.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="tbComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 506</value>
-  </data>
-  <data name="tbComment.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="tpFigure2.Text" xml:space="preserve">
+    <value>Figure 2</value>
   </data>
   <data name="tbComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>518, 44</value>
   </data>
-  <data name="tbComment.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbComment.Name" xml:space="preserve">
-    <value>tbComment</value>
-  </data>
-  <data name="&gt;&gt;tbComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbComment.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;tbComment.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lbCheckersComment.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbCheckersComment.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbWard.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="lbCheckersComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 487</value>
-  </data>
-  <data name="lbCheckersComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 16</value>
-  </data>
-  <data name="lbCheckersComment.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lbCheckersComment.Text" xml:space="preserve">
-    <value>Checker's comment</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.Name" xml:space="preserve">
-    <value>lbCheckersComment</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;lbCheckersComment.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btReverseOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 92</value>
-  </data>
-  <data name="btReverseOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 27</value>
-  </data>
-  <data name="btReverseOrder.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btReverseOrder.Text" xml:space="preserve">
-    <value>Reverse order</value>
-  </data>
-  <data name="btReverseOrder.ToolTip" xml:space="preserve">
-    <value>Click here to reverse diagnoses order.</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.Name" xml:space="preserve">
-    <value>btReverseOrder</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btReverseOrder.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="btCopyDiag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 152</value>
-  </data>
-  <data name="btCopyDiag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 47</value>
-  </data>
-  <data name="btCopyDiag.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btCopyDiag.Text" xml:space="preserve">
-    <value>Copy diagnoses to findings</value>
-  </data>
-  <data name="btCopyDiag.ToolTip" xml:space="preserve">
-    <value>Click this button when you want to copy diagnoses to findings.</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.Name" xml:space="preserve">
-    <value>btCopyDiag</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btCopyDiag.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="tbFindings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 221</value>
-  </data>
-  <data name="tbFindings.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tbFindings.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="tbFindings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>521, 247</value>
-  </data>
-  <data name="tbFindings.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tbFindings.ToolTip" xml:space="preserve">
-    <value>Write findings to this box.</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.Name" xml:space="preserve">
-    <value>tbFindings</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;tbFindings.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="btAddDiag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 39</value>
-  </data>
-  <data name="btAddDiag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 47</value>
-  </data>
-  <data name="btAddDiag.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btAddDiag.Text" xml:space="preserve">
-    <value>Add diagnosis</value>
-  </data>
-  <data name="btAddDiag.ToolTip" xml:space="preserve">
-    <value>Click here to add diagnosis.</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Name" xml:space="preserve">
-    <value>btAddDiag</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;btAddDiag.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="dgvDiagnoses.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="dgvDiagnoses.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 193</value>
-  </data>
-  <data name="dgvDiagnoses.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Name" xml:space="preserve">
-    <value>dgvDiagnoses</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.Parent" xml:space="preserve">
-    <value>tpFindings</value>
-  </data>
-  <data name="&gt;&gt;dgvDiagnoses.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="btErace1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 409</value>
-  </data>
-  <data name="btErace1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 28</value>
-  </data>
-  <data name="btErace1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btErace1.Text" xml:space="preserve">
-    <value>Erace</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Name" xml:space="preserve">
-    <value>btErace1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btErace1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;btErace1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cbBrushWidth1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 446</value>
-  </data>
-  <data name="cbBrushWidth1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
-  </data>
-  <data name="cbBrushWidth1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Name" xml:space="preserve">
-    <value>cbBrushWidth1</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pbBrushWidth1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 443</value>
-  </data>
-  <data name="pbBrushWidth1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="pbBrushWidth1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Name" xml:space="preserve">
-    <value>pbBrushWidth1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pbColor1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 407</value>
-  </data>
-  <data name="pbColor1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="pbColor1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Name" xml:space="preserve">
-    <value>pbColor1</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbColor1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btColorSelect1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 409</value>
-  </data>
-  <data name="btColorSelect1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 28</value>
-  </data>
-  <data name="btColorSelect1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btColorSelect1.Text" xml:space="preserve">
-    <value>Color select</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Name" xml:space="preserve">
-    <value>btColorSelect1</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pbFigure1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 26</value>
-  </data>
-  <data name="pbFigure1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 375</value>
-  </data>
-  <data name="pbFigure1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Name" xml:space="preserve">
-    <value>pbFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.Parent" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;pbFigure1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btErace2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 409</value>
-  </data>
-  <data name="btErace2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 28</value>
-  </data>
-  <data name="btErace2.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="btErace2.Text" xml:space="preserve">
-    <value>Erace</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Name" xml:space="preserve">
-    <value>btErace2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btErace2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;btErace2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cbBrushWidth2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 446</value>
-  </data>
-  <data name="cbBrushWidth2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
-  </data>
-  <data name="cbBrushWidth2.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Name" xml:space="preserve">
-    <value>cbBrushWidth2</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;cbBrushWidth2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pbBrushWidth2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 443</value>
-  </data>
-  <data name="pbBrushWidth2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="pbBrushWidth2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Name" xml:space="preserve">
-    <value>pbBrushWidth2</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbBrushWidth2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pbColor2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 407</value>
-  </data>
-  <data name="pbColor2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="pbColor2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Name" xml:space="preserve">
-    <value>pbColor2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbColor2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btColorSelect2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 409</value>
-  </data>
-  <data name="btColorSelect2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 28</value>
-  </data>
-  <data name="btColorSelect2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btColorSelect2.Text" xml:space="preserve">
-    <value>Color select</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Name" xml:space="preserve">
-    <value>btColorSelect2</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;btColorSelect2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pbFigure2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 26</value>
-  </data>
-  <data name="pbFigure2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 375</value>
-  </data>
-  <data name="pbFigure2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Name" xml:space="preserve">
-    <value>pbFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.Parent" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;pbFigure2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cbExamStatus.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cbExamStatus.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
+  <data name="tpInformation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
   </data>
   <data name="cbExamStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>431, 6</value>
   </data>
-  <data name="cbExamStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 24</value>
+  <data name="cbOperator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 274</value>
   </data>
-  <data name="cbExamStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="&gt;&gt;cbPlace.Parent" xml:space="preserve">
+    <value>tpInformation</value>
   </data>
-  <data name="&gt;&gt;cbExamStatus.Name" xml:space="preserve">
-    <value>cbExamStatus</value>
+  <data name="btErace2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;cbExamStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pbFigure1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 26</value>
   </data>
-  <data name="&gt;&gt;cbExamStatus.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="cbDepartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 24</value>
   </data>
-  <data name="&gt;&gt;cbExamStatus.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lbDiagnosed.Text" xml:space="preserve">
+    <value>Diagnosed:</value>
   </data>
-  <data name="dgvWords.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 39</value>
+  <data name="lbDate.Text" xml:space="preserve">
+    <value>Date: ExamType:</value>
   </data>
-  <data name="dgvWords.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 618</value>
+  <data name="&gt;&gt;pbColor1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dgvWords.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="lbPatho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
   </data>
-  <data name="dgvWords.ToolTip" xml:space="preserve">
-    <value>Click words you want to copy to findings or comment.</value>
+  <data name="cbEquipment.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;dgvWords.Name" xml:space="preserve">
-    <value>dgvWords</value>
+  <data name="&gt;&gt;tpFigure1.Name" xml:space="preserve">
+    <value>tpFigure1</value>
   </data>
-  <data name="&gt;&gt;dgvWords.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btSetNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 6</value>
   </data>
-  <data name="&gt;&gt;dgvWords.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbOperator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dgvWords.ZOrder" xml:space="preserve">
+  <data name="btCopyDiag.ToolTip" xml:space="preserve">
+    <value>Click this button when you want to copy diagnoses to findings.</value>
+  </data>
+  <data name="&gt;&gt;btErace1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="pbFigure1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 375</value>
+  </data>
+  <data name="lbWard.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btClearOp4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 26</value>
+  </data>
+  <data name="tbPatho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>521, 560</value>
+  </data>
+  <data name="&gt;&gt;lbPatho.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbWard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="btChecked.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;cbOperator5.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btCopy2ClipBoard.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="btCopy2ClipBoard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btCopy2ClipBoard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 4</value>
-  </data>
-  <data name="btCopy2ClipBoard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 26</value>
-  </data>
-  <data name="btCopy2ClipBoard.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="btCopy2ClipBoard.Text" xml:space="preserve">
-    <value>Copy to clipboard</value>
-  </data>
-  <data name="btCopy2ClipBoard.ToolTip" xml:space="preserve">
-    <value>Click after diagnose.</value>
+  <data name="&gt;&gt;cbOrderDr.ZOrder" xml:space="preserve">
+    <value>23</value>
   </data>
   <data name="&gt;&gt;btCopy2ClipBoard.Name" xml:space="preserve">
     <value>btCopy2ClipBoard</value>
   </data>
-  <data name="&gt;&gt;btCopy2ClipBoard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbCheckersComment.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;btCopy2ClipBoard.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btSetNormal.Name" xml:space="preserve">
+    <value>btSetNormal</value>
   </data>
-  <data name="&gt;&gt;btCopy2ClipBoard.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="lbPlace.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="btSaveClose.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="tpFindings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbFindings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 221</value>
+  </data>
+  <data name="cbBrushWidth1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="lbCheckersComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 487</value>
+  </data>
+  <data name="&gt;&gt;lbOperator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPurpose.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="btSaveClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
   </data>
-  <data name="btSaveClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>864, 4</value>
+  <data name="&gt;&gt;lbDiagnosed.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="btSaveClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 26</value>
+  <data name="&gt;&gt;lbChecker.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="lbPurpose.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOperator5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 394</value>
+  </data>
+  <data name="tpFigure2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="cbOperator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.Name" xml:space="preserve">
+    <value>pbBrushWidth2</value>
+  </data>
+  <data name="btClearOp3.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="lbOperator3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbDepartment.Name" xml:space="preserve">
+    <value>lbDepartment</value>
+  </data>
+  <data name="cbDiagnosed.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbOperator4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 364</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btColorSelect1.Text" xml:space="preserve">
+    <value>Color select</value>
+  </data>
+  <data name="lbEquipment.Text" xml:space="preserve">
+    <value>Equipment:</value>
+  </data>
+  <data name="cbDiagnosed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 474</value>
+  </data>
+  <data name="btColorSelect1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 28</value>
+  </data>
+  <data name="&gt;&gt;cbOperator3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btClearOp5.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;lbOperator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcExam.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbFindings.Name" xml:space="preserve">
+    <value>lbFindings</value>
+  </data>
+  <data name="cbOperator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="lbChecker.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tpPatho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Ordered Dr:</value>
+  </data>
+  <data name="pbColor2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 407</value>
+  </data>
+  <data name="&gt;&gt;btClearOp3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 16</value>
+  </data>
+  <data name="lbOperator2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 307</value>
+  </data>
+  <data name="lbCheckersComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbPatient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 16</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btSaveClose.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="btSaveClose.Text" xml:space="preserve">
-    <value>Save and Close</value>
+  <data name="btCopy2ClipBoard.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
-  <data name="btSaveClose.ToolTip" xml:space="preserve">
-    <value>Click after diagnose.</value>
+  <data name="&gt;&gt;btChecked.Name" xml:space="preserve">
+    <value>btChecked</value>
   </data>
-  <data name="&gt;&gt;btSaveClose.Name" xml:space="preserve">
-    <value>btSaveClose</value>
+  <data name="&gt;&gt;cbDiagnosed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btSaveClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tpFindings.Text" xml:space="preserve">
+    <value>Findings</value>
   </data>
-  <data name="&gt;&gt;btSaveClose.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lbPlace.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
   </data>
-  <data name="&gt;&gt;btSaveClose.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;pbFigure1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+  <data name="&gt;&gt;cbOperator2.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 669</value>
+  <data name="lbOperator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>EditFindings</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value>Data will saved when this form closed.</value>
+  <data name="&gt;&gt;cbPlace.Name" xml:space="preserve">
+    <value>cbPlace</value>
   </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
   </data>
+  <data name="&gt;&gt;btDiagnosed.Name" xml:space="preserve">
+    <value>btDiagnosed</value>
+  </data>
+  <data name="&gt;&gt;dgvWords.Name" xml:space="preserve">
+    <value>dgvWords</value>
+  </data>
+  <data name="btSaveClose.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="tpPatho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="pbColor1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="&gt;&gt;tbPatho.Parent" xml:space="preserve">
+    <value>tpPatho</value>
+  </data>
+  <data name="cbOperator2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 304</value>
+  </data>
+  <data name="btCopyDiag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 152</value>
+  </data>
+  <data name="tpFigure1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="lbOperator1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btCopy2ClipBoard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbFindings.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbBrushWidth2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 446</value>
+  </data>
+  <data name="pbFigure2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 375</value>
+  </data>
+  <data name="&gt;&gt;cbExamStatus.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tpInformation.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;tbFindings.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="btClearOp5.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="&gt;&gt;cbDepartment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbOperator1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btAddDiag.Text" xml:space="preserve">
+    <value>Add diagnosis</value>
+  </data>
+  <data name="cbOperator4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbDepartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 154</value>
+  </data>
+  <data name="tpPatho.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbPurpose.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="tbComment.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cbOperator1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btSetNormal.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="btExamCanceled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 462</value>
+  </data>
+  <data name="btClearOp2.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="lbChecker.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbOperator5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btChecked.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="&gt;&gt;cbWard.Name" xml:space="preserve">
+    <value>cbWard</value>
+  </data>
+  <data name="cbOperator3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbCheckersComment.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="lbOperator2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btColorSelect2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btColorSelect2.Text" xml:space="preserve">
+    <value>Color select</value>
+  </data>
+  <data name="tpFigure2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbChecker.Text" xml:space="preserve">
+    <value>Checker:</value>
+  </data>
+  <data name="btClearOp3.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="tbFindings.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="pbBrushWidth2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 443</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;lbDate.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;cbDiagnosed.Name" xml:space="preserve">
+    <value>cbDiagnosed</value>
+  </data>
+  <data name="&gt;&gt;tbComment.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="&gt;&gt;tbPatho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbChecker.Name" xml:space="preserve">
+    <value>cbChecker</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btSetNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 27</value>
+  </data>
+  <data name="&gt;&gt;pbColor2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;cbChecker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbDepartment.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btCopy2ClipBoard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;lbOperator1.Name" xml:space="preserve">
+    <value>lbOperator1</value>
+  </data>
+  <data name="cbOperator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="tpFigure2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btChecked.Text" xml:space="preserve">
+    <value>Checked</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btCopyDiag.Name" xml:space="preserve">
+    <value>btCopyDiag</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Name" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;cbWard.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="lbPlace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="lbFindings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 16</value>
+  </data>
+  <data name="btClearOp4.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;pbFigure1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btClearOp4.Name" xml:space="preserve">
+    <value>btClearOp4</value>
+  </data>
+  <data name="pbBrushWidth1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 443</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="lbPatient.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btReverseOrder.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="btAddDiag.ToolTip" xml:space="preserve">
+    <value>Click here to add diagnosis.</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;tpInformation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbEquipment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpInformation.Text" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="tbPurpose.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbChecker.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;cbDepartment.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.Name" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="&gt;&gt;tbComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbFindings.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;btErace1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbEquipment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPurpose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 16</value>
+  </data>
+  <data name="&gt;&gt;lbFindings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pbBrushWidth1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="&gt;&gt;dgvWords.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbOperator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpInformation.Name" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;dgvWords.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbOperator4.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;lbWard.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;lbDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbOperator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="tpPatho.Text" xml:space="preserve">
+    <value>Pathology</value>
+  </data>
+  <data name="&gt;&gt;btSaveClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cbChecker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
+  </data>
+  <data name="cbExamStatus.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tbPatho.ToolTip" xml:space="preserve">
+    <value>Write findings to this box.</value>
+  </data>
+  <data name="&gt;&gt;lbDiagnosed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbFigure2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="lbPatho.Text" xml:space="preserve">
+    <value>Pathology results</value>
+  </data>
+  <data name="&gt;&gt;lbChecker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbOperator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 24</value>
+  </data>
+  <data name="&gt;&gt;lbPatient.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbPurpose.Text" xml:space="preserve">
+    <value>Purpose:</value>
+  </data>
+  <data name="tbFindings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>521, 247</value>
+  </data>
+  <data name="btChecked.ToolTip" xml:space="preserve">
+    <value>Click after checking.</value>
+  </data>
+  <data name="btChecked.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 24</value>
+  </data>
+  <data name="btReverseOrder.Text" xml:space="preserve">
+    <value>Reverse order</value>
+  </data>
+  <data name="&gt;&gt;btErace1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbDepartment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cbWard.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;lbPlace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbEquipment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="tbFindings.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPatient.Text" xml:space="preserve">
+    <value>ID: Name:</value>
+  </data>
+  <data name="&gt;&gt;lbOperator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btDiagnosed.ToolTip" xml:space="preserve">
+    <value>Click after diagnose.</value>
+  </data>
+  <data name="tbComment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;tbPatho.Name" xml:space="preserve">
+    <value>tbPatho</value>
+  </data>
+  <data name="&gt;&gt;pbColor2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="tbComment.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbPlace.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="cbOrderDr.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbEquipment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btErace1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 28</value>
+  </data>
+  <data name="&gt;&gt;lbPatho.Parent" xml:space="preserve">
+    <value>tpPatho</value>
+  </data>
+  <data name="btSaveClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>864, 4</value>
+  </data>
+  <data name="lbEquipment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbOperator1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pbColor1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbPurpose.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lbCheckersComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbDiagnosed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="tbPatho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pbFigure2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbDiagnosed.Name" xml:space="preserve">
+    <value>lbDiagnosed</value>
+  </data>
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbFigure2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbOperator4.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="dgvWords.ToolTip" xml:space="preserve">
+    <value>Click words you want to copy to findings or comment.</value>
+  </data>
+  <data name="lbWard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 186</value>
+  </data>
+  <data name="&gt;&gt;btCopyDiag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbPatho.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;cbChecker.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="lbPurpose.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btClearOp1.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="&gt;&gt;btClearOp5.Name" xml:space="preserve">
+    <value>btClearOp5</value>
+  </data>
+  <data name="cbOrderDr.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btErace2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbEquipment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 24</value>
+  </data>
+  <data name="btErace2.Text" xml:space="preserve">
+    <value>Erace</value>
+  </data>
+  <data name="cbDepartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 151</value>
+  </data>
+  <data name="lbPatient.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbDiagnosed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbOperator4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbDepartment.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dgvDiagnoses.Name" xml:space="preserve">
+    <value>dgvDiagnoses</value>
+  </data>
+  <data name="&gt;&gt;pbColor1.Name" xml:space="preserve">
+    <value>pbColor1</value>
+  </data>
+  <data name="&gt;&gt;btClearOp2.Name" xml:space="preserve">
+    <value>btClearOp2</value>
+  </data>
+  <data name="&gt;&gt;pbFigure2.Name" xml:space="preserve">
+    <value>pbFigure2</value>
+  </data>
+  <data name="pbFigure2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="pbFigure1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbPatho.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbWard.Text" xml:space="preserve">
+    <value>Ward:</value>
+  </data>
+  <data name="&gt;&gt;cbEquipment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.Name" xml:space="preserve">
+    <value>pbBrushWidth1</value>
+  </data>
+  <data name="&gt;&gt;btExamCanceled.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbCheckersComment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="btErace1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btExamCanceled.Text" xml:space="preserve">
+    <value>This exam was canceled.</value>
+  </data>
+  <data name="&gt;&gt;btCopyDiag.Parent" xml:space="preserve">
+    <value>tpFindings</value>
+  </data>
+  <data name="&gt;&gt;cbOperator4.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="lbDiagnosed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 477</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditFindings</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tbPurpose.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
+  <data name="pbColor2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btAddDiag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tcExam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 39</value>
+  </data>
+  <data name="&gt;&gt;lbPatient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btExamCanceled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 40</value>
+  </data>
+  <data name="&gt;&gt;pbFigure1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbCheckersComment.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dgvDiagnoses.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbDiagnosed.ToolTip" xml:space="preserve">
+    <value>This box will automatically filled with right button.</value>
+  </data>
+  <data name="cbPlace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="cbOperator1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="tcExam.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbChecker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 561</value>
+  </data>
+  <data name="lbWard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 16</value>
+  </data>
+  <data name="btClearOp5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 394</value>
+  </data>
+  <data name="lbPlace.Text" xml:space="preserve">
+    <value>Place:</value>
+  </data>
+  <data name="btErace1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 409</value>
+  </data>
+  <data name="&gt;&gt;lbPatient.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btAddDiag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 47</value>
+  </data>
+  <data name="btSaveClose.ToolTip" xml:space="preserve">
+    <value>Click after diagnose.</value>
+  </data>
+  <data name="lbOperator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 277</value>
+  </data>
+  <data name="pbFigure2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 26</value>
+  </data>
+  <data name="btReverseOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 92</value>
+  </data>
+  <data name="&gt;&gt;tbPurpose.Name" xml:space="preserve">
+    <value>tbPurpose</value>
+  </data>
+  <data name="btClearOp5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbEquipment.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;cbOperator4.Name" xml:space="preserve">
+    <value>cbOperator4</value>
+  </data>
+  <data name="lbDepartment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btClearOp1.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="&gt;&gt;lbPurpose.Name" xml:space="preserve">
+    <value>lbPurpose</value>
+  </data>
+  <data name="cbOrderDr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 24</value>
+  </data>
+  <data name="btAddDiag.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btExamCanceled.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;btErace1.Name" xml:space="preserve">
+    <value>btErace1</value>
+  </data>
+  <data name="btCopyDiag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 47</value>
+  </data>
+  <data name="cbBrushWidth2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btClearOp3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 334</value>
+  </data>
+  <data name="&gt;&gt;btClearOp2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tpFindings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Name" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;cbOperator2.Name" xml:space="preserve">
+    <value>cbOperator2</value>
+  </data>
+  <data name="pbBrushWidth1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbPatho.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="btCopyDiag.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btClearOp4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 364</value>
+  </data>
+  <data name="&gt;&gt;lbDepartment.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="lbFindings.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPlace.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;tbPurpose.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="pbBrushWidth1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cbExamStatus.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btDiagnosed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 26</value>
+  </data>
+  <data name="cbPlace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 224</value>
+  </data>
+  <data name="&gt;&gt;cbOperator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPlace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 227</value>
+  </data>
+  <data name="&gt;&gt;dgvDiagnoses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbOperator2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="lbChecker.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btReverseOrder.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btChecked.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbPatho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 16</value>
+  </data>
+  <data name="pbColor1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbOperator3.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;cbEquipment.Name" xml:space="preserve">
+    <value>cbEquipment</value>
+  </data>
+  <data name="lbPatho.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="cbPlace.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbOperator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 16</value>
+  </data>
+  <data name="&gt;&gt;btCopy2ClipBoard.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbEquipment.Name" xml:space="preserve">
+    <value>lbEquipment</value>
+  </data>
+  <data name="lbOperator3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 337</value>
+  </data>
+  <data name="btSetNormal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;pbFigure1.Name" xml:space="preserve">
+    <value>pbFigure1</value>
+  </data>
+  <data name="btClearOp4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbExamStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;lbOperator2.Name" xml:space="preserve">
+    <value>lbOperator2</value>
+  </data>
+  <data name="tpInformation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tcExam.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbDate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbOperator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tpFigure1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="&gt;&gt;tbComment.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbOperator2.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lbFindings.Text" xml:space="preserve">
+    <value>Findings</value>
+  </data>
+  <data name="cbChecker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 558</value>
+  </data>
+  <data name="dgvDiagnoses.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btClearOp3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btColorSelect1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btClearOp3.Parent" xml:space="preserve">
+    <value>tpInformation</value>
+  </data>
+  <data name="tpFindings.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btSaveClose.Text" xml:space="preserve">
+    <value>Save and Close</value>
+  </data>
+  <data name="btCopy2ClipBoard.Text" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="&gt;&gt;tpFindings.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbEquipment.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

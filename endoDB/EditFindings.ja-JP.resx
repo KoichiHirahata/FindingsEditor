@@ -231,6 +231,9 @@
   <data name="lbCheckersComment.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="btCopyDiag.Text" xml:space="preserve">
+    <value>診断名をクリップ　ボードにコピー</value>
+  </data>
   <data name="dgvDiagnoses.ToolTip" xml:space="preserve">
     <value />
   </data>
