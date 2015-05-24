@@ -1273,7 +1273,7 @@ namespace endoDB
         }
         #endregion
 
-        #region btCopy2ClipBoard
+        #region Buttons on the header
         private void btCopy2ClipBoard_Click(object sender, EventArgs e)
         {
             string str = "";
@@ -1371,6 +1371,12 @@ namespace endoDB
 
             return operatorNames;
         }
+
+        private void btViewFigures_Click(object sender, EventArgs e)
+        {
+            uckyFunctions.showImages(exam.pt_id,
+                    uckyFunctions.dateTo8char(exam.exam_day.ToShortDateString(), Settings.lang));
+        }
         #endregion
 
         #region Timer
@@ -1437,5 +1443,6 @@ namespace endoDB
         private void tbPatho_TextChanged(object sender, EventArgs e)
         { edited = true; }
         #endregion
+
     }
 }

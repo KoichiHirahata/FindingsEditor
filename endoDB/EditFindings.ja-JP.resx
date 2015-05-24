@@ -294,4 +294,7 @@
   <data name="cbExamStatus.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="btViewFigures.Text" xml:space="preserve">
+    <value>画像表示</value>
+  </data>
 </root>

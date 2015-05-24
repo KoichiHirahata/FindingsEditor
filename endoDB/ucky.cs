@@ -302,13 +302,37 @@ namespace endoDB
 
         public static string dateTo8char(string date_str, string lang)
         {
+            string yyyy;
+            string mm;
+            string dd;
+            int tempIndex;
             switch (lang)
             {
                 case "ja":
-                    return date_str.Substring(0, 4) + date_str.Substring(5, 2) + date_str.Substring(8, 2);
+                    yyyy = date_str.Substring(0, 4);
+                    tempIndex = date_str.IndexOf("/", date_str.IndexOf("/") + 1);
+                    mm = date_str.Substring(5, tempIndex - 5);
+                    if (mm.Length == 1)
+                    { mm = "0" + mm; }
+                    dd = date_str.Substring(tempIndex + 1);
+                    if (dd.Length == 1)
+                    { dd = "0" + dd; }
+                    break;
                 default:
-                    return date_str.Substring(6, 4) + date_str.Substring(0, 2) + date_str.Substring(3, 2);
+                    if (date_str.IndexOf("/") == 1)
+                    { mm = "0" + date_str.Substring(0, 1); }
+                    else
+                    { mm = date_str.Substring(0, 2); }
+
+                    tempIndex = date_str.IndexOf("/", date_str.IndexOf("/") + 1);
+                    dd = date_str.Substring(date_str.IndexOf("/") + 1, tempIndex - date_str.IndexOf("/") - 1);
+                    if (dd.Length == 1)
+                    { dd = "0" + dd; }
+
+                    yyyy = date_str.Substring(tempIndex + 1);
+                    break;
             }
+            return yyyy + mm + dd;
         }
 
         /// Run transaction

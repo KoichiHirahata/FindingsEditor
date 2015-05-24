@@ -90,9 +90,9 @@
             // 
             // dgv
             // 
-            resources.ApplyResources(this.dgv, "dgv");
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.dgv, "dgv");
             this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.MultiSelect = false;
@@ -103,14 +103,14 @@
             // 
             // lb1
             // 
-            resources.ApplyResources(this.lb1, "lb1");
             this.lb1.BackColor = System.Drawing.Color.YellowGreen;
+            resources.ApplyResources(this.lb1, "lb1");
             this.lb1.Name = "lb1";
             // 
             // lb2
             // 
-            resources.ApplyResources(this.lb2, "lb2");
             this.lb2.BackColor = System.Drawing.Color.YellowGreen;
+            resources.ApplyResources(this.lb2, "lb2");
             this.lb2.Name = "lb2";
             // 
             // bt6
@@ -129,8 +129,8 @@
             // 
             // lb3
             // 
-            resources.ApplyResources(this.lb3, "lb3");
             this.lb3.BackColor = System.Drawing.Color.YellowGreen;
+            resources.ApplyResources(this.lb3, "lb3");
             this.lb3.Name = "lb3";
             // 
             // bt8
@@ -156,8 +156,8 @@
             // 
             // lb4
             // 
-            resources.ApplyResources(this.lb4, "lb4");
             this.lb4.BackColor = System.Drawing.Color.YellowGreen;
+            resources.ApplyResources(this.lb4, "lb4");
             this.lb4.Name = "lb4";
             // 
             // bt11
