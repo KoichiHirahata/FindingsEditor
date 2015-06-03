@@ -356,14 +356,14 @@ namespace endoDB
             { sql = "SELECT name_jp FROM exam_type WHERE type_no=" + exam_type.ToString(); }
             else
             { sql = "SELECT name_eng FROM exam_type WHERE type_no=" + exam_type.ToString(); }
-            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB");
+            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
         }
 
         public string getDepartmentName()
         {
             string sql;
             sql = "SELECT name1 FROM department WHERE code=" + department.ToString();
-            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB");
+            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
         }
 
         public string getWardName()
@@ -419,14 +419,14 @@ namespace endoDB
         {
             string sql;
             sql = "SELECT name1 FROM place WHERE place_no=" + place_no.ToString();
-            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB");
+            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
         }
 
         public string getEquipmentName()
         {
             string sql;
             sql = "SELECT name FROM equipment WHERE equipment_no=" + equipment.ToString();
-            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB");
+            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
         }
 
         public string getDiagDr()

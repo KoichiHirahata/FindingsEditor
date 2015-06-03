@@ -333,7 +333,7 @@ namespace endoDB
             if (string.IsNullOrWhiteSpace(exam.findings))
             {
                 sql = "SELECT findings FROM default_findings WHERE exam_type=" + exam.exam_type.ToString();
-                tbFindings.Text = uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB");
+                tbFindings.Text = uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
             }
             else
             { this.tbFindings.Text = exam.findings.Replace("\n", "\r\n").Replace("\r\r", "\r"); }//Replace code is necessary because we have data made with Linux machine.

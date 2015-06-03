@@ -83,6 +83,7 @@ namespace endoDB
         public static string DBSrvPort { get; set; } //Port number of DB server
         public static string DBconnectID { get; set; } //ID of DB user
         public static string DBconnectPw { get; set; } //Pw of DB user
+        public static string DBname { get; set; }
         public static string settingFile_location { get; set; } //Config file path
         //public static Boolean isJP { get; set; } //Property for storing that machine's language is Japanese or not.
         public static string lang { get; set; } //language
@@ -103,6 +104,7 @@ namespace endoDB
         {
             settingFile_location = Application.StartupPath + "\\settings.config";
             readSettings();
+            DBname = "endoDB";
             //isJP = (Application.CurrentCulture.TwoLetterISOLanguageName == "ja");
             lang = Application.CurrentCulture.TwoLetterISOLanguageName;
             //Settings.sslSetting = ""; //Use this when you want to connect without using SSL
@@ -444,7 +446,16 @@ namespace endoDB
             return functionResult.success;
         }
 
-        ///中身がstringなカラムについて、SELECT文で一意な結果を取得するSQLを放り込むとstringで結果を返してくれる関数。If there was no data, return null.
+        /// <summary>
+        ///This function will return string, if you specify SQL that returns unique string. If there is no data, return null.
+        /// </summary>
+        /// <param name="sql">SQL</param>
+        /// <param name="DBserver">DB server IP address</param>
+        /// <param name="DBport">DB server port number</param>
+        /// <param name="DBuser">DB user ID</param>
+        /// <param name="DBpw">DB user password</param>
+        /// <param name="DBname">DB name</param>
+        /// <returns>string</returns>
         public static string getSelectString(string sql, string DBserver, string DBport, string DBuser, string DBpw, string DBname)
         {
             string resultStr;

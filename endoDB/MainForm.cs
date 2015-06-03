@@ -87,7 +87,7 @@ namespace endoDB
         //IDのmaxを取り込み、それがintに変換できたら変換した上で+1し、文字列にして返す関数
         private string getNewIDsample()
         {
-            string maxID = uckyFunctions.getSelectString("SELECT max(pt_id) from patient", Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, "endoDB"); //IDのmaxをゲットしてくる。
+            string maxID = uckyFunctions.getSelectString("SELECT max(pt_id) from patient", Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname); //IDのmaxをゲットしてくる。
             return uckyFunctions.maxPlus1(maxID); //maxに1足してreturn。
         }
         #endregion

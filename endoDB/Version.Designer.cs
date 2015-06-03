@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbDbVersion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -41,13 +42,13 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Findings Editor Ver. 1.15";
+            this.label1.Text = "Findings Editor Ver. 1.16";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(35, 98);
+            this.label2.Location = new System.Drawing.Point(35, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(267, 16);
             this.label2.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.linkLabel1.Location = new System.Drawing.Point(111, 127);
+            this.linkLabel1.Location = new System.Drawing.Point(111, 151);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(191, 16);
             this.linkLabel1.TabIndex = 2;
@@ -65,11 +66,22 @@
             this.linkLabel1.Text = "http://www.madeinclinic.jp/";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // lbDbVersion
+            // 
+            this.lbDbVersion.AutoSize = true;
+            this.lbDbVersion.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbDbVersion.Location = new System.Drawing.Point(58, 84);
+            this.lbDbVersion.Name = "lbDbVersion";
+            this.lbDbVersion.Size = new System.Drawing.Size(81, 16);
+            this.lbDbVersion.TabIndex = 3;
+            this.lbDbVersion.Text = "DB version";
+            // 
             // Version
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 164);
+            this.ClientSize = new System.Drawing.Size(328, 190);
+            this.Controls.Add(this.lbDbVersion);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -86,5 +98,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lbDbVersion;
     }
 }

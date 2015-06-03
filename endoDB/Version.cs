@@ -14,6 +14,13 @@ namespace endoDB
         public Version()
         {
             InitializeComponent();
+
+            string db_version = uckyFunctions.getSelectString("SELECT db_version FROM db_version", Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
+
+            if (db_version != null)
+            { lbDbVersion.Text = "DataBase Version: " + db_version; }
+            else
+            { lbDbVersion.Text = ""; }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
