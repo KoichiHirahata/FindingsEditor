@@ -490,6 +490,7 @@ namespace endoDB
             dgvWords.Columns["word_order"].Visible = false;
             #endregion
 
+            KeyPreview = true; //To detect keyboard input on the form.
             edited = false;
         }
 
@@ -1443,6 +1444,24 @@ namespace endoDB
         private void tbPatho_TextChanged(object sender, EventArgs e)
         { edited = true; }
         #endregion
+
+        private void EditFindings_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageDown && e.Shift == true)
+            {
+                if (tcExam.SelectedIndex == tcExam.TabCount - 1)
+                { tcExam.SelectedIndex = 0; }
+                else
+                { tcExam.SelectedIndex = tcExam.SelectedIndex + 1; }
+            }
+            else if (e.KeyCode == Keys.PageUp && e.Shift == true)
+            {
+                if (tcExam.SelectedIndex == 0)
+                { tcExam.SelectedIndex = tcExam.TabCount - 1; }
+                else
+                { tcExam.SelectedIndex = tcExam.SelectedIndex - 1; }
+            }
+        }
 
     }
 }

@@ -156,7 +156,7 @@
     <value>297, 40</value>
   </data>
   <data name="btExamCanceled.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+    <value>17</value>
   </data>
   <data name="btExamCanceled.Text" xml:space="preserve">
     <value>This exam was canceled.</value>
@@ -180,7 +180,7 @@
     <value>61, 26</value>
   </data>
   <data name="btClearOp5.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+    <value>16</value>
   </data>
   <data name="btClearOp5.Text" xml:space="preserve">
     <value>Clear</value>
@@ -204,7 +204,7 @@
     <value>173, 24</value>
   </data>
   <data name="cbOperator5.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;cbOperator5.Name" xml:space="preserve">
     <value>cbOperator5</value>
@@ -255,7 +255,7 @@
     <value>61, 26</value>
   </data>
   <data name="btClearOp4.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>14</value>
   </data>
   <data name="btClearOp4.Text" xml:space="preserve">
     <value>Clear</value>
@@ -279,7 +279,7 @@
     <value>173, 24</value>
   </data>
   <data name="cbOperator4.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;cbOperator4.Name" xml:space="preserve">
     <value>cbOperator4</value>
@@ -330,7 +330,7 @@
     <value>61, 26</value>
   </data>
   <data name="btClearOp3.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>12</value>
   </data>
   <data name="btClearOp3.Text" xml:space="preserve">
     <value>Clear</value>
@@ -354,7 +354,7 @@
     <value>173, 24</value>
   </data>
   <data name="cbOperator3.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;cbOperator3.Name" xml:space="preserve">
     <value>cbOperator3</value>
@@ -405,7 +405,7 @@
     <value>61, 26</value>
   </data>
   <data name="btClearOp2.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>10</value>
   </data>
   <data name="btClearOp2.Text" xml:space="preserve">
     <value>Clear</value>
@@ -429,7 +429,7 @@
     <value>173, 24</value>
   </data>
   <data name="cbOperator2.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;cbOperator2.Name" xml:space="preserve">
     <value>cbOperator2</value>
@@ -480,7 +480,7 @@
     <value>61, 26</value>
   </data>
   <data name="btClearOp1.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>8</value>
   </data>
   <data name="btClearOp1.Text" xml:space="preserve">
     <value>Clear</value>
@@ -504,7 +504,7 @@
     <value>173, 24</value>
   </data>
   <data name="cbOperator1.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;cbOperator1.Name" xml:space="preserve">
     <value>cbOperator1</value>
@@ -555,7 +555,7 @@
     <value>121, 24</value>
   </data>
   <data name="cbPlace.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;cbPlace.Name" xml:space="preserve">
     <value>cbPlace</value>
@@ -606,7 +606,7 @@
     <value>142, 24</value>
   </data>
   <data name="cbEquipment.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;cbEquipment.Name" xml:space="preserve">
     <value>cbEquipment</value>
@@ -657,7 +657,7 @@
     <value>121, 24</value>
   </data>
   <data name="cbWard.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;cbWard.Name" xml:space="preserve">
     <value>cbWard</value>
@@ -738,7 +738,7 @@
     <value>178, 24</value>
   </data>
   <data name="cbOrderDr.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;cbOrderDr.Name" xml:space="preserve">
     <value>cbOrderDr</value>
@@ -759,7 +759,7 @@
     <value>147, 24</value>
   </data>
   <data name="cbDepartment.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;cbDepartment.Name" xml:space="preserve">
     <value>cbDepartment</value>
@@ -813,7 +813,7 @@
     <value>449, 86</value>
   </data>
   <data name="tbPurpose.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;tbPurpose.Name" xml:space="preserve">
     <value>tbPurpose</value>
@@ -925,7 +925,7 @@
     <value>136, 27</value>
   </data>
   <data name="btSetNormal.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>0</value>
   </data>
   <data name="btSetNormal.Text" xml:space="preserve">
     <value>Add "Normal"</value>
@@ -1069,7 +1069,7 @@
     <value>83, 26</value>
   </data>
   <data name="btDiagnosed.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>5</value>
   </data>
   <data name="btDiagnosed.Text" xml:space="preserve">
     <value>Diagnosed</value>
@@ -1096,7 +1096,7 @@
     <value>83, 24</value>
   </data>
   <data name="btChecked.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>7</value>
   </data>
   <data name="btChecked.Text" xml:space="preserve">
     <value>Checked</value>
@@ -1207,7 +1207,7 @@
     <value>136, 27</value>
   </data>
   <data name="btReverseOrder.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="btReverseOrder.Text" xml:space="preserve">
     <value>Reverse order</value>
@@ -1267,7 +1267,7 @@
     <value>521, 247</value>
   </data>
   <data name="tbFindings.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="tbFindings.ToolTip" xml:space="preserve">
     <value>Write findings to this box.</value>
@@ -1358,6 +1358,279 @@
   </data>
   <data name="&gt;&gt;tpFindings.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;btErace1.Name" xml:space="preserve">
+    <value>btErace1</value>
+  </data>
+  <data name="&gt;&gt;btErace1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btErace1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;btErace1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.Name" xml:space="preserve">
+    <value>cbBrushWidth1</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.Name" xml:space="preserve">
+    <value>pbBrushWidth1</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pbColor1.Name" xml:space="preserve">
+    <value>pbColor1</value>
+  </data>
+  <data name="&gt;&gt;pbColor1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbColor1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;pbColor1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.Name" xml:space="preserve">
+    <value>btColorSelect1</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pbFigure1.Name" xml:space="preserve">
+    <value>pbFigure1</value>
+  </data>
+  <data name="&gt;&gt;pbFigure1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbFigure1.Parent" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;pbFigure1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tpFigure1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tpFigure1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpFigure1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="tpFigure1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tpFigure1.Text" xml:space="preserve">
+    <value>Figure 1</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Name" xml:space="preserve">
+    <value>tpFigure1</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tpFigure1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btErace2.Name" xml:space="preserve">
+    <value>btErace2</value>
+  </data>
+  <data name="&gt;&gt;btErace2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btErace2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;btErace2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth2.Name" xml:space="preserve">
+    <value>cbBrushWidth2</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;cbBrushWidth2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.Name" xml:space="preserve">
+    <value>pbBrushWidth2</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;pbBrushWidth2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pbColor2.Name" xml:space="preserve">
+    <value>pbColor2</value>
+  </data>
+  <data name="&gt;&gt;pbColor2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbColor2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;pbColor2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.Name" xml:space="preserve">
+    <value>btColorSelect2</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;btColorSelect2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pbFigure2.Name" xml:space="preserve">
+    <value>pbFigure2</value>
+  </data>
+  <data name="&gt;&gt;pbFigure2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbFigure2.Parent" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;pbFigure2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tpFigure2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tpFigure2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpFigure2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="tpFigure2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tpFigure2.Text" xml:space="preserve">
+    <value>Figure 2</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Name" xml:space="preserve">
+    <value>tpFigure2</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tpFigure2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lbPatho.Name" xml:space="preserve">
+    <value>lbPatho</value>
+  </data>
+  <data name="&gt;&gt;lbPatho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPatho.Parent" xml:space="preserve">
+    <value>tpPatho</value>
+  </data>
+  <data name="&gt;&gt;lbPatho.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbPatho.Name" xml:space="preserve">
+    <value>tbPatho</value>
+  </data>
+  <data name="&gt;&gt;tbPatho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPatho.Parent" xml:space="preserve">
+    <value>tpPatho</value>
+  </data>
+  <data name="&gt;&gt;tbPatho.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tpPatho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tpPatho.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpPatho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 588</value>
+  </data>
+  <data name="tpPatho.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tpPatho.Text" xml:space="preserve">
+    <value>Pathology</value>
+  </data>
+  <data name="&gt;&gt;tpPatho.Name" xml:space="preserve">
+    <value>tpPatho</value>
+  </data>
+  <data name="&gt;&gt;tpPatho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpPatho.Parent" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tpPatho.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tcExam.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="tcExam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 39</value>
+  </data>
+  <data name="tcExam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>541, 618</value>
+  </data>
+  <data name="tcExam.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Name" xml:space="preserve">
+    <value>tcExam</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcExam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tcExam.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="btErace1.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 409</value>
@@ -1491,33 +1764,6 @@
   <data name="&gt;&gt;pbFigure1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="tpFigure1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFigure1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFigure1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFigure1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tpFigure1.Text" xml:space="preserve">
-    <value>Figure 1</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Name" xml:space="preserve">
-    <value>tpFigure1</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFigure1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="btErace2.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 409</value>
   </data>
@@ -1650,33 +1896,6 @@
   <data name="&gt;&gt;pbFigure2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="tpFigure2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpFigure2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpFigure2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpFigure2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tpFigure2.Text" xml:space="preserve">
-    <value>Figure 2</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Name" xml:space="preserve">
-    <value>tpFigure2</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpFigure2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="lbPatho.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1736,57 +1955,6 @@
   </data>
   <data name="&gt;&gt;tbPatho.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="tpPatho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="tpPatho.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpPatho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 588</value>
-  </data>
-  <data name="tpPatho.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tpPatho.Text" xml:space="preserve">
-    <value>Pathology</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.Name" xml:space="preserve">
-    <value>tpPatho</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.Parent" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tpPatho.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="tcExam.Font" type="System.Drawing.Font, System.Drawing">
-    <value>MS UI Gothic, 12pt</value>
-  </data>
-  <data name="tcExam.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 39</value>
-  </data>
-  <data name="tcExam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>541, 618</value>
-  </data>
-  <data name="tcExam.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Name" xml:space="preserve">
-    <value>tcExam</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tcExam.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tcExam.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="cbExamStatus.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1852,7 +2020,7 @@
     <value>158, 26</value>
   </data>
   <data name="btCopy2ClipBoard.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>1</value>
   </data>
   <data name="btCopy2ClipBoard.Text" xml:space="preserve">
     <value>Copy to clipboard</value>
@@ -1885,7 +2053,7 @@
     <value>132, 26</value>
   </data>
   <data name="btSaveClose.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>3</value>
   </data>
   <data name="btSaveClose.Text" xml:space="preserve">
     <value>Save and Close</value>
@@ -1918,7 +2086,7 @@
     <value>132, 26</value>
   </data>
   <data name="btViewFigures.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>2</value>
   </data>
   <data name="btViewFigures.Text" xml:space="preserve">
     <value>View figures</value>

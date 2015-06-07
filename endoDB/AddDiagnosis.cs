@@ -91,6 +91,8 @@ namespace endoDB
                     cbPostmodifier.ImeMode = ImeMode.On;
                     break;
             }
+
+            buttonFunction(1);
         }
 
         private void setButtons(int _examType)
@@ -347,39 +349,75 @@ namespace endoDB
         }
 
         private void bt1_Click(object sender, EventArgs e)
-        { buttonFunction(1); }
+        {
+            buttonFunction(1);
+            cbPremodifier.Focus();
+        }
 
         private void bt2_Click(object sender, EventArgs e)
-        { buttonFunction(2); }
+        {
+            buttonFunction(2);
+            cbPremodifier.Focus();
+        }
 
         private void bt3_Click(object sender, EventArgs e)
-        { buttonFunction(3); }
+        {
+            buttonFunction(3);
+            cbPremodifier.Focus();
+        }
 
         private void bt4_Click(object sender, EventArgs e)
-        { buttonFunction(4); }
+        {
+            buttonFunction(4);
+            cbPremodifier.Focus();
+        }
 
         private void bt5_Click(object sender, EventArgs e)
-        { buttonFunction(5); }
+        {
+            buttonFunction(5);
+            cbPremodifier.Focus();
+        }
 
         private void bt6_Click(object sender, EventArgs e)
-        { buttonFunction(6); }
+        {
+            buttonFunction(6);
+            cbPremodifier.Focus();
+        }
 
         private void bt7_Click(object sender, EventArgs e)
-        { buttonFunction(7); }
+        {
+            buttonFunction(7);
+            cbPremodifier.Focus();
+        }
 
         private void bt8_Click(object sender, EventArgs e)
-        { buttonFunction(8); }
+        {
+            buttonFunction(8);
+            cbPremodifier.Focus();
+        }
 
         private void bt9_Click(object sender, EventArgs e)
-        { buttonFunction(9); }
+        {
+            buttonFunction(9);
+            cbPremodifier.Focus();
+        }
 
         private void bt10_Click(object sender, EventArgs e)
-        { buttonFunction(10); }
+        {
+            buttonFunction(10);
+            cbPremodifier.Focus();
+        }
 
         private void bt11_Click(object sender, EventArgs e)
-        { buttonFunction(11); }
+        {
+            buttonFunction(11);
+            cbPremodifier.Focus();
+        }
 
         private void bt12_Click(object sender, EventArgs e)
-        { buttonFunction(12); }
+        {
+            buttonFunction(12);
+            cbPremodifier.Focus();
+        }
     }
 }

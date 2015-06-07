@@ -709,6 +709,7 @@
             this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditFindings_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditFindings_FormClosed);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.EditFindings_KeyUp);
             this.tcExam.ResumeLayout(false);
             this.tpInformation.ResumeLayout(false);
             this.tpInformation.PerformLayout();
