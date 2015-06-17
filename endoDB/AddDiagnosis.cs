@@ -92,11 +92,37 @@ namespace endoDB
                     break;
             }
 
-            buttonFunction(1);
+            if (!isValidRangeOfDiagnoses(CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter))
+            { buttonFunction(1); }
         }
 
         private void setButtons(int _examType)
         {
+            #region Set -1 to all button's start and end
+            bt1start = -1;
+            bt1end = -1;
+            bt2start = -1;
+            bt2end = -1;
+            bt3start = -1;
+            bt3end = -1;
+            bt4start = -1;
+            bt4end = -1;
+            bt5start = -1;
+            bt5end = -1;
+            bt6start = -1;
+            bt6end = -1;
+            bt7start = -1;
+            bt7end = -1;
+            bt8start = -1;
+            bt8end = -1;
+            bt9start = -1;
+            bt9end = -1;
+            bt11start = -1;
+            bt11end = -1;
+            bt12start = -1;
+            bt12end = -1;
+            #endregion
+
             DataRow[] drs;
             switch (_examType)
             {
@@ -346,6 +372,90 @@ namespace endoDB
 
                 this.Close();
             }
+        }
+
+        #region Functions for isValidRangeOfDiagnoses()
+        public static bool isValidStringOfTheRangeOfDiagnoses(string rangeStr)
+        {
+            if (String.IsNullOrWhiteSpace(rangeStr))
+            { return false; }
+
+            int topLocate = rangeStr.IndexOf("(no>=");
+            int midLocate = rangeStr.IndexOf(")AND(no<=");
+
+            if (topLocate != 0)
+            { return false; }
+
+            if (midLocate == 5)
+            { return false; }
+
+            if (topLocate == -1 || midLocate == -1)
+            { return false; }
+
+            return true;
+        }
+
+        public static int getStartOfTheRange(string rangeStr)
+        {
+            int midLocate = rangeStr.IndexOf(")AND(no<=");
+            return int.Parse(rangeStr.Substring(5, midLocate - 5));
+        }
+
+        public static int getEndOfTheRange(string rangeStr)
+        {
+            int midLocate = rangeStr.IndexOf(")AND(no<=");
+            return int.Parse(rangeStr.Substring(midLocate + 9, rangeStr.Length - midLocate - 10));
+        }
+        #endregion
+
+        private bool isValidRangeOfDiagnoses(string rangeStr)
+        {
+            if (!isValidStringOfTheRangeOfDiagnoses(rangeStr))
+            { return false; }
+
+            int topLocate = rangeStr.IndexOf("(no>=");
+            int midLocate = rangeStr.IndexOf(")AND(no<=");
+
+            int startOfTheRange = getStartOfTheRange(rangeStr);
+            int endOfTheRange = getEndOfTheRange(rangeStr);
+
+            List<int> startsOfButtons = new List<int>();
+            startsOfButtons.Add(bt1start);
+            startsOfButtons.Add(bt2start);
+            startsOfButtons.Add(bt3start);
+            startsOfButtons.Add(bt4start);
+            startsOfButtons.Add(bt5start);
+            startsOfButtons.Add(bt6start);
+            startsOfButtons.Add(bt7start);
+            startsOfButtons.Add(bt8start);
+            startsOfButtons.Add(bt9start);
+            startsOfButtons.Add(bt10start);
+            startsOfButtons.Add(bt11start);
+            startsOfButtons.Add(bt12start);
+
+            startsOfButtons.RemoveAll(s => s == -1);
+            if (startsOfButtons.Min() > startOfTheRange || startsOfButtons.Count() == 0)
+            { return false; }
+
+            List<int> endsOfButtons = new List<int>();
+            endsOfButtons.Add(bt1end);
+            endsOfButtons.Add(bt2end);
+            endsOfButtons.Add(bt3end);
+            endsOfButtons.Add(bt4end);
+            endsOfButtons.Add(bt5end);
+            endsOfButtons.Add(bt6end);
+            endsOfButtons.Add(bt7end);
+            endsOfButtons.Add(bt8end);
+            endsOfButtons.Add(bt9end);
+            endsOfButtons.Add(bt10end);
+            endsOfButtons.Add(bt11end);
+            endsOfButtons.Add(bt12end);
+
+            endsOfButtons.RemoveAll(e => e == -1);
+            if (endsOfButtons.Max() < endOfTheRange || endsOfButtons.Count() == 0)
+            { return false; }
+
+            return true;
         }
 
         private void bt1_Click(object sender, EventArgs e)

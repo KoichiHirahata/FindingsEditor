@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AddDiagnosisTests.cs" />
     <Compile Include="EditFindingsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uckyFunctionsTests.cs" />
