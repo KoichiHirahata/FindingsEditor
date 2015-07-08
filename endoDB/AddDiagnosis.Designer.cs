@@ -221,6 +221,8 @@
             this.Controls.Add(this.bt3);
             this.Controls.Add(this.bt2);
             this.Controls.Add(this.bt1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddDiagnosis";
             this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();

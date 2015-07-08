@@ -98,190 +98,228 @@ namespace endoDB
 
         private void setButtons(int _examType)
         {
-            #region Set -1 to all button's start and end
-            bt1start = -1;
-            bt1end = -1;
-            bt2start = -1;
-            bt2end = -1;
-            bt3start = -1;
-            bt3end = -1;
-            bt4start = -1;
-            bt4end = -1;
-            bt5start = -1;
-            bt5end = -1;
-            bt6start = -1;
-            bt6end = -1;
-            bt7start = -1;
-            bt7end = -1;
-            bt8start = -1;
-            bt8end = -1;
-            bt9start = -1;
-            bt9end = -1;
-            bt11start = -1;
-            bt11end = -1;
-            bt12start = -1;
-            bt12end = -1;
-            #endregion
-
             DataRow[] drs;
             switch (_examType)
             {
                 #region GF
                 case 1:
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1000");
-                    lb1.Text = drs[0]["name"].ToString();
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1001");
-                    bt1.Text = drs[0]["name"].ToString();
-                    bt1start = int.Parse(drs[0]["start_no"].ToString());
-                    bt1end = int.Parse(drs[0]["end_no"].ToString());
-                    bt2.Visible = false;
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=200000");
-                    bt3.Text = drs[0]["name"].ToString();
-                    bt3start = int.Parse(drs[0]["start_no"].ToString());
-                    bt3end = int.Parse(drs[0]["end_no"].ToString());
+                    setButtonLabels(1, false, 1000);
+                    setButtonSettings(1, true, 1001);
+                    setButtonSettings(2, false);
+                    setButtonSettings(3, true, 200000);
 
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=2000");
-                    lb2.Text = drs[0]["name"].ToString();
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=2001");
-                    bt4.Text = drs[0]["name"].ToString();
-                    bt4start = int.Parse(drs[0]["start_no"].ToString());
-                    bt4end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=3000");
-                    bt5.Text = drs[0]["name"].ToString();
-                    bt5start = int.Parse(drs[0]["start_no"].ToString());
-                    bt5end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=4000");
-                    bt6.Text = drs[0]["name"].ToString();
-                    bt6start = int.Parse(drs[0]["start_no"].ToString());
-                    bt6end = int.Parse(drs[0]["end_no"].ToString());
+                    setButtonLabels(2, false, 2000);
+                    setButtonSettings(4, true, 2001);
+                    setButtonSettings(5, true, 3000);
+                    setButtonSettings(6, true, 4000);
 
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=5000");
-                    lb3.Text = drs[0]["name"].ToString();
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=5001");
-                    bt7.Text = drs[0]["name"].ToString();
-                    bt7start = int.Parse(drs[0]["start_no"].ToString());
-                    bt7end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=6000");
-                    bt8.Text = drs[0]["name"].ToString();
-                    bt8start = int.Parse(drs[0]["start_no"].ToString());
-                    bt8end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=7000");
-                    bt9.Text = drs[0]["name"].ToString();
-                    bt9start = int.Parse(drs[0]["start_no"].ToString());
-                    bt9end = int.Parse(drs[0]["end_no"].ToString());
+                    setButtonLabels(3, false, 5000);
+                    setButtonSettings(7, true, 5001);
+                    setButtonSettings(8, true, 6000);
+                    setButtonSettings(9, true, 7000);
 
-                    lb4.Text = "";
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=10001");
-                    bt10.Text = drs[0]["name"].ToString();
-                    bt10start = int.Parse(drs[0]["start_no"].ToString());
-                    bt10end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=20000");
-                    bt11.Text = drs[0]["name"].ToString();
-                    bt11start = int.Parse(drs[0]["start_no"].ToString());
-                    bt11end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=100001");
-                    bt12.Text = drs[0]["name"].ToString();
-                    bt12start = int.Parse(drs[0]["start_no"].ToString());
-                    bt12end = int.Parse(drs[0]["end_no"].ToString());
+                    setButtonLabels(4, true);
+                    setButtonSettings(10, true, 10001);
+                    setButtonSettings(11, true, 20000);
+                    setButtonSettings(12, true, 100001);
                     break;
                 #endregion
 
                 #region CF
                 case 2:
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=30000");
-                    lb1.Text = drs[0]["name"].ToString();
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=30001");
-                    bt1.Text = drs[0]["name"].ToString();
-                    bt1start = int.Parse(drs[0]["start_no"].ToString());
-                    bt1end = int.Parse(drs[0]["end_no"].ToString());
-                    bt2.Visible = false;
-                    bt3.Visible = false;
+                    setButtonLabels(1, false, 30000);
+                    setButtonSettings(1, true, 30001);
+                    setButtonSettings(2, false);
+                    setButtonSettings(3, false);
 
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=40000");
-                    lb2.Text = drs[0]["name"].ToString();
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=40001");
-                    bt4.Text = drs[0]["name"].ToString();
-                    bt4start = int.Parse(drs[0]["start_no"].ToString());
-                    bt4end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=50000");
-                    bt5.Text = drs[0]["name"].ToString();
-                    bt5start = int.Parse(drs[0]["start_no"].ToString());
-                    bt5end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=60000");
-                    bt6.Text = drs[0]["name"].ToString();
-                    bt6start = int.Parse(drs[0]["start_no"].ToString());
-                    bt6end = int.Parse(drs[0]["end_no"].ToString());
+                    setButtonLabels(2, false, 40000);
+                    setButtonSettings(4, true, 40001);
+                    setButtonSettings(5, true, 50000);
+                    setButtonSettings(6, true, 60000);
 
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=70000");
-                    lb3.Text = drs[0]["name"].ToString();
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=70001");
-                    bt7.Text = drs[0]["name"].ToString();
-                    bt7start = int.Parse(drs[0]["start_no"].ToString());
-                    bt7end = int.Parse(drs[0]["end_no"].ToString());
-                    bt8.Visible = false;
-                    bt9.Visible = false;
+                    setButtonLabels(3, false, 70000);
+                    setButtonSettings(7, true, 70001);
+                    setButtonSettings(8, false);
+                    setButtonSettings(9, false);
 
-                    lb4.Text = "";
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=100001");
-                    bt10.Text = drs[0]["name"].ToString();
-                    bt10start = int.Parse(drs[0]["start_no"].ToString());
-                    bt10end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=200001");
-                    bt11.Text = drs[0]["name"].ToString();
-                    bt11start = int.Parse(drs[0]["start_no"].ToString());
-                    bt11end = int.Parse(drs[0]["end_no"].ToString());
-                    bt12.Visible = false;
+                    setButtonLabels(4, true);
+                    setButtonSettings(10, true, 100001);
+                    setButtonSettings(11, true, 200001);
+                    setButtonSettings(12, false);
                     break;
                 #endregion
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
 
                 #region abdominal US
                 case 1001:
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1000000");
-                    lb1.Text = drs[0]["name"].ToString();
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1010000");
-                    bt1.Text = drs[0]["name"].ToString();
-                    bt1start = int.Parse(drs[0]["start_no"].ToString());
-                    bt1end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1020000");
-                    bt2.Text = drs[0]["name"].ToString();
-                    bt2start = int.Parse(drs[0]["start_no"].ToString());
-                    bt2end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1030000");
-                    bt3.Text = drs[0]["name"].ToString();
-                    bt3start = int.Parse(drs[0]["start_no"].ToString());
-                    bt3end = int.Parse(drs[0]["end_no"].ToString());
+                    setButtonLabels(1, false, 1000000);
+                    setButtonSettings(1, true, 1010000);
+                    setButtonSettings(2, true, 1020000);
+                    setButtonSettings(3, true, 1030000);
 
-                    lb2.Text = "";
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1040000");
-                    bt4.Text = drs[0]["name"].ToString();
-                    bt4start = int.Parse(drs[0]["start_no"].ToString());
-                    bt4end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1050000");
-                    bt5.Text = drs[0]["name"].ToString();
-                    bt5start = int.Parse(drs[0]["start_no"].ToString());
-                    bt5end = int.Parse(drs[0]["end_no"].ToString());
-                    drs = CLocalDB.localDB.Tables["diag_category"].Select("id=1060000");
-                    bt6.Text = drs[0]["name"].ToString();
-                    bt6start = int.Parse(drs[0]["start_no"].ToString());
-                    bt6end = int.Parse(drs[0]["end_no"].ToString());
+                    setButtonLabels(2, true);
+                    setButtonSettings(4, true, 1040000);
+                    setButtonSettings(5, true, 1050000);
+                    setButtonSettings(6, true, 1060000);
 
-                    lb3.Text = "";
+                    setButtonLabels(3, true);
                     bt7.Visible = false;
                     bt8.Visible = false;
                     bt9.Visible = false;
 
-                    lb4.Text = "";
+                    setButtonLabels(4, true);
                     bt10.Visible = false;
                     bt11.Visible = false;
                     bt12.Visible = false;
                     break;
                 #endregion
+
+                #region default
+                default:
+                    setButtonLabels(1, true);
+                    setButtonSettings(1, false);
+                    setButtonSettings(2, false);
+                    setButtonSettings(3, false);
+
+                    setButtonLabels(2, true);
+                    setButtonSettings(4, false);
+                    setButtonSettings(5, false);
+                    setButtonSettings(6, false);
+
+                    setButtonLabels(3, true);
+                    setButtonSettings(7, false);
+                    setButtonSettings(8, false);
+                    setButtonSettings(9, false);
+
+                    setButtonLabels(4, true);
+                    setButtonSettings(10, false);
+                    setButtonSettings(11, false);
+                    setButtonSettings(12, false);
+                    break;
+                #endregion
+            }
+        }
+
+        private void setButtonLabels(int labelNumber, bool isBlank, int idNumber = 0)
+        {
+            DataRow[] drs;
+            string labelText = "";
+
+            if (!isBlank && idNumber != 0)
+            {
+                drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + idNumber.ToString());
+                if (drs.Length != 0)
+                { labelText = drs[0]["name"].ToString(); }
+            }
+
+            switch (labelNumber)
+            {
+                case 1:
+                    lb1.Text = labelText;
+                    break;
+                case 2:
+                    lb2.Text = labelText;
+                    break;
+                case 3:
+                    lb3.Text = labelText;
+                    break;
+                case 4:
+                    lb4.Text = labelText;
+                    break;
+            }
+        }
+
+        private void setButtonSettings(int buttonNumber, bool isVisible, int idNumber = 0)
+        {
+            DataRow[] drs;
+            string buttonText = "";
+            int buttonStart = -1;
+            int buttonEnd = -1;
+
+            if (isVisible && idNumber != 0)
+            {
+                drs = CLocalDB.localDB.Tables["diag_category"].Select("id=" + idNumber.ToString());
+                if (drs.Length != 0)
+                {
+                    buttonText = drs[0]["name"].ToString();
+                    buttonStart = int.Parse(drs[0]["start_no"].ToString());
+                    buttonEnd = int.Parse(drs[0]["end_no"].ToString());
+                }
+            }
+
+            switch (buttonNumber)
+            {
+                case 1:
+                    bt1.Visible = isVisible;
+                    bt1.Text = buttonText;
+                    bt1start = buttonStart;
+                    bt1end = buttonEnd;
+                    break;
+                case 2:
+                    bt2.Visible = isVisible;
+                    bt2.Text = buttonText;
+                    bt2start = buttonStart;
+                    bt2end = buttonEnd;
+                    break;
+                case 3:
+                    bt3.Visible = isVisible;
+                    bt3.Text = buttonText;
+                    bt3start = buttonStart;
+                    bt3end = buttonEnd;
+                    break;
+                case 4:
+                    bt4.Visible = isVisible;
+                    bt4.Text = buttonText;
+                    bt4start = buttonStart;
+                    bt4end = buttonEnd;
+                    break;
+                case 5:
+                    bt5.Visible = isVisible;
+                    bt5.Text = buttonText;
+                    bt5start = buttonStart;
+                    bt5end = buttonEnd;
+                    break;
+                case 6:
+                    bt6.Visible = isVisible;
+                    bt6.Text = buttonText;
+                    bt6start = buttonStart;
+                    bt6end = buttonEnd;
+                    break;
+                case 7:
+                    bt7.Visible = isVisible;
+                    bt7.Text = buttonText;
+                    bt7start = buttonStart;
+                    bt7end = buttonEnd;
+                    break;
+                case 8:
+                    bt8.Visible = isVisible;
+                    bt8.Text = buttonText;
+                    bt8start = buttonStart;
+                    bt8end = buttonEnd;
+                    break;
+                case 9:
+                    bt9.Visible = isVisible;
+                    bt9.Text = buttonText;
+                    bt9start = buttonStart;
+                    bt9end = buttonEnd;
+                    break;
+                case 10:
+                    bt10.Visible = isVisible;
+                    bt10.Text = buttonText;
+                    bt10start = buttonStart;
+                    bt10end = buttonEnd;
+                    break;
+                case 11:
+                    bt11.Visible = isVisible;
+                    bt11.Text = buttonText;
+                    bt11start = buttonStart;
+                    bt11end = buttonEnd;
+                    break;
+                case 12:
+                    bt12.Visible = isVisible;
+                    bt12.Text = buttonText;
+                    bt12start = buttonStart;
+                    bt12end = buttonEnd;
+                    break;
             }
         }
 
