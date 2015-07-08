@@ -225,6 +225,7 @@
             this.MinimizeBox = false;
             this.Name = "AddDiagnosis";
             this.ShowInTaskbar = false;
+            this.Shown += new System.EventHandler(this.AddDiagnosis_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

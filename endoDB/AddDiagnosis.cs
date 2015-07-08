@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace endoDB
 {
@@ -91,14 +92,11 @@ namespace endoDB
                     cbPostmodifier.ImeMode = ImeMode.On;
                     break;
             }
-
-            if (!isValidRangeOfDiagnoses(CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter))
-            { buttonFunction(1); }
         }
 
+        #region Initialize Buttons
         private void setButtons(int _examType)
         {
-            DataRow[] drs;
             switch (_examType)
             {
                 #region GF
@@ -322,6 +320,7 @@ namespace endoDB
                     break;
             }
         }
+        #endregion
 
         private void resizeColumns()
         {
@@ -335,41 +334,141 @@ namespace endoDB
             {
                 case 1:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt1start + ")AND(no<=" + bt1end + ")";
+                    setPremodifier(bt1start, bt1end);
+                    setPostmodifier(bt1start, bt1end);
                     break;
                 case 2:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt2start + ")AND(no<=" + bt2end + ")";
+                    setPremodifier(bt2start, bt2end);
+                    setPostmodifier(bt2start, bt2end);
                     break;
                 case 3:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt3start + ")AND(no<=" + bt3end + ")";
+                    setPremodifier(bt3start, bt3end);
+                    setPostmodifier(bt3start, bt3end);
                     break;
                 case 4:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt4start + ")AND(no<=" + bt4end + ")";
+                    setPremodifier(bt4start, bt4end);
+                    setPostmodifier(bt4start, bt4end);
                     break;
                 case 5:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt5start + ")AND(no<=" + bt5end + ")";
+                    setPremodifier(bt5start, bt5end);
+                    setPostmodifier(bt5start, bt5end);
                     break;
                 case 6:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt6start + ")AND(no<=" + bt6end + ")";
+                    setPremodifier(bt6start, bt6end);
+                    setPostmodifier(bt6start, bt6end);
                     break;
                 case 7:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt7start + ")AND(no<=" + bt7end + ")";
+                    setPremodifier(bt7start, bt7end);
+                    setPostmodifier(bt7start, bt7end);
                     break;
                 case 8:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt8start + ")AND(no<=" + bt8end + ")";
+                    setPremodifier(bt8start, bt8end);
+                    setPostmodifier(bt8start, bt8end);
                     break;
                 case 9:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt9start + ")AND(no<=" + bt9end + ")";
+                    setPremodifier(bt9start, bt9end);
+                    setPostmodifier(bt9start, bt9end);
                     break;
                 case 10:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt10start + ")AND(no<=" + bt10end + ")";
+                    setPremodifier(bt10start, bt10end);
+                    setPostmodifier(bt10start, bt10end);
                     break;
                 case 11:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt11start + ")AND(no<=" + bt11end + ")";
+                    setPremodifier(bt11start, bt11end);
+                    setPostmodifier(bt11start, bt11end);
                     break;
                 case 12:
                     CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter = "(no>=" + bt12start + ")AND(no<=" + bt12end + ")";
+                    setPremodifier(bt12start, bt12end);
+                    setPostmodifier(bt12start, bt12end);
                     break;
             }
+        }
+
+        private void setPremodifier(int start, int end)
+        {
+            #region Npgsql
+            NpgsqlConnection conn;
+            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
+                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+
+            try
+            { conn.Open(); }
+            catch (NpgsqlException)
+            {
+                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+            }
+            #endregion
+
+            string sql;
+
+            sql = "SELECT premodifier AS key, premodifier FROM diag WHERE premodifier <> '' AND diag_code >= " + start.ToString()
+                + " AND diag_code <= " + end.ToString() + " GROUP BY premodifier ORDER BY count(premodifier) DESC";
+
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataRow newRow = dt.NewRow();
+            newRow["key"] = "";
+            newRow["premodifier"] = "";
+            dt.Rows.InsertAt(newRow, 0);
+            cbPremodifier.DataSource = dt;
+            cbPremodifier.DisplayMember = "premodifier";
+            cbPremodifier.ValueMember = "key";
+        }
+
+        private void setPostmodifier(int start, int end)
+        {
+            #region Npgsql
+            NpgsqlConnection conn;
+            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
+                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+
+            try
+            { conn.Open(); }
+            catch (NpgsqlException)
+            {
+                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+            }
+            #endregion
+
+            string sql;
+
+            sql = "SELECT postmodifier AS key, postmodifier FROM diag WHERE postmodifier <> '' AND diag_code >= " + start.ToString()
+                + " AND diag_code <= " + end.ToString() + " GROUP BY postmodifier ORDER BY count(postmodifier) DESC";
+
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataRow newRow = dt.NewRow();
+            newRow["key"] = "";
+            newRow["postmodifier"] = "";
+            dt.Rows.InsertAt(newRow, 0);
+            cbPostmodifier.DataSource = dt;
+            cbPostmodifier.DisplayMember = "postmodifier";
+            cbPostmodifier.ValueMember = "key";
         }
 
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -566,6 +665,12 @@ namespace endoDB
         {
             buttonFunction(12);
             cbPremodifier.Focus();
+        }
+
+        private void AddDiagnosis_Shown(object sender, EventArgs e)
+        {
+            if (!isValidRangeOfDiagnoses(CLocalDB.localDB.Tables["diag_name"].DefaultView.RowFilter))
+            { buttonFunction(1); }
         }
     }
 }
