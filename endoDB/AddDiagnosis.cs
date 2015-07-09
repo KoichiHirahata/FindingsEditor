@@ -424,6 +424,8 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            conn.Close();
+            
             DataRow newRow = dt.NewRow();
             newRow["key"] = "";
             newRow["premodifier"] = "";
@@ -462,6 +464,8 @@ namespace endoDB
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            conn.Close();
+
             DataRow newRow = dt.NewRow();
             newRow["key"] = "";
             newRow["postmodifier"] = "";
