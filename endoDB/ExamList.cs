@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using Npgsql;
 
 namespace endoDB
@@ -74,8 +75,10 @@ namespace endoDB
             #region Design and Settings
             exam_list.DefaultView.RowFilter = "exam_status < 2";  //Show only blank/draft findings.
 
-            this.dgvExamList.Columns["exam_id"].Visible = false;
-            this.dgvExamList.Columns["exam_status"].Visible = false;
+            dgvExamList.Columns["exam_id"].Visible = false;
+            dgvExamList.Columns["exam_status"].Visible = false;
+            dgvExamList.Columns["exam_type_no"].Visible = false;
+            dgvExamList.Columns["type_name_en"].Visible = false;
 
             //Without below settings, this application will down.
             dgvExamList.Columns["btSelect"].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -137,7 +140,7 @@ namespace endoDB
             string sql =
                 "SELECT exam_id, exam.pt_id, pt_name, exam_day, exam_type." + exam_type_name + " AS exam_type_name, department.name1, ward, status."
                 + status_name
-                + " AS status_name, exam_status FROM exam"
+                + " AS status_name, exam_status, exam_type.type_no AS exam_type_no, exam_type.name_eng AS type_name_en FROM exam" //"exam_type_no" and "type_name_en" are needed to use plugins
                 + " INNER JOIN patient ON exam.pt_id = patient.pt_id"
                 + " INNER JOIN exam_type ON exam.exam_type = exam_type.type_no"
                 + " LEFT JOIN department ON exam.department = department.code"
@@ -186,7 +189,7 @@ namespace endoDB
 
             if (dgv.Columns[e.ColumnIndex].Name == "btSelect")
             {
-                selectExam(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString());
+                selectExam(dgv.Rows[e.RowIndex].Cells["exam_id"].Value.ToString(), dgv.Rows[e.RowIndex].Cells["exam_type_no"].Value.ToString(), dgv.Rows[e.RowIndex].Cells["type_name_en"].Value.ToString());
                 return;
             }
             else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
@@ -217,7 +220,7 @@ namespace endoDB
 
                 if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btSelect")
                 {
-                    selectExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString());
+                    selectExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString(), dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_type_no"].Value.ToString(), dgv.Rows[dgv.CurrentCell.RowIndex].Cells["type_name_en"].Value.ToString());
                     return;
                 }
                 else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btImage")
@@ -240,14 +243,35 @@ namespace endoDB
         }
 
         #region dgv buttons functions
-        private void selectExam(string exam_id_str)
+        private void selectExam(string exam_id_str, string exam_type_no, string type_name_en)
         {
-            EditFindings ef = new EditFindings(exam_id_str);
-            ef.ShowDialog(this);
-            ef.Dispose();
-            exam_list.Rows.Clear();
-            searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
-            resizeColumns();
+            if (int.Parse(exam_type_no) >= 10000)
+            {
+                if (Directory.Exists(Application.StartupPath + @"\plugin\" + type_name_en))
+                {
+                    if (File.Exists(Application.StartupPath + @"\plugin\" + type_name_en + @"\" + type_name_en + ".exe"))
+                    {
+                        System.Diagnostics.Process p = System.Diagnostics.Process.Start(Application.StartupPath + @"\plugin\" + type_name_en + @"\" + type_name_en + ".exe",
+                          "/DBSrvIP:" + Settings.DBSrvIP
+                          + " /DBSrvPort:" + Settings.DBSrvPort
+                          + " /DBconnectID:" + Settings.DBconnectID
+                          + " /DBconnectPw:" + Settings.DBconnectPw
+                          + " /exam_id:" + exam_id_str
+                          + " /operator_id:" + db_operator.operatorID);
+                    }
+                    else
+                    { MessageBox.Show("[Plugin]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                }
+                else
+                { MessageBox.Show("[Plugin]" + Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+            else
+            {
+                EditFindings ef = new EditFindings(exam_id_str);
+                ef.ShowDialog(this);
+                ef.Dispose();
+            }
+            refreshDgv();
         }
 
         private void delExam(string exam_id_str)
@@ -272,7 +296,7 @@ namespace endoDB
         private void printExam(string exam_id_str)
         {
             #region Error Check
-            if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
+            if (!File.Exists(Application.StartupPath + @"\result.html"))
             {
                 MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -289,30 +313,35 @@ namespace endoDB
         private void btBlankDraft_Click(object sender, EventArgs e)
         {
             exam_list.DefaultView.RowFilter = "exam_status < 2";
+            refreshDgv();
             setFocus2Select();
         }//Show only blank/draft findings.
 
         private void btDone_Click(object sender, EventArgs e)
         {
             exam_list.DefaultView.RowFilter = "exam_status = 2";
+            refreshDgv();
             setFocus2Select();
         }
 
         private void btChecked_Click(object sender, EventArgs e)
         {
             exam_list.DefaultView.RowFilter = "exam_status = 3";
+            refreshDgv();
             setFocus2Select();
         }
 
         private void btCanceled_Click(object sender, EventArgs e)
         {
             exam_list.DefaultView.RowFilter = "exam_status = 9";
+            refreshDgv();
             setFocus2Select();
         }
 
         private void btShowAll_Click(object sender, EventArgs e)
         {
             exam_list.DefaultView.RowFilter = "exam_status < 10";
+            refreshDgv();
             setFocus2Select();
         }
 
@@ -321,26 +350,31 @@ namespace endoDB
             if (e.KeyCode == Keys.A && e.Alt == true)
             {
                 exam_list.DefaultView.RowFilter = "exam_status < 10";
+                refreshDgv();
                 setFocus2Select();
             }
             else if (e.KeyCode == Keys.B && e.Alt == true)
             {
                 exam_list.DefaultView.RowFilter = "exam_status < 2";
+                refreshDgv();
                 setFocus2Select();
             }
             else if (e.KeyCode == Keys.D && e.Alt == true)
             {
                 exam_list.DefaultView.RowFilter = "exam_status = 2";
+                refreshDgv();
                 setFocus2Select();
             }
             else if (e.KeyCode == Keys.C && e.Alt == true)
             {
                 exam_list.DefaultView.RowFilter = "exam_status = 3";
+                refreshDgv();
                 setFocus2Select();
             }
             else if (e.KeyCode == Keys.E && e.Alt == true)
             {
                 exam_list.DefaultView.RowFilter = "exam_status = 9";
+                refreshDgv();
                 setFocus2Select();
             }
         }
@@ -354,6 +388,13 @@ namespace endoDB
             dgvExamList.Focus();
             if (dgvExamList.RowCount != 0)
             { dgvExamList.CurrentCell = dgvExamList["btSelect", 0]; }
+        }
+
+        private void refreshDgv()
+        {
+            exam_list.Rows.Clear();
+            searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
+            resizeColumns();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using Npgsql;
 
 namespace endoDB
@@ -90,16 +91,25 @@ namespace endoDB
             #endregion
 
             string sql;
+            string status_name;
+            string exam_type_name;
+
             if (Settings.lang == "ja")
             {
-                sql = "SELECT exam_id, exam_day, name_jp AS exam_name FROM exam INNER JOIN exam_type ON exam.exam_type = exam_type.type_no"
-                + " WHERE pt_id ='" + pt1.ptID + "' ORDER BY exam_day DESC";
+                status_name = "name_jp";
+                exam_type_name = "name_jp";
             }
             else
             {
-                sql = "SELECT exam_id, exam_day, name_eng AS exam_name FROM exam INNER JOIN exam_type ON exam.exam_type = exam_type.type_no"
-                + " WHERE pt_id ='" + pt1.ptID + "' ORDER BY exam_day DESC";
+                status_name = "name_eng";
+                exam_type_name = "name_eng";
             }
+
+            sql = "SELECT exam_id, exam_day, exam_type." + exam_type_name + " AS exam_name, status." + status_name + " AS status_name,"
+                + " exam_type.type_no AS exam_type_no, exam_type.name_eng AS type_name_en"
+                + " FROM exam INNER JOIN exam_type ON exam.exam_type = exam_type.type_no"
+                + " INNER JOIN status ON exam.exam_status = status.status_no"
+                + " WHERE pt_id ='" + pt1.ptID + "' ORDER BY exam_day DESC";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -147,9 +157,15 @@ namespace endoDB
                 dgvExams.Columns["exam_id"].Visible = false;
                 dgvExams.Columns["exam_name"].HeaderText = Properties.Resources.ExamType;
                 dgvExams.Columns["exam_day"].HeaderText = Properties.Resources.Date;
+                dgvExams.Columns["status_name"].HeaderText = Properties.Resources.Status;
                 dgvExams.Columns["btEdit"].HeaderText = Properties.Resources.Edit;
                 dgvExams.Columns["btImage"].HeaderText = Properties.Resources.Image;
                 dgvExams.Columns["btPrint"].HeaderText = Properties.Resources.Print;
+                #endregion
+
+                #region Set invisible
+                dgvExams.Columns["exam_type_no"].Visible = false;
+                dgvExams.Columns["type_name_en"].Visible = false;
                 #endregion
 
                 foreach (DataGridViewColumn dc in dgvExams.Columns)
@@ -163,7 +179,7 @@ namespace endoDB
         {
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex].Name == "btEdit")
-            { editExam(dgvExams.Rows[e.RowIndex].Cells["exam_id"].Value.ToString()); }
+            { editExam(dgvExams.Rows[e.RowIndex].Cells["exam_id"].Value.ToString(), dgv.Rows[e.RowIndex].Cells["exam_type_no"].Value.ToString(), dgv.Rows[e.RowIndex].Cells["type_name_en"].Value.ToString()); }
             else if (dgv.Columns[e.ColumnIndex].Name == "btImage")
             { uckyFunctions.showImages(pt1.ptID, uckyFunctions.dateTo8char(dgv.Rows[e.RowIndex].Cells["exam_day"].Value.ToString(), Settings.lang)); }
             else if (dgv.Columns[e.ColumnIndex].Name == "btPrint")
@@ -180,7 +196,7 @@ namespace endoDB
 
                 if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btEdit")
                 {
-                    editExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString());
+                    editExam(dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_id"].Value.ToString(), dgv.Rows[dgv.CurrentCell.RowIndex].Cells["exam_type_no"].Value.ToString(), dgv.Rows[dgv.CurrentCell.RowIndex].Cells["type_name_en"].Value.ToString());
                     return;
                 }
                 else if (dgv.Columns[dgv.CurrentCell.ColumnIndex].Name == "btImage")
@@ -196,11 +212,34 @@ namespace endoDB
             }
         }
 
-        private void editExam(string exam_id_str)
+        private void editExam(string exam_id_str, string exam_type_no, string type_name_en)
         {
-            EditFindings ef = new EditFindings(exam_id_str);
-            ef.ShowDialog(this);
-            ef.Dispose();
+            if (int.Parse(exam_type_no) >= 10000)
+            {
+                if (Directory.Exists(Application.StartupPath + @"\plugin\" + type_name_en))
+                {
+                    if (File.Exists(Application.StartupPath + @"\plugin\" + type_name_en + @"\" + type_name_en + ".exe"))
+                    {
+                        System.Diagnostics.Process p = System.Diagnostics.Process.Start(Application.StartupPath + @"\plugin\" + type_name_en + @"\" + type_name_en + ".exe",
+                            "/DBSrvIP:" + Settings.DBSrvIP
+                            + " /DBSrvPort:" + Settings.DBSrvPort
+                            + " /DBconnectID:" + Settings.DBconnectID
+                            + " /DBconnectPw:" + Settings.DBconnectPw
+                            + " /exam_id:" + exam_id_str
+                            + " /operator_id:" + db_operator.operatorID);
+                    }
+                    else
+                    { MessageBox.Show("[Plugin]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                }
+                else
+                { MessageBox.Show("[Plugin]" + Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+            else
+            {
+                EditFindings ef = new EditFindings(exam_id_str);
+                ef.ShowDialog(this);
+                ef.Dispose();
+            }
         }
 
         private void printExam(string exam_id_str)
