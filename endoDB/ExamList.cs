@@ -20,7 +20,7 @@ namespace endoDB
         private string pt_id;
         private string department;
         private string operator1;
-        private Boolean op1_5; //True means operator1 among operator1-5 
+        private Boolean op1_5; //True means searching operator among operator1 to 5 
 
         public ExamList(string _date_from, string _date_to, string _pt_id, string _department, string _operator1, Boolean _op1_5)
         {
