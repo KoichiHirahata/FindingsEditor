@@ -128,7 +128,7 @@
     <value>ログイン</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 123</value>
+    <value>401, 246</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 16</value>

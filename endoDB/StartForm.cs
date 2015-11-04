@@ -16,6 +16,10 @@ namespace endoDB
         public StartForm()
         {
             InitializeComponent();
+            if (System.IO.File.Exists(Application.StartupPath + "\\title.jpg"))
+            { pbTitle.ImageLocation = Application.StartupPath + "\\title.jpg"; }
+            else
+            { MessageBox.Show("[title.jpg]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             Settings.initiateSettings();
         }
 

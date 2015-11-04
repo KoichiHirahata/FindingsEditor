@@ -37,7 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbTitle = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -87,6 +89,12 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // pbTitle
+            // 
+            resources.ApplyResources(this.pbTitle, "pbTitle");
+            this.pbTitle.Name = "pbTitle";
+            this.pbTitle.TabStop = false;
+            // 
             // StartForm
             // 
             resources.ApplyResources(this, "$this");
@@ -98,11 +106,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pbTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StartForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +128,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbTitle;
     }
 }

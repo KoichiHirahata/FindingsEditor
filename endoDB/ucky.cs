@@ -121,15 +121,14 @@ namespace endoDB
             st.DBconnectPw = PasswordEncoder.Encrypt(Settings.DBconnectPw);
             st.figureFolder = Settings.figureFolder;
 
-            //＜バイナリファイルに書き込む＞
-            //BinaryFormatterオブジェクトを作成
+            //Write to a binary file
+            //Create a BinaryFormatter object
             BinaryFormatter bf1 = new BinaryFormatter();
-            //ファイルを開く
+            //Open the file
             System.IO.FileStream fs1 =
                 new System.IO.FileStream(Settings.settingFile_location, System.IO.FileMode.Create);
-            //シリアル化し、バイナリファイルに保存する
+            //Serialize it and save to the binery file
             bf1.Serialize(fs1, st);
-            //閉じる
             fs1.Close();
 
         }
@@ -140,13 +139,14 @@ namespace endoDB
             {
                 Settings4file st = new Settings4file();
 
-                //＜バイナリファイルから読み込む＞
-                //BinaryFormatterオブジェクトの作成
+                //Read the binary file
+                //Create a BinaryFormatter object
                 BinaryFormatter bf2 = new BinaryFormatter();
-                //ファイルを開く
-                System.IO.FileStream fs2 =
-                    new System.IO.FileStream(Settings.settingFile_location, System.IO.FileMode.Open);
-                //バイナリファイルから読み込み、逆シリアル化する
+                IgnoreAssemblyBinder iab = new IgnoreAssemblyBinder();
+                bf2.Binder = iab;
+                //Open the file
+                System.IO.FileStream fs2 = new System.IO.FileStream(Settings.settingFile_location, System.IO.FileMode.Open);
+                //Deserialize the binary file
                 try
                 {
                     st = (Settings4file)bf2.Deserialize(fs2);
@@ -185,6 +185,14 @@ namespace endoDB
             }
             else
             { return ""; }
+        }
+    }
+
+    public class IgnoreAssemblyBinder : SerializationBinder
+    {
+        public override Type BindToType(string assemblyName, string typeName)
+        {
+            return Type.GetType(typeName);
         }
     }
     #endregion

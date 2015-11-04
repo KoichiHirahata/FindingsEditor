@@ -259,7 +259,7 @@
     <value>本当に削除しますか？</value>
   </data>
   <data name="CouldntDelOp" xml:space="preserve">
-    <value>施行済み検査あり、削除できませんでした。</value>
+    <value>当該施行者による施行済み検査があり、削除できませんでした。</value>
   </data>
   <data name="Date" xml:space="preserve">
     <value>日付</value>
