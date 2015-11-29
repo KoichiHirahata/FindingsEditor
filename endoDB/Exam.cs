@@ -439,6 +439,13 @@ namespace endoDB
             return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
         }
 
+        public string getEnglishExamTypeName()
+        {
+            string sql;
+            sql = "SELECT name_eng FROM exam_type WHERE type_no=" + exam_type.ToString();
+            return uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
+        }
+
         public string getDepartmentName()
         {
             string sql;

@@ -478,8 +478,8 @@ namespace endoDB
                     dvWords.RowFilter = "operator='Colonoscopy' OR operator='" + db_operator.operatorID + "'";
                     dvWords.Sort = "operator, word_order";
                     break;
-                case 1001:
-                    dvWords.RowFilter = "operator='Abdomen US' OR operator='" + db_operator.operatorID + "'";
+                default:
+                    dvWords.RowFilter = "operator='" + exam.getEnglishExamTypeName() + "' OR operator='" + db_operator.operatorID + "'";
                     dvWords.Sort = "operator, word_order";
                     break;
             }
