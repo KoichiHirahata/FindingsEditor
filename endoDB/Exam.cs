@@ -184,9 +184,10 @@ namespace endoDB
                 }
             }
 
+            #region operator1
+            column = "operator1";
             if (!string.IsNullOrWhiteSpace(operator1))
             {
-                column = "operator1";
                 sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
@@ -202,7 +203,6 @@ namespace endoDB
             }
             else
             {
-                column = "operator1";
                 sql = "UPDATE exam SET " + column + "=NULL WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
@@ -216,10 +216,12 @@ namespace endoDB
                         break;
                 }
             }
+            #endregion
 
+            #region operator2
+            column = "operator2";
             if (!string.IsNullOrWhiteSpace(operator2))
             {
-                column = "operator2";
                 sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator2))
                 {
@@ -235,7 +237,6 @@ namespace endoDB
             }
             else
             {
-                column = "operator2";
                 sql = "UPDATE exam SET " + column + "=NULL WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
@@ -249,10 +250,12 @@ namespace endoDB
                         break;
                 }
             }
+            #endregion
 
+            #region operator3
+            column = "operator3";
             if (!string.IsNullOrWhiteSpace(operator3))
             {
-                column = "operator3";
                 sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator3))
                 {
@@ -268,7 +271,6 @@ namespace endoDB
             }
             else
             {
-                column = "operator3";
                 sql = "UPDATE exam SET " + column + "=NULL WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
@@ -282,10 +284,12 @@ namespace endoDB
                         break;
                 }
             }
+            #endregion
 
+            #region operator4
+            column = "operator4";
             if (!string.IsNullOrWhiteSpace(operator4))
             {
-                column = "operator4";
                 sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator4))
                 {
@@ -301,7 +305,6 @@ namespace endoDB
             }
             else
             {
-                column = "operator4";
                 sql = "UPDATE exam SET " + column + "=NULL WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
@@ -315,10 +318,12 @@ namespace endoDB
                         break;
                 }
             }
+            #endregion
 
+            #region operator5
+            column = "operator5";
             if (!string.IsNullOrWhiteSpace(operator5))
             {
-                column = "operator5";
                 sql = "UPDATE exam SET " + column + "=:p0 WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator5))
                 {
@@ -334,7 +339,6 @@ namespace endoDB
             }
             else
             {
-                column = "operator5";
                 sql = "UPDATE exam SET " + column + "=NULL WHERE exam_id=" + exam_id.ToString();
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
@@ -348,7 +352,9 @@ namespace endoDB
                         break;
                 }
             }
+            #endregion
 
+            #region diag_dr
             if (!string.IsNullOrWhiteSpace(diag_dr))
             {
                 column = "diag_dr";
@@ -365,7 +371,9 @@ namespace endoDB
                         break;
                 }
             }
+            #endregion
 
+            #region final_diag_dr
             if (!string.IsNullOrWhiteSpace(final_diag_dr))
             {
                 column = "final_diag_dr";
@@ -382,6 +390,7 @@ namespace endoDB
                         break;
                 }
             }
+            #endregion
 
             if (equipment != 0)
             {
