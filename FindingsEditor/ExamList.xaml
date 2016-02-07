@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FindingsEditor"
         xmlns:properties="clr-namespace:FindingsEditor.Properties"
         mc:Ignorable="d"
-        Title="{x:Static properties:Resources.ExamList}" Height="700" Width="900">
+        Title="{x:Static properties:Resources.ExamList}" Height="700" Width="900" Icon="Properties/FELOGO-151019-2.ico" ShowInTaskbar="False">
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10" VerticalAlignment="Top" Height="auto">
             <Button x:Name="btShowAll" Content="{x:Static properties:Resources.All}" HorizontalAlignment="Left" Height="25" Margin="0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btShowAll_Click"/>
