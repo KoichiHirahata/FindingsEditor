@@ -459,4 +459,13 @@
   <data name="DoYouReallyWantToDeleteIt" xml:space="preserve">
     <value>本当に削除しますか？</value>
   </data>
+  <data name="CopyToClipBoard" xml:space="preserve">
+    <value>クリップボードにコピー</value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>保存して終了</value>
+  </data>
+  <data name="ViewImages" xml:space="preserve">
+    <value>画像表示</value>
+  </data>
 </root>

@@ -370,6 +370,18 @@
           <source>You can make changes only to pathology result.</source>
           <target state="new">You can make changes only to pathology result.</target>
         </trans-unit>
+        <trans-unit id="Resx/CopyToClipBoard" translate="yes" xml:space="preserve">
+          <source>Copy to clipboard</source>
+          <target state="new">Copy to clipboard</target>
+        </trans-unit>
+        <trans-unit id="Resx/SaveAndClose" translate="yes" xml:space="preserve">
+          <source>Save and Close</source>
+          <target state="new">Save and Close</target>
+        </trans-unit>
+        <trans-unit id="Resx/ViewImages" translate="yes" xml:space="preserve">
+          <source>View images</source>
+          <target state="new">View images</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="new">Suspect</target>

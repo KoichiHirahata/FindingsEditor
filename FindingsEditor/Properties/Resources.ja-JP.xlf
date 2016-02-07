@@ -351,6 +351,18 @@
           <source>You can make changes only to pathology result.</source>
           <target state="signed-off">病理結果のみ変更できます。</target>
         </trans-unit>
+        <trans-unit id="Resx/CopyToClipBoard" translate="yes" xml:space="preserve">
+          <source>Copy to clipboard</source>
+          <target state="signed-off">クリップボードにコピー</target>
+        </trans-unit>
+        <trans-unit id="Resx/SaveAndClose" translate="yes" xml:space="preserve">
+          <source>Save and Close</source>
+          <target state="signed-off">保存して終了</target>
+        </trans-unit>
+        <trans-unit id="Resx/ViewImages" translate="yes" xml:space="preserve">
+          <source>View images</source>
+          <target state="signed-off">画像表示</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="signed-off">疑い</target>

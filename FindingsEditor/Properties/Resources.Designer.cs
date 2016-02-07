@@ -178,6 +178,15 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Copy to clipboard に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CopyToClipBoard {
+            get {
+                return ResourceManager.GetString("CopyToClipBoard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Could not establish connection. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string CouldNotEstablishConnection {
@@ -826,6 +835,15 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Save and Close に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SaveAndClose {
+            get {
+                return ResourceManager.GetString("SaveAndClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Search by date に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SearchByDate {
@@ -1029,6 +1047,15 @@ namespace FindingsEditor.Properties {
         public static string View {
             get {
                 return ResourceManager.GetString("View", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   View images に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewImages {
+            get {
+                return ResourceManager.GetString("ViewImages", resourceCulture);
             }
         }
         
