@@ -447,4 +447,16 @@
   <data name="Print" xml:space="preserve">
     <value>印刷</value>
   </data>
+  <data name="YouCanMakeChangesOnlyToPatho" xml:space="preserve">
+    <value>病理結果のみ変更できます。</value>
+  </data>
+  <data name="Suspect" xml:space="preserve">
+    <value>疑い</value>
+  </data>
+  <data name="ReadOnlyMode" xml:space="preserve">
+    <value>編集権限が得られませんでした。読み込み専用モードです。</value>
+  </data>
+  <data name="DoYouReallyWantToDeleteIt" xml:space="preserve">
+    <value>本当に削除しますか？</value>
+  </data>
 </root>

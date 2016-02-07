@@ -5,6 +5,7 @@ using Npgsql;
 using System.Windows.Data;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.IO;
 
 namespace FindingsEditor
 {
@@ -168,16 +169,65 @@ namespace FindingsEditor
         #region GridViewButtons
         private void select_Click(object sender, RoutedEventArgs e)
         {
-            EditFindings ef = new EditFindings();
+            EditFindings ef = new EditFindings(getExamId());
             ef.Owner = this;
             ef.ShowDialog();
         }
 
-        private int getExamId()
+        private void image_Click(object sender, RoutedEventArgs e)
+        {
+            DataGridRow dgr = (DataGridRow)dgExamList.ItemContainerGenerator.ContainerFromIndex(int.Parse(dgExamList.SelectedIndex.ToString()));
+            TextBlock pt_id_block = dgExamList.Columns[4].GetCellContent(dgr) as TextBlock;
+            TextBlock exam_day_block = dgExamList.Columns[6].GetCellContent(dgr) as TextBlock;
+
+            feFunctions.showImages(pt_id_block.Text,
+                feFunctions.dateTo8char(exam_day_block.Text, Settings.lang));
+            return;
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            delExam(getExamId());
+            return;
+        }
+
+        private void print_Click(object sender, RoutedEventArgs e)
+        {
+            #region Error Check
+            if (!File.Exists(Settings.startupPath + @"\result.html"))
+            {
+                MessageBox.Show("[Result template file]" + Properties.Resources.FileDoesNotExist, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            #endregion
+            ExamResult er = new ExamResult(getExamId());
+            er.Owner = this;
+            er.ShowDialog();
+        }
+
+        private string getExamId()
         {
             DataGridRow dgr = (DataGridRow)dgExamList.ItemContainerGenerator.ContainerFromIndex(int.Parse(dgExamList.SelectedIndex.ToString()));
             TextBlock exam_id_block = dgExamList.Columns[0].GetCellContent(dgr) as TextBlock;
-            return int.Parse(exam_id_block.Text);
+            return exam_id_block.Text;
+        }
+
+        private void delExam(string exam_id_str)
+        {
+            Exam exam = new Exam(exam_id_str);
+
+            //If findings was blank, delete exam.
+            //If findings was not blank, make exam invisible.
+            if (MessageBox.Show(Properties.Resources.DoYouReallyWantToDeleteIt, "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+            {
+                if (exam.findings.Length == 0)
+                { exam.delExam(); }
+                else
+                { exam.makeInvisible(); }
+
+                exam_list.Rows.Clear();
+                searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
+            }
         }
         #endregion
     }

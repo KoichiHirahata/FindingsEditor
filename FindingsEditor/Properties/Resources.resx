@@ -447,4 +447,16 @@
   <data name="Status" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="DoYouReallyWantToDeleteIt" xml:space="preserve">
+    <value>Do you really want to delete it?</value>
+  </data>
+  <data name="ReadOnlyMode" xml:space="preserve">
+    <value>Permission denied. Read only mode.</value>
+  </data>
+  <data name="Suspect" xml:space="preserve">
+    <value>Suspect</value>
+  </data>
+  <data name="YouCanMakeChangesOnlyToPatho" xml:space="preserve">
+    <value>You can make changes only to pathology result.</value>
+  </data>
 </root>

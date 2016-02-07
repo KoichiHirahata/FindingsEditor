@@ -101,8 +101,8 @@ namespace FindingsEditor
         public static void initiateSettings()
         {
             string exePath = Environment.GetCommandLineArgs()[0];
-            string exeFullPath = System.IO.Path.GetFullPath(exePath);
-            string startupPath = System.IO.Path.GetDirectoryName(exeFullPath);
+            string exeFullPath = Path.GetFullPath(exePath);
+            startupPath = Path.GetDirectoryName(exeFullPath);
 
             settingFile_location = startupPath + "\\settings.config";
             readSettings();
@@ -299,7 +299,7 @@ namespace FindingsEditor
         public enum functionResult { success, failed, connectionError };
 
         /// <summary>
-        /// 生年月日から年齢を計算する 
+        /// Calculate age from date of birth.
         /// </summary>
         /// <param name="birthDate"></param>
         /// <param name="today"></param>
@@ -755,9 +755,12 @@ namespace FindingsEditor
         //Start PtGraViewer with options of patient's ID, date of examination
         public static void showImages(string pt_id_str, string exam_date)
         {
-            //MessageBox.Show("/pt:" + pt_id_str + " /date:" + exam_date);
-            if (System.IO.File.Exists(Settings.startupPath + @"\PtGraViewer\PtGraViewer.exe"))
-            { System.Diagnostics.Process.Start(Settings.startupPath + @"\PtGraViewer\PtGraViewer.exe", "/pt:" + pt_id_str + " /date:" + exam_date); }
+            //MessageBox.Show(Settings.startupPath + @"\PtGraViewer\PtGraViewer.exe");
+            if (File.Exists(Settings.startupPath + @"\PtGraViewer\PtGraViewer.exe"))
+            {
+                //MessageBox.Show("/pt:" + pt_id_str + " /date:" + exam_date);
+                System.Diagnostics.Process.Start(Settings.startupPath + @"\PtGraViewer\PtGraViewer.exe", "/pt:" + pt_id_str + " /date:" + exam_date);
+            }
         }
         #endregion
     }

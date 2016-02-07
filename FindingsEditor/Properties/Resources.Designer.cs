@@ -313,6 +313,15 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Do you really want to delete it? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DoYouReallyWantToDeleteIt {
+            get {
+                return ResourceManager.GetString("DoYouReallyWantToDeleteIt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Do you wish to log out? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DoYouWishToLogOut {
@@ -790,6 +799,15 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Permission denied. Read only mode. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ReadOnlyMode {
+            get {
+                return ResourceManager.GetString("ReadOnlyMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Renew Password に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string RenewPw {
@@ -943,6 +961,15 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Suspect に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Suspect {
+            get {
+                return ResourceManager.GetString("Suspect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Test connection に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TestConnection {
@@ -1038,6 +1065,15 @@ namespace FindingsEditor.Properties {
         public static string WrongIDorPW {
             get {
                 return ResourceManager.GetString("WrongIDorPW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can make changes only to pathology result. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string YouCanMakeChangesOnlyToPatho {
+            get {
+                return ResourceManager.GetString("YouCanMakeChangesOnlyToPatho", resourceCulture);
             }
         }
         

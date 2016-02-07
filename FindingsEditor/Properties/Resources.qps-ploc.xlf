@@ -362,6 +362,22 @@
           <source>Status</source>
           <target state="new">Status</target>
         </trans-unit>
+        <trans-unit id="Resx/DoYouReallyWantToDeleteIt" translate="yes" xml:space="preserve">
+          <source>Do you really want to delete it?</source>
+          <target state="new">Do you really want to delete it?</target>
+        </trans-unit>
+        <trans-unit id="Resx/YouCanMakeChangesOnlyToPatho" translate="yes" xml:space="preserve">
+          <source>You can make changes only to pathology result.</source>
+          <target state="new">You can make changes only to pathology result.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
+          <source>Suspect</source>
+          <target state="new">Suspect</target>
+        </trans-unit>
+        <trans-unit id="Resx/ReadOnlyMode" translate="yes" xml:space="preserve">
+          <source>Permission denied. Read only mode.</source>
+          <target state="new">Permission denied. Read only mode.</target>
+        </trans-unit>
         <trans-unit id="Resx/Checked" translate="yes" xml:space="preserve">
           <source>Checked(_C)</source>
           <target state="new">Checked(_C)</target>

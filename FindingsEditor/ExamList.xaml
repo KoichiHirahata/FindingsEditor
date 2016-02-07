@@ -43,21 +43,21 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="{x:Static properties:Resources.Image}" FontSize="16"/>
+                            <Button Content="{x:Static properties:Resources.Image}" FontSize="16" Click="image_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="{x:Static properties:Resources.Delete}" FontSize="14"/>
+                            <Button Content="{x:Static properties:Resources.Delete}" FontSize="14" Click="delete_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="{x:Static properties:Resources.Print}" FontSize="14"/>
+                            <Button Content="{x:Static properties:Resources.Print}" FontSize="14" Click="print_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

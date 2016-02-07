@@ -98,8 +98,12 @@
     <Compile Include="EditPatient.xaml.cs">
       <DependentUpon>EditPatient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Exam.cs" />
     <Compile Include="ExamList.xaml.cs">
       <DependentUpon>ExamList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExamResult.xaml.cs">
+      <DependentUpon>ExamResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="fe.cs" />
     <Compile Include="initialSettings.xaml.cs">
@@ -123,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ExamList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExamResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

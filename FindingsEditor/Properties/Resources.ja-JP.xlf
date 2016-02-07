@@ -343,6 +343,22 @@
           <source>Status</source>
           <target state="signed-off">状態</target>
         </trans-unit>
+        <trans-unit id="Resx/DoYouReallyWantToDeleteIt" translate="yes" xml:space="preserve">
+          <source>Do you really want to delete it?</source>
+          <target state="signed-off">本当に削除しますか？</target>
+        </trans-unit>
+        <trans-unit id="Resx/YouCanMakeChangesOnlyToPatho" translate="yes" xml:space="preserve">
+          <source>You can make changes only to pathology result.</source>
+          <target state="signed-off">病理結果のみ変更できます。</target>
+        </trans-unit>
+        <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
+          <source>Suspect</source>
+          <target state="signed-off">疑い</target>
+        </trans-unit>
+        <trans-unit id="Resx/ReadOnlyMode" translate="yes" xml:space="preserve">
+          <source>Permission denied. Read only mode.</source>
+          <target state="signed-off">編集権限が得られませんでした。読み込み専用モードです。</target>
+        </trans-unit>
         <trans-unit id="Resx/Checked" translate="yes" xml:space="preserve">
           <source>Checked(_C)</source>
           <target state="signed-off">チェック済(_C)</target>
