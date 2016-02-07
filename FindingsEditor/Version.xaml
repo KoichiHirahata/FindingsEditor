@@ -1,0 +1,21 @@
+﻿<Window x:Class="FindingsEditor.Version"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindingsEditor"
+        xmlns:properties="clr-namespace:FindingsEditor.Properties"
+        mc:Ignorable="d"
+        Title="Version" Height="260" Width="360" Icon="Properties/FELOGO-151019-2.ico" ShowInTaskbar="False" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="lbTitle" Content="{x:Static properties:Resources.FindingsEditor}" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lbVersion" Content="Ver. " HorizontalAlignment="Left" Margin="220,60,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lbDbVersion" Content="" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <Label x:Name="lbCopyRight" Content="" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" FontSize="13">
+            <Hyperlink x:Name="hlMicUrl" RequestNavigate="hlMicUrl_RequestNavigate">
+                <TextBlock Text="{x:Static properties:Resources.MicUrl}" />
+            </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>

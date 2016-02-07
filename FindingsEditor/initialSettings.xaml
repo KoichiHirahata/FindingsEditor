@@ -1,0 +1,83 @@
+﻿<Window x:Class="FindingsEditor.initialSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindingsEditor"
+        xmlns:properties="clr-namespace:FindingsEditor.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.InitialSettings}" Height="390" Width="430">
+    <Grid>
+        <Label x:Name="lbDbSrvIP" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Right">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.DbServerIpAddress}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <TextBox x:Name="tbDbSrvIpAddress" HorizontalAlignment="Left" Height="23" Margin="150,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbIpEx" Content="{x:Static properties:Resources.exIP}" HorizontalAlignment="Left" Margin="150,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbDbSrvPort" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Right">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.DbSrvPort}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <TextBox x:Name="tbDbSrvPort" HorizontalAlignment="Left" Height="23" Margin="150,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="DbUserID" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Right">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.DbUserId}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <TextBox x:Name="tbDbUserId" HorizontalAlignment="Left" Height="23" Margin="150,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbDbUserPw" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top" Width="400" HorizontalContentAlignment="Left">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.DbUserPw}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Button x:Name="btPwSet" Content="{x:Static properties:Resources.RenewPw}" HorizontalAlignment="Left" Margin="30,175,0,0" VerticalAlignment="Top" Width="110" Height="25" Click="btPwSet_Click"/>
+        <TextBox x:Name="tbDbPw" HorizontalAlignment="Left" Height="23" Margin="150,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btTestConnect" Content="{x:Static properties:Resources.TestConnection}" HorizontalAlignment="Left" Margin="280,175,0,0" VerticalAlignment="Top" Width="110" Height="25" Click="btTestConnect_Click"/>
+        <Label x:Name="lbFigureFolder" HorizontalAlignment="Left" Margin="25,210,0,0" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Left">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.FigureFolder}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <TextBox x:Name="tbFigureFolder" HorizontalAlignment="Left" Height="23" Margin="40,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230"/>
+        <Button x:Name="btFigureFolder" Content="{x:Static properties:Resources.Select}" HorizontalAlignment="Left" Margin="280,233,0,0" VerticalAlignment="Top" Width="110" Height="25" Click="btFigureFolder_Click"/>
+        <Button x:Name="btSave" Content="{x:Static properties:Resources.Save}" HorizontalAlignment="Left" Margin="180,300,0,0" VerticalAlignment="Top" Width="90" Height="25" Click="btSave_Click"/>
+        <Button x:Name="btCancel" Content="{x:Static properties:Resources.Cancel}" HorizontalAlignment="Left" Margin="280,300,0,0" VerticalAlignment="Top" Width="90" Height="25" Click="btCancel_Click"/>
+    </Grid>
+</Window>

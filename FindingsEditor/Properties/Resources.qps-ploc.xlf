@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="Resources.resx" tool-id="MultilingualAppToolkit" product-name="FindingsEditor" product-version="1.25.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1250.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/Date" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="new">Date</target>
+        </trans-unit>
+        <trans-unit id="Resx/DefaultFindings" translate="yes" xml:space="preserve">
+          <source>Default findings</source>
+          <target state="new">Default findings</target>
+        </trans-unit>
+        <trans-unit id="Resx/Departments" translate="yes" xml:space="preserve">
+          <source>Departments</source>
+          <target state="new">Departments</target>
+        </trans-unit>
+        <trans-unit id="Resx/Diagnoses" translate="yes" xml:space="preserve">
+          <source>Diagnoses</source>
+          <target state="new">Diagnoses</target>
+        </trans-unit>
+        <trans-unit id="Resx/Equipments" translate="yes" xml:space="preserve">
+          <source>Equipments</source>
+          <target state="new">Equipments</target>
+        </trans-unit>
+        <trans-unit id="Resx/FindingsEditor" translate="yes" xml:space="preserve">
+          <source>Findings Editor</source>
+          <target state="new">Findings Editor</target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialSettings" translate="yes" xml:space="preserve">
+          <source>Initial Settings</source>
+          <target state="new">Initial Settings</target>
+        </trans-unit>
+        <trans-unit id="Resx/InputYourIDandPassword" translate="yes" xml:space="preserve">
+          <source>Input your ID and Password.</source>
+          <target state="new">Input your ID and Password.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Login" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="new">Login</target>
+        </trans-unit>
+        <trans-unit id="Resx/LogOut" translate="yes" xml:space="preserve">
+          <source>Log Out</source>
+          <target state="new">Log Out</target>
+        </trans-unit>
+        <trans-unit id="Resx/Management" translate="yes" xml:space="preserve">
+          <source>Management</source>
+          <target state="new">Management</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyWords" translate="yes" xml:space="preserve">
+          <source>My words</source>
+          <target state="new">My words</target>
+        </trans-unit>
+        <trans-unit id="Resx/NewExamination" translate="yes" xml:space="preserve">
+          <source>New examination</source>
+          <target state="new">New examination</target>
+        </trans-unit>
+        <trans-unit id="Resx/NewPatient" translate="yes" xml:space="preserve">
+          <source>New patient</source>
+          <target state="new">New patient</target>
+        </trans-unit>
+        <trans-unit id="Resx/Operators" translate="yes" xml:space="preserve">
+          <source>Operators</source>
+          <target state="new">Operators</target>
+        </trans-unit>
+        <trans-unit id="Resx/Option" translate="yes" xml:space="preserve">
+          <source>Option</source>
+          <target state="new">Option</target>
+        </trans-unit>
+        <trans-unit id="Resx/Password" translate="yes" xml:space="preserve">
+          <source>Password:</source>
+          <target state="new">Password:</target>
+        </trans-unit>
+        <trans-unit id="Resx/PatientId" translate="yes" xml:space="preserve">
+          <source>Patient ID</source>
+          <target state="new">Patient ID</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlacesRooms" translate="yes" xml:space="preserve">
+          <source>Places (Rooms)</source>
+          <target state="new">Places (Rooms)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Plugin" translate="yes" xml:space="preserve">
+          <source>Plug-in</source>
+          <target state="new">Plug-in</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByDate" translate="yes" xml:space="preserve">
+          <source>Search by date</source>
+          <target state="new">Search by date</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByDepartment" translate="yes" xml:space="preserve">
+          <source>Search by department</source>
+          <target state="new">Search by department</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByOp1" translate="yes" xml:space="preserve">
+          <source>Search by operator 1</source>
+          <target state="new">Search by operator 1</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByOp15" translate="yes" xml:space="preserve">
+          <source>Search by operator 1-5</source>
+          <target state="new">Search by operator 1-5</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchExamination" translate="yes" xml:space="preserve">
+          <source>Search examination</source>
+          <target state="new">Search examination</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchPatient" translate="yes" xml:space="preserve">
+          <source>Search patient</source>
+          <target state="new">Search patient</target>
+        </trans-unit>
+        <trans-unit id="Resx/TodaysExaminations" translate="yes" xml:space="preserve">
+          <source>Today's examinations</source>
+          <target state="new">Today's examinations</target>
+        </trans-unit>
+        <trans-unit id="Resx/User" translate="yes" xml:space="preserve">
+          <source>User:</source>
+          <target state="new">User:</target>
+        </trans-unit>
+        <trans-unit id="Resx/Version" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="new">Version</target>
+        </trans-unit>
+        <trans-unit id="Resx/View" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="new">View</target>
+        </trans-unit>
+        <trans-unit id="Resx/Wards" translate="yes" xml:space="preserve">
+          <source>Wards</source>
+          <target state="new">Wards</target>
+        </trans-unit>
+        <trans-unit id="Resx/Words" translate="yes" xml:space="preserve">
+          <source>Words</source>
+          <target state="new">Words</target>
+        </trans-unit>
+        <trans-unit id="Resx/WrongIDorPW" translate="yes" xml:space="preserve">
+          <source>Wrong ID or Password.</source>
+          <target state="new">Wrong ID or Password.</target>
+        </trans-unit>
+        <trans-unit id="Resx/DbServerIpAddress" translate="yes" xml:space="preserve">
+          <source>Database server IP address</source>
+          <target state="new">Database server IP address</target>
+        </trans-unit>
+        <trans-unit id="Resx/ServerPwHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Server password has not been configured.</source>
+          <target state="new">Server password has not been configured.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="new">Cancel</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionSuccessful" translate="yes" xml:space="preserve">
+          <source>Connection successful.</source>
+          <target state="new">Connection successful.</target>
+        </trans-unit>
+        <trans-unit id="Resx/DbSrvPort" translate="yes" xml:space="preserve">
+          <source>Database server port</source>
+          <target state="new">Database server port</target>
+        </trans-unit>
+        <trans-unit id="Resx/DbUserId" translate="yes" xml:space="preserve">
+          <source>Database user ID</source>
+          <target state="new">Database user ID</target>
+        </trans-unit>
+        <trans-unit id="Resx/DbUserPw" translate="yes" xml:space="preserve">
+          <source>Database user password</source>
+          <target state="new">Database user password</target>
+        </trans-unit>
+        <trans-unit id="Resx/exIP" translate="yes" xml:space="preserve">
+          <source>e.x. 192.168.1.10</source>
+          <target state="new">e.x. 192.168.1.10</target>
+        </trans-unit>
+        <trans-unit id="Resx/FigureFolder" translate="yes" xml:space="preserve">
+          <source>Figure folder</source>
+          <target state="new">Figure folder</target>
+        </trans-unit>
+        <trans-unit id="Resx/IdRequired" translate="yes" xml:space="preserve">
+          <source>ID required.</source>
+          <target state="new">ID required.</target>
+        </trans-unit>
+        <trans-unit id="Resx/FolderDoesNotExist" translate="yes" xml:space="preserve">
+          <source>Folder does not exist.</source>
+          <target state="new">Folder does not exist.</target>
+        </trans-unit>
+        <trans-unit id="Resx/FileDoesNotExist" translate="yes" xml:space="preserve">
+          <source>File does not exist.</source>
+          <target state="new">File does not exist.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PwHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Password has not been configured.</source>
+          <target state="new">Password has not been configured.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PwHasBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Password has been configured.</source>
+          <target state="new">Password has been configured.</target>
+        </trans-unit>
+        <trans-unit id="Resx/RenewPw" translate="yes" xml:space="preserve">
+          <source>Renew Password</source>
+          <target state="new">Renew Password</target>
+        </trans-unit>
+        <trans-unit id="Resx/Save" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="new">Save</target>
+        </trans-unit>
+        <trans-unit id="Resx/Select" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="new">Select</target>
+        </trans-unit>
+        <trans-unit id="Resx/SelectFolder" translate="yes" xml:space="preserve">
+          <source>Select folder.</source>
+          <target state="new">Select folder.</target>
+        </trans-unit>
+        <trans-unit id="Resx/ServerPortHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Server port has not been configured.</source>
+          <target state="new">Server port has not been configured.</target>
+        </trans-unit>
+        <trans-unit id="Resx/TestConnection" translate="yes" xml:space="preserve">
+          <source>Test connection</source>
+          <target state="new">Test connection</target>
+        </trans-unit>
+        <trans-unit id="Resx/MicUrl" translate="yes" xml:space="preserve">
+          <source>http://www.madeinclinic.co.jp/</source>
+          <target state="new">http://www.madeinclinic.co.jp/</target>
+        </trans-unit>
+        <trans-unit id="Resx/Age" translate="yes" xml:space="preserve">
+          <source>Age</source>
+          <target state="new">Age</target>
+        </trans-unit>
+        <trans-unit id="Resx/Birthday" translate="yes" xml:space="preserve">
+          <source>Birthday</source>
+          <target state="new">Birthday</target>
+        </trans-unit>
+        <trans-unit id="Resx/Confirm" translate="yes" xml:space="preserve">
+          <source>Confirm</source>
+          <target state="new">Confirm</target>
+        </trans-unit>
+        <trans-unit id="Resx/CouldntFindPatientData" translate="yes" xml:space="preserve">
+          <source>Couldn't find patient data.</source>
+          <target state="new">Couldn't find patient data.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Department" translate="yes" xml:space="preserve">
+          <source>Department</source>
+          <target state="new">Department</target>
+        </trans-unit>
+        <trans-unit id="Resx/DoYouWishToLogOut" translate="yes" xml:space="preserve">
+          <source>Do you wish to log out?</source>
+          <target state="new">Do you wish to log out?</target>
+        </trans-unit>
+        <trans-unit id="Resx/EditPatientInformation" translate="yes" xml:space="preserve">
+          <source>Edit patient information</source>
+          <target state="new">Edit patient information</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExamDate" translate="yes" xml:space="preserve">
+          <source>ExamDate</source>
+          <target state="new">ExamDate</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExamType" translate="yes" xml:space="preserve">
+          <source>ExamType</source>
+          <target state="new">ExamType</target>
+        </trans-unit>
+        <trans-unit id="Resx/Female" translate="yes" xml:space="preserve">
+          <source>Female</source>
+          <target state="new">Female</target>
+        </trans-unit>
+        <trans-unit id="Resx/Gender" translate="yes" xml:space="preserve">
+          <source>Gender</source>
+          <target state="new">Gender</target>
+        </trans-unit>
+        <trans-unit id="Resx/Load" translate="yes" xml:space="preserve">
+          <source>Load</source>
+          <target state="new">Load</target>
+        </trans-unit>
+        <trans-unit id="Resx/Male" translate="yes" xml:space="preserve">
+          <source>Male</source>
+          <target state="new">Male</target>
+        </trans-unit>
+        <trans-unit id="Resx/Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="new">Name</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoRecord" translate="yes" xml:space="preserve">
+          <source>No record.</source>
+          <target state="new">No record.</target>
+        </trans-unit>
+        <trans-unit id="Resx/NotSelected" translate="yes" xml:space="preserve">
+          <source>Not selected.</source>
+          <target state="new">Not selected.</target>
+        </trans-unit>
+        <trans-unit id="Resx/OrderedDr" translate="yes" xml:space="preserve">
+          <source>Ordered Dr. </source>
+          <target state="new">Ordered Dr. </target>
+        </trans-unit>
+        <trans-unit id="Resx/ProcedureHasBeenCancelled" translate="yes" xml:space="preserve">
+          <source>Procedure has been cancelled.</source>
+          <target state="new">Procedure has been cancelled.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PluginCouldntGetPtName" translate="yes" xml:space="preserve">
+          <source>Plug-in couldn't get patient's name.</source>
+          <target state="new">Plug-in couldn't get patient's name.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Purpose" translate="yes" xml:space="preserve">
+          <source>Purpose</source>
+          <target state="new">Purpose</target>
+        </trans-unit>
+        <trans-unit id="Resx/WardOutpatient" translate="yes" xml:space="preserve">
+          <source>Ward/Outpatient</source>
+          <target state="new">Ward/Outpatient</target>
+        </trans-unit>
+        <trans-unit id="Resx/IdMayNotBeChanged" translate="yes" xml:space="preserve">
+          <source>ID may not be changed.</source>
+          <target state="new">ID may not be changed.</target>
+        </trans-unit>
+        <trans-unit id="Resx/IdAlreadyExists" translate="yes" xml:space="preserve">
+          <source>ID already exists.</source>
+          <target state="new">ID already exists.</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExamRecordAlreadyExist" translate="yes" xml:space="preserve">
+          <source>Exam record(s) already exist.</source>
+          <target state="new">Exam record(s) already exist.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PatientData" translate="yes" xml:space="preserve">
+          <source>Patient data</source>
+          <target state="new">Patient data</target>
+        </trans-unit>
+        <trans-unit id="Resx/YouGoingToChangePtId" translate="yes" xml:space="preserve">
+          <source>You going to change patient ID. Do you really want to change Patient ID?</source>
+          <target state="new">You going to change patient ID. Do you really want to change Patient ID?</target>
+        </trans-unit>
+        <trans-unit id="Resx/All" translate="yes" xml:space="preserve">
+          <source>All(_A)</source>
+          <target state="new">All(_A)</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExamList" translate="yes" xml:space="preserve">
+          <source>Exam List</source>
+          <target state="new">Exam List</target>
+        </trans-unit>
+        <trans-unit id="Resx/Done" translate="yes" xml:space="preserve">
+          <source>Done(_D)</source>
+          <target state="new">Done(_D)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Colon" translate="yes" xml:space="preserve">
+          <source>:</source>
+          <target state="new">:</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoExamOnRecord" translate="yes" xml:space="preserve">
+          <source>No exam on record.</source>
+          <target state="new">No exam on record.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Delete" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="new">Delete</target>
+        </trans-unit>
+        <trans-unit id="Resx/Image" translate="yes" xml:space="preserve">
+          <source>Image</source>
+          <target state="new">Image</target>
+        </trans-unit>
+        <trans-unit id="Resx/Print" translate="yes" xml:space="preserve">
+          <source>Print</source>
+          <target state="new">Print</target>
+        </trans-unit>
+        <trans-unit id="Resx/Status" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="new">Status</target>
+        </trans-unit>
+        <trans-unit id="Resx/Checked" translate="yes" xml:space="preserve">
+          <source>Checked(_C)</source>
+          <target state="new">Checked(_C)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Canceled" translate="yes" xml:space="preserve">
+          <source>Canceled(_E)</source>
+          <target state="new">Canceled(_E)</target>
+        </trans-unit>
+        <trans-unit id="Resx/BlankDraft" translate="yes" xml:space="preserve">
+          <source>Blank/Draft(_B)</source>
+          <target state="new">Blank/Draft(_B)</target>
+        </trans-unit>
+        <trans-unit id="Resx/SelectGender" translate="yes" xml:space="preserve">
+          <source>Select gender.</source>
+          <target state="new">Select gender.</target>
+        </trans-unit>
+        <trans-unit id="Resx/ServerIpHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Server IP has not been configured.</source>
+          <target state="new">Server IP has not been configured.</target>
+        </trans-unit>
+        <trans-unit id="Resx/UpdateFailed" translate="yes" xml:space="preserve">
+          <source>Update failed.</source>
+          <target state="new">Update failed.</target>
+        </trans-unit>
+        <trans-unit id="Resx/SuccessfullyUpdated" translate="yes" xml:space="preserve">
+          <source>Successfully updated.</source>
+          <target state="new">Successfully updated.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PleaseDeterminPassword" translate="yes" xml:space="preserve">
+          <source>Please determine password.</source>
+          <target state="new">Please determine password.</target>
+        </trans-unit>
+        <trans-unit id="Resx/LockProcedureFailed" translate="yes" xml:space="preserve">
+          <source>Lock procedure failed. Please contact your administrator.</source>
+          <target state="new">Lock procedure failed. Please contact your administrator.</target>
+        </trans-unit>
+        <trans-unit id="Resx/DataBaseError" translate="yes" xml:space="preserve">
+          <source>Database error.</source>
+          <target state="new">Database error.</target>
+        </trans-unit>
+        <trans-unit id="Resx/CouldNotFindPatientData" translate="yes" xml:space="preserve">
+          <source>Couldn't find patient data.</source>
+          <target state="new">Couldn't find patient data.</target>
+        </trans-unit>
+        <trans-unit id="Resx/CouldNotEstablishConnection" translate="yes" xml:space="preserve">
+          <source>Could not establish connection.</source>
+          <target state="new">Could not establish connection.</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionClosedByServer" translate="yes" xml:space="preserve">
+          <source>Connection closed by server.</source>
+          <target state="new">Connection closed by server.</target>
+        </trans-unit>
+        <trans-unit id="Resx/TheFileDoesNotExist" translate="yes" xml:space="preserve">
+          <source>The file does not exist.</source>
+          <target state="new">The file does not exist.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PermissionDenied" translate="yes" xml:space="preserve">
+          <source>Permission denied.</source>
+          <target state="new">Permission denied.</target>
+        </trans-unit>
+        <trans-unit id="Resx/NotSupportedFileType" translate="yes" xml:space="preserve">
+          <source>Not supported file type.</source>
+          <target state="new">Not supported file type.</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoDataFound" translate="yes" xml:space="preserve">
+          <source>No data found.</source>
+          <target state="new">No data found.</target>
+        </trans-unit>
+        <trans-unit id="Resx/FileInUse" translate="yes" xml:space="preserve">
+          <source>File in use.</source>
+          <target state="new">File in use.</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionStringIsWrong" translate="yes" xml:space="preserve">
+          <source>Connection string is wrong.</source>
+          <target state="new">Connection string is wrong.</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionFailed" translate="yes" xml:space="preserve">
+          <source>Connection failed.</source>
+          <target state="new">Connection failed.</target>
+        </trans-unit>
+        <trans-unit id="Resx/SettingFileCorrupt" translate="yes" xml:space="preserve">
+          <source>The setting file may be corrupt. Do you want to delete the setting file?</source>
+          <target state="new">The setting file may be corrupt. Do you want to delete the setting file?</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

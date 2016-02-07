@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ja-JP" original="Resources.resx" tool-id="MultilingualAppToolkit" product-name="FindingsEditor" product-version="1.25.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1250.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/Date" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="signed-off">日付</target></trans-unit>
+        <trans-unit id="Resx/DefaultFindings" translate="yes" xml:space="preserve">
+          <source>Default findings</source>
+          <target state="signed-off">既定の所見</target>
+        </trans-unit>
+        <trans-unit id="Resx/Departments" translate="yes" xml:space="preserve">
+          <source>Departments</source>
+          <target state="signed-off">診療科</target>
+        </trans-unit>
+        <trans-unit id="Resx/Diagnoses" translate="yes" xml:space="preserve">
+          <source>Diagnoses</source>
+          <target state="signed-off">診断名</target>
+        </trans-unit>
+        <trans-unit id="Resx/Equipments" translate="yes" xml:space="preserve">
+          <source>Equipments</source>
+          <target state="signed-off">検査機器</target>
+        </trans-unit>
+        <trans-unit id="Resx/FindingsEditor" translate="yes" xml:space="preserve">
+          <source>Findings Editor</source>
+          <target state="signed-off">内視鏡・超音波検査所見入力システム（Findings Editor）</target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialSettings" translate="yes" xml:space="preserve">
+          <source>Initial Settings</source>
+          <target state="signed-off">初期設定</target>
+        </trans-unit>
+        <trans-unit id="Resx/InputYourIDandPassword" translate="yes" xml:space="preserve">
+          <source>Input your ID and Password.</source>
+          <target state="signed-off">IDとパスワードを入力してください</target>
+        </trans-unit>
+        <trans-unit id="Resx/Login" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="signed-off">ログイン</target>
+        </trans-unit>
+        <trans-unit id="Resx/LogOut" translate="yes" xml:space="preserve">
+          <source>Log Out</source>
+          <target state="signed-off">ログアウト</target>
+        </trans-unit>
+        <trans-unit id="Resx/Management" translate="yes" xml:space="preserve">
+          <source>Management</source>
+          <target state="signed-off">管理</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyWords" translate="yes" xml:space="preserve">
+          <source>My words</source>
+          <target state="signed-off">マイワード</target>
+        </trans-unit>
+        <trans-unit id="Resx/NewExamination" translate="yes" xml:space="preserve">
+          <source>New examination</source>
+          <target state="signed-off">新規検査登録</target>
+        </trans-unit>
+        <trans-unit id="Resx/NewPatient" translate="yes" xml:space="preserve">
+          <source>New patient</source>
+          <target state="signed-off">新規患者登録</target>
+        </trans-unit>
+        <trans-unit id="Resx/Operators" translate="yes" xml:space="preserve">
+          <source>Operators</source>
+          <target state="signed-off">施行者</target>
+        </trans-unit>
+        <trans-unit id="Resx/Option" translate="yes" xml:space="preserve">
+          <source>Option</source>
+          <target state="signed-off">オプション</target>
+        </trans-unit>
+        <trans-unit id="Resx/Password" translate="yes" xml:space="preserve">
+          <source>Password:</source>
+          <target state="signed-off">パスワード：</target>
+        </trans-unit>
+        <trans-unit id="Resx/PatientId" translate="yes" xml:space="preserve">
+          <source>Patient ID</source>
+          <target state="signed-off">患者ID</target></trans-unit>
+        <trans-unit id="Resx/PlacesRooms" translate="yes" xml:space="preserve">
+          <source>Places (Rooms)</source>
+          <target state="signed-off">検査場所</target>
+        </trans-unit>
+        <trans-unit id="Resx/Plugin" translate="yes" xml:space="preserve">
+          <source>Plug-in</source>
+          <target state="signed-off">プラグイン</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByDate" translate="yes" xml:space="preserve">
+          <source>Search by date</source>
+          <target state="signed-off">日付で検索</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByDepartment" translate="yes" xml:space="preserve">
+          <source>Search by department</source>
+          <target state="signed-off">診療科で検索</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByOp1" translate="yes" xml:space="preserve">
+          <source>Search by operator 1</source>
+          <target state="signed-off">施行者１で検索</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchByOp15" translate="yes" xml:space="preserve">
+          <source>Search by operator 1-5</source>
+          <target state="signed-off">施行者１～５で検索</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchExamination" translate="yes" xml:space="preserve">
+          <source>Search examination</source>
+          <target state="signed-off">検査検索</target>
+        </trans-unit>
+        <trans-unit id="Resx/SearchPatient" translate="yes" xml:space="preserve">
+          <source>Search patient</source>
+          <target state="signed-off">患者検索</target>
+        </trans-unit>
+        <trans-unit id="Resx/TodaysExaminations" translate="yes" xml:space="preserve">
+          <source>Today's examinations</source>
+          <target state="signed-off">今日の検査</target>
+        </trans-unit>
+        <trans-unit id="Resx/User" translate="yes" xml:space="preserve">
+          <source>User:</source>
+          <target state="signed-off">ユーザー：</target></trans-unit>
+        <trans-unit id="Resx/Version" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="signed-off">バージョン</target>
+        </trans-unit>
+        <trans-unit id="Resx/View" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="signed-off">表示</target>
+        </trans-unit>
+        <trans-unit id="Resx/Wards" translate="yes" xml:space="preserve">
+          <source>Wards</source>
+          <target state="signed-off">病棟/外来</target>
+        </trans-unit>
+        <trans-unit id="Resx/Words" translate="yes" xml:space="preserve">
+          <source>Words</source>
+          <target state="signed-off">クイックワード</target>
+        </trans-unit>
+        <trans-unit id="Resx/WrongIDorPW" translate="yes" xml:space="preserve">
+          <source>Wrong ID or Password.</source>
+          <target state="signed-off">IDかパスワードが間違っています。</target>
+        </trans-unit>
+        <trans-unit id="Resx/DbServerIpAddress" translate="yes" xml:space="preserve">
+          <source>Database server IP address</source>
+          <target state="signed-off">ＤＢサーバーＩＰアドレス</target></trans-unit>
+        <trans-unit id="Resx/ServerPwHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Server password has not been configured.</source>
+          <target state="signed-off">データベースパスワード：未設定</target>
+        </trans-unit>
+        <trans-unit id="Resx/Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="signed-off">キャンセル</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionSuccessful" translate="yes" xml:space="preserve">
+          <source>Connection successful.</source>
+          <target state="signed-off">接続に成功しました。</target>
+        </trans-unit>
+        <trans-unit id="Resx/DbSrvPort" translate="yes" xml:space="preserve">
+          <source>Database server port</source>
+          <target state="signed-off">ＤＢサーバーポート番号</target></trans-unit>
+        <trans-unit id="Resx/DbUserId" translate="yes" xml:space="preserve">
+          <source>Database user ID</source>
+          <target state="signed-off">ＤＢユーザーＩＤ</target></trans-unit>
+        <trans-unit id="Resx/DbUserPw" translate="yes" xml:space="preserve">
+          <source>Database user password</source>
+          <target state="signed-off">ＤＢユーザーパスワード</target></trans-unit>
+        <trans-unit id="Resx/exIP" translate="yes" xml:space="preserve">
+          <source>e.x. 192.168.1.10</source>
+          <target state="signed-off">例：192.168.1.10</target>
+        </trans-unit>
+        <trans-unit id="Resx/FigureFolder" translate="yes" xml:space="preserve">
+          <source>Figure folder</source>
+          <target state="signed-off">シェーマ保存フォルダ</target></trans-unit>
+        <trans-unit id="Resx/IdRequired" translate="yes" xml:space="preserve">
+          <source>ID required.</source>
+          <target state="signed-off">IDが必要です。</target>
+        </trans-unit>
+        <trans-unit id="Resx/FolderDoesNotExist" translate="yes" xml:space="preserve">
+          <source>Folder does not exist.</source>
+          <target state="signed-off">フォルダが存在していません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/FileDoesNotExist" translate="yes" xml:space="preserve">
+          <source>File does not exist.</source>
+          <target state="signed-off">ファイルが存在しません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/PwHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Password has not been configured.</source>
+          <target state="signed-off">パスワード未設定</target>
+        </trans-unit>
+        <trans-unit id="Resx/PwHasBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Password has been configured.</source>
+          <target state="signed-off">パスワード設定済</target>
+        </trans-unit>
+        <trans-unit id="Resx/RenewPw" translate="yes" xml:space="preserve">
+          <source>Renew Password</source>
+          <target state="signed-off">パスワード変更</target>
+        </trans-unit>
+        <trans-unit id="Resx/Save" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="signed-off">保存</target>
+        </trans-unit>
+        <trans-unit id="Resx/Select" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="signed-off">選択</target>
+        </trans-unit>
+        <trans-unit id="Resx/SelectFolder" translate="yes" xml:space="preserve">
+          <source>Select folder.</source>
+          <target state="signed-off">選択</target>
+        </trans-unit>
+        <trans-unit id="Resx/ServerPortHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Server port has not been configured.</source>
+          <target state="signed-off">サーバーのポートが設定されていません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/TestConnection" translate="yes" xml:space="preserve">
+          <source>Test connection</source>
+          <target state="signed-off">テスト接続</target>
+        </trans-unit>
+        <trans-unit id="Resx/MicUrl" translate="yes" xml:space="preserve">
+          <source>http://www.madeinclinic.co.jp/</source>
+          <target state="signed-off">http://www.madeinclinic.jp/</target>
+        </trans-unit>
+        <trans-unit id="Resx/Age" translate="yes" xml:space="preserve">
+          <source>Age</source>
+          <target state="signed-off">年齢</target></trans-unit>
+        <trans-unit id="Resx/Birthday" translate="yes" xml:space="preserve">
+          <source>Birthday</source>
+          <target state="signed-off">生年月日</target></trans-unit>
+        <trans-unit id="Resx/Confirm" translate="yes" xml:space="preserve">
+          <source>Confirm</source>
+          <target state="signed-off">決定</target>
+        </trans-unit>
+        <trans-unit id="Resx/CouldntFindPatientData" translate="yes" xml:space="preserve">
+          <source>Couldn't find patient data.</source>
+          <target state="signed-off">該当する患者情報が見つかりませんでした。</target>
+        </trans-unit>
+        <trans-unit id="Resx/Department" translate="yes" xml:space="preserve">
+          <source>Department</source>
+          <target state="signed-off">科</target></trans-unit>
+        <trans-unit id="Resx/DoYouWishToLogOut" translate="yes" xml:space="preserve">
+          <source>Do you wish to log out?</source>
+          <target state="signed-off">ログアウトしますか？</target>
+        </trans-unit>
+        <trans-unit id="Resx/EditPatientInformation" translate="yes" xml:space="preserve">
+          <source>Edit patient information</source>
+          <target state="signed-off">患者情報編集</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExamDate" translate="yes" xml:space="preserve">
+          <source>ExamDate</source>
+          <target state="signed-off">検査日</target></trans-unit>
+        <trans-unit id="Resx/ExamType" translate="yes" xml:space="preserve">
+          <source>ExamType</source>
+          <target state="signed-off">検査内容</target></trans-unit>
+        <trans-unit id="Resx/Female" translate="yes" xml:space="preserve">
+          <source>Female</source>
+          <target state="signed-off">女性</target>
+        </trans-unit>
+        <trans-unit id="Resx/Gender" translate="yes" xml:space="preserve">
+          <source>Gender</source>
+          <target state="signed-off">性別</target></trans-unit>
+        <trans-unit id="Resx/Load" translate="yes" xml:space="preserve">
+          <source>Load</source>
+          <target state="signed-off">読込</target>
+        </trans-unit>
+        <trans-unit id="Resx/Male" translate="yes" xml:space="preserve">
+          <source>Male</source>
+          <target state="signed-off">男性</target>
+        </trans-unit>
+        <trans-unit id="Resx/Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="signed-off">氏名</target></trans-unit>
+        <trans-unit id="Resx/NoRecord" translate="yes" xml:space="preserve">
+          <source>No record.</source>
+          <target state="signed-off">データが0件です。</target>
+        </trans-unit>
+        <trans-unit id="Resx/NotSelected" translate="yes" xml:space="preserve">
+          <source>Not selected.</source>
+          <target state="signed-off">選択されていません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/OrderedDr" translate="yes" xml:space="preserve">
+          <source>Ordered Dr. </source>
+          <target state="signed-off">依頼医</target></trans-unit>
+        <trans-unit id="Resx/ProcedureHasBeenCancelled" translate="yes" xml:space="preserve">
+          <source>Procedure has been cancelled.</source>
+          <target state="signed-off">処理は中止されました。</target>
+        </trans-unit>
+        <trans-unit id="Resx/PluginCouldntGetPtName" translate="yes" xml:space="preserve">
+          <source>Plug-in couldn't get patient's name.</source>
+          <target state="signed-off">プラグインで患者名が取得できませんでした。</target>
+        </trans-unit>
+        <trans-unit id="Resx/Purpose" translate="yes" xml:space="preserve">
+          <source>Purpose</source>
+          <target state="signed-off">目的</target></trans-unit>
+        <trans-unit id="Resx/WardOutpatient" translate="yes" xml:space="preserve">
+          <source>Ward/Outpatient</source>
+          <target state="signed-off">病棟/外来</target></trans-unit>
+        <trans-unit id="Resx/IdMayNotBeChanged" translate="yes" xml:space="preserve">
+          <source>ID may not be changed.</source>
+          <target state="signed-off">IDは変更できません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/IdAlreadyExists" translate="yes" xml:space="preserve">
+          <source>ID already exists.</source>
+          <target state="signed-off">そのIDはすでに存在しています。</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExamRecordAlreadyExist" translate="yes" xml:space="preserve">
+          <source>Exam record(s) already exist.</source>
+          <target state="signed-off">すでに検査が存在しています。</target>
+        </trans-unit>
+        <trans-unit id="Resx/PatientData" translate="yes" xml:space="preserve">
+          <source>Patient data</source>
+          <target state="signed-off">患者情報</target>
+        </trans-unit>
+        <trans-unit id="Resx/YouGoingToChangePtId" translate="yes" xml:space="preserve">
+          <source>You going to change patient ID. Do you really want to change Patient ID?</source>
+          <target state="signed-off">IDを変更しようとしています。本当にIDを変更しますか？</target>
+        </trans-unit>
+        <trans-unit id="Resx/All" translate="yes" xml:space="preserve">
+          <source>All(_A)</source>
+          <target state="signed-off">全て(_A)</target></trans-unit>
+        <trans-unit id="Resx/ExamList" translate="yes" xml:space="preserve">
+          <source>Exam List</source>
+          <target state="signed-off">検査一覧</target>
+        </trans-unit>
+        <trans-unit id="Resx/Done" translate="yes" xml:space="preserve">
+          <source>Done(_D)</source>
+          <target state="signed-off">記入済(_D)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Colon" translate="yes" xml:space="preserve">
+          <source>:</source>
+          <target state="signed-off">：</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoExamOnRecord" translate="yes" xml:space="preserve">
+          <source>No exam on record.</source>
+          <target state="signed-off">条件に該当する検査がありません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/Delete" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="signed-off">削除</target>
+        </trans-unit>
+        <trans-unit id="Resx/Image" translate="yes" xml:space="preserve">
+          <source>Image</source>
+          <target state="signed-off">画像</target>
+        </trans-unit>
+        <trans-unit id="Resx/Print" translate="yes" xml:space="preserve">
+          <source>Print</source>
+          <target state="signed-off">印刷</target>
+        </trans-unit>
+        <trans-unit id="Resx/Status" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="signed-off">状態</target>
+        </trans-unit>
+        <trans-unit id="Resx/Checked" translate="yes" xml:space="preserve">
+          <source>Checked(_C)</source>
+          <target state="signed-off">チェック済(_C)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Canceled" translate="yes" xml:space="preserve">
+          <source>Canceled(_E)</source>
+          <target state="signed-off">実施せず(_E)</target>
+        </trans-unit>
+        <trans-unit id="Resx/BlankDraft" translate="yes" xml:space="preserve">
+          <source>Blank/Draft(_B)</source>
+          <target state="signed-off">未記入/草稿(_B)</target>
+        </trans-unit>
+        <trans-unit id="Resx/SelectGender" translate="yes" xml:space="preserve">
+          <source>Select gender.</source>
+          <target state="signed-off">性別を選んでください。</target>
+        </trans-unit>
+        <trans-unit id="Resx/ServerIpHasNotBeenConfigured" translate="yes" xml:space="preserve">
+          <source>Server IP has not been configured.</source>
+          <target state="signed-off">サーバーのIPが設定されていません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/UpdateFailed" translate="yes" xml:space="preserve">
+          <source>Update failed.</source>
+          <target state="signed-off">更新が失敗しました。</target>
+        </trans-unit>
+        <trans-unit id="Resx/SuccessfullyUpdated" translate="yes" xml:space="preserve">
+          <source>Successfully updated.</source>
+          <target state="signed-off">正常に更新されました。</target>
+        </trans-unit>
+        <trans-unit id="Resx/PleaseDeterminPassword" translate="yes" xml:space="preserve">
+          <source>Please determine password.</source>
+          <target state="signed-off">パスワードが設定されていません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/LockProcedureFailed" translate="yes" xml:space="preserve">
+          <source>Lock procedure failed. Please contact your administrator.</source>
+          <target state="signed-off">ロック処理が失敗しました。管理者に連絡してください。</target>
+        </trans-unit>
+        <trans-unit id="Resx/DataBaseError" translate="yes" xml:space="preserve">
+          <source>Database error.</source>
+          <target state="signed-off">データベースエラーです。</target>
+        </trans-unit>
+        <trans-unit id="Resx/CouldNotFindPatientData" translate="yes" xml:space="preserve">
+          <source>Couldn't find patient data.</source>
+          <target state="signed-off">該当する患者情報が見つかりませんでした。</target>
+        </trans-unit>
+        <trans-unit id="Resx/CouldNotEstablishConnection" translate="yes" xml:space="preserve">
+          <source>Could not establish connection.</source>
+          <target state="signed-off">接続に失敗しました。</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionClosedByServer" translate="yes" xml:space="preserve">
+          <source>Connection closed by server.</source>
+          <target state="signed-off">接続はリモート ホストに強制的に切断されました。</target>
+        </trans-unit>
+        <trans-unit id="Resx/TheFileDoesNotExist" translate="yes" xml:space="preserve">
+          <source>The file does not exist.</source>
+          <target state="signed-off">ファイルが存在しません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/PermissionDenied" translate="yes" xml:space="preserve">
+          <source>Permission denied.</source>
+          <target state="signed-off">権限がありません。</target>
+        </trans-unit>
+        <trans-unit id="Resx/NotSupportedFileType" translate="yes" xml:space="preserve">
+          <source>Not supported file type.</source>
+          <target state="signed-off">サポートされていないファイルタイプです。</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoDataFound" translate="yes" xml:space="preserve">
+          <source>No data found.</source>
+          <target state="signed-off">データが見つかりませんでした。</target>
+        </trans-unit>
+        <trans-unit id="Resx/FileInUse" translate="yes" xml:space="preserve">
+          <source>File in use.</source>
+          <target state="signed-off">ファイルが使用中です。</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionStringIsWrong" translate="yes" xml:space="preserve">
+          <source>Connection string is wrong.</source>
+          <target state="signed-off">不正な接続文字列です。</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConnectionFailed" translate="yes" xml:space="preserve">
+          <source>Connection failed.</source>
+          <target state="signed-off">接続に失敗しました。</target>
+        </trans-unit>
+        <trans-unit id="Resx/SettingFileCorrupt" translate="yes" xml:space="preserve">
+          <source>The setting file may be corrupt. Do you want to delete the setting file?</source>
+          <target state="signed-off">設定ファイルが壊れている可能性があります。設定ファイルを削除しますか？</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

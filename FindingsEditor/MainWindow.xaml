@@ -1,0 +1,52 @@
+﻿<Window x:Class="FindingsEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindingsEditor"
+        xmlns:properties="clr-namespace:FindingsEditor.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.FindingsEditor}" Height="340" Width="560" ResizeMode="NoResize" Icon="Properties/FELOGO-151019-2.ico">
+    <Grid>
+        <Menu x:Name="menu" VerticalAlignment="Top">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem x:Name="miSearchExam" Header="{x:Static properties:Resources.SearchExamination}" FontSize="14">
+                <MenuItem Header="{x:Static properties:Resources.SearchByDepartment}"/>
+                <MenuItem Header="{x:Static properties:Resources.SearchByOp1}"/>
+                <MenuItem Header="{x:Static properties:Resources.SearchByOp15}"/>
+            </MenuItem>
+            <MenuItem x:Name="miOption" Header="{x:Static properties:Resources.Option}" FontSize="14">
+                <MenuItem Header="{x:Static properties:Resources.MyWords}"/>
+                <MenuItem x:Name="miManagement" Header="{x:Static properties:Resources.Management}">
+                    <MenuItem Header="{x:Static properties:Resources.Operators}"/>
+                    <MenuItem Header="{x:Static properties:Resources.Words}"/>
+                    <MenuItem Header="{x:Static properties:Resources.DefaultFindings}"/>
+                    <MenuItem Header="{x:Static properties:Resources.Equipments}"/>
+                    <MenuItem Header="{x:Static properties:Resources.PlacesRooms}"/>
+                    <MenuItem Header="{x:Static properties:Resources.Wards}"/>
+                    <MenuItem Header="{x:Static properties:Resources.Diagnoses}"/>
+                    <MenuItem Header="{x:Static properties:Resources.Departments}"/>
+                </MenuItem>
+                <MenuItem x:Name="miPlugin" Header="{x:Static properties:Resources.Plugin}" />
+            </MenuItem>
+            <MenuItem x:Name="miLogout" Header="{x:Static properties:Resources.LogOut}" FontSize="14" Click="miLogout_Click"/>
+            <MenuItem x:Name="miVersion" Header="{x:Static properties:Resources.Version}" HorizontalAlignment="Right" FontSize="14" Click="miVersion_Click"/>
+        </Menu>
+        <Label x:Name="lbUser" Content="{x:Static properties:Resources.User}" Margin="20,35,0,0" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" FontSize="14"/>
+        <Label x:Name="lbUserName" Content="UserName" HorizontalAlignment="Left" Margin="73,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="btSchedule" Content="{x:Static properties:Resources.TodaysExaminations}" HorizontalAlignment="Left" Height="41" Margin="51,78,0,0" VerticalAlignment="Top" Width="194" FontSize="20" Click="btSchedule_Click" TabIndex="1"/>
+        <Button x:Name="btNewExamination" Content="{x:Static properties:Resources.NewExamination}" HorizontalAlignment="Left" Height="41" Margin="300,78,0,0" VerticalAlignment="Top" Width="194" FontSize="20" Click="btNewExamination_Click" TabIndex="2"/>
+        <Label x:Name="lbPtId" Content="{x:Static properties:Resources.PatientId}" HorizontalAlignment="Left" Margin="20,190,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right" FontSize="14"/>
+        <TextBox x:Name="tbPtId" HorizontalAlignment="Left" Height="23" Margin="95,193,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"  Width="120" FontSize="14" TabIndex="3"/>
+        <Button x:Name="btPtView" Content="{x:Static properties:Resources.View}" HorizontalAlignment="Left" Margin="220,193,0,0" VerticalAlignment="Top" Width="60" FontSize="14" TabIndex="4"/>
+        <Button x:Name="btNewPt" Content="{x:Static properties:Resources.NewPatient}" HorizontalAlignment="Left" Margin="300,193,0,0" VerticalAlignment="Top" FontSize="14" Click="btNewPt_Click" TabIndex="5"/>
+        <Button x:Name="btSrchPt" Content="{x:Static properties:Resources.SearchPatient}" HorizontalAlignment="Left" Margin="400,193,0,0" VerticalAlignment="Top" FontSize="14" TabIndex="6"/>
+        <Label x:Name="lbDate" Content="{x:Static properties:Resources.Date}" HorizontalAlignment="Left" Margin="100,250,0,0" VerticalAlignment="Top" FontSize="14" Width="150" HorizontalContentAlignment="Right"/>
+        <DatePicker HorizontalAlignment="Left" Margin="245,253,0,0" VerticalAlignment="Top" FontSize="14" TabIndex="7"/>
+        <Button x:Name="btSrchByDate" Content="{x:Static properties:Resources.SearchByDate}" HorizontalAlignment="Left" Margin="360,253,0,0" VerticalAlignment="Top" FontSize="14" TabIndex="8"/>
+    </Grid>
+</Window>

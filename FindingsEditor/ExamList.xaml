@@ -1,0 +1,67 @@
+﻿<Window x:Class="FindingsEditor.ExamList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindingsEditor"
+        xmlns:properties="clr-namespace:FindingsEditor.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.ExamList}" Height="700" Width="900">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10" VerticalAlignment="Top" Height="auto">
+            <Button x:Name="btShowAll" Content="{x:Static properties:Resources.All}" HorizontalAlignment="Left" Height="25" Margin="0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btShowAll_Click"/>
+            <Button x:Name="btBlankDraft" Content="{x:Static properties:Resources.BlankDraft}" HorizontalAlignment="Left" Height="25" Margin="20,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btBlankDraft_Click"/>
+            <Button x:Name="btDone" Content="{x:Static properties:Resources.Done}" HorizontalAlignment="Left" Height="25" Margin="20,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btDone_Click"/>
+            <Button x:Name="btChecked" Content="{x:Static properties:Resources.Checked}" HorizontalAlignment="Left" Height="25" Margin="20,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btChecked_Click"/>
+            <Button x:Name="btCanceled" Content="{x:Static properties:Resources.Canceled}" HorizontalAlignment="Left" Height="25" Margin="20,0,20,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btCanceled_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="dgExamList" HorizontalAlignment="Stretch" Margin="0,40,0,0" VerticalAlignment="Stretch" FontSize="16" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="" x:Name="clExamId" Binding="{Binding exam_id}" Visibility="Visible" FontSize="0.01" Width="0" />
+                <DataGridTextColumn Header="exam_status" x:Name="clExamStatus" Binding="{Binding exam_status}" Visibility="Collapsed"/>
+                <DataGridTextColumn Header="exam_type_no" x:Name="clExamTypeNo" Binding="{Binding exam_type_no}" Visibility="Collapsed"/>
+                <DataGridTextColumn Header="type_name_en" x:Name="clTypeNameEn" Binding="{Binding type_name_en}" Visibility="Collapsed"/>
+                <DataGridTextColumn Header="ID" x:Name="clPtId" Binding="{Binding pt_id}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.Name}" x:Name="clPtName" Binding="{Binding pt_name}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.Date}" x:Name="clDate" Binding="{Binding exam_day}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.ExamType}" x:Name="clExamType" Binding="{Binding exam_type_name}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.Department}" x:Name="clDepartment" Binding="{Binding department_name}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.WardOutpatient}" x:Name="clWardOutpatient" Binding="{Binding ward}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.Status}" x:Name="clStatus" Binding="{Binding status_name}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{x:Static properties:Resources.Select}" FontSize="16" Click="select_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{x:Static properties:Resources.Image}" FontSize="16"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{x:Static properties:Resources.Delete}" FontSize="14"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{x:Static properties:Resources.Print}" FontSize="14"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

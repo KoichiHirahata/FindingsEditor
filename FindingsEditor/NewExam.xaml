@@ -1,0 +1,161 @@
+﻿<Window x:Class="FindingsEditor.NewExam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindingsEditor"
+        xmlns:properties="clr-namespace:FindingsEditor.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.NewExamination}" Height="420" Width="640" Icon="Properties/FELOGO-151019-2.ico" ShowInTaskbar="False" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="lbExamDate" HorizontalAlignment="Left" Margin="0,20,0,0" Width="100" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.ExamDate}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <DatePicker x:Name="dpExamDate" HorizontalAlignment="Left" Margin="100,21,0,0" VerticalAlignment="Top" FontSize="16" TabIndex="1"/>
+        <Label x:Name="lbExamType" HorizontalAlignment="Left" Margin="0,70,0,0" Width="100" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.ExamType}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <ComboBox x:Name="cbExamType" HorizontalAlignment="Left" Margin="100,72,0,0" VerticalAlignment="Top" Width="160" FontSize="16" TabIndex="2"/>
+        <Label x:Name="lbPtId" HorizontalAlignment="Left" Margin="0,120,0,0" Width="100" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.PatientId}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <TextBox x:Name="tbPtId" HorizontalAlignment="Left" Height="23" Margin="100,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16" KeyDown="tbPtId_KeyDown" TabIndex="3"/>
+        <Button x:Name="btPtLoad" Content="{x:Static properties:Resources.Load}" HorizontalAlignment="Left" Margin="230,123,0,0" VerticalAlignment="Top" Width="70" FontSize="16" Click="btPtLoad_Click" TabIndex="4"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="140" Margin="10,173,0,0" VerticalAlignment="Top" Width="290"/>
+        <Label x:Name="lbPtName" HorizontalAlignment="Left" Margin="10,180,0,0" Width="90" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.Name}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Label x:Name="Pt_name" Content="" HorizontalAlignment="Left" Margin="100,180,0,0" Width="200" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="16"/>
+        <Label x:Name="lbGender" HorizontalAlignment="Left" Margin="10,210,0,0" Width="90" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.Gender}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Label x:Name="Pt_gender" Content="" HorizontalAlignment="Left" Margin="100,210,0,0" Width="90" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="16"/>
+        <Label x:Name="lbBirthday" HorizontalAlignment="Left" Margin="10,240,0,0" Width="90" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.Birthday}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Label x:Name="Pt_birthday" Content="" HorizontalAlignment="Left" Margin="100,240,0,0" Width="90" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="16"/>
+        <Label x:Name="lbAge" HorizontalAlignment="Left" Margin="10,270,0,0" Width="90" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.Age}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Label x:Name="Pt_age" Content="" HorizontalAlignment="Left" Margin="100,270,0,0" Width="90" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="16"/>
+        <Button x:Name="btPtEdit" Content="{x:Static properties:Resources.EditPatientInformation}" HorizontalAlignment="Left" Margin="120,323,0,0" VerticalAlignment="Top" Width="180" FontSize="14" Click="btPtEdit_Click"/>
+
+        <Label x:Name="lbWard" HorizontalAlignment="Left" Margin="310,20,0,0" Width="120" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.WardOutpatient}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <ComboBox x:Name="cbWard" HorizontalAlignment="Left" Margin="430,22,0,0" VerticalAlignment="Top" Width="160" FontSize="16" TabIndex="5"/>
+        <Label x:Name="lbDept" HorizontalAlignment="Left" Margin="310,70,0,0" Width="120" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.Department}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <ComboBox x:Name="cbDepartment" HorizontalAlignment="Left" Margin="430,72,0,0" VerticalAlignment="Top" Width="160" FontSize="16" TabIndex="6"/>
+        <Label x:Name="lbOrderedDr" HorizontalAlignment="Left" Margin="310,120,0,0" Width="120" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.OrderedDr}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <ComboBox x:Name="cbOrderedDr" HorizontalAlignment="Left" Margin="430,122,0,0" VerticalAlignment="Top" Width="160" FontSize="16" IsEditable="True" TabIndex="7"/>
+        <Label x:Name="lbPurpose" HorizontalAlignment="Left" Margin="340,180,0,0" Width="200" VerticalAlignment="Top" FontSize="16">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.Purpose}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <TextBox x:Name="tbPurpose" HorizontalAlignment="Left" Height="100" Margin="340,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" FontSize="16" TabIndex="8"/>
+        <Button x:Name="btConfirm" Content="{x:Static properties:Resources.Confirm}" HorizontalAlignment="Left" Margin="500,330,0,0" VerticalAlignment="Top" Width="110" FontSize="20" Click="btConfirm_Click" TabIndex="9"/>
+    </Grid>
+</Window>
