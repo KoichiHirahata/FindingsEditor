@@ -607,5 +607,11 @@ namespace FindingsEditor
             }
             return str;
         }
+
+        public int getAge()
+        {
+            patient p = new patient(pt_id, false);
+            return feFunctions.GetAge(p.ptBirthday, exam_day);
+        }
     }
 }

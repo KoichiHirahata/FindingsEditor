@@ -106,11 +106,20 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
-        ///   Canceled(_E) に類似しているローカライズされた文字列を検索します。
+        ///   Canceled に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Canceled {
             get {
                 return ResourceManager.GetString("Canceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Canceled(_E) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Canceled_E {
+            get {
+                return ResourceManager.GetString("Canceled_E", resourceCulture);
             }
         }
         
@@ -120,6 +129,15 @@ namespace FindingsEditor.Properties {
         public static string Checked {
             get {
                 return ResourceManager.GetString("Checked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Close に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
             }
         }
         

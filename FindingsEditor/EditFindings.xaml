@@ -17,7 +17,19 @@
             <Button x:Name="btViewImages" Content="{x:Static properties:Resources.ViewImages}" HorizontalAlignment="Left" Height="25" Margin="15,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="15" />
             <Button x:Name="btSaveClose" Content="{x:Static properties:Resources.SaveAndClose}" HorizontalAlignment="Left" Height="25" Margin="15,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="15" />
         </StackPanel>
-        <Label x:Name="lbPurpose" HorizontalAlignment="Left" Margin="5,40,0,0" VerticalAlignment="Top" FontSize="15">
+        <Label x:Name="lbAge" HorizontalAlignment="Left" Margin="5,40,0,0" VerticalAlignment="Top" FontSize="15">
+            <Label.Content>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}{1}">
+                            <Binding Source="{x:Static properties:Resources.Age}"/>
+                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+        <Label x:Name="lbPurpose" HorizontalAlignment="Left" Margin="5,65,0,0" VerticalAlignment="Top" FontSize="15">
             <Label.Content>
                 <TextBlock>
                     <TextBlock.Text>
@@ -29,8 +41,8 @@
                 </TextBlock>
             </Label.Content>
         </Label>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="5,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" MinHeight="70" FontSize="15"/>
-        <Label x:Name="lbDepartment" HorizontalAlignment="Left" Margin="5,140,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="5,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" MinHeight="70" FontSize="15"/>
+        <Label x:Name="lbDepartment" HorizontalAlignment="Left" Margin="5,165,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
             <Label.Content>
                 <TextBlock>
                     <TextBlock.Text>
@@ -42,8 +54,8 @@
                 </TextBlock>
             </Label.Content>
         </Label>
-        <ComboBox x:Name="cbDepartment" HorizontalAlignment="Left" Margin="105,142" VerticalAlignment="Top" Width="120" FontSize="15"/>
-        <Label x:Name="lbOrderedDr" HorizontalAlignment="Left" Margin="5,175,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
+        <ComboBox x:Name="cbDepartment" HorizontalAlignment="Left" Margin="105,167" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Label x:Name="lbOrderedDr" HorizontalAlignment="Left" Margin="5,200,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
             <Label.Content>
                 <TextBlock>
                     <TextBlock.Text>
@@ -55,8 +67,8 @@
                 </TextBlock>
             </Label.Content>
         </Label>
-        <ComboBox x:Name="cbOrderedDr" HorizontalAlignment="Left" Margin="105,177" VerticalAlignment="Top" Width="120" FontSize="15" IsEditable="True"/>
-        <Label x:Name="lbWard" HorizontalAlignment="Left" Margin="5,210,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
+        <ComboBox x:Name="cbOrderedDr" HorizontalAlignment="Left" Margin="105,202" VerticalAlignment="Top" Width="120" FontSize="15" IsEditable="True"/>
+        <Label x:Name="lbWard" HorizontalAlignment="Left" Margin="5,235,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
             <Label.Content>
                 <TextBlock>
                     <TextBlock.Text>
@@ -68,8 +80,8 @@
                 </TextBlock>
             </Label.Content>
         </Label>
-        <ComboBox x:Name="cbWard" HorizontalAlignment="Left" Margin="105,212" VerticalAlignment="Top" Width="120" FontSize="15"/>
-        <Label x:Name="lbEquipment" HorizontalAlignment="Left" Margin="5,245,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
+        <ComboBox x:Name="cbWard" HorizontalAlignment="Left" Margin="105,237" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Label x:Name="lbEquipment" HorizontalAlignment="Left" Margin="5,270,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
             <Label.Content>
                 <TextBlock>
                     <TextBlock.Text>
@@ -81,8 +93,8 @@
                 </TextBlock>
             </Label.Content>
         </Label>
-        <ComboBox x:Name="cbEquipment" HorizontalAlignment="Left" Margin="105,247" VerticalAlignment="Top" Width="120" FontSize="15"/>
-        <Label x:Name="lbPlace" HorizontalAlignment="Left" Margin="5,280,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
+        <ComboBox x:Name="cbEquipment" HorizontalAlignment="Left" Margin="105,272" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Label x:Name="lbPlace" HorizontalAlignment="Left" Margin="5,305,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
             <Label.Content>
                 <TextBlock>
                     <TextBlock.Text>
@@ -94,19 +106,19 @@
                 </TextBlock>
             </Label.Content>
         </Label>
-        <ComboBox x:Name="cbPlace" HorizontalAlignment="Left" Margin="105,282" VerticalAlignment="Top" Width="120" FontSize="15"/>
-        <Label x:Name="lbOperators" Content="{x:Static properties:Resources.Operators}" HorizontalAlignment="Left" Margin="5,315,0,0" VerticalAlignment="Top" FontSize="15"/>
-        <Label x:Name="lbOp1" Content="1:" HorizontalAlignment="Left" Margin="5,340,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator1" HorizontalAlignment="Left" Margin="55,344,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
-        <Label x:Name="lbOp2" Content="2:" HorizontalAlignment="Left" Margin="5,375,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator2" HorizontalAlignment="Left" Margin="55,377,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
-        <Label x:Name="lbOp3" Content="3:" HorizontalAlignment="Left" Margin="5,410,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator3" HorizontalAlignment="Left" Margin="55,412,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
-        <Label x:Name="lbOp4" Content="4:" HorizontalAlignment="Left" Margin="5,445,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator4" HorizontalAlignment="Left" Margin="55,447,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
-        <Label x:Name="lbOp5" Content="5:" HorizontalAlignment="Left" Margin="5,480,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator5" HorizontalAlignment="Left" Margin="55,482,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
-        <Button x:Name="btExamCanceled" Content="canceled" HorizontalAlignment="Left" Height="25" Margin="15,600,0,0" VerticalAlignment="Bottom" Width="auto" MinWidth="80" FontSize="15" />
+        <ComboBox x:Name="cbPlace" HorizontalAlignment="Left" Margin="105,307" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Label x:Name="lbOperators" Content="{x:Static properties:Resources.Operators}" HorizontalAlignment="Left" Margin="5,340,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label x:Name="lbOp1" Content="1:" HorizontalAlignment="Left" Margin="5,365,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbOperator1" HorizontalAlignment="Left" Margin="55,367,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <Label x:Name="lbOp2" Content="2:" HorizontalAlignment="Left" Margin="5,400,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbOperator2" HorizontalAlignment="Left" Margin="55,402,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <Label x:Name="lbOp3" Content="3:" HorizontalAlignment="Left" Margin="5,435,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbOperator3" HorizontalAlignment="Left" Margin="55,437,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <Label x:Name="lbOp4" Content="4:" HorizontalAlignment="Left" Margin="5,470,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbOperator4" HorizontalAlignment="Left" Margin="55,472,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <Label x:Name="lbOp5" Content="5:" HorizontalAlignment="Left" Margin="5,505,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbOperator5" HorizontalAlignment="Left" Margin="55,507,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <Button x:Name="btExamCanceled" Content="{x:Static properties:Resources.Canceled}" HorizontalAlignment="Left" Height="25" Margin="15,0,0,15" VerticalAlignment="Bottom" Width="auto" MinWidth="80" FontSize="16" />
 
 
     </Grid>

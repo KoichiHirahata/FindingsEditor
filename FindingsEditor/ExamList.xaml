@@ -13,7 +13,7 @@
             <Button x:Name="btBlankDraft" Content="{x:Static properties:Resources.BlankDraft}" HorizontalAlignment="Left" Height="25" Margin="20,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btBlankDraft_Click"/>
             <Button x:Name="btDone" Content="{x:Static properties:Resources.Done}" HorizontalAlignment="Left" Height="25" Margin="20,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btDone_Click"/>
             <Button x:Name="btChecked" Content="{x:Static properties:Resources.Checked}" HorizontalAlignment="Left" Height="25" Margin="20,0,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btChecked_Click"/>
-            <Button x:Name="btCanceled" Content="{x:Static properties:Resources.Canceled}" HorizontalAlignment="Left" Height="25" Margin="20,0,20,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btCanceled_Click"/>
+            <Button x:Name="btCanceled" Content="{x:Static properties:Resources.Canceled_E}" HorizontalAlignment="Left" Height="25" Margin="20,0,20,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="14" Click="btCanceled_Click"/>
         </StackPanel>
         <DataGrid x:Name="dgExamList" HorizontalAlignment="Stretch" Margin="0,40,0,0" VerticalAlignment="Stretch" FontSize="16" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.ColumnHeaderStyle>

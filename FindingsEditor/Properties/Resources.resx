@@ -420,7 +420,7 @@
   <data name="BlankDraft" xml:space="preserve">
     <value>Blank/Draft(_B)</value>
   </data>
-  <data name="Canceled" xml:space="preserve">
+  <data name="Canceled_E" xml:space="preserve">
     <value>Canceled(_E)</value>
   </data>
   <data name="Checked" xml:space="preserve">
@@ -467,5 +467,11 @@
   </data>
   <data name="ViewImages" xml:space="preserve">
     <value>View images</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
 </root>

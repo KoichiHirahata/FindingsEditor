@@ -363,6 +363,10 @@
           <source>View images</source>
           <target state="signed-off">画像表示</target>
         </trans-unit>
+        <trans-unit id="Resx/Close" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="signed-off">閉じる</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="signed-off">疑い</target>
@@ -376,12 +380,15 @@
           <target state="signed-off">チェック済(_C)</target>
         </trans-unit>
         <trans-unit id="Resx/Canceled" translate="yes" xml:space="preserve">
-          <source>Canceled(_E)</source>
-          <target state="signed-off">実施せず(_E)</target>
-        </trans-unit>
+          <source>Canceled</source>
+          <target state="signed-off">実施せず</target></trans-unit>
         <trans-unit id="Resx/BlankDraft" translate="yes" xml:space="preserve">
           <source>Blank/Draft(_B)</source>
           <target state="signed-off">未記入/草稿(_B)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Canceled_E" translate="yes" xml:space="preserve">
+          <source>Canceled(_E)</source>
+          <target state="signed-off">実施せず(_E)</target>
         </trans-unit>
         <trans-unit id="Resx/SelectGender" translate="yes" xml:space="preserve">
           <source>Select gender.</source>

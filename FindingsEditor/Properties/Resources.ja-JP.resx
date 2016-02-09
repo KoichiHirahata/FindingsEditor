@@ -421,7 +421,7 @@
     <value>チェック済(_C)</value>
   </data>
   <data name="Canceled" xml:space="preserve">
-    <value>実施せず(_E)</value>
+    <value>実施せず</value>
   </data>
   <data name="BlankDraft" xml:space="preserve">
     <value>未記入/草稿(_B)</value>
@@ -467,5 +467,11 @@
   </data>
   <data name="ViewImages" xml:space="preserve">
     <value>画像表示</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Canceled_E" xml:space="preserve">
+    <value>実施せず(_E)</value>
   </data>
 </root>

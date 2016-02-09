@@ -382,6 +382,10 @@
           <source>View images</source>
           <target state="new">View images</target>
         </trans-unit>
+        <trans-unit id="Resx/Close" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="new">Close</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="new">Suspect</target>
@@ -395,12 +399,16 @@
           <target state="new">Checked(_C)</target>
         </trans-unit>
         <trans-unit id="Resx/Canceled" translate="yes" xml:space="preserve">
-          <source>Canceled(_E)</source>
-          <target state="new">Canceled(_E)</target>
+          <source>Canceled</source>
+          <target state="new">Canceled</target>
         </trans-unit>
         <trans-unit id="Resx/BlankDraft" translate="yes" xml:space="preserve">
           <source>Blank/Draft(_B)</source>
           <target state="new">Blank/Draft(_B)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Canceled_E" translate="yes" xml:space="preserve">
+          <source>Canceled(_E)</source>
+          <target state="new">Canceled(_E)</target>
         </trans-unit>
         <trans-unit id="Resx/SelectGender" translate="yes" xml:space="preserve">
           <source>Select gender.</source>

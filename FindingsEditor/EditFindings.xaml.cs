@@ -69,7 +69,24 @@ namespace FindingsEditor
 
             #endregion
 
+            #region Information
+            lbPatient.Content = "ID: " + exam.pt_id + "   " + Properties.Resources.Name + ": " + exam.pt_name;
+            lbDate.Content = Properties.Resources.Date + Properties.Resources.Colon + exam.exam_day.ToShortDateString() + "  "
+                + Properties.Resources.ExamType + Properties.Resources.Colon + exam.getExamTypeName();
+            lbAge.Content = Properties.Resources.Age + Properties.Resources.Colon + exam.getAge().ToString(); 
 
+            if (!canEdit)
+            { btSaveClose.Content = Properties.Resources.Close; }
+
+            //cbExamStatus initialization
+            cbExamStatus.ItemsSource = CLocalDB.localDB.Tables["exam_status"].DefaultView;
+            cbExamStatus.SelectedValuePath = "status_no";
+            cbExamStatus.DisplayMemberPath = "status_name";
+            if (string.IsNullOrWhiteSpace(exam.exam_status.ToString()) || (exam.exam_status == 0))
+            { cbExamStatus.SelectedValue = 1; }
+            else
+            { cbExamStatus.SelectedValue = exam.exam_status; }
+            #endregion
 
         }
 
