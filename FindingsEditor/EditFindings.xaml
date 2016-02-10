@@ -41,7 +41,7 @@
                 </TextBlock>
             </Label.Content>
         </Label>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="5,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" MinHeight="70" FontSize="15"/>
+        <TextBox x:Name="tbPurpose" HorizontalAlignment="Left" Height="23" Margin="5,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" MinHeight="70" FontSize="15"/>
         <Label x:Name="lbDepartment" HorizontalAlignment="Left" Margin="5,165,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right" FontSize="15">
             <Label.Content>
                 <TextBlock>
@@ -109,15 +109,20 @@
         <ComboBox x:Name="cbPlace" HorizontalAlignment="Left" Margin="105,307" VerticalAlignment="Top" Width="120" FontSize="15"/>
         <Label x:Name="lbOperators" Content="{x:Static properties:Resources.Operators}" HorizontalAlignment="Left" Margin="5,340,0,0" VerticalAlignment="Top" FontSize="15"/>
         <Label x:Name="lbOp1" Content="1:" HorizontalAlignment="Left" Margin="5,365,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator1" HorizontalAlignment="Left" Margin="55,367,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <ComboBox x:Name="cbOperator1" HorizontalAlignment="Left" Margin="55,367,0,0" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Button x:Name="btClearOp1" Content="Clear" HorizontalAlignment="Left" Height="25" Margin="190,367,0,0" VerticalAlignment="Top" Width="Auto" MinWidth="35" FontSize="13" Click="btClearOp1_Click"/>
         <Label x:Name="lbOp2" Content="2:" HorizontalAlignment="Left" Margin="5,400,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator2" HorizontalAlignment="Left" Margin="55,402,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <ComboBox x:Name="cbOperator2" HorizontalAlignment="Left" Margin="55,402,0,0" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Button x:Name="btClearOp2" Content="Clear" HorizontalAlignment="Left" Height="25" Margin="190,402,0,0" VerticalAlignment="Top" Width="Auto" MinWidth="30" FontSize="13" Click="btClearOp2_Click"/>
         <Label x:Name="lbOp3" Content="3:" HorizontalAlignment="Left" Margin="5,435,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator3" HorizontalAlignment="Left" Margin="55,437,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <ComboBox x:Name="cbOperator3" HorizontalAlignment="Left" Margin="55,437,0,0" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Button x:Name="btClearOp3" Content="Clear" HorizontalAlignment="Left" Height="25" Margin="190,437,0,0" VerticalAlignment="Top" Width="Auto" MinWidth="30" FontSize="13" Click="btClearOp3_Click"/>
         <Label x:Name="lbOp4" Content="4:" HorizontalAlignment="Left" Margin="5,470,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator4" HorizontalAlignment="Left" Margin="55,472,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <ComboBox x:Name="cbOperator4" HorizontalAlignment="Left" Margin="55,472,0,0" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Button x:Name="btClearOp4" Content="Clear" HorizontalAlignment="Left" Height="25" Margin="190,472,0,0" VerticalAlignment="Top" Width="Auto" MinWidth="30" FontSize="13" Click="btClearOp4_Click"/>
         <Label x:Name="lbOp5" Content="5:" HorizontalAlignment="Left" Margin="5,505,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
-        <ComboBox x:Name="cbOperator5" HorizontalAlignment="Left" Margin="55,507,0,0" VerticalAlignment="Top" Width="170" FontSize="15"/>
+        <ComboBox x:Name="cbOperator5" HorizontalAlignment="Left" Margin="55,507,0,0" VerticalAlignment="Top" Width="120" FontSize="15"/>
+        <Button x:Name="btClearOp5" Content="Clear" HorizontalAlignment="Left" Height="25" Margin="190,507,0,0" VerticalAlignment="Top" Width="Auto" MinWidth="30" FontSize="13" Click="btClearOp5_Click"/>
         <Button x:Name="btExamCanceled" Content="{x:Static properties:Resources.Canceled}" HorizontalAlignment="Left" Height="25" Margin="15,0,0,15" VerticalAlignment="Bottom" Width="auto" MinWidth="80" FontSize="16" />
 
 

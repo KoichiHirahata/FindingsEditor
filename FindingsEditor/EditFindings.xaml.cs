@@ -78,7 +78,7 @@ namespace FindingsEditor
             if (!canEdit)
             { btSaveClose.Content = Properties.Resources.Close; }
 
-            //cbExamStatus initialization
+            #region cbExamStatus initialization
             cbExamStatus.ItemsSource = CLocalDB.localDB.Tables["exam_status"].DefaultView;
             cbExamStatus.SelectedValuePath = "status_no";
             cbExamStatus.DisplayMemberPath = "status_name";
@@ -88,7 +88,242 @@ namespace FindingsEditor
             { cbExamStatus.SelectedValue = exam.exam_status; }
             #endregion
 
+            #region tbPurpose initialization
+            tbPurpose.Text = exam.purpose;
+            if (canEdit)
+            { tbPurpose.IsReadOnly = false; }
+            else
+            { tbPurpose.IsReadOnly = true; }
+            #endregion
+
+            #region cbDepartment initialization
+            cbDepartment.ItemsSource = CLocalDB.localDB.Tables["department"].DefaultView;
+            cbDepartment.SelectedValuePath = "code";
+            cbDepartment.DisplayMemberPath = "name1";
+            cbDepartment.SelectedValue = exam.department;
+            if (!canEdit)
+            { cbDepartment.IsEnabled = false; }
+            #endregion
+
+            #region cbOrderedDr initialization
+            cbOrderedDr.ItemsSource = CLocalDB.localDB.Tables["orderDr"].DefaultView;
+            cbOrderedDr.DisplayMemberPath = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.order_dr))
+            { cbOrderedDr.SelectedIndex = -1; }
+            else
+            {
+                cbOrderedDr.SelectedIndex = -1;//これをしないと項目にないテキストがちゃんと反映されない。
+                this.cbOrderedDr.Text = exam.order_dr;
+            }
+            if (!canEdit)
+            { cbOrderedDr.IsEnabled = false; }
+            #endregion
+
+            #region cbWard initialization
+            cbWard.ItemsSource = CLocalDB.localDB.Tables["ward"].DefaultView;
+            cbWard.SelectedValuePath = "ward_no";
+            cbWard.DisplayMemberPath = "ward";
+            cbWard.SelectedValue = exam.ward_id;
+            if (!canEdit)
+            { cbWard.IsEnabled = false; }
+            #endregion
+
+            #region cbEquipment initialization
+            switch (exam.exam_type)
+            {
+                case 1:
+                    cbEquipment.ItemsSource = CLocalDB.localDB.Tables["equipmentGF"].DefaultView;
+                    break;
+                case 2:
+                    cbEquipment.ItemsSource = CLocalDB.localDB.Tables["equipmentCF"].DefaultView;
+                    break;
+                case 3:
+                    cbEquipment.ItemsSource = CLocalDB.localDB.Tables["equipmentSV"].DefaultView;
+                    break;
+                case 4:
+                    cbEquipment.ItemsSource = CLocalDB.localDB.Tables["equipmentS"].DefaultView;
+                    break;
+                case 1001:
+                case 1002:
+                case 1003:
+                case 1004:
+                case 1005:
+                case 1006:
+                case 1007:
+                case 1008:
+                case 1009:
+                case 1010:
+                case 1011:
+                case 1012:
+                    cbEquipment.ItemsSource = CLocalDB.localDB.Tables["equipmentUS"].DefaultView;
+                    break;
+            }
+            cbEquipment.SelectedValuePath = "equipment_no";
+            cbEquipment.DisplayMemberPath = "name";
+            cbEquipment.SelectedValue = exam.equipment;
+            if (!canEdit)
+            { cbEquipment.IsEnabled = false; }
+            #endregion
+
+            #region cbPlace initialization
+            switch (exam.exam_type)
+            {
+                case 99:
+                    cbPlace.ItemsSource = CLocalDB.localDB.Tables["placeUS"].DefaultView;
+                    break;
+                default:
+                    cbPlace.ItemsSource = CLocalDB.localDB.Tables["placeEndo"].DefaultView;
+                    break;
+            }
+            cbPlace.SelectedValuePath = "place_no";
+            cbPlace.DisplayMemberPath = "name1";
+            if (string.IsNullOrWhiteSpace(exam.place_no.ToString()))
+            { cbPlace.SelectedIndex = -1; }
+            else
+            { cbPlace.SelectedValue = exam.place_no; }
+            if (!canEdit)
+            { cbPlace.IsEnabled = false; }
+            #endregion
+
+            #region cbOperator1 initialization
+            cbOperator1.ItemsSource = CLocalDB.localDB.Tables["operator1"].DefaultView;
+            cbOperator1.SelectedValuePath = "operator_id";
+            cbOperator1.DisplayMemberPath = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.operator1))
+            { cbOperator1.SelectedIndex = -1; }
+            else
+            { cbOperator1.SelectedValue = exam.operator1; }
+
+            if (!canEdit)
+            {
+                cbOperator1.IsEnabled = false;
+                btClearOp1.Visibility = Visibility.Collapsed;
+            }
+
+            if (shouldFillOperatorWithUser(canEdit, exam.exam_status))
+            { cbOperator1.SelectedValue = db_operator.operatorID; }
+            #endregion
+
+            #region cbOperator2 initialization
+            cbOperator2.ItemsSource = CLocalDB.localDB.Tables["operator2"].DefaultView;
+            cbOperator2.SelectedValuePath = "operator_id";
+            cbOperator2.DisplayMemberPath = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.operator2))
+            { cbOperator2.SelectedIndex = -1; }
+            else
+            { cbOperator2.SelectedValue = exam.operator2; }
+
+            if (!canEdit)
+            {
+                cbOperator2.IsEnabled = false;
+                btClearOp2.Visibility = Visibility.Collapsed;
+            }
+            #endregion
+
+            #region cbOperator3 initialization
+            cbOperator3.ItemsSource = CLocalDB.localDB.Tables["operator3"].DefaultView;
+            cbOperator3.SelectedValuePath = "operator_id";
+            cbOperator3.DisplayMemberPath = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.operator3))
+            { cbOperator3.SelectedIndex = -1; }
+            else
+            { cbOperator3.SelectedValue = exam.operator3; }
+
+            if (!canEdit)
+            {
+                cbOperator3.IsEnabled = false;
+                btClearOp3.Visibility = Visibility.Collapsed;
+            }
+            #endregion
+
+            #region cbOperator4 initialization
+            cbOperator4.ItemsSource = CLocalDB.localDB.Tables["operator4"].DefaultView;
+            cbOperator4.SelectedValuePath = "operator_id";
+            cbOperator4.DisplayMemberPath = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.operator4))
+            { cbOperator4.SelectedIndex = -1; }
+            else
+            { cbOperator4.SelectedValue = exam.operator4; }
+
+            if (!canEdit)
+            {
+                cbOperator4.IsEnabled = false;
+                btClearOp4.Visibility = Visibility.Collapsed;
+            }
+            #endregion
+
+            #region cbOperator5 initialization
+            cbOperator5.ItemsSource = CLocalDB.localDB.Tables["operator5"].DefaultView;
+            cbOperator5.SelectedValuePath = "operator_id";
+            cbOperator5.DisplayMemberPath = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.operator5))
+            { cbOperator5.SelectedIndex = -1; }
+            else
+            { cbOperator5.SelectedValue = exam.operator5; }
+
+            if (!canEdit)
+            {
+                cbOperator5.IsEnabled = false;
+                btClearOp5.Visibility = Visibility.Collapsed;
+            }
+            #endregion
+
+            if (!canEdit)
+            { btExamCanceled.Visibility = Visibility.Collapsed; }
+
+            #endregion
+
+
+
+
         }
+
+        #region information
+        public static bool shouldFillOperatorWithUser(bool can_edit, int exam_status)
+        {
+            if (can_edit && exam_status == 0)
+            { return true; }
+            else
+            { return false; }
+        }
+
+        #region ClearOperatorButton
+        private void btClearOp1_Click(object sender, EventArgs e)
+        {
+            edited = true;
+            cbOperator1.SelectedIndex = -1;
+        }
+
+        private void btClearOp2_Click(object sender, EventArgs e)
+        {
+            edited = true;
+            cbOperator2.SelectedIndex = -1;
+        }
+
+        private void btClearOp3_Click(object sender, EventArgs e)
+        {
+            edited = true;
+            cbOperator3.SelectedIndex = -1;
+        }
+
+        private void btClearOp4_Click(object sender, EventArgs e)
+        {
+            edited = true;
+            cbOperator4.SelectedIndex = -1;
+        }
+
+        private void btClearOp5_Click(object sender, EventArgs e)
+        {
+            edited = true;
+            this.cbOperator5.SelectedIndex = -1;
+        }
+        #endregion
+        #endregion
+
+
+
+
+
 
         #region Timer
         //This function necessary for timer procedure. Call updateLockTime.
