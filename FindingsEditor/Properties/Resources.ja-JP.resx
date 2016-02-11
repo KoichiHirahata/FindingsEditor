@@ -474,4 +474,10 @@
   <data name="Canceled_E" xml:space="preserve">
     <value>実施せず(_E)</value>
   </data>
+  <data name="PathologyTest" xml:space="preserve">
+    <value>病理検査</value>
+  </data>
+  <data name="Findings" xml:space="preserve">
+    <value>検査所見</value>
+  </data>
 </root>

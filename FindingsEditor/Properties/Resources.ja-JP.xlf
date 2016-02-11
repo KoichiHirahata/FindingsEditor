@@ -367,6 +367,14 @@
           <source>Close</source>
           <target state="signed-off">閉じる</target>
         </trans-unit>
+        <trans-unit id="Resx/Findings" translate="yes" xml:space="preserve">
+          <source>Findings</source>
+          <target state="signed-off">検査所見</target>
+        </trans-unit>
+        <trans-unit id="Resx/PathologyTest" translate="yes" xml:space="preserve">
+          <source>Pathology test</source>
+          <target state="signed-off">病理検査</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="signed-off">疑い</target>

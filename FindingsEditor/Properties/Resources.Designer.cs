@@ -457,6 +457,15 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Findings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Findings {
+            get {
+                return ResourceManager.GetString("Findings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Findings Editor に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string FindingsEditor {
@@ -714,6 +723,15 @@ namespace FindingsEditor.Properties {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pathology test に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PathologyTest {
+            get {
+                return ResourceManager.GetString("PathologyTest", resourceCulture);
             }
         }
         

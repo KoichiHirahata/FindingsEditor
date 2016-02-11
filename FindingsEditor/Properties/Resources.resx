@@ -474,4 +474,10 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Findings" xml:space="preserve">
+    <value>Findings</value>
+  </data>
+  <data name="PathologyTest" xml:space="preserve">
+    <value>Pathology test</value>
+  </data>
 </root>

@@ -386,6 +386,14 @@
           <source>Close</source>
           <target state="new">Close</target>
         </trans-unit>
+        <trans-unit id="Resx/Findings" translate="yes" xml:space="preserve">
+          <source>Findings</source>
+          <target state="new">Findings</target>
+        </trans-unit>
+        <trans-unit id="Resx/PathologyTest" translate="yes" xml:space="preserve">
+          <source>Pathology test</source>
+          <target state="new">Pathology test</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="new">Suspect</target>
