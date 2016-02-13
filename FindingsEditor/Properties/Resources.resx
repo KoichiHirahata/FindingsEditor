@@ -423,7 +423,7 @@
   <data name="Canceled_E" xml:space="preserve">
     <value>Canceled(_E)</value>
   </data>
-  <data name="Checked" xml:space="preserve">
+  <data name="Checked_C" xml:space="preserve">
     <value>Checked(_C)</value>
   </data>
   <data name="Done" xml:space="preserve">
@@ -479,5 +479,32 @@
   </data>
   <data name="PathologyTest" xml:space="preserve">
     <value>Pathology test</value>
+  </data>
+  <data name="AddDiagnosis" xml:space="preserve">
+    <value>Add diagnosis</value>
+  </data>
+  <data name="AddNormal" xml:space="preserve">
+    <value>Add "Normal"</value>
+  </data>
+  <data name="Checked" xml:space="preserve">
+    <value>Checked</value>
+  </data>
+  <data name="Checker" xml:space="preserve">
+    <value>Checker</value>
+  </data>
+  <data name="CheckersComment" xml:space="preserve">
+    <value>Checker's comment</value>
+  </data>
+  <data name="Diagnosed" xml:space="preserve">
+    <value>Diagnosed</value>
+  </data>
+  <data name="DiagnosedDr" xml:space="preserve">
+    <value>Diagnosed Dr.</value>
+  </data>
+  <data name="PathologyTestResults" xml:space="preserve">
+    <value>Pathology test results</value>
+  </data>
+  <data name="PathologyTestWasPerformed" xml:space="preserve">
+    <value>Pathology test was performed</value>
   </data>
 </root>

@@ -418,7 +418,7 @@
     <value>検査一覧</value>
   </data>
   <data name="Checked" xml:space="preserve">
-    <value>チェック済(_C)</value>
+    <value>二次診断済</value>
   </data>
   <data name="Canceled" xml:space="preserve">
     <value>実施せず</value>
@@ -479,5 +479,29 @@
   </data>
   <data name="Findings" xml:space="preserve">
     <value>検査所見</value>
+  </data>
+  <data name="Diagnosed" xml:space="preserve">
+    <value>診断医</value>
+  </data>
+  <data name="CheckersComment" xml:space="preserve">
+    <value>二次診断医コメント</value>
+  </data>
+  <data name="Checker" xml:space="preserve">
+    <value>二次診断医</value>
+  </data>
+  <data name="AddNormal" xml:space="preserve">
+    <value>「正常」追加</value>
+  </data>
+  <data name="AddDiagnosis" xml:space="preserve">
+    <value>診断名追加</value>
+  </data>
+  <data name="PathologyTestWasPerformed" xml:space="preserve">
+    <value>病理検査あり</value>
+  </data>
+  <data name="DiagnosedDr" xml:space="preserve">
+    <value>診断医</value>
+  </data>
+  <data name="Checked_C" xml:space="preserve">
+    <value>二次診断済(_C)</value>
   </data>
 </root>

@@ -394,6 +394,38 @@
           <source>Pathology test</source>
           <target state="new">Pathology test</target>
         </trans-unit>
+        <trans-unit id="Resx/Diagnosed" translate="yes" xml:space="preserve">
+          <source>Diagnosed</source>
+          <target state="new">Diagnosed</target>
+        </trans-unit>
+        <trans-unit id="Resx/DiagnosedDr" translate="yes" xml:space="preserve">
+          <source>Diagnosed Dr.</source>
+          <target state="new">Diagnosed Dr.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PathologyTestResults" translate="yes" xml:space="preserve">
+          <source>Pathology test results</source>
+          <target state="new">Pathology test results</target>
+        </trans-unit>
+        <trans-unit id="Resx/PathologyTestWasPerformed" translate="yes" xml:space="preserve">
+          <source>Pathology test was performed</source>
+          <target state="new">Pathology test was performed</target>
+        </trans-unit>
+        <trans-unit id="Resx/CheckersComment" translate="yes" xml:space="preserve">
+          <source>Checker's comment</source>
+          <target state="new">Checker's comment</target>
+        </trans-unit>
+        <trans-unit id="Resx/Checker" translate="yes" xml:space="preserve">
+          <source>Checker</source>
+          <target state="new">Checker</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddNormal" translate="yes" xml:space="preserve">
+          <source>Add "Normal"</source>
+          <target state="new">Add "Normal"</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddDiagnosis" translate="yes" xml:space="preserve">
+          <source>Add diagnosis</source>
+          <target state="new">Add diagnosis</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="new">Suspect</target>
@@ -403,8 +435,8 @@
           <target state="new">Permission denied. Read only mode.</target>
         </trans-unit>
         <trans-unit id="Resx/Checked" translate="yes" xml:space="preserve">
-          <source>Checked(_C)</source>
-          <target state="new">Checked(_C)</target>
+          <source>Checked</source>
+          <target state="new">Checked</target>
         </trans-unit>
         <trans-unit id="Resx/Canceled" translate="yes" xml:space="preserve">
           <source>Canceled</source>
@@ -417,6 +449,10 @@
         <trans-unit id="Resx/Canceled_E" translate="yes" xml:space="preserve">
           <source>Canceled(_E)</source>
           <target state="new">Canceled(_E)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Checked_C" translate="yes" xml:space="preserve">
+          <source>Checked(_C)</source>
+          <target state="new">Checked(_C)</target>
         </trans-unit>
         <trans-unit id="Resx/SelectGender" translate="yes" xml:space="preserve">
           <source>Select gender.</source>

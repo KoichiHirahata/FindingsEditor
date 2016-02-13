@@ -61,6 +61,24 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Add diagnosis に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AddDiagnosis {
+            get {
+                return ResourceManager.GetString("AddDiagnosis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Add &quot;Normal&quot; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AddNormal {
+            get {
+                return ResourceManager.GetString("AddNormal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Age に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Age {
@@ -124,11 +142,38 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
-        ///   Checked(_C) に類似しているローカライズされた文字列を検索します。
+        ///   Checked に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Checked {
             get {
                 return ResourceManager.GetString("Checked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Checked(_C) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Checked_C {
+            get {
+                return ResourceManager.GetString("Checked_C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Checker に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Checker {
+            get {
+                return ResourceManager.GetString("Checker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Checker&apos;s comment に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CheckersComment {
+            get {
+                return ResourceManager.GetString("CheckersComment", resourceCulture);
             }
         }
         
@@ -318,6 +363,24 @@ namespace FindingsEditor.Properties {
         public static string Departments {
             get {
                 return ResourceManager.GetString("Departments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Diagnosed に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Diagnosed {
+            get {
+                return ResourceManager.GetString("Diagnosed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Diagnosed Dr. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DiagnosedDr {
+            get {
+                return ResourceManager.GetString("DiagnosedDr", resourceCulture);
             }
         }
         
@@ -732,6 +795,24 @@ namespace FindingsEditor.Properties {
         public static string PathologyTest {
             get {
                 return ResourceManager.GetString("PathologyTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pathology test results に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PathologyTestResults {
+            get {
+                return ResourceManager.GetString("PathologyTestResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pathology test was performed に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PathologyTestWasPerformed {
+            get {
+                return ResourceManager.GetString("PathologyTestWasPerformed", resourceCulture);
             }
         }
         

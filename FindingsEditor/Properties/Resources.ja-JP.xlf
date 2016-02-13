@@ -375,6 +375,38 @@
           <source>Pathology test</source>
           <target state="signed-off">病理検査</target>
         </trans-unit>
+        <trans-unit id="Resx/Diagnosed" translate="yes" xml:space="preserve">
+          <source>Diagnosed</source>
+          <target state="signed-off">診断医</target>
+        </trans-unit>
+        <trans-unit id="Resx/DiagnosedDr" translate="yes" xml:space="preserve">
+          <source>Diagnosed Dr.</source>
+          <target state="signed-off">診断医</target>
+        </trans-unit>
+        <trans-unit id="Resx/PathologyTestResults" translate="yes" xml:space="preserve">
+          <source>Pathology test results</source>
+          <target state="signed-off">病理検査結果</target>
+        </trans-unit>
+        <trans-unit id="Resx/PathologyTestWasPerformed" translate="yes" xml:space="preserve">
+          <source>Pathology test was performed</source>
+          <target state="signed-off">病理検査あり</target>
+        </trans-unit>
+        <trans-unit id="Resx/CheckersComment" translate="yes" xml:space="preserve">
+          <source>Checker's comment</source>
+          <target state="signed-off">二次診断医コメント</target>
+        </trans-unit>
+        <trans-unit id="Resx/Checker" translate="yes" xml:space="preserve">
+          <source>Checker</source>
+          <target state="signed-off">二次診断医</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddNormal" translate="yes" xml:space="preserve">
+          <source>Add "Normal"</source>
+          <target state="signed-off">「正常」追加</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddDiagnosis" translate="yes" xml:space="preserve">
+          <source>Add diagnosis</source>
+          <target state="signed-off">診断名追加</target>
+        </trans-unit>
         <trans-unit id="Resx/Suspect" translate="yes" xml:space="preserve">
           <source>Suspect</source>
           <target state="signed-off">疑い</target>
@@ -384,9 +416,8 @@
           <target state="signed-off">編集権限が得られませんでした。読み込み専用モードです。</target>
         </trans-unit>
         <trans-unit id="Resx/Checked" translate="yes" xml:space="preserve">
-          <source>Checked(_C)</source>
-          <target state="signed-off">チェック済(_C)</target>
-        </trans-unit>
+          <source>Checked</source>
+          <target state="signed-off">二次診断済</target></trans-unit>
         <trans-unit id="Resx/Canceled" translate="yes" xml:space="preserve">
           <source>Canceled</source>
           <target state="signed-off">実施せず</target></trans-unit>
@@ -397,6 +428,10 @@
         <trans-unit id="Resx/Canceled_E" translate="yes" xml:space="preserve">
           <source>Canceled(_E)</source>
           <target state="signed-off">実施せず(_E)</target>
+        </trans-unit>
+        <trans-unit id="Resx/Checked_C" translate="yes" xml:space="preserve">
+          <source>Checked(_C)</source>
+          <target state="signed-off">二次診断済(_C)</target>
         </trans-unit>
         <trans-unit id="Resx/SelectGender" translate="yes" xml:space="preserve">
           <source>Select gender.</source>

@@ -123,11 +123,73 @@
         <Label x:Name="lbOp5" Content="5:" HorizontalAlignment="Left" Margin="5,505,0,0" VerticalAlignment="Top" FontSize="15" Width="50" HorizontalContentAlignment="Right"/>
         <ComboBox x:Name="cbOperator5" HorizontalAlignment="Left" Margin="55,507,0,0" VerticalAlignment="Top" Width="120" FontSize="15"/>
         <Button x:Name="btClearOp5" Content="Clear" HorizontalAlignment="Left" Height="25" Margin="190,507,0,0" VerticalAlignment="Top" Width="Auto" MinWidth="30" FontSize="13" Click="btClearOp5_Click"/>
-        <CheckBox x:Name="cbPathology" Content="{x:Static properties:Resources.PathologyTest}" HorizontalAlignment="Left" Margin="55,570,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <CheckBox x:Name="cbPathology" Content="{x:Static properties:Resources.PathologyTestWasPerformed}" HorizontalAlignment="Left" Margin="10,570,0,0" VerticalAlignment="Top" FontSize="15"/>
         <Button x:Name="btExamCanceled" Content="{x:Static properties:Resources.Canceled}" HorizontalAlignment="Left" Height="25" Margin="55,0,0,25" VerticalAlignment="Bottom" Width="auto" MinWidth="80" FontSize="16" />
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="618" Margin="260,50,0,0" VerticalAlignment="Top" Width="540">
             <TabItem Header="{x:Static properties:Resources.Findings}" FontSize="15">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="dgDiagnoses" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="190" Width="320"/>
+                    <Button x:Name="btAddNormal" Content="{x:Static properties:Resources.AddNormal}" HorizontalAlignment="Left" Height="25" Margin="350,20,0,0" VerticalAlignment="Top" Width="auto" MinWidth="130" FontSize="16" />
+                    <Button x:Name="btAddDiagnosis" Content="{x:Static properties:Resources.AddDiagnosis}" HorizontalAlignment="Left" Height="25" Margin="350,55,0,0" VerticalAlignment="Top" Width="auto" MinWidth="130" FontSize="16" />
+                    <Label x:Name="lbFindings" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Right" FontSize="15">
+                        <Label.Content>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0}{1}">
+                                        <Binding Source="{x:Static properties:Resources.Findings}"/>
+                                        <Binding Source="{x:Static properties:Resources.Colon}"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Label.Content>
+                    </Label>
+                    <TextBox x:Name="tbFindings" HorizontalAlignment="Left" Height="250" Margin="10,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="515" FontSize="15"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,480,10,0" VerticalAlignment="Top" Height="auto">
+                        <Label x:Name="lbDiagnosedDr" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Right" FontSize="15">
+                            <Label.Content>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0}{1}">
+                                            <Binding Source="{x:Static properties:Resources.DiagnosedDr}"/>
+                                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </Label.Content>
+                        </Label>
+                        <ComboBox x:Name="cbDiagnosedDr" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top" Width="140" FontSize="15"/>
+                        <Button x:Name="btSetDiagnosedDr" Content="{x:Static properties:Resources.Diagnosed}" HorizontalAlignment="Left" Height="25" Margin="5,2,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="15" />
+                    </StackPanel>
+                    <Label x:Name="lbCheckersComment" HorizontalAlignment="Left" Margin="10,480,0,0" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Right" FontSize="15">
+                        <Label.Content>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0}{1}">
+                                        <Binding Source="{x:Static properties:Resources.CheckersComment}"/>
+                                        <Binding Source="{x:Static properties:Resources.Colon}"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Label.Content>
+                    </Label>
+                    <TextBox x:Name="tbCheckersComment" HorizontalAlignment="Left" Height="45" Margin="10,510,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="515" FontSize="15"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,557,10,0" VerticalAlignment="Top" Height="auto">
+                        <Label x:Name="lbChecker" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Right" FontSize="15">
+                            <Label.Content>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0}{1}">
+                                            <Binding Source="{x:Static properties:Resources.Checker}"/>
+                                            <Binding Source="{x:Static properties:Resources.Colon}"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </Label.Content>
+                        </Label>
+                        <ComboBox x:Name="cbChecker" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top" Width="140" FontSize="15"/>
+                        <Button x:Name="btSetChecker" Content="{x:Static properties:Resources.Checked}" HorizontalAlignment="Left" Height="25" Margin="5,2,0,0" VerticalAlignment="Top" Width="auto" MinWidth="80" FontSize="15" />
+                    </StackPanel>
+                </Grid>
             </TabItem>
             <TabItem Header="Figure 1" FontSize="15">
                 <Grid Background="#FFE5E5E5"/>
@@ -136,9 +198,24 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="{x:Static properties:Resources.PathologyTest}" FontSize="15">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="lbPathologyTestResults" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Right" FontSize="15">
+                        <Label.Content>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0}{1}">
+                                        <Binding Source="{x:Static properties:Resources.PathologyTestResults}"/>
+                                        <Binding Source="{x:Static properties:Resources.Colon}"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Label.Content>
+                    </Label>
+                    <TextBox x:Name="tbPathologyTestResults" HorizontalAlignment="Left" Height="546" Margin="10,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="515" FontSize="15"/>
+                </Grid>
             </TabItem>
         </TabControl>
+        <DataGrid x:Name="dgWords" HorizontalAlignment="Left" Margin="805,50,0,0" VerticalAlignment="Top" Height="617" Width="457"/>
 
 
     </Grid>
