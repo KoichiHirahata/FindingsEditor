@@ -1,5 +1,6 @@
 #Findings Editor（内視鏡・超音波検査所見入力システム） Ver.1.24.2
-【動作環境】Windows XP/7/8/8.1
+###動作環境
+Windows XP/7/8/8.1
 【取り扱い種別】フリーソフト
 【開発】（株）メイドインクリニック（http://www.madeinclinic.jp）
 【開発環境】Microsoft Visual Studio 2013 (Visual C# 2013)
