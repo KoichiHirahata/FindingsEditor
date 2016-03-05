@@ -1,202 +1,202 @@
-�y�\�t�g���zFindings Editor�i�������E�����g�����������̓V�X�e���j Ver.1.24.2
-�y������zWindows XP/7/8/8.1
-�y��舵����ʁz�t���[�\�t�g
-�y�J���z�i���j���C�h�C���N���j�b�N�ihttp://www.madeinclinic.jp�j
-�y�J�����zMicrosoft Visual Studio 2013 (Visual C# 2013)
-�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\�\
+【ソフト名】Findings Editor（内視鏡・超音波検査所見入力システム） Ver.1.24.2
+【動作環境】Windows XP/7/8/8.1
+【取り扱い種別】フリーソフト
+【開発】（株）メイドインクリニック（http://www.madeinclinic.jp）
+【開発環境】Microsoft Visual Studio 2013 (Visual C# 2013)
+―――――――――――――――――――――――――――――――――――――
 
-#�T�v
-�������⒴���g�����̏����A�M�@�ł͂ǂ�����Ă܂����H
-���ɏ�����Ă��܂����H
-�d�q�J���e�ɒ��ڋL���H
-���������[�J�[�̃V�X�e���œ��́H
-���ł͂����΂�܂����A�ǂ����Ă��{�����Ɍ����Ă��܂��܂��B
-���̃��[�J�[�̓������̏����͓��͂ł��܂����H
-�V�X�e�����Â��Ȃ������A�V�X�e���̓���ւ��͊ȒP�ɂł��܂����H
-�i�n�[�h�f�B�X�N�̌̏ᗦ�͂R�N�ڈȍ~�ɋ}���ɏ㏸����Ƃ����Ă��܂��B�j
-���������A�����g�����̏������̓V�X�e�����āA���܂�I�ׂȂ��ł���ˁc�B
+#概要
+内視鏡や超音波検査の所見、貴院ではどうされてますか？  
+紙に書かれていますか？  
+電子カルテに直接記入？  
+内視鏡メーカーのシステムで入力？  
+紙ではかさばりますし、どうしても閲覧性に欠けてしまいます。
+他のメーカーの内視鏡の所見は入力できますか？
+システムが古くなった時、システムの入れ替えは簡単にできますか？  
+（ハードディスクの故障率は３年目以降に急激に上昇するといわれています。）  
+そもそも、超音波検査の所見入力システムって、あまり選べないですよね…。
 
-����Findings Editor�͂�������������V�X�e���ł��B
-�f�[�^�x�[�X�ɂ̓I�[�v���\�[�X�\�t�g�E�F�A�ł���PostgreSQL���̗p���Ă���A
-�T�[�o�[���̃n�[�h�E�F�A�̓���ւ����e�ՂȂق��A��a�@�Ȃǂ̑�K�͊��ɂ�
-�Ή����邱�Ƃ��ł��܂��B
-�^�p�ɂ́A���i���p���Ă���Windows PC���P�䂠��Ζ�肠��܂���
-�i�Z�L�����e�B��̓s������Windows 8.1pro�����j���A���\��ȏ�̊��ɂ�
-�e�ՂɑΉ����\�ł��B
+このFindings Editorはそれらを__解決する__システムです。  
+データベースにはオープンソースソフトウェアであるPostgreSQLを採用しており、
+サーバー等のハードウェアの入れ替えも容易なほか、大病院などの大規模環境にも
+対応することができます。
+運用には、普段利用しているWindows PCが１台あれば問題ありません
+（セキュリティ上の都合からWindows 8.1pro推奨）が、数十台以上の環境にも
+容易に対応が可能です。
 
-���݊J������Findings Site�Ƒg�ݍ��킹�邱�ƂŁAiPad��Android�^�u���b�g�ł�
-�{�����\�ɂȂ�܂��B
-OS���p���PC�ł͎����I�ɉp��\���ɐ؂�ւ��܂��B
+現在開発中のFindings Siteと組み合わせることで、iPadやAndroidタブレットでの
+閲覧も可能になります。
+OSが英語のPCでは自動的に英語表示に切り替わります。
 
-�ڍׂȃC���X�g�[���A�^�p���������uFindings Editor�����E�^�p�}�j���A���v��A
-�ݒu���邾���Ŏg�p���邱�Ƃ��ł��郊�t�@�����X�@���ߓ������\��ł��B
-�ڂ����͓��Ѓz�[���y�[�W�����m�F���������B
-�܂��A��K�͊��ւ̓����ɂ̓R���T���e�B���O�Ɩ����s���\��ł��B
+詳細なインストール、運用を解説する「Findings Editor準備・運用マニュアル」や、
+設置するだけで使用することができるリファレンス機を近日発売予定です。
+詳しくは当社ホームページをご確認ください。
+また、大規模環境への導入にはコンサルティング業務も行う予定です。
 
-�E�����
-Windows XP�A7�A8�A8.1�ł̓�����m�F���Ă��܂��B
-�������AWindows XP�̓T�|�[�g�������I�����Ă��邽�߁A�������܂���B
+#動作環境
+Windows XP、7、8、8.1での動作を確認しています。
+ただし、Windows XPはサポート期限が終了しているため、推奨しません。
 
-�E����ɕK�v�ȃ\�t�g�E�F�A
-.NET Framework 4.0���K�v�ł��B
+##動作に必要なソフトウェア
+.NET Framework 4.0が必要です。
 
-.NET Framework 4.0��Windows update�ŃC���X�g�[�����\�ł��B
+.NET Framework 4.0はWindows updateでインストールが可能です。
 
-�C���^�[�l�b�g�ɐڑ����Ă��Ȃ�PC��Findings Editor�i�ȉ��A�{�\�t�g�E�F�A�j��
-���삵�Ȃ��悤�ł���΁A
+インターネットに接続していないPCでFindings Editor（以下、本ソフトウェア）が
+動作しないようであれば、
 http://www.microsoft.com/ja-jp/download/details.aspx?id=24872
-�ɃA�N�Z�X���AdotNetFx40_Client_x86_x64.exe���_�E�����[�h����
-�C���X�g�[�����Ă��������B
+にアクセスし、dotNetFx40_Client_x86_x64.exeをダウンロードして
+インストールしてください。
 
-�܂��A�uWindows Imaging Component (WIC) ���C���X�g�[������K�v������܂��B�v
-�ƕ\������邱�Ƃ�����܂��B���̍ۂ́A
-�y32bit���̏ꍇ�zhttp://www.microsoft.com/ja-jp/download/details.aspx?id=32
-�y64bit���̏ꍇ�zhttp://www.microsoft.com/ja-jp/download/details.aspx?id=1385
-�ɃA�N�Z�X����Windows Imaging Component���_�E�����[�h���A
-�C���X�g�[�����Ă��������B
+また、「Windows Imaging Component (WIC) をインストールする必要があります。」
+と表示されることがあります。その際は、
+【32bit環境の場合】http://www.microsoft.com/ja-jp/download/details.aspx?id=32
+【64bit環境の場合】http://www.microsoft.com/ja-jp/download/details.aspx?id=1385
+にアクセスしてWindows Imaging Componentをダウンロードし、
+インストールしてください。
 
-�Ȃ��A������d�q�J���e�[���ȂǂɃC���X�g�[�����ꂽ�ꍇ�A
-�����̃\�t�g�̓���Ɏx����������ꍇ������܂��̂ŁA
-�d�q�J���e�[���ւ̖{�\�t�g�E�F�A�̃C���X�g�[���͐������܂���B
-�C���X�g�[�����\���ǂ����́A�e�J���e���[�J�[�ɂ��₢���킹���������B
-�Ȃ��A�{�\�t�g�E�F�A���g�p���Ĕ����������Q���ɂ��āA
-���Ђ͈�؂̐ӔC�𕉂����˂܂��̂ł��������������B
+なお、これらを電子カルテ端末などにインストールされた場合、
+既存のソフトの動作に支障をきたす場合がありますので、
+電子カルテ端末への本ソフトウェアのインストールは推奨しません。
+インストールが可能かどうかは、各カルテメーカーにお問い合わせください。
+なお、本ソフトウェアを使用して発生した損害等について、
+当社は一切の責任を負いかねますのでご了承ください。
 
-�E�C���X�g�[�����@
-PostgreSQL�ƒʐM�ł���}�V���̓K���ȃt�H���_�ɉ𓀂��Ă��������B
-���W�X�g���͈�ؕύX���܂���B
+##インストール方法
+PostgreSQLと通信できるマシンの適当なフォルダに解凍してください。
+レジストリは一切変更しません。
 
-�E�N�����@
-FE.exe���_�u���N���b�N�����Findings Editor���N�����܂��B
-�V���[�g�J�b�g���f�X�N�g�b�v�ɒu���Ȃǂ��Ă����p���������B
-�Ȃ��AWindows8�ȍ~�ł�Windows SmartScreen�ɂ����
-�N���ł��Ȃ��ꍇ������܂��B
-���̏ꍇ�́A�t�@�C���̃v���p�e�B����u�u���b�N�̉����v���s���Ă��������B
+##起動方法
+FE.exeをダブルクリックするとFindings Editorが起動します。
+ショートカットをデスクトップに置くなどしてご利用ください。
+なお、Windows8以降ではWindows SmartScreenによって
+起動できない場合があります。
+この場合は、ファイルのプロパティから「ブロックの解除」を行ってください。
 
-�E�A���C���X�g�[�����@
-�t�H���_���ƍ폜���Ă��������B
-���̑��̑���͕K�v����܂���B
+##アンインストール方法
+フォルダごと削除してください。
+その他の操作は必要ありません。
 
-�E�g�����Ǝ��O����
-�f�[�^�x�[�X�����ݒ�\�t�g�Ƃ��āA�uFE_setup�v�i�t���[�\�t�g�j��
-�ʂɌ��J���Ă��܂��B
-PostgreSQL�̓��삵�Ă�����ŁuFE_setup�v�����s���邱�Ƃɂ��A
-�{�\�t�g�E�F�A�������p�����������������ɍ\�z���邱�Ƃ��ł��܂��B
-�܂��A�������������ۂ̃t�b�^�[�i��Ë@�֖��j��
-�����́uresult.html�v��K�X�ҏW���Ă��������B
+##使い方と事前準備
+データベース初期設定ソフトとして、「FE_setup」（フリーソフト）を
+別に公開しています。
+PostgreSQLの動作している環境で「FE_setup」を実行することにより、
+本ソフトウェアをご利用いただく環境をすぐに構築することができます。
+また、所見を印刷する際のフッター（医療機関名）は
+同梱の「result.html」を適宜編集してください。
 
-��FE.exe
-FE.exe���N�����A�����ݒ��DB�T�[�o�iPostgreSQL�j��IP�A�h���X
-�܂��̓z�X�g���A�|�[�g�ԍ��ADB��ID�A�p�X���[�h�A�V�F�[�}�ۑ��t�H���_��
-�w�肵�܂��B
-DB�T�[�oIP�A�h���X�Flocalhost�i�f�[�^�x�[�X���C���X�g�[�������}�V����
-���p����ꍇ�j
-DB�T�[�o�̃|�[�g�F5432
-DB��ID�Fdb_user
-DB�̃p�X���[�h�Ftest�iFE_setup�ŕύX����邱�Ƃ𐄏��������܂��j
-�V�F�[�}�ۑ��t�H���_�F�C�ӂ̃t�H���_�i�T�[�o�[�̋��L�t�H���_��NAS��
-�l�b�g���[�N�h���C�u�Ƃ��Đݒ肵�A������ݒ肷�邱�Ƃ������߂������܂��B�j
+▽FE.exe
+FE.exeを起動し、初期設定でDBサーバ（PostgreSQL）のIPアドレス
+またはホスト名、ポート番号、DBのID、パスワード、シェーマ保存フォルダを
+指定します。
+DBサーバIPアドレス：localhost（データベースをインストールしたマシンで
+利用する場合）
+DBサーバのポート：5432
+DBのID：db_user
+DBのパスワード：test（FE_setupで変更されることを推奨いたします）
+シェーマ保存フォルダ：任意のフォルダ（サーバーの共有フォルダやNASを
+ネットワークドライブとして設定し、そこを設定することをお勧めいたします。）
 
-���߂ɁAID���utest�v�A�p�X���[�h���utest�v�Ƃ��ă��O�C�����A
-�u�I�v�V�����v�́u�Ǘ��v���u�{�s�ҁv����Ǘ��pID��p�X���[�h��
-�ݒ肵�Ă��������B
-�ݒ��AID�utest�v���폜���Ă��������B
-�Ȃ��A�J�e�S���[�uViewer�v�͏������͂��ł��Ȃ����[�U�[�ƂȂ�܂��B
-�����̕��������p�ɂȂ�ꍇ�ɂ��g�p���������B
-�܂��A�ʃ\�t�g��FindingsSite�ł�Viewer�J�e�S���[�̃��[�U�[��
-���p���܂��B
+初めに、IDを「test」、パスワードを「test」としてログインし、
+「オプション」の「管理」→「施行者」から管理用IDやパスワードを
+設定してください。
+設定後、ID「test」を削除してください。
+なお、カテゴリー「Viewer」は所見入力ができないユーザーとなります。
+事務の方がご利用になる場合にご使用ください。
+また、別ソフトのFindingsSiteでもViewerカテゴリーのユーザーを
+利用します。
 
-���ɁA���O�C����̃I�v�V�����̊Ǘ����j���[���猟���@��⌟���ꏊ����
-�K�v�Ȑݒ���s������A�V�K���҂�o�^���A�o�^���I�������
-�V�K������o�^���Ă��������B
-�������⒴���g�̌������{�s������A�{�s�҂���������͂��A
-1���f�f��ɂ�鏊���A2���f�f��ɂ�鏊��������͂��邱�Ƃ��ł��܂��B
-�܂��A�����̏����ɂ͓����̊��҉摜�Ǘ��\�t�g�i�摜�o�^�FGraphicRenamer,
-�摜�{���FPtGraViewer�j�Ŋ��҂ɕR�t���摜��o�^�A�{�����邱�Ƃ��ł��܂��B
-PtGraViewer�͌������X�g�̉摜�{�^������N���\�ł��B
+次に、ログイン後のオプションの管理メニューから検査機器や検査場所等の
+必要な設定を行った後、新規患者を登録し、登録が終わったら
+新規検査を登録してください。
+内視鏡や超音波の検査を施行したら、施行者が所見を入力し、
+1次診断医による所見、2次診断医による所見等を入力することができます。
+また、これらの所見には同梱の患者画像管理ソフト（画像登録：GraphicRenamer,
+画像閲覧：PtGraViewer）で患者に紐付く画像を登録、閲覧することができます。
+PtGraViewerは検査リストの画像ボタンから起動可能です。
 
-�֗��ȋ@�\�Ƃ��āA������ʁiCF�AGF�Ȃǁj���ƂɎ������͂��������
-������ݒ肵����A�悭�g�����[�h��o�^���ă����N���b�N��
-���͂��邱�Ƃ��ł��܂��B
-�u�I�v�V�����v�̃}�C���[�h��A�u�Ǘ��v�́u�N�C�b�N���[�h�v�A
-�u����̏����v���Őݒ肵�Ă��������B
+便利な機能として、検査種別（CF、GFなど）ごとに自動入力される既定の
+所見を設定したり、よく使うワードを登録してワンクリックで
+入力することができます。
+「オプション」のマイワードや、「管理」の「クイックワード」、
+「既定の所見」等で設定してください。
 
-�E���ҏ��擾�p�̃v���O�C���ɂ���
-�d�q�J���e�����犳�ҏ����擾���邽�߂̃v���O�C���ɑΉ����܂����B
-���݁A�����ɑΉ��ł��Ă���̂�ORCA�݂̂ł��B
-���̓d�q�J���e�V�X�e���ɂ��ẮA���₢���킹���������B
+・患者情報取得用のプラグインについて
+電子カルテ等から患者情報を取得するためのプラグインに対応しました。
+現在、正式に対応できているのはORCAのみです。
+他の電子カルテシステムについては、お問い合わせください。
 
-�E��������
-������ԂŋN�������ꍇ�́A�f�[�^�x�[�X�Ƀf�[�^�����݂��Ȃ����߁A
-�e����ŃG���[���b�Z�[�W���\������邱�Ƃ�����܂����A
-�f�[�^����͂��邱�Ƃŕ\������Ȃ��Ȃ�܂��B
-�܂��A�{�\�t�g�E�F�A�œ��͂������ҏ��⏊���A�ݒ肵������̏�����
-�}�C���[�h���͂��ׂ�PostgreSQL�ɈÍ������ꂸ�ɕۑ�����܂��B
-���̂��߁A�f�[�^�x�[�X�V�X�e���̓���ւ����͊ȒP�ɍs�����Ƃ�
-�ł��܂����A�l���̕ی쓙�ɂ��ẮAPostgreSQL���C���X�g�[��
-����Ă�������ۂ��ƈÍ�������Ȃǂ̑΍�iWindows��BitLocker�Ȃǁj
-��K�X�s���Ă��������B
+##制限事項
+初期状態で起動した場合は、データベースにデータが存在しないため、
+各動作でエラーメッセージが表示されることがありますが、
+データを入力することで表示されなくなります。
+また、本ソフトウェアで入力した患者情報や所見、設定した既定の所見や
+マイワード等はすべてPostgreSQLに暗号化されずに保存されます。
+このため、データベースシステムの入れ替え等は簡単に行うことが
+できますが、個人情報の保護等については、PostgreSQLがインストール
+されている環境を丸ごと暗号化するなどの対策（WindowsのBitLockerなど）
+を適宜行ってください。
 
-�E�A����
-���s���ȓ_�A���v�]���������܂�����A������܂ł��A���������B
+###連絡先
+ご不明な点、ご要望等ございましたら、こちらまでご連絡下さい。
 URL: http://www.madeinclinic.jp
 E-mail: info@madeinclinic.jp
 
-�E����
-2016/02/14 Ver. 1.24.2�@�����̊��҉摜�Ǘ��̃o�[�W�����A�b�v�B
-2015/11/29 Ver. 1.24.1 �݃J�����A�咰�J�����A����US�ȊO�̌�������
-�@�@�@�@�@�@�@�@�@�@�@ �N�C�b�N���[�h�̋��������P���܂����B
-2015/11/04 Ver. 1.24.0 �A�C�R���ǉ��A���O�C���t�H�[���̃f�U�C���ύX�A
-�@�@�@�@�@�@�@�@�@�@�@ �t�@�C������FE.exe�ɕύX�A�{�s�҂��ォ��
-�@�@�@�@�@�@�@�@�@�@�@ �N���A�����Ƃ��̕ۑ��̃o�O�C���A������
-�@�@�@�@�@�@�@�@�@�@�@ ���҉摜�Ǘ��̃o�[�W�����A�b�v�ȂǁB
-2015/10/19 Ver. 1.23.0 �����v���O�C���ɑΉ����܂����B
-2015/07/29 Ver. 1.22b ���삪���肵�܂����B�iNpgsql�̃o�[�W�����A�b�v�j
-2015/07/10 Ver. 1.22�@�f�f�ǉ��t�H�[���̃o�O�C���B
-2015/07/08 Ver. 1.21�@�f�f�ǉ��̍ہA�O��̏C����̃R���{�{�b�N�X��
-�@�@�@�@�@�@�@�@�@�@�@���o�̕�����p�x���ɕ\������悤�ύX�B
-2015/06/20 Ver. 1.20�@�����̊��҉摜�Ǘ��̃o�[�W�����A�b�v�B
-2015/06/18 Ver. 1.19�@�����̊��҉摜�Ǘ��̃o�[�W�����A�b�v�B
-�@�@�@�@�@�@�@�@�@�@�@�f�f�ǉ����A�ŏ��ɕ\�������f�f�����C���B
-2015/06/08 Ver. 1.18�@�����ҏW�t�H�[���ŁuShift+PageDown�v�A
-�@�@�@�@�@�@�@�@�@�@�@�uShift+PageUp�v�Ń^�u���ړ��ł���悤�ɂ����B
-2015/06/03 Ver. 1.17�@�o�[�W�����\���Ńf�[�^�x�[�X�̃o�[�W������
-�@�@�@�@�@�@�@�@�@�@�@�\������悤�ɂ����B
-2015/05/25 Ver. 1.16�@�������͉�ʂɉ摜�\���{�^����ǉ��B
-�@�@�@�@�@�@�@�@�@�@�@�I�����p�X�Зl�̓������摜��荞�݂��\�ɂ����B
-2015/05/19 Ver. 1.15�@�ׂ����g������̏C���B
-2015/05/18 Ver. 1.14�@�����̊��҉摜�Ǘ��̃o�[�W�����A�b�v�B
-�@�@�@�@�@�@�@�@�@�@�@���̂ق��ׂ����C���B
-2015/05/06 Ver. 1.13�@�摜�{�^�����������Ƃ��A���̌����̓��t�̉摜�݂̂�
-�@�@�@�@�@�@�@�@�@�@�@���o����悤�ύX�B
-�@�@�@�@�@�@�@�@�@�@�@Ver. 1.12�ł̌����V�K�쐬���̕\���C���B
-2015/05/04 Ver. 1.12�@�����̕a����ҏW�\�ɂ����B
-2015/04/12 Ver. 1.11�@�f�f���̑O�ƌ�ɏC�����t������悤�ɂ����B
-�@�@�@�@�@�@�@�@�@�@�@�iVer.1.07�ȏ�̃f�[�^�x�[�X�̕K�{�B�j
-�@�@�@�@�@�@�@�@�@�@�@�e�E�B���h�E�̊J���ʒu�̒����B
-2015/04/02 Ver. 1.10a �������ʈ����ʂ�ctrl+p�ň�����ł���悤�ɂ����B
-2015/04/01 Ver. 1.10�@�����ʂŕa���̕��ʂ��\������Ȃ������o�O���C���B
-2015/02/26 Ver. 1.09�@�a�����ʂ��L�^�ł���悤���ρB
-�@�@�@�@�@�@�@�@�@�@�@�iVer.1.06�ȏ�̃f�[�^�x�[�X�̕K�{�B�j
-�@�@�@�@�@�@�@�@�@�@�@���̂ق��ׂ����C���B
-2015/02/15 Ver. 1.08�@�����G�R�[�ɑΉ��B
-2015/01/21 Ver. 1.07�@�����̊��҉摜�Ǘ��̃o�[�W�����A�b�v�B
-2015/01/07 Ver. 1.06�@�������X�g�Łu�I���v���̗񖼂��N���b�N�����ۂ�
-�@�@�@�@�@�@�@�@�@�@�@�ُ�I������o�O�C���B�o�[�W�����\���C���B
-�@�@�@�@�@�@�@�@�@�@�@�f�t�H���g�Ńe�X�g�T�[�o�[�ɐڑ�����ݒ�ɕύX�B
-2014/09/28 Ver. 1.05�@�ҏW�����������Ȃ��������̋����ύX�B
-�@�@�@�@�@�@�@�@�@�@�@ExamList�̃o�O�C���B
-2014/09/08 Ver. 1.04�@�����̊��҉摜�Ǘ��̃o�[�W�����A�b�v�B
-2014/07/21 Ver. 1.03�@���ҏ���d�q�J���e������擾����v���O�C���ɑΉ��B
-2014/07/02 Ver. 1.02�@DB�T�[�o�[��Ŏg�p�������̃o�O���C���B
-2014/06/29 Ver. 1.01�@�ҏW�����̏C���A�o�[�W�����\���ǉ��B
-2014/06/23 Ver. 1.00�@���J�J�n�B
+・履歴
+2016/02/14 Ver. 1.24.2　同梱の患者画像管理のバージョンアップ。
+2015/11/29 Ver. 1.24.1 胃カメラ、大腸カメラ、腹部US以外の検査時の
+　　　　　　　　　　　 クイックワードの挙動を改善しました。
+2015/11/04 Ver. 1.24.0 アイコン追加、ログインフォームのデザイン変更、
+　　　　　　　　　　　 ファイル名をFE.exeに変更、施行者を後から
+　　　　　　　　　　　 クリアしたときの保存のバグ修正、同梱の
+　　　　　　　　　　　 患者画像管理のバージョンアップなど。
+2015/10/19 Ver. 1.23.0 検査プラグインに対応しました。
+2015/07/29 Ver. 1.22b 動作が安定しました。（Npgsqlのバージョンアップ）
+2015/07/10 Ver. 1.22　診断追加フォームのバグ修正。
+2015/07/08 Ver. 1.21　診断追加の際、前後の修飾語のコンボボックスに
+　　　　　　　　　　　既出の文言を頻度順に表示するよう変更。
+2015/06/20 Ver. 1.20　同梱の患者画像管理のバージョンアップ。
+2015/06/18 Ver. 1.19　同梱の患者画像管理のバージョンアップ。
+　　　　　　　　　　　診断追加時、最初に表示される診断名を修正。
+2015/06/08 Ver. 1.18　所見編集フォームで「Shift+PageDown」、
+　　　　　　　　　　　「Shift+PageUp」でタブを移動できるようにした。
+2015/06/03 Ver. 1.17　バージョン表示でデータベースのバージョンも
+　　　　　　　　　　　表示するようにした。
+2015/05/25 Ver. 1.16　所見入力画面に画像表示ボタンを追加。
+　　　　　　　　　　　オリンパス社様の内視鏡画像取り込みを可能にした。
+2015/05/19 Ver. 1.15　細かい使い勝手の修正。
+2015/05/18 Ver. 1.14　同梱の患者画像管理のバージョンアップ。
+　　　　　　　　　　　そのほか細かい修正。
+2015/05/06 Ver. 1.13　画像ボタンを押したとき、その検査の日付の画像のみを
+　　　　　　　　　　　抽出するよう変更。
+　　　　　　　　　　　Ver. 1.12での検査新規作成時の表示修正。
+2015/05/04 Ver. 1.12　腹部の病名を編集可能にした。
+2015/04/12 Ver. 1.11　診断名の前と後に修飾語を付けられるようにした。
+　　　　　　　　　　　（Ver.1.07以上のデータベースの必須。）
+　　　　　　　　　　　各ウィンドウの開く位置の調整。
+2015/04/02 Ver. 1.10a 検査結果印刷画面でctrl+pで印刷ができるようにした。
+2015/04/01 Ver. 1.10　印刷画面で病名の部位が表示されなかったバグを修正。
+2015/02/26 Ver. 1.09　病理結果を記録できるよう改変。
+　　　　　　　　　　　（Ver.1.06以上のデータベースの必須。）
+　　　　　　　　　　　そのほか細かい修正。
+2015/02/15 Ver. 1.08　腹部エコーに対応。
+2015/01/21 Ver. 1.07　同梱の患者画像管理のバージョンアップ。
+2015/01/07 Ver. 1.06　検査リストで「選択」等の列名をクリックした際に
+　　　　　　　　　　　異常終了するバグ修正。バージョン表示修正。
+　　　　　　　　　　　デフォルトでテストサーバーに接続する設定に変更。
+2014/09/28 Ver. 1.05　編集権限が得られなかった時の挙動変更。
+　　　　　　　　　　　ExamListのバグ修正。
+2014/09/08 Ver. 1.04　同梱の患者画像管理のバージョンアップ。
+2014/07/21 Ver. 1.03　患者情報を電子カルテ等から取得するプラグインに対応。
+2014/07/02 Ver. 1.02　DBサーバー上で使用した時のバグを修正。
+2014/06/29 Ver. 1.01　編集権限の修正、バージョン表示追加。
+2014/06/23 Ver. 1.00　公開開始。
 
-�ᒘ�쌠����іƐӎ�����
-�@�{�\�t�g�E�F�A�̓t���[�\�t�g�ł��B�iGPL v3 ���C�Z���X�j
-���R�Ɏg�p���Ă��������č\���܂��񂪁A
-���쌠�͊�����Ѓ��C�h�C���N���j�b�N���ۗL���Ă��܂��B
-�Ȃ��A���̃\�t�g�E�F�A���g�p�������Ƃɂ���Đ��������ׂĂ�
-��Q�E���Q�E�s����Ɋւ��A���Ђ͈�؂̐ӔC�𕉂��܂���B
-�\�[�X�R�[�h��GitHub��Ō��J���Ă��܂��B
+≪著作権および免責事項≫
+　本ソフトウェアはフリーソフトです。（GPL v3 ライセンス）
+自由に使用していただいて構いませんが、
+著作権は株式会社メイドインクリニックが保有しています。
+なお、このソフトウェアを使用したことによって生じたすべての
+障害・損害・不具合等に関し、当社は一切の責任を負いません。
+ソースコードはGitHub上で公開しています。
 https://github.com/KoichiHirahata
