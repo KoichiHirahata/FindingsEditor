@@ -36,7 +36,7 @@ Rady to install インストールの準備が完了しました。 「Next」をクリック。
 ![postgreinstall03.png](http://www.madeinclinic.jp/software/fe/images/postgre/postgreinstall03.png) 
   
 ##PostgreSQLにおけるSSL設定
-始めに[サーバー証明書の作成](./INSTALL-ja.md)で作成したserver.crtとserver.keyをコピーしておきます。
+始めに[サーバー証明書の作成](./SSLCRT-ja.md)で作成したserver.crtとserver.keyをコピーしておきます。
 2つのファイルをC:\Program Files\PostgreSQL\9.5\dataにペーストします。
 
 ![postgressl01.png](http://www.madeinclinic.jp/software/fe/images/postgre/postgressl01.png)  
@@ -60,6 +60,21 @@ Rady to install インストールの準備が完了しました。 「Next」をクリック。
 と表記される部分がありますこの場所の２か所の「host」を「hostssl」に書き換えて上書き保存してください。
 
 ![postgressl03.png](http://www.madeinclinic.jp/software/fe/images/postgre/postgressl03.png)  
+
+PostgreSQLのインストールされたPCでFindingsEditorを利用する場合は  
+pg\_hba.confは上記のとおり記述してもらいます。  
+一方で、PostgreSQLをインストールしていないプライベートネットワークから  
+FindingsEditorを利用したい場合はpg\_hba.confを以下のように追記します。  
+
+    # IPv4 local connections:
+    hostssl    all             all             127.0.0.1/32            md5
+    # IPv6 local connections:
+    hostssl    all             all             ::1/128                 md5
+    hostssl    all             all             192.168.1.0/24          md5
+
+※__注意__  
+例として192.168.1.0/24という数値を使用していますがこの部分に  
+利用したいプライベートネットワークとサブネットマスクを記述してください。
 
 ##PostgreSQL再起動
 SSLの設定を反映させるためにPostgreSQLを再起動します。
