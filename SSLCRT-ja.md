@@ -94,4 +94,4 @@ C:\OpenSSL-Win64\bin>だけが表示されれば大丈夫です。
   
 ![cmdopenssl07.png](http://www.madeinclinic.jp/software/fe/images/openssl/cmdopenssl07.png) 
 
-
+次項では[データベースの導入（PostgreSQL）](./POSTGRESQL-ja.md)について説明します。

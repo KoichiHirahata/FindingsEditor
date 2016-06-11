@@ -105,7 +105,7 @@ Informationウィンドウの「はい」をクリック。
 
 ##5. 診断名の編集・登録
 
-「オプション」→「管理」→「病棟/外来」で病棟と外来を追加します。  
+「オプション」→「管理」→「診断名」で診断名を追加します。  
 
 ![feeditdiagnosis01.png](http://www.madeinclinic.jp/software/fe/images/findingseditor/feeditdiagnosis01.png)   
 
@@ -129,7 +129,7 @@ Informationウィンドウの「はい」をクリック。
 	
 「オプション」→「管理」→「科」で診療科を追加します。  
 
-![feeditdiagnosis01.png](http://www.madeinclinic.jp/software/fe/images/findingseditor/feeditdiagnosis01.png) 
+![feeditdepartment01.png](http://www.madeinclinic.jp/software/fe/images/findingseditor/feeditdepartment01.png) 
 
 それぞれの項目を入力します。 入力後、「閉じる」をクリックしてFindingsEditorを再起動することで設定が反映されます。  
 それぞれの項目は、以下を示しています。

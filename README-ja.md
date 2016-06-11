@@ -58,8 +58,13 @@ Windows XP、7、8、8.1での動作を確認しています。
 当社は一切の責任を負いかねますのでご了承ください。  
 
 ##インストール方法
-[サーバー証明書の作成](./SSLCRT-ja.md)  
-[データベースの導入（PostgreSQL）](./POSTGRESQL-ja.md)  
+1.[サーバー証明書の作成](./SSLCRT-ja.md)  
+2.[データベースの導入（PostgreSQL）](./POSTGRESQL-ja.md)  
+3.[Findings Editorの導入](./FEINSTALL-ja.md)  
+##運用方法
+4.[Findings Editorの初期設定](./FEINISET-ja.md)  
+5.[新規患者・検査の登録](./FERUNNING01-ja.md)  
+ 
 ##起動方法
 FE.exeをダブルクリックするとFindings Editorが起動します。
 ショートカットをデスクトップに置くなどしてご利用ください。
