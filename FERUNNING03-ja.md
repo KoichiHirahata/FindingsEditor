@@ -1,181 +1,191 @@
-#Findings Editor�̉^�p�@�֗��ȋ@�\
-�{���ł�FE��Ŏg����ȉ��̂悤�ȕ֗��ȋ@�\���Љ�܂��B  
-1.�}�C���[�h�̓o�^    
-2.�N�C�b�N���[�h�̓o�^  
-3.����̏����̍쐬�E�ҏW  
-4.����p�����̃t�b�^�[�̕ύX  
-5.�摜�̓o�^�iGraphicRenamer�j
-6.�摜�̉{���ƈ���iP��Graviewer�j
+#Findings Editorの運用　便利な機能
+本項ではFE上で使える以下のような便利な機能を紹介します。  
+1.マイワードの登録    
+2.クイックワードの登録  
+3.既定の所見の作成・編集  
+4.印刷用所見のフッターの変更  
+5.画像の登録（GraphicRenamer）
+6.画像の閲覧と印刷（PｔGraviewer）
 
-##1.�}�C���[�h�̓o�^
-�}�C���[�h�Ƃ́A�����Ȃǂ���͂���ۂɃN���b�N�݂̂œ��͂��邱�Ƃ̂ł����^���[�h�ł��B  
-�}�C���[�h�́A���[�U���Ƃɐݒ肷�邱�Ƃ��ł��܂��B�i�Ǘ��҂̂݁A�S�̃��[�U�ɑ΂��Đݒ肷�邱�Ƃ��ł��܂��B_2.�N�C�b�N���[�h�̓o�^_���Q�Ƃ��Ă��������B�j  
+##1.マイワードの登録
+マイワードとは、所見などを入力する際にクリックのみで入力することのできる定型ワードです。  
+マイワードは、ユーザごとに設定することができます。（管理者のみ、全体ユーザに対して設定することができます。_2.クイックワードの登録_を参照してください。）  
 
-HOME��ʂ���u�I�v�V�����v���u�}�C���[�h�v���N���b�N���Ă��������B  
-�u�f�[�^��������܂���ł����B�v�ƕ\������邱�Ƃ�����܂����uok�v�������Ă��������B  
-���[�h����͂��܂��B1�g3���[�h�ł����A�P���[�h�ȏ�œo�^�ł��܂��B  
-�\�����̓}�C���[�h�̕W���ƂȂ�A���������Ȃ�������ʂɕ\������܂��B�i�W�����͔��p�����œ��͂��Ă��������j
-��Ƃ��ă}�C���[�h1�`9�܂ł���͂��܂����B  �@
+HOME画面から「オプション」→「マイワード」をクリックしてください。  
+「データが見つかりませんでした。」と表示されることがありますが「ok」を押してください。  
+ワードを入力します。1組3ワードですが、１ワード以上で登録できます。  
+表示順はマイワードの標準となり、数字が少ない方が上位に表示されます。（標示順は半角数字で入力してください）
+例としてマイワード1～9までを入力しました。  　
 
 ![femyword01](http://www.madeinclinic.jp/software/fe/images/findingseditor/femyword01.png)
 
-����������܂��B�@������ҏW����ۂɉ摜�E���̂悤�Ƀ}�C���[�h���o�^����Ă��܂��B
-���̓t�H�[���ɃJ�[�\���������ԂŃ}�C���[�h���N���b�N����Ƃ��̃��[�h���}������܂��B   
+閉じるを押します。　所見を編集する際に画像右側のようにマイワードが登録されています。
+入力フォームにカーソルがある状態でマイワードをクリックするとそのワードが挿入されます。   
 
 ![femyword02](http://www.madeinclinic.jp/software/fe/images/findingseditor/femyword02.png)  
 
-##2.�N�C�b�N���[�h�̓o�^�i�Ǘ��҂̂݁j
-�N�C�b�N���[�h�́A�S�Ẵ��[�U�̃}�C���[�h��ҏW�E�ǉ����邱�Ƃ��ł��܂��B  
-HOME��ʂ���u�I�v�V�����v���u�Ǘ��v���u�N�C�b�N���[�h�v���N���b�N���Ă��������B  
-���փX�N���[���ŉ��i�̋󗓂Ƀ��[�h��ǉ����܂��B  
-�}�C���[�h�Ɠ��l��1�g3���[�h��o�^���邱�Ƃ��ł��܂����A�Œ�1���[�h����o�^�\�ł��B  
-�܂��A�K�X�\�����i�������������قǏ�ʂɕ\�������j����͂��܂��B  
-���̂悤�ɓo�^���邱�ƂŃN�C�b�N���[�h�̕\���Ώۂ����߂邱�Ƃ��ł��܂��B   
-�E�������e���uCF�v�̏ꍇ�@���@�f�f����uColonoscopy�v�œo�^  
-�E�������e���uGF�v�̏ꍇ�@���@�f�f����uUpper endoscopy�v�œo�^  
-�E�������e���󗓂̏ꍇ�@ ���@�S�Ẵ��[�U�ɕ\������܂��B    
+##2.クイックワードの登録（管理者のみ）
+クイックワードは、全てのユーザのマイワードを編集・追加することができます。  
+HOME画面から「オプション」→「管理」→「クイックワード」をクリックしてください。  
+下へスクロール最下段の空欄にワードを追加します。  
+マイワードと同様に1組3ワードを登録することができますが、最低1ワードから登録可能です。  
+また、適宜表示順（数字が小さいほど上位に表示される）を入力します。  
+次のように登録することでクイックワードの表示対象を決めることができます。   
+・検査内容が「CF」の場合　→　診断医を「Colonoscopy」で登録  
+・検査内容が「GF」の場合　→　診断医を「Upper endoscopy」で登録  
+・検査内容が空欄の場合　 →　全てのユーザに表示されます。    
 
 ![fequickword01](http://www.madeinclinic.jp/software/fe/images/findingseditor/fequickword01.png)   
 
-##3.����̏����̍쐬�E�ҏW 
-�������ʂɓ��Ɉُ킪������Ȃ��ꍇ�ȂǁA�������������x�����͂��邱�ƂȂ��A�����̊���̓��e����͂��Ă������Ƃ��ł��܂��B  
+##3.既定の所見の作成・編集 
+検査結果に特に異常が見つからない場合など、同じ所見を何度も入力することなく、所見の既定の内容を入力しておくことができます。  
 
-HOME��ʂ���u�I�v�V�����v���u�Ǘ��v���u����̏����v���N���b�N���Ă��������B  
-�����ݒ�ł́AGF�ACF�A�����G�R�[�A�b��B�G�R�[�A�򓮖��G�R�[�A���B�G�R�[�A�S�G�R�[�Ɋ���̏������ݒ肳��Ă��܂��B  
-���͂��s���ہA���s��Shift�L�[�������Ȃ���Enter�L�[�������Ă��������B
-�ύX��͉E���u�ۑ��v���N���b�N���Ă��������B
+HOME画面から「オプション」→「管理」→「既定の所見」をクリックしてください。  
+初期設定では、GF、CF、腹部エコー、甲状腺エコー、頸動脈エコー、乳腺エコー、心エコーに既定の所見が設定されています。  
+入力を行う際、改行はShiftキーを押しながらEnterキーを押してください。
+変更後は右下「保存」をクリックしてください。
 
 ![fekiteishoken01](http://www.madeinclinic.jp/software/fe/images/findingseditor/fekiteishoken01.png)   
 
-##4.����p�����̃t�b�^�[�̕ύX  
-����p�����̃t�b�^�[���̋L�ڂ�ύX���邱�Ƃ��ł��܂��B  
-�����ݒ�ł́u�����N���j�b�N�v�Ɠ��͂���Ă��܂��̂ŁA�K�X�ύX���Ă��������B  
+##4.印刷用所見のフッターの変更  
+印刷用所見のフッター部の記載を変更することができます。  
+初期設定では「○○クリニック」と入力されていますので、適宜変更してください。  
 
-FE�A�v���P�[�V�����������Ă���t�H���_���́uresult.html�v��K���ȃe�L�X�g�G�f�B�^�⃁�����ŊJ���܂��B  
+FEアプリケーションが入っているフォルダ内の「result.html」を適当なテキストエディタやメモ帳で開きます。  
 
 ![feshoken_print_footer01](http://www.madeinclinic.jp/software/fe/images/findingseditor/feshoken_print_footer01.png)   
+<<<<<<< HEAD
 
 ���ɽ�۰ق��ā����N���j�b�N�̕�����K���ȕ\�L�ɏ��������㏑���ۑ����܂��B
+=======
+下にｽｸﾛｰﾙして○○クリニックの部分を適当な表記に書き換え上書き保存します。
+>>>>>>> 798c802230897ba462ec4cfa081edb458a8ea947
 
 ![feshoken_print_footer02](http://www.madeinclinic.jp/software/fe/images/findingseditor/feshoken_print_footer02.png) 
 
-�����̈����ʂɐi�ނƈȉ��̂悤�ɕύX����Ă��邱�Ƃ��킩��܂��B  
+所見の印刷画面に進むと以下のように変更されていることがわかります。  
 
 ![feshoken_print_footer03](http://www.madeinclinic.jp/software/fe/images/findingseditor/feshoken_print_footer03.png)
 
-##5.�������摜�̓o�^�iGraphicRenamer�j
-�O���\�t�g�E�F�A��GraphicRenamer�ƘA�g���āA���҂̉摜�i�������摜���j������ID�ƕR�Â��Đ������A�o�^���邱�Ƃ��ł��܂��B   
-�o�^�����摜��_6.�摜�̉{���iP��Graviewer�j�ƈ��_�ɐ�������悤�ɉ{�����邱�Ƃ��ł��܂��B  
-�������摜��o�^����ۂ͊e���[�J�[�ɂ���ēo�^�̎d�����قȂ�܂��B���������Ă����ł́A����m�F�ς̃t�W�t�B�����ЂƃI�����p�X�ЂŎB�e�����������摜�ɂ��Ă̂ݐ������܂��B
+##5.内視鏡画像の登録（GraphicRenamer）
+外部ソフトウェアのGraphicRenamerと連携して、患者の画像（内視鏡画像等）を患者IDと紐づけて整理し、登録することができます。   
+登録した画像は_6.画像の閲覧（PｔGraviewer）と印刷_に説明するように閲覧することができます。  
+内視鏡画像を登録する際は各メーカーによって登録の仕方が異なります。したがってここでは、動作確認済のフジフィルム社とオリンパス社で撮影した内視鏡画像についてのみ説明します。
 
 
-###5.1 GraphicRenamer�̐ݒ�(����)
-FE�̃A�v���P�[�V�����Ɠ����t�H���_����P��Graviewer�t�H���_���J��GraphicRenamer�A�v���P�[�V�������N�����Ă��������B  
+###5.1 GraphicRenamerの設定(共通)
+FEのアプリケーションと同じフォルダ内のPｔGraviewerフォルダを開きGraphicRenamerアプリケーションを起動してください。  
 
 ![Graphicrenamer01](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer01.png)  
 
 
-�ݒ���N���b�N���ď����ݒ���s���Ă��������B  
-��Ƃ��ĉ摜�t�H���_�́uC:\FE-share\patient�v���w�肵�܂��B  
-�uUse database server of Findings Editor�v�Ƀ`�F�b�N�������Ă��邩�m�F���܂��B  
-�f�[�^�x�[�X�T�[�o�[��IP���ڽ����͂��܂��B 
+設定をクリックして初期設定を行ってください。  
+例として画像フォルダは「C:\FE-share\patient」を指定します。  
+「Use database server of Findings Editor」にチェックが入っているか確認します。  
+データベースサーバーのIPｱﾄﾞﾚｽを入力します。 
 
-    �f�[�^�x�[�X�|�[�g�ԍ�: 5432
-    �f�[�^�x�[�XID: db_user
+    データベースポート番号: 5432
+    データベースID: db_user
 
-�����͂���Ă��邩�m�F���܂��B  
-�u�p�X���[�h�ύX�v���N���b�N��db_user�̃p�X���[�h����͌�u�e�X�g�v���N���b�N�B  
-�u�ڑ��ɐ������܂����B�v�ƕ\�����ꂽ��u�ۑ��v���N���b�N���܂��B
+が入力されているか確認します。  
+「パスワード変更」をクリックしdb_userのパスワードを入力後「テスト」をクリック。  
+「接続に成功しました。」と表示されたら「保存」をクリックします。
 
 ![Graphicrenamer02](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer02.png) 
 
-###5.2.1 �摜�o�^(�t�W�t�B������) 
-�t�W�t�B�����А��̓������摜�t�H���_��p�ӂ��Ă��������B  
-�t�H���_�̒��ɂ͓������摜�iJPEG�j�ƁA���̉摜�̏��ithu�j�������Ă��邱�Ƃ��m�F���Ă��������B   
+###5.2.1 画像登録(フジフィルム社) 
+フジフィルム社製の内視鏡画像フォルダを用意してください。  
+フォルダの中には内視鏡画像（JPEG）と、その画像の情報（thu）が入っていることを確認してください。   
 
 ![Graphicrenamer_fuji_01](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_fuji_01.png)   
 
-��قǊm�F�����t�H���_���t�H���_����GraphicRenamer�́u�������摜�t�H���_��JPEG�t�@�C���APDF�t�@�C�����h���b�O���h���b�v���Ă��������B�v�Ə�����Ă���ʒu�Ƀh���b�O���h���b�v���Ă��������B  
+先ほど確認したフォルダをフォルダごとGraphicRenamerの「内視鏡画像フォルダかJPEGファイル、PDFファイルをドラッグ＆ドロップしてください。」と書かれている位置にドラッグ＆ドロップしてください。  
 
 ![Graphicrenamer_fuji_02](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_fuji_02.png)    
 
-�h���b�v����ƁA�u�t�H���_���h���b�v����܂����B�e�L�X�g�{�b�N�X�ɐݒ肳�ꂽID�ƃJ�����_�[�͖�������܂��B�v�ƕ\�������̂ŁuOK�v�������Ă��������B  
-�������ݒ��ʂ��o��̂Ŋm�F���Ă���uOK�v�������Ă��������B  
-�����F�����������������B�e���ɓo�^����Ă��鎁��  
-�����iDB�j�F����������FindingsEditor�ɓo�^����Ă��鎁��   
-��\���Ă��܂��B  
-��v���Ă��Ȃ��ꍇ�͑Ή�����ID����͂��āu����:�v�Ɓu����:(DB)�v����v�����Ă���uOK�v�������Ă��������B  
+ドロップすると、「フォルダがドロップされました。テキストボックスに設定されたIDとカレンダーは無視されます。」と表示されるので「OK」を押してください。  
+検査情報設定画面が出るので確認してから「OK」を押してください。  
+氏名：○○○○が内視鏡撮影時に登録されている氏名  
+氏名（DB）：○○○○がFindingsEditorに登録されている氏名   
+を表しています。  
+一致していない場合は対応するIDを入力して「氏名:」と「氏名:(DB)」を一致させてから「OK」を押してください。  
 
 ![Graphicrenamer_fuji_03](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_fuji_03.png)   
  
-�ȏオ�t�W�t�B�����А��̓o�^�̕��@�ł��B
+以上がフジフィルム社製の登録の方法です。
 
-###5.2.2 �摜�o�^(�I�����p�X��) 
-�I�����p�X�А��̓������摜�t�H���_��p�ӂ��Ă��������B  
-�I�����p�X�Ђ̓������摜�t�H���_�͔N�����Ŗ��Â����Ă��܂��B  
-�t�H���_���ɂ�CV�t�H���_��DCIM�t�H���_������Ǝv���܂��̂Ŋm�F���Ă��������B  
+###5.2.2 画像登録(オリンパス社) 
+オリンパス社製の内視鏡画像フォルダを用意してください。  
+オリンパス社の内視鏡画像フォルダは年月日で名づけられています。  
+フォルダ内にはCVフォルダとDCIMフォルダがあると思いますので確認してください。  
 
 ![Graphicrenamer_olym_01](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_olym_01.png) 
 
-�m�F������N�����t�H���_���t�H���_����GraphicRenamer�́u�������摜�t�H���_��JPEG�t�@�C���APDF�t�@�C�����h���b�O���h���b�v���Ă��������B�v�Ə�����Ă���ʒu�Ƀh���b�O���h���b�v���Ă��������B  
+確認したら年月日フォルダをフォルダごとGraphicRenamerの「内視鏡画像フォルダかJPEGファイル、PDFファイルをドラッグ＆ドロップしてください。」と書かれている位置にドラッグ＆ドロップしてください。  
 
 ![Graphicrenamer_olym_02](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_olym_02.png)  
 
 
-�h���b�v����ƁA�u�t�H���_���h���b�v����܂����B�e�L�X�g�{�b�N�X�ɐݒ肳�ꂽID�ƃJ�����_�[�͖�������܂��B�v�ƕ\�������̂ŁuOK�v�������Ă��������B  
-�������ݒ��ʂ��o��̂Ŋm�F���Ă���uOK�v�������Ă��������B  
-�����F�����������������B�e���ɓo�^����Ă��鎁��  
-�����iDB�j�F����������FindingsEditor�ɓo�^����Ă��鎁��   
-��\���Ă��܂��B  
-��v���Ă��Ȃ��ꍇ�͑Ή�����ID����͂��āu����:�v�Ɓu����:(DB)�v����v�����Ă���uOK�v�������Ă��������B  
+ドロップすると、「フォルダがドロップされました。テキストボックスに設定されたIDとカレンダーは無視されます。」と表示されるので「OK」を押してください。  
+検査情報設定画面が出るので確認してから「OK」を押してください。  
+氏名：○○○○が内視鏡撮影時に登録されている氏名  
+氏名（DB）：○○○○がFindingsEditorに登録されている氏名   
+を表しています。  
+一致していない場合は対応するIDを入力して「氏名:」と「氏名:(DB)」を一致させてから「OK」を押してください。  
 
 ![Graphicrenamer_olym_03](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_olym_03.png) 
 
-�ȏオ�I�����p�X�А��̓o�^�̕��@�ł��B   
+以上がオリンパス社製の登録の方法です。   
 
-##6.  �摜�̉{���ƈ��(P��Graviewer)
-_5.�������摜�̓o�^�iGraphicRenamer�j_�œo�^�����摜���{�����邱�Ƃ��ł��܂��B  
-�摜�̉{����P��Graviewer�A�v���P�[�V�����𒼐ڋN��������@��Findings Editor�̏�������A�g����P��Graviewer�A�v���P�[�V�����𗧂��グ����@������܂��B  
-�܂��A�摜��������邱�Ƃ��ł��܂��B  
-###6.1.1. P��Graviewer�A�v���P�[�V�����̋N���i���ځj
-FE�̃A�v���P�[�V�����Ɠ����t�H���_����P��Graviewer�t�H���_���J��PtGraViewer�A�v���P�[�V�������N�����Ă��������B 
+##6.  画像の閲覧と印刷(PｔGraviewer)
+_5.内視鏡画像の登録（GraphicRenamer）_で登録した画像を閲覧することができます。  
+画像の閲覧はPｔGraviewerアプリケーションを直接起動する方法とFindings Editorの所見から連携してPｔGraviewerアプリケーションを立ち上げる方法があります。  
+また、画像を印刷することもできます。  
+###6.1.1. PｔGraviewerアプリケーションの起動（直接）
+FEのアプリケーションと同じフォルダ内のPｔGraviewerフォルダを開きPtGraViewerアプリケーションを起動してください。 
 
 ![ptgraviewer01](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer01.png) 
  
-�{������������ID����͂��Č���������Ă��������B�����̋󔒕��ɓo�^���ꂽ�摜�̑�\�̃T���l�C���Ɩ��O���\������܂��B�T���l�C�����_�u���N���b�N���邱�ƂŉE���ɓo�^���ꂽ���ׂẲ摜�̃T���l�C����\�������邱�Ƃ��ł��܂��B  
+閲覧したい患者IDを入力して決定を押してください。左側の空白部に登録された画像の代表のサムネイルと名前が表示されます。サムネイルをダブルクリックすることで右側に登録されたすべての画像のサムネイルを表示させることができます。  
 
 ![ptgraviewer02](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer02.png)  
 
-###6.1.2. P��GraViewer�A�v���P�[�V�����̋N���iFE�o�R�j
-HOME��ʂ���{�����������҂̏�����\�����Ă��������B  
-���������B�e�������ɂ��̏����́u�摜�v�{�^�����N���b�N���Ă��������B  
+###6.1.2. PｔGraViewerアプリケーションの起動（FE経由）
+HOME画面から閲覧したい患者の所見を表示してください。  
+内視鏡を撮影した日にちの所見の「画像」ボタンをクリックしてください。  
 
 ![ptgraviewer03](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer03.png)  
 
- P��GraViewer�A�v���P�[�V�������N�����܂��B  
-�����ɓo�^���ꂽ�摜�̑�\�̃T���l�C���Ɩ��O���\������܂��B�T���l�C�����_�u���N���b�N���邱�ƂŉE���ɓo�^���ꂽ���ׂẲ摜�̃T���l�C����\�������邱�Ƃ��ł��܂��B  
+ PｔGraViewerアプリケーションが起動します。  
+左側に登録された画像の代表のサムネイルと名前が表示されます。サムネイルをダブルクリックすることで右側に登録されたすべての画像のサムネイルを表示させることができます。  
 
 ![ptgraviewer04](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer04.png)  
 
-###6.2. P��GraViewer�A�v���P�[�V�������g�����摜�{��
-6.1.�ŉE���ɃT���l�C�����\�����ꂽ��g��\���������摜���_�u���N���b�N���Ă��������B
-�摜���g��\������܂��B  �摜��؂�ւ������ꍇ�͍����ɕ\�������T���l�C�����N���b�N���Ă��������B  
+###6.2. PｔGraViewerアプリケーションを使った画像閲覧
+6.1.で右側にサムネイルが表示されたら拡大表示したい画像をダブルクリックしてください。
+画像が拡大表示されます。  画像を切り替えたい場合は左側に表示されるサムネイルをクリックしてください。  
 
 ![ptgraviewer05](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer05.png)   
  
-###6.3.  P��GraViewer�A�v���P�[�V�������g�����摜���
-����������摜��I�т܂��B�����̃T���l�C���̃`�F�b�N�{�b�N�X�Ƀ`�F�b�N�����邱�ƂőI���ł��܂��B  
-�`�F�b�N�����鏇�Ԃň���̏��Ԃ����܂�܂��B  
-�܂��ꖇ�̗p���ɍő��8���̉摜������ł��܂��B  
+###6.3.  PｔGraViewerアプリケーションを使った画像印刷
+印刷したい画像を選びます。左側のサムネイルのチェックボックスにチェックを入れることで選択できます。  
+チェックをつける順番で印刷の順番が決まります。  
+また一枚の用紙に最大で8枚の画像を印刷できます。  
 
 ![ptgraviewer06](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer06.png) 
 
-�`�F�b�N������ō���́u����v�{�^�����N���b�N���Ă��������B  
-����v���r���[�������オ��܂��̂ŁA�m�F���ăv�����g���Ă��������B
+チェックした後で左上の「印刷」ボタンをクリックしてください。  
+印刷プレビューが立ち上がりますので、確認してプリントしてください。
 
 ![ptgraviewer07](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer07.png)   
 
+<<<<<<< HEAD
 ����[���̑�](./ETCETERA-ja.md)�ł̓f�[�^�x�[�X�̃o�[�W�����A�b�v�̎d���Ȃǂɂ��Đ������܂��B  
+=======
+次章[その他](./FERUNNING03-ja.md)ではデータベースのバージョンアップの仕方などについて説明します。  
+
+ 
+>>>>>>> 798c802230897ba462ec4cfa081edb458a8ea947
 
  
 
