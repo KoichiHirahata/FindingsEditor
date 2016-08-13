@@ -54,6 +54,7 @@ HOME画面から「オプション」→「管理」→「既定の所見」をクリックしてください。
 FEアプリケーションが入っているフォルダ内の「result.html」を適当なテキストエディタやメモ帳で開きます。  
 
 ![feshoken_print_footer01](http://www.madeinclinic.jp/software/fe/images/findingseditor/feshoken_print_footer01.png)   
+
 下にｽｸﾛｰﾙして○○クリニックの部分を適当な表記に書き換え上書き保存します。
 
 ![feshoken_print_footer02](http://www.madeinclinic.jp/software/fe/images/findingseditor/feshoken_print_footer02.png) 
@@ -105,7 +106,7 @@ FEのアプリケーションと同じフォルダ内のPｔGraviewerフォルダを開きGraphicRenamerア
 を表しています。  
 一致していない場合は対応するIDを入力して「氏名:」と「氏名:(DB)」を一致させてから「OK」を押してください。  
 
-![Graphicrenamer_fuji_03](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_fuji_01.png)   
+![Graphicrenamer_fuji_03](http://www.madeinclinic.jp/software/fe/images/graphicrenamer/Graphicrenamer_fuji_03.png)   
  
 以上がフジフィルム社製の登録の方法です。
 
@@ -174,9 +175,7 @@ HOME画面から閲覧したい患者の所見を表示してください。
 
 ![ptgraviewer07](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer07.png)   
 
-次章[その他](./FERUNNING03-ja.md)ではデータベースのバージョンアップの仕方などについて説明します。  
-
- 
+次章[その他](./ETCETERA-ja.md)ではデータベースのバージョンアップの仕方などについて説明します。  
 
  
 

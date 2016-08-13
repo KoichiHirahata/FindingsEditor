@@ -14,9 +14,9 @@
  ![fedownload01](http://www.madeinclinic.jp/software/fe/images/findingseditor/fedownload01.png)   
 
 下にスクロールして  
-「クライアントソフト（FindingsEditorx_xx_x.zip）のダウンロードはこちら（www.madeinclinic.jp内）」をクリックして保存してください。  
+「クライアントソフト（FindingsEditorX\_XX\_X.zip）のダウンロードはこちら（www.madeinclinic.jp内）」をクリックして保存してください。  
 同様に、
-「環境設定ソフト（FE_setupx_xx.zip）のダウンロードはこちら（www.madeinclinic.jp内）」もダウンロードしてください。
+「環境設定ソフト（FE\_setupX\_XX.zip）のダウンロードはこちら（www.madeinclinic.jp内）」もダウンロードしてください。
 
  ![fedownload02](http://www.madeinclinic.jp/software/fe/images/findingseditor/fedownload02.png)  
 ##環境設定ソフト（FE_setup）を用いたセットアップ
