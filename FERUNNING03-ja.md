@@ -54,7 +54,12 @@ HOME画面から「オプション」→「管理」→「既定の所見」を�
 FEアプリケーションが入っているフォルダ内の「result.html」を適当なテキストエディタやメモ帳で開きます。  
 
 ![feshoken_print_footer01](http://www.madeinclinic.jp/software/fe/images/findingseditor/feshoken_print_footer01.png)   
+<<<<<<< HEAD
+
+���ɽ�۰ق��ā����N���j�b�N�̕�����K���ȕ\�L�ɏ��������㏑���ۑ����܂��B
+=======
 下にｽｸﾛｰﾙして○○クリニックの部分を適当な表記に書き換え上書き保存します。
+>>>>>>> 798c802230897ba462ec4cfa081edb458a8ea947
 
 ![feshoken_print_footer02](http://www.madeinclinic.jp/software/fe/images/findingseditor/feshoken_print_footer02.png) 
 
@@ -174,9 +179,13 @@ HOME画面から閲覧したい患者の所見を表示してください。
 
 ![ptgraviewer07](http://www.madeinclinic.jp/software/fe/images/ptgraviewer/ptgraviewer07.png)   
 
+<<<<<<< HEAD
+����[���̑�](./ETCETERA-ja.md)�ł̓f�[�^�x�[�X�̃o�[�W�����A�b�v�̎d���Ȃǂɂ��Đ������܂��B  
+=======
 次章[その他](./FERUNNING03-ja.md)ではデータベースのバージョンアップの仕方などについて説明します。  
 
  
+>>>>>>> 798c802230897ba462ec4cfa081edb458a8ea947
 
  
 
