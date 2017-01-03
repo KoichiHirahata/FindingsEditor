@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingsEditor", "FindingsEditor\FindingsEditor.csproj", "{F6C51E1B-4ED1-4ACB-91AA-7A7BA8EACCEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingsEditorTests", "FindingsEditorTests\FindingsEditorTests.csproj", "{A1CC7D74-149D-438F-B303-BDFE33F344D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6C51E1B-4ED1-4ACB-91AA-7A7BA8EACCEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C51E1B-4ED1-4ACB-91AA-7A7BA8EACCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C51E1B-4ED1-4ACB-91AA-7A7BA8EACCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C51E1B-4ED1-4ACB-91AA-7A7BA8EACCEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1CC7D74-149D-438F-B303-BDFE33F344D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CC7D74-149D-438F-B303-BDFE33F344D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1CC7D74-149D-438F-B303-BDFE33F344D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1CC7D74-149D-438F-B303-BDFE33F344D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

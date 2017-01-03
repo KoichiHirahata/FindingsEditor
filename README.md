@@ -8,6 +8,22 @@ Many people in your facility can simultaneously use FINDINGS EDITOR, as it autom
 With FINDINGS EDITOR, you will be able to simply, efficiently, accurately and painlessly enter test results from Upper and Lower GI Endoscopies, as well as Abdominal Ultrasounds. (Future releases will include additional tests).
 Toho University Ohashi Medical Center has been using a previous version of FINDINGS EDITOR for almost a decade with minimal issues.
 
-License: GPL v3
-
-Please note that you will need to be running PostgreSQL.
+## Requirement
+
+PostgreSQL
+
+## Usage
+
+## Install
+
+First of all, run `create_db_and_users.sql` file in sql folder.
+Run the other SQL files in the folder.
+
+## Licence
+
+GPL v3
+
+## Author
+
+[KoichiHirahata](https://github.com/KoichiHirahata)
+
