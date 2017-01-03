@@ -1,6 +1,6 @@
 FindingsEditor
 ==============
-
+[Japanese Readme](./README-ja.md)
 How do you deal with the piles of test results from ultrasounds and endoscopies?
 Many medical professionals struggle to manage the considerable paperwork.
 I’m writing to introduce a solution – and it costs absolutely nothing. FINDINGS EDITOR.
