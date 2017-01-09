@@ -881,10 +881,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5010
+    , 'Atrophic gastritis'
+    , '胃粘膜萎縮（萎縮性胃炎）'
+    , 5010
     , true
     )
     ;
@@ -896,10 +896,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5020
+    , 'Erosive gastritis'
+    , 'びらん性胃炎'
+    , 5020
     , true
     )
     ;
@@ -911,10 +911,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5030
+    , 'Erythematous gastritis'
+    , '発赤胃炎'
+    , 5030
     , true
     )
     ;
@@ -926,10 +926,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5040
+    , 'Hypertrophic gastritis'
+    , '肥厚性胃炎'
+    , 5040
     , true
     )
     ;
@@ -941,10 +941,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5050
+    , 'Hemorrhagic gastritis'
+    , '出血性胃炎'
+    , 5050
     , true
     )
     ;
@@ -956,10 +956,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5060
+    , 'Gastropathy-portal hypertensive'
+    , '胃病変-門脈圧亢進性'
+    , 5060
     , true
     )
     ;
@@ -971,10 +971,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5070
+    , 'Eosinophilic gastritis'
+    , '好酸球性胃炎'
+    , 5070
     , true
     )
     ;
@@ -986,10 +986,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5080
+    , 'Gastric bleeding of unknown origin'
+    , '胃の原因不明の出血'
+    , 5080
     , true
     )
     ;
@@ -1001,10 +1001,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5090
+    , 'Gastric ulcer'
+    , '胃潰瘍'
+    , 5090
     , true
     )
     ;
@@ -1016,10 +1016,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5100
+    , 'Gastric ulcer scar'
+    , '胃潰瘍瘢痕'
+    , 5100
     , true
     )
     ;
@@ -1031,10 +1031,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5110
+    , 'Hemorrhagic gastric ulcer'
+    , '出血性胃潰瘍'
+    , 5110
     , true
     )
     ;
@@ -1046,10 +1046,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5120
+    , 'Dieulafoy lesion'
+    , 'デュラフォア病変'
+    , 5120
     , true
     )
     ;
@@ -1061,10 +1061,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5130
+    , 'Gastropathy-NSAID-related'
+    , '胃病変-NSAID 起因性'
+    , 5130
     , true
     )
     ;
@@ -1076,10 +1076,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5140
+    , 'Acute gastric mucosal lesion(AGML)'
+    , '急性胃粘膜病変(AGML)'
+    , 5140
     , true
     )
     ;
@@ -1091,10 +1091,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5150
+    , 'Acute gastroduodenal mucosal lesion'
+    , '急性胃十二指腸粘膜病変'
+    , 5150
     , true
     )
     ;
@@ -1106,10 +1106,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5160
+    , 'Gastric ulcer-anastomotic'
+    , '胃潰瘍-吻合部'
+    , 5160
     , true
     )
     ;
@@ -1121,10 +1121,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5170
+    , 'Gastric ulcer-postprocedure'
+    , '胃治療後潰瘍'
+    , 5170
     , true
     )
     ;
@@ -1136,10 +1136,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5180
+    , 'Gastric scar-postprocedure'
+    , '胃治療後瘢痕'
+    , 5180
     , true
     )
     ;
@@ -1151,10 +1151,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5190
+    , 'Gastric amyloidosis'
+    , '胃アミロイドーシス'
+    , 5190
     , true
     )
     ;
@@ -1166,10 +1166,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5200
+    , 'Gastric sarcoidosis'
+    , '胃サルコイドーシス'
+    , 5200
     , true
     )
     ;
@@ -1181,10 +1181,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5210
+    , 'Gastric syphilis'
+    , '胃梅毒'
+    , 5210
     , true
     )
     ;
@@ -1196,10 +1196,10 @@ insert into diag_name(
     , diag_order
     , diag_visible)
     values(
-    
-    , ''
-    , ''
-    , 
+    5220
+    , 'Menetrier\'s disease'
+    , 'Menetrier病'
+    , 5220
     , true
     )
     ;
