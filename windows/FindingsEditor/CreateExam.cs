@@ -18,26 +18,32 @@ namespace FindingsEdior
         public CreateExam()
         {
             InitializeComponent();
-            //cbExamType初期化
-            this.cbExamType.DataSource = CLocalDB.localDB.Tables["exam_type"];
-            this.cbExamType.ValueMember = "type_no";
-            this.cbExamType.DisplayMember = "exam_name";
+            // Initialize cbExamType
+            cbExamType.DataSource = CLocalDB.localDB.Tables["exam_type"];
+            cbExamType.ValueMember = "type_no";
+            cbExamType.DisplayMember = "exam_name";
             this.cbExamType.SelectedIndex = -1;
-            //cbWard初期化
-            this.cbWard.DataSource = CLocalDB.localDB.Tables["ward"];
-            this.cbWard.ValueMember = "ward_no";
-            this.cbWard.DisplayMember = "ward";
-            this.cbWard.SelectedIndex = -1;
-            //cbDepartment初期化
-            this.cbDepartment.DataSource = CLocalDB.localDB.Tables["department"];
-            this.cbDepartment.ValueMember = "code";
-            this.cbDepartment.DisplayMember = "name1";
-            this.cbDepartment.SelectedIndex = -1;
-            //cbOrderDr初期化
-            this.cbOrderDr.DataSource = CLocalDB.localDB.Tables["orderDr"];
-            this.cbOrderDr.DisplayMember = "op_name";
+            // Initialize cbWard
+            cbWard.DataSource = CLocalDB.localDB.Tables["ward"];
+            cbWard.ValueMember = "ward_no";
+            cbWard.DisplayMember = "ward";
+            cbWard.SelectedIndex = -1;
+            // Initialize cbDepartment
+            cbDepartment.DataSource = CLocalDB.localDB.Tables["department"];
+            cbDepartment.ValueMember = "code";
+            cbDepartment.DisplayMember = "name1";
+            cbDepartment.SelectedIndex = -1;
+            //Initialize cbOrderDr
+            cbOrderDr.DataSource = CLocalDB.localDB.Tables["orderDr"];
+            cbOrderDr.DisplayMember = "op_name";
             cbOrderDr.SelectedIndex = -1;
-            //this.cbOrderDr.Text = null;
+            // this.cbOrderDr.Text = null;
+
+            // Elase text of patient information labels
+            Pt_name.Text = "";
+            Pt_gender.Text = "";
+            Pt_birthday.Text = "";
+            Pt_age.Text = "";
         }
 
         private void btPtLoad_Click(object sender, EventArgs e)

@@ -185,7 +185,8 @@ namespace FindingsEdior
             if (ret == DialogResult.Yes)
             {
                 file_control.delFile(settingFile_location);
-                Application.Restart();
+                System.Diagnostics.Process.Start(Application.ExecutablePath);
+                Environment.Exit(0);
             }
             else
             {
