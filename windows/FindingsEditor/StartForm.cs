@@ -19,7 +19,7 @@ namespace FindingsEdior
             if (System.IO.File.Exists(Application.StartupPath + "\\title.jpg"))
             { pbTitle.ImageLocation = Application.StartupPath + "\\title.jpg"; }
             else
-            { MessageBox.Show("[title.jpg]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[title.jpg]" + FindingsEditor.Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             Settings.initiateSettings();
         }
 
@@ -27,13 +27,13 @@ namespace FindingsEdior
         {
             if (Settings.DBSrvIP == null)
             {
-                MessageBox.Show(Properties.Resources.ServerIP, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ServerIP, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (Settings.DBconnectPw == null)
             {
-                MessageBox.Show(Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

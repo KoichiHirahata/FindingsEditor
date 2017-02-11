@@ -23,31 +23,31 @@ namespace FindingsEdior
             showList();
 
             //●●●移植時要変更
-            this.dgv.Columns[0].HeaderText = Properties.Resources.Number;
-            this.dgv.Columns[1].HeaderText = Properties.Resources.ObjectName;
-            this.dgv.Columns[2].HeaderText = Properties.Resources.Category;
+            this.dgv.Columns[0].HeaderText = FindingsEditor.Properties.Resources.Number;
+            this.dgv.Columns[1].HeaderText = FindingsEditor.Properties.Resources.ObjectName;
+            this.dgv.Columns[2].HeaderText = FindingsEditor.Properties.Resources.Category;
             this.dgv.Columns[2].Visible = false;
-            this.dgv.Columns[3].HeaderText = Properties.Resources.Order + " (GF)";
-            this.dgv.Columns[4].HeaderText = Properties.Resources.Order + " (CF)";
-            this.dgv.Columns[5].HeaderText = Properties.Resources.Order + " (" + Properties.Resources.SideView + ")";
-            this.dgv.Columns[6].HeaderText = Properties.Resources.Order + " (" + Properties.Resources.SmallBowel + ")";
-            this.dgv.Columns[7].HeaderText = Properties.Resources.Order + " (US)";
+            this.dgv.Columns[3].HeaderText = FindingsEditor.Properties.Resources.Order + " (GF)";
+            this.dgv.Columns[4].HeaderText = FindingsEditor.Properties.Resources.Order + " (CF)";
+            this.dgv.Columns[5].HeaderText = FindingsEditor.Properties.Resources.Order + " (" + FindingsEditor.Properties.Resources.SideView + ")";
+            this.dgv.Columns[6].HeaderText = FindingsEditor.Properties.Resources.Order + " (" + FindingsEditor.Properties.Resources.SmallBowel + ")";
+            this.dgv.Columns[7].HeaderText = FindingsEditor.Properties.Resources.Order + " (US)";
             this.dgv.Columns[8].HeaderText = "Scope";
             this.dgv.Columns[9].HeaderText = "US";
-            this.dgv.Columns[10].HeaderText = Properties.Resources.Visible;
+            this.dgv.Columns[10].HeaderText = FindingsEditor.Properties.Resources.Visible;
 
             DataGridViewComboBoxColumn eTypeColumn = new DataGridViewComboBoxColumn();
             eTypeColumn.DataPropertyName = "equipment_type";    //バインドされているデータを表示する
             eTypeColumn.DataSource =　CLocalDB.localDB.Tables["equipment_type"];
             eTypeColumn.ValueMember = "type_no";
             eTypeColumn.DisplayMember = "name";
-            eTypeColumn.HeaderText = Properties.Resources.Category;
+            eTypeColumn.HeaderText = FindingsEditor.Properties.Resources.Category;
             this.dgv.Columns.Add(eTypeColumn);
 
             DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
-            btDelColumn.Name = Properties.Resources.Delete;  //列の名前を設定
+            btDelColumn.Name = FindingsEditor.Properties.Resources.Delete;  //列の名前を設定
             btDelColumn.UseColumnTextForButtonValue = true;  //ボタンにテキスト表示
-            btDelColumn.Text = Properties.Resources.Delete;  //ボタンの表示テキスト設定
+            btDelColumn.Text = FindingsEditor.Properties.Resources.Delete;  //ボタンの表示テキスト設定
             dgv.Columns.Add(btDelColumn);     //ボタン追加
 
             this.dgv.Columns[0].DisplayIndex = 0;
@@ -78,7 +78,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -87,13 +87,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -106,7 +106,7 @@ namespace FindingsEdior
             da.Fill(dt);
             if (dt.Rows.Count == 0)
             {
-                MessageBox.Show(Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -120,7 +120,7 @@ namespace FindingsEdior
             DataGridView temp_dgv = (DataGridView)sender;
 
             //Delete row
-            if (temp_dgv.Columns[e.ColumnIndex].Name == Properties.Resources.Delete)
+            if (temp_dgv.Columns[e.ColumnIndex].Name == FindingsEditor.Properties.Resources.Delete)
             {
                 this.Validate(); //Without this code, new data will disappear.
                 saveDataTable(); //Without this code, deleting new record will call error;
@@ -129,7 +129,7 @@ namespace FindingsEdior
                 int i = uckyFunctions.CountTimes("exam", "equipment", temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString(), "int");
                 if (i > 0) //●●●移植時要変更
                 {
-                    MessageBox.Show(Properties.Resources.CouldntDelData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.CouldntDelData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (i == -1)
                 {
@@ -139,7 +139,7 @@ namespace FindingsEdior
                 {
                     if (!temp_dgv.Rows[e.RowIndex].IsNewRow)
                     {
-                        if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + FindingsEditor.Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                         {
                             temp_dgv.Rows.Remove(temp_dgv.Rows[e.RowIndex]);
                             saveDataTable();
@@ -167,7 +167,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -176,13 +176,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -294,7 +294,7 @@ namespace FindingsEdior
                 {
                     if (string.IsNullOrWhiteSpace(dr[0].ToString()) == true)
                     {
-                        MessageBox.Show("[" + Properties.Resources.Number + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                        MessageBox.Show("[" + FindingsEditor.Properties.Resources.Number + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                         e.Cancel = true;
                         return;
                     }
@@ -312,7 +312,7 @@ namespace FindingsEdior
 
                     if (string.IsNullOrWhiteSpace(dr[1].ToString()) == true)
                     {
-                        MessageBox.Show("[" + Properties.Resources.ObjectName + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                        MessageBox.Show("[" + FindingsEditor.Properties.Resources.ObjectName + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                         e.Cancel = true;
                         return;
                     }
@@ -350,12 +350,12 @@ namespace FindingsEdior
 
             if (i == 0)
             {
-                MessageBox.Show(Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return Duplication.Error;
             }
             else if (i > 1)
             {
-                MessageBox.Show("[" + Properties.Resources.Number + "]" + Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                MessageBox.Show("[" + FindingsEditor.Properties.Resources.Number + "]" + FindingsEditor.Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                 return Duplication.Duplicated;
             }
             else

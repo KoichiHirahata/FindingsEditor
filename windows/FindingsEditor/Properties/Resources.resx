@@ -477,4 +477,7 @@
   <data name="DiagnosisIsRequired" xml:space="preserve">
     <value>Dianosis is required.</value>
   </data>
+  <data name="ShuttingDown" xml:space="preserve">
+    <value>Shutting down...</value>
+  </data>
 </root>

@@ -30,16 +30,16 @@ namespace FindingsEdior
             showList();
 
             //●●●移植時要変更
-            this.dgv.Columns[0].HeaderText = Properties.Resources.PlaceNo;
-            this.dgv.Columns[1].HeaderText = Properties.Resources.PlaceName;
-            this.dgv.Columns[2].HeaderText = Properties.Resources.Order + " (Endoscopy)";
-            this.dgv.Columns[3].HeaderText = Properties.Resources.Order + " (US)";
-            this.dgv.Columns[4].HeaderText = Properties.Resources.Visible;
+            this.dgv.Columns[0].HeaderText = FindingsEditor.Properties.Resources.PlaceNo;
+            this.dgv.Columns[1].HeaderText = FindingsEditor.Properties.Resources.PlaceName;
+            this.dgv.Columns[2].HeaderText = FindingsEditor.Properties.Resources.Order + " (Endoscopy)";
+            this.dgv.Columns[3].HeaderText = FindingsEditor.Properties.Resources.Order + " (US)";
+            this.dgv.Columns[4].HeaderText = FindingsEditor.Properties.Resources.Visible;
 
             DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
-            btDelColumn.Name = Properties.Resources.Delete;  //列の名前を設定
+            btDelColumn.Name = FindingsEditor.Properties.Resources.Delete;  //列の名前を設定
             btDelColumn.UseColumnTextForButtonValue = true;  //ボタンにテキスト表示
-            btDelColumn.Text = Properties.Resources.Delete;  //ボタンの表示テキスト設定
+            btDelColumn.Text = FindingsEditor.Properties.Resources.Delete;  //ボタンの表示テキスト設定
             dgv.Columns.Add(btDelColumn);     //ボタン追加
 
             resizeColumns();
@@ -58,7 +58,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -67,13 +67,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -87,7 +87,7 @@ namespace FindingsEdior
             da.Fill(dt);
             if (dt.Rows.Count == 0)
             {
-                MessageBox.Show(Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -125,7 +125,7 @@ namespace FindingsEdior
             DataGridView temp_dgv = (DataGridView)sender;
 
             //Delete row
-            if (temp_dgv.Columns[e.ColumnIndex].Name == Properties.Resources.Delete)
+            if (temp_dgv.Columns[e.ColumnIndex].Name == FindingsEditor.Properties.Resources.Delete)
             {
                 this.Validate(); //Without this code, new data will disappear.
                 saveDataTable(); //Without this code, deleting new record will call error;
@@ -134,7 +134,7 @@ namespace FindingsEdior
                 int i = uckyFunctions.CountTimes("exam", "place_no", temp_dgv.Rows[e.RowIndex].Cells[0].Value.ToString(), "int"); //●●●移植時要変更
                 if (i > 0)
                 {
-                    MessageBox.Show(Properties.Resources.CouldntDelData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.CouldntDelData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (i == -1)
                 {
@@ -144,7 +144,7 @@ namespace FindingsEdior
                 {
                     if (!temp_dgv.Rows[e.RowIndex].IsNewRow)
                     {
-                        if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + FindingsEditor.Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                         {
                             temp_dgv.Rows.Remove(temp_dgv.Rows[e.RowIndex]);
                             saveDataTable();
@@ -172,7 +172,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -181,13 +181,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -263,7 +263,7 @@ namespace FindingsEdior
                 {
                     if (string.IsNullOrWhiteSpace(dr[0].ToString()) == true)
                     {
-                        MessageBox.Show("[" + Properties.Resources.PlaceNo + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                        MessageBox.Show("[" + FindingsEditor.Properties.Resources.PlaceNo + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                         e.Cancel = true;
                         return;
                     }
@@ -281,14 +281,14 @@ namespace FindingsEdior
 
                     if (string.IsNullOrWhiteSpace(dr[1].ToString()) == true)
                     {
-                        MessageBox.Show("[" + Properties.Resources.PlaceName + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                        MessageBox.Show("[" + FindingsEditor.Properties.Resources.PlaceName + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                         e.Cancel = true;
                         return;
                     }
 
                     //if (int.TryParse(dr[2].ToString(), out d) == false)
                     //{
-                    //    MessageBox.Show("[" + Properties.Resources.PlaceName + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    MessageBox.Show("[" + FindingsEditor.Properties.Resources.PlaceName + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //    e.Cancel = true;
                     //    return;
                     //}
@@ -328,12 +328,12 @@ namespace FindingsEdior
 
             if (i == 0)
             {
-                MessageBox.Show(Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return Duplication.Error;
             }
             else if (i > 1)
             {
-                MessageBox.Show("[" + Properties.Resources.PlaceNo + "]" + Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                MessageBox.Show("[" + FindingsEditor.Properties.Resources.PlaceNo + "]" + FindingsEditor.Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                 return Duplication.Duplicated;
             }
             else

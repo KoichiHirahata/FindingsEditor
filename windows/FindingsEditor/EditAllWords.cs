@@ -23,13 +23,13 @@ namespace FindingsEdior
 
             //●●●移植時要変更
             dgv.Columns["no"].Visible = false;
-            dgv.Columns["operator"].HeaderText = Properties.Resources.DiagnosedDr;
-            dgv.Columns["word_order"].HeaderText = Properties.Resources.Order;
+            dgv.Columns["operator"].HeaderText = FindingsEditor.Properties.Resources.DiagnosedDr;
+            dgv.Columns["word_order"].HeaderText = FindingsEditor.Properties.Resources.Order;
 
             DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
-            btDelColumn.Name = Properties.Resources.Delete;  //列の名前を設定
+            btDelColumn.Name = FindingsEditor.Properties.Resources.Delete;  //列の名前を設定
             btDelColumn.UseColumnTextForButtonValue = true;  //ボタンにテキスト表示
-            btDelColumn.Text = Properties.Resources.Delete;  //ボタンの表示テキスト設定
+            btDelColumn.Text = FindingsEditor.Properties.Resources.Delete;  //ボタンの表示テキスト設定
             dgv.Columns.Add(btDelColumn);     //ボタン追加
 
             dgv.Columns["words1"].DataGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -58,7 +58,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -67,13 +67,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -83,7 +83,7 @@ namespace FindingsEdior
             da.Fill(dt);
             if (dt.Rows.Count == 0)
             {
-                MessageBox.Show(Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -97,14 +97,14 @@ namespace FindingsEdior
             DataGridView temp_dgv = (DataGridView)sender;
 
             //Delete row.  This form delete data without checking. In common case, checking of using object is needed.
-            if (temp_dgv.Columns[e.ColumnIndex].Name == Properties.Resources.Delete)
+            if (temp_dgv.Columns[e.ColumnIndex].Name == FindingsEditor.Properties.Resources.Delete)
             {
                 this.Validate(); //Without this code, new data will disappear.
                 saveDataTable(); //Without this code, deleting new record will call error;
 
                 if (!temp_dgv.Rows[e.RowIndex].IsNewRow)
                 {
-                    if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show("[" + temp_dgv.Rows[e.RowIndex].Cells[1].Value.ToString() + "]" + FindingsEditor.Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         temp_dgv.Rows.Remove(temp_dgv.Rows[e.RowIndex]);
                         saveDataTable();
@@ -131,7 +131,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -140,13 +140,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -224,7 +224,7 @@ namespace FindingsEdior
                 //{
                 //    if (string.IsNullOrWhiteSpace(dr[0].ToString()) == true)
                 //    {
-                //        MessageBox.Show("[" + Properties.Resources.Number + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                //        MessageBox.Show("[" + FindingsEditor.Properties.Resources.Number + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                 //        e.Cancel = true;
                 //        return;
                 //    }
@@ -242,7 +242,7 @@ namespace FindingsEdior
 
                 //    if (string.IsNullOrWhiteSpace(dr[1].ToString()) == true)
                 //    {
-                //        MessageBox.Show("[" + Properties.Resources.ObjectName + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                //        MessageBox.Show("[" + FindingsEditor.Properties.Resources.ObjectName + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                 //        e.Cancel = true;
                 //        return;
                 //    }
@@ -280,12 +280,12 @@ namespace FindingsEdior
 
         //    if (i == 0)
         //    {
-        //        MessageBox.Show(Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        MessageBox.Show(FindingsEditor.Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         //        return Duplication.Error;
         //    }
         //    else if (i > 1)
         //    {
-        //        MessageBox.Show("[" + Properties.Resources.Number + "]" + Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+        //        MessageBox.Show("[" + FindingsEditor.Properties.Resources.Number + "]" + FindingsEditor.Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
         //        return Duplication.Duplicated;
         //    }
         //    else

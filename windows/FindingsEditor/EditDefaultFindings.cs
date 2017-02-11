@@ -29,7 +29,7 @@ namespace FindingsEdior
 
             //●●●移植時要変更
             dgv.Columns["exam_type"].Visible = false;
-            dgv.Columns["findings"].HeaderText = Properties.Resources.Findings;
+            dgv.Columns["findings"].HeaderText = FindingsEditor.Properties.Resources.Findings;
             dgv.Columns["findings"].DataGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             DataGridViewComboBoxColumn eTypeColumn = new DataGridViewComboBoxColumn();
@@ -37,7 +37,7 @@ namespace FindingsEdior
             eTypeColumn.DataSource = CLocalDB.localDB.Tables["all_exam_type"];
             eTypeColumn.ValueMember = "type_no";
             eTypeColumn.DisplayMember = "exam_name";
-            eTypeColumn.HeaderText = Properties.Resources.ExamType;
+            eTypeColumn.HeaderText = FindingsEditor.Properties.Resources.ExamType;
             this.dgv.Columns.Add(eTypeColumn);
 
             this.dgv.Columns[1].DisplayIndex = 1;
@@ -58,7 +58,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -67,13 +67,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -86,7 +86,7 @@ namespace FindingsEdior
             da.Fill(dt);
             if (dt.Rows.Count == 0)
             {
-                MessageBox.Show(Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -118,7 +118,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -127,13 +127,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -179,12 +179,12 @@ namespace FindingsEdior
 
             if (i == 0)
             {
-                MessageBox.Show("[" + checkKey + "]" + Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("[" + checkKey + "]" + FindingsEditor.Properties.Resources.SoftwareError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return Duplication.Error;
             }
             else if (i > 1)
             {
-                MessageBox.Show("[" + Properties.Resources.Number + "]" + Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                MessageBox.Show("[" + FindingsEditor.Properties.Resources.Number + "]" + FindingsEditor.Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                 return Duplication.Duplicated;
             }
             else
@@ -204,7 +204,7 @@ namespace FindingsEdior
                 {
                     if (string.IsNullOrWhiteSpace(dr[0].ToString()) == true)
                     {
-                        MessageBox.Show("[" + Properties.Resources.Number + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                        MessageBox.Show("[" + FindingsEditor.Properties.Resources.Number + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                         return;
                     }
 
@@ -219,7 +219,7 @@ namespace FindingsEdior
 
                     if (string.IsNullOrWhiteSpace(dr[1].ToString()) == true)
                     {
-                        MessageBox.Show("[" + Properties.Resources.ObjectName + "]" + Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
+                        MessageBox.Show("[" + FindingsEditor.Properties.Resources.ObjectName + "]" + FindingsEditor.Properties.Resources.BlankNotAllowed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //●●●移植時要変更
                         return;
                     }
                 }

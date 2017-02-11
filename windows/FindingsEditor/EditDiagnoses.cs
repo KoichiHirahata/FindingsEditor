@@ -206,18 +206,18 @@ namespace FindingsEdior
             DataGridViewButtonColumn btDelete = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
             btDelete.Name = "btDelete";  //列の名前を設定
             btDelete.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-            btDelete.Text = Properties.Resources.Delete;  //ボタンの表示テキスト設定
+            btDelete.Text = FindingsEditor.Properties.Resources.Delete;  //ボタンの表示テキスト設定
             dgv.Columns.Add(btDelete);           //ボタン追加
             #endregion
 
             #region Header text
             dgv.Columns["no"].HeaderText = "No";
-            dgv.Columns["name_eng"].HeaderText = Properties.Resources.English;
-            dgv.Columns["name_jp"].HeaderText = Properties.Resources.Japanese;
-            dgv.Columns["diag_order"].HeaderText = Properties.Resources.Order;
-            dgv.Columns["diag_visible"].HeaderText = Properties.Resources.Visible;
-            dgv.Columns["btDelete"].HeaderText = Properties.Resources.Delete;
-            dgv.Columns["tbUpdate"].HeaderText = Properties.Resources.Update;
+            dgv.Columns["name_eng"].HeaderText = FindingsEditor.Properties.Resources.English;
+            dgv.Columns["name_jp"].HeaderText = FindingsEditor.Properties.Resources.Japanese;
+            dgv.Columns["diag_order"].HeaderText = FindingsEditor.Properties.Resources.Order;
+            dgv.Columns["diag_visible"].HeaderText = FindingsEditor.Properties.Resources.Visible;
+            dgv.Columns["btDelete"].HeaderText = FindingsEditor.Properties.Resources.Delete;
+            dgv.Columns["tbUpdate"].HeaderText = FindingsEditor.Properties.Resources.Update;
             #endregion
 
             #region Design and Settings
@@ -271,7 +271,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -280,13 +280,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -297,7 +297,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(dt);
             if (dt.Rows.Count == 0)
-            { MessageBox.Show(Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             { this.dgv.Refresh(); }
             conn.Close();
@@ -319,14 +319,14 @@ namespace FindingsEdior
             {
                 if ((dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value != null) && (dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value.ToString() != ""))//更新テキストが出てたら削除できない。
                 {
-                    MessageBox.Show(Properties.Resources.YouCanDelAfterUpdate, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.YouCanDelAfterUpdate, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                else if (MessageBox.Show(Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                else if (MessageBox.Show(FindingsEditor.Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     sql = "DELETE FROM diag_name WHERE no=" + dgv.Rows[e.RowIndex].Cells["no"].Value.ToString();
                     if (uckyFunctions.ExeNonQuery(sql) == uckyFunctions.functionResult.failed)
-                    { MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    { MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     else
                     {
                         dgv.Rows.RemoveAt(e.RowIndex);
@@ -338,18 +338,18 @@ namespace FindingsEdior
             #region tbUpdate
             else if (dgv.Columns[e.ColumnIndex].Name == "tbUpdate")
             {
-                if (dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value.ToString() == Properties.Resources.Click2Update)
+                if (dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value.ToString() == FindingsEditor.Properties.Resources.Click2Update)
                 {
                     #region ErrorCheck
                     if (string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["no"].Value.ToString()))
                     {
-                        MessageBox.Show(Properties.Resources.NoIsNeeded, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(FindingsEditor.Properties.Resources.NoIsNeeded, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
                     if (string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString()) && string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString()))
                     {
-                        MessageBox.Show(Properties.Resources.DiagnosisIsRequired, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(FindingsEditor.Properties.Resources.DiagnosisIsRequired, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -357,7 +357,7 @@ namespace FindingsEdior
                     {
                         lbNoRange.ForeColor = Color.Red;
                         lbNoRange.Font = new Font(lbNoRange.Font, FontStyle.Bold);
-                        MessageBox.Show(Properties.Resources.NoOutOfRange + Environment.NewLine + start_no.ToString() + " <= No <=" + end_no.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(FindingsEditor.Properties.Resources.NoOutOfRange + Environment.NewLine + start_no.ToString() + " <= No <=" + end_no.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         lbNoRange.ForeColor = Color.Black;
                         lbNoRange.Font = new Font(lbNoRange.Font, FontStyle.Regular);
                         return;
@@ -367,7 +367,7 @@ namespace FindingsEdior
                     {
                         if (dgv.Rows[i].Cells["no"].Value.ToString() == dgv.Rows[e.RowIndex].Cells["no"].Value.ToString() && i != e.RowIndex)
                         {
-                            MessageBox.Show("[No]" + Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("[No]" + FindingsEditor.Properties.Resources.Duplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -398,10 +398,10 @@ namespace FindingsEdior
                             dgv.Rows[e.RowIndex].Cells["no"].Value.ToString()))
                         {
                             case uckyFunctions.functionResult.connectionError:
-                                MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 break;
                             case uckyFunctions.functionResult.failed:
-                                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 break;
                             case uckyFunctions.functionResult.success:
                                 dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = "";
@@ -439,10 +439,10 @@ namespace FindingsEdior
                             dgv.Rows[e.RowIndex].Cells["diag_visible"].Value.ToString()))
                         {
                             case uckyFunctions.functionResult.connectionError:
-                                MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 break;
                             case uckyFunctions.functionResult.failed:
-                                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 break;
                             case uckyFunctions.functionResult.success:
                                 dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = "";
@@ -463,8 +463,8 @@ namespace FindingsEdior
 
         private void dgv_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv.Columns[e.ColumnIndex].HeaderText != Properties.Resources.Update)
-            { dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = Properties.Resources.Click2Update; }
+            if (dgv.Columns[e.ColumnIndex].HeaderText != FindingsEditor.Properties.Resources.Update)
+            { dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = FindingsEditor.Properties.Resources.Click2Update; }
         }
         #endregion
 
@@ -475,9 +475,9 @@ namespace FindingsEdior
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                if (dt.Rows[i]["tbUpdate"].ToString() == Properties.Resources.Click2Update)
+                if (dt.Rows[i]["tbUpdate"].ToString() == FindingsEditor.Properties.Resources.Click2Update)
                 {
-                    if (MessageBox.Show(Properties.Resources.ChangesNotSavedDiscardOrNot, "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
+                    if (MessageBox.Show(FindingsEditor.Properties.Resources.ChangesNotSavedDiscardOrNot, "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2)
                         == DialogResult.Cancel)
                     { e.Cancel = true; }
                 }

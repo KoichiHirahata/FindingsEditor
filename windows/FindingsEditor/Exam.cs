@@ -62,7 +62,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -70,13 +70,13 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -97,7 +97,7 @@ namespace FindingsEdior
             if (dt.Rows.Count == 0)
             {
                 conn.Close();
-                MessageBox.Show(Properties.Resources.NoData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -157,10 +157,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, department.ToString()))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -174,10 +174,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, ward_id))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -192,10 +192,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -207,10 +207,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -226,10 +226,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator2))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -241,10 +241,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -260,10 +260,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator3))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -275,10 +275,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -294,10 +294,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator4))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -309,10 +309,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -328,10 +328,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator5))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -343,10 +343,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, operator1))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -362,10 +362,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, diag_dr))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -381,10 +381,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, final_diag_dr))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -399,10 +399,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, equipment.ToString()))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -415,10 +415,10 @@ namespace FindingsEdior
                 switch (uckyFunctions.ExeNonQuery(sql, place_no.ToString()))
                 {
                     case uckyFunctions.functionResult.connectionError:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.failed:
-                        MessageBox.Show("[" + column + "]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("[" + column + "]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.success:
                         break;
@@ -567,12 +567,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -605,7 +605,7 @@ namespace FindingsEdior
                 if (!string.IsNullOrWhiteSpace(dr["suspect"].ToString()))
                 {
                     if ((Boolean)dr["suspect"])
-                    { str += Properties.Resources.Suspect; }
+                    { str += FindingsEditor.Properties.Resources.Suspect; }
                 }
                 str += Environment.NewLine;
             }

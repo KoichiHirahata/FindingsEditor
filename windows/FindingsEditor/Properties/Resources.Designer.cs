@@ -979,6 +979,15 @@ namespace FindingsEditor.Properties {
         }
         
         /// <summary>
+        ///   Shutting down... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ShuttingDown {
+            get {
+                return ResourceManager.GetString("ShuttingDown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Side view に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SideView {

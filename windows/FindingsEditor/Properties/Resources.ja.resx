@@ -477,4 +477,7 @@
   <data name="DiagnosisIsRequired" xml:space="preserve">
     <value>診断名が空欄です。</value>
   </data>
+  <data name="ShuttingDown" xml:space="preserve">
+    <value>プログラムを終了します。</value>
+  </data>
 </root>

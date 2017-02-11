@@ -44,7 +44,7 @@ namespace FindingsEdior
             DataGridViewButtonColumn btSelect = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
             btSelect.Name = "btSelect";  //列の名前を設定
             btSelect.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-            btSelect.Text = Properties.Resources.ptSelect;  //ボタンの表示テキスト設定
+            btSelect.Text = FindingsEditor.Properties.Resources.ptSelect;  //ボタンの表示テキスト設定
             dgvExamList.Columns.Add(btSelect);           //ボタン追加
             #endregion
 
@@ -52,7 +52,7 @@ namespace FindingsEdior
             DataGridViewButtonColumn btImage = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
             btImage.Name = "btImage";  //列の名前を設定
             btImage.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-            btImage.Text = Properties.Resources.Image;  //ボタンの表示テキスト設定
+            btImage.Text = FindingsEditor.Properties.Resources.Image;  //ボタンの表示テキスト設定
             dgvExamList.Columns.Add(btImage);           //ボタン追加
             #endregion
 
@@ -60,7 +60,7 @@ namespace FindingsEdior
             DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
             btDelColumn.Name = "btDelColumn";  //列の名前を設定
             btDelColumn.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-            btDelColumn.Text = Properties.Resources.Delete;  //ボタンの表示テキスト設定
+            btDelColumn.Text = FindingsEditor.Properties.Resources.Delete;  //ボタンの表示テキスト設定
             dgvExamList.Columns.Add(btDelColumn);           //ボタン追加
             #endregion
 
@@ -68,7 +68,7 @@ namespace FindingsEdior
             DataGridViewButtonColumn btPrint = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
             btPrint.Name = "btPrint";  //列の名前を設定
             btPrint.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-            btPrint.Text = Properties.Resources.Print;  //ボタンの表示テキスト設定
+            btPrint.Text = FindingsEditor.Properties.Resources.Print;  //ボタンの表示テキスト設定
             dgvExamList.Columns.Add(btPrint);           //ボタン追加
             #endregion
 
@@ -89,16 +89,16 @@ namespace FindingsEdior
 
             #region Change columns header text
             this.dgvExamList.Columns["pt_id"].HeaderText = "ID";
-            this.dgvExamList.Columns["pt_name"].HeaderText = Properties.Resources.ptName;
-            this.dgvExamList.Columns["exam_day"].HeaderText = Properties.Resources.Date;
-            this.dgvExamList.Columns["exam_type_name"].HeaderText = Properties.Resources.ExamType;
-            this.dgvExamList.Columns["name1"].HeaderText = Properties.Resources.Department;
-            this.dgvExamList.Columns["ward"].HeaderText = Properties.Resources.Ward;
-            this.dgvExamList.Columns["status_name"].HeaderText = Properties.Resources.Status;
-            //dgvExamList.Columns["btSelect"].HeaderText = Properties.Resources.ptSelect; //If this code is enabled, this application will stop with clicking at columnheader.
-            //dgvExamList.Columns["btImage"].HeaderText = Properties.Resources.Image; //Same as above.
-            //dgvExamList.Columns["btDelColumn"].HeaderText = Properties.Resources.Delete; //Same as above.
-            //dgvExamList.Columns["btPrint"].HeaderText = Properties.Resources.Print; //Same as above.
+            this.dgvExamList.Columns["pt_name"].HeaderText = FindingsEditor.Properties.Resources.ptName;
+            this.dgvExamList.Columns["exam_day"].HeaderText = FindingsEditor.Properties.Resources.Date;
+            this.dgvExamList.Columns["exam_type_name"].HeaderText = FindingsEditor.Properties.Resources.ExamType;
+            this.dgvExamList.Columns["name1"].HeaderText = FindingsEditor.Properties.Resources.Department;
+            this.dgvExamList.Columns["ward"].HeaderText = FindingsEditor.Properties.Resources.Ward;
+            this.dgvExamList.Columns["status_name"].HeaderText = FindingsEditor.Properties.Resources.Status;
+            //dgvExamList.Columns["btSelect"].HeaderText = FindingsEditor.Properties.Resources.ptSelect; //If this code is enabled, this application will stop with clicking at columnheader.
+            //dgvExamList.Columns["btImage"].HeaderText = FindingsEditor.Properties.Resources.Image; //Same as above.
+            //dgvExamList.Columns["btDelColumn"].HeaderText = FindingsEditor.Properties.Resources.Delete; //Same as above.
+            //dgvExamList.Columns["btPrint"].HeaderText = FindingsEditor.Properties.Resources.Print; //Same as above.
             dgvExamList.Columns["btSelect"].HeaderText = "";
             dgvExamList.Columns["btImage"].HeaderText = "";
             dgvExamList.Columns["btDelColumn"].HeaderText = "";
@@ -120,7 +120,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             #endregion
@@ -260,10 +260,10 @@ namespace FindingsEdior
                           + " /operator_id:" + db_operator.operatorID);
                     }
                     else
-                    { MessageBox.Show("[Plugin]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    { MessageBox.Show("[Plugin]" + FindingsEditor.Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
                 else
-                { MessageBox.Show("[Plugin]" + Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                { MessageBox.Show("[Plugin]" + FindingsEditor.Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             else
             {
@@ -280,7 +280,7 @@ namespace FindingsEdior
 
             //If findings was blank, delete exam.
             //If findings was not blank, make exam invisible.
-            if (MessageBox.Show(Properties.Resources.ConfirmDel, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(FindingsEditor.Properties.Resources.ConfirmDel, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 if (exam.findings.Length == 0)
                 { exam.delExam(); }
@@ -298,7 +298,7 @@ namespace FindingsEdior
             #region Error Check
             if (!File.Exists(Application.StartupPath + @"\result.html"))
             {
-                MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("[Result template file]" + FindingsEditor.Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             #endregion

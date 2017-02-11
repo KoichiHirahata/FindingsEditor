@@ -44,7 +44,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             #endregion
@@ -55,7 +55,7 @@ namespace FindingsEdior
             DataSet ds = new DataSet("t_patient");
             da.Fill(ds, "t_patient");
             if (ds.Tables["t_patient"].Rows.Count == 0)
-            { MessageBox.Show(Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             {
                 this.dgvPatientList.Columns.Clear();    //これしとかないと検索するたびにボタンが増え続ける。
@@ -63,13 +63,13 @@ namespace FindingsEdior
 
                 //列名のテキストを変更する
                 this.dgvPatientList.Columns[0].HeaderText = "ID";
-                this.dgvPatientList.Columns[1].HeaderText = Properties.Resources.ptName;
-                this.dgvPatientList.Columns[2].HeaderText = Properties.Resources.Birthday;
+                this.dgvPatientList.Columns[1].HeaderText = FindingsEditor.Properties.Resources.ptName;
+                this.dgvPatientList.Columns[2].HeaderText = FindingsEditor.Properties.Resources.Birthday;
 
                 DataGridViewButtonColumn btColumn = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
-                btColumn.Name = Properties.Resources.ptSelect;  //列の名前を設定
+                btColumn.Name = FindingsEditor.Properties.Resources.ptSelect;  //列の名前を設定
                 btColumn.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-                btColumn.Text = Properties.Resources.ptSelect;  //ボタンの表示テキスト設定
+                btColumn.Text = FindingsEditor.Properties.Resources.ptSelect;  //ボタンの表示テキスト設定
                 dgvPatientList.Columns.Add(btColumn);           //ボタン追加
 
                 this.dgvPatientList.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;  //列幅自動調整
@@ -98,7 +98,7 @@ namespace FindingsEdior
             Point p = dgvPatientList.PointToClient(Cursor.Position);
             DataGridView.HitTestInfo hti = dgvPatientList.HitTest(p.X, p.Y);  // 取得したポイントからHitTestでセル位置取得
 
-            if ((hti.Type == DataGridViewHitTestType.Cell) && (dgv.Columns[e.ColumnIndex].Name == Properties.Resources.ptSelect))
+            if ((hti.Type == DataGridViewHitTestType.Cell) && (dgv.Columns[e.ColumnIndex].Name == FindingsEditor.Properties.Resources.ptSelect))
             {
                 DataRowView drv = dgvPatientList.SelectedRows[0].DataBoundItem as DataRowView;
                 DataRow dr = drv.Row;

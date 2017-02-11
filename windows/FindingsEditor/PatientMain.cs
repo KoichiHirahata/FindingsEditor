@@ -36,7 +36,7 @@ namespace FindingsEdior
                 }
                 else
                 {
-                    MessageBox.Show(Properties.Resources.ReadOnlyMode, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.ReadOnlyMode, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     pCanEdit = false;
                     btEditPtData.Visible = false;
                     tbPtInfo.ReadOnly = true;
@@ -51,7 +51,7 @@ namespace FindingsEdior
                 timer.Start();
             }
             else
-            { MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
         }
         //This function is necessary for lock
@@ -63,9 +63,9 @@ namespace FindingsEdior
             this.Pt_ID.Text = pt1.ptID;
             this.Pt_name.Text = pt1.ptName;
             if (pt1.ptGender == patient.gender.female)
-            { this.Pt_gender.Text = Properties.Resources.Female; }
+            { this.Pt_gender.Text = FindingsEditor.Properties.Resources.Female; }
             else
-            { this.Pt_gender.Text = Properties.Resources.Male; }
+            { this.Pt_gender.Text = FindingsEditor.Properties.Resources.Male; }
             DateTime bday = pt1.ptBirthday;
             this.Pt_birthday.Text = bday.ToShortDateString();
             this.Pt_age.Text = pt1.getPtAge().ToString();
@@ -85,7 +85,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             #endregion
@@ -117,7 +117,7 @@ namespace FindingsEdior
             { da.Fill(dt); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -133,7 +133,7 @@ namespace FindingsEdior
                 DataGridViewButtonColumn btEdit = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
                 btEdit.Name = "btEdit";
                 btEdit.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-                btEdit.Text = Properties.Resources.Edit;
+                btEdit.Text = FindingsEditor.Properties.Resources.Edit;
                 dgvExams.Columns.Add(btEdit);
                 #endregion
 
@@ -141,7 +141,7 @@ namespace FindingsEdior
                 DataGridViewButtonColumn btImage = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
                 btImage.Name = "btImage";  //列の名前を設定
                 btImage.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-                btImage.Text = Properties.Resources.Image;  //ボタンの表示テキスト設定
+                btImage.Text = FindingsEditor.Properties.Resources.Image;  //ボタンの表示テキスト設定
                 dgvExams.Columns.Add(btImage);           //ボタン追加
                 #endregion
 
@@ -149,18 +149,18 @@ namespace FindingsEdior
                 DataGridViewButtonColumn btPrint = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
                 btPrint.Name = "btPrint";
                 btPrint.UseColumnTextForButtonValue = true;    //ボタンにテキスト表示
-                btPrint.Text = Properties.Resources.Print;
+                btPrint.Text = FindingsEditor.Properties.Resources.Print;
                 dgvExams.Columns.Add(btPrint);
                 #endregion
 
                 #region Change columns header text
                 dgvExams.Columns["exam_id"].Visible = false;
-                dgvExams.Columns["exam_name"].HeaderText = Properties.Resources.ExamType;
-                dgvExams.Columns["exam_day"].HeaderText = Properties.Resources.Date;
-                dgvExams.Columns["status_name"].HeaderText = Properties.Resources.Status;
-                dgvExams.Columns["btEdit"].HeaderText = Properties.Resources.Edit;
-                dgvExams.Columns["btImage"].HeaderText = Properties.Resources.Image;
-                dgvExams.Columns["btPrint"].HeaderText = Properties.Resources.Print;
+                dgvExams.Columns["exam_name"].HeaderText = FindingsEditor.Properties.Resources.ExamType;
+                dgvExams.Columns["exam_day"].HeaderText = FindingsEditor.Properties.Resources.Date;
+                dgvExams.Columns["status_name"].HeaderText = FindingsEditor.Properties.Resources.Status;
+                dgvExams.Columns["btEdit"].HeaderText = FindingsEditor.Properties.Resources.Edit;
+                dgvExams.Columns["btImage"].HeaderText = FindingsEditor.Properties.Resources.Image;
+                dgvExams.Columns["btPrint"].HeaderText = FindingsEditor.Properties.Resources.Print;
                 #endregion
 
                 #region Set invisible
@@ -229,10 +229,10 @@ namespace FindingsEdior
                             + " /operator_id:" + db_operator.operatorID);
                     }
                     else
-                    { MessageBox.Show("[Plugin]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    { MessageBox.Show("[Plugin]" + FindingsEditor.Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
                 else
-                { MessageBox.Show("[Plugin]" + Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                { MessageBox.Show("[Plugin]" + FindingsEditor.Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             else
             {
@@ -247,7 +247,7 @@ namespace FindingsEdior
             #region Error Check
             if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
             {
-                MessageBox.Show("[Result template file]" + Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("[Result template file]" + FindingsEditor.Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             #endregion
@@ -267,7 +267,7 @@ namespace FindingsEdior
         {
             if (this.tbPtInfo.Text != pt1.ptInfo)
             {
-                switch (MessageBox.Show(Properties.Resources.SummarySaveYN, "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information))
+                switch (MessageBox.Show(FindingsEditor.Properties.Resources.SummarySaveYN, "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information))
                 {
                     case DialogResult.Cancel:
                         e.Cancel = true;

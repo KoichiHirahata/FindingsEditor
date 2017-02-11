@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -69,7 +66,7 @@ namespace FindingsEdior
             DataGridViewButtonColumn btSelect = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
             btSelect.Name = "btSelect";  //列の名前を設定
             btSelect.UseColumnTextForButtonValue = true;  //ボタンにテキスト表示
-            btSelect.Text = Properties.Resources.Select;  //ボタンの表示テキスト設定
+            btSelect.Text = FindingsEditor.Properties.Resources.Select;  //ボタンの表示テキスト設定
             dgv.Columns.Add(btSelect);     //ボタン追加
             #endregion
 
@@ -77,8 +74,8 @@ namespace FindingsEdior
             this.dgv.Columns[0].Visible = false;
             this.dgv.Columns[2].Visible = false;
 
-            this.dgv.Columns[1].HeaderText = Properties.Resources.Diagnosis;
-            this.dgv.Columns["chbSusp"].HeaderText = Properties.Resources.Suspect;
+            this.dgv.Columns[1].HeaderText = FindingsEditor.Properties.Resources.Diagnosis;
+            this.dgv.Columns["chbSusp"].HeaderText = FindingsEditor.Properties.Resources.Suspect;
             this.dgv.Columns["btSelect"].HeaderText = "";
             #endregion
 
@@ -406,12 +403,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -446,12 +443,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -484,7 +481,7 @@ namespace FindingsEdior
                 #region Error check
                 if (cbPremodifier.Text.Length > 255)
                 {
-                    MessageBox.Show(Properties.Resources.Location2Long, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.Location2Long, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 #endregion

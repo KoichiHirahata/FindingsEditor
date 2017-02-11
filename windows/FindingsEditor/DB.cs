@@ -50,12 +50,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -74,7 +74,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "exam_type");
             if (localDB.Tables["exam_type"].Rows.Count == 0)
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             conn.Close();
         }
 
@@ -89,12 +89,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -113,7 +113,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "all_exam_type");
             if (localDB.Tables["all_exam_type"].Rows.Count == 0)
-                MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             conn.Close();
         }
         #endregion
@@ -129,12 +129,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -144,7 +144,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "ward");
             if (localDB.Tables["ward"].Rows.Count == 0)
-            { MessageBox.Show("[ward]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[ward]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -159,12 +159,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -174,7 +174,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "department");
             if (localDB.Tables["department"].Rows.Count == 0)
-                MessageBox.Show("[department]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("[department]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             conn.Close();
         }
 
@@ -190,12 +190,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -205,7 +205,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "orderDr");
             if (localDB.Tables["orderDr"].Rows.Count == 0)
-            { MessageBox.Show("[orderDr]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[orderDr]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             else
             {
                 DataTable operator1;
@@ -251,12 +251,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -266,7 +266,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "allOp");
             if (localDB.Tables["allOp"].Rows.Count == 0)
-            { MessageBox.Show("[allOp]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[allOp]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -281,12 +281,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -296,7 +296,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "op_category");
             if (localDB.Tables["op_category"].Rows.Count == 0)
-            { MessageBox.Show("[op_category]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[op_category]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
         #endregion
@@ -313,12 +313,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -328,7 +328,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "equipment_type");
             if (localDB.Tables["equipment_type"].Rows.Count == 0)
-            { MessageBox.Show("[equipment_type]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[equipment_type]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -343,12 +343,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -371,12 +371,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -399,12 +399,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -427,12 +427,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -455,12 +455,12 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -487,12 +487,12 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -517,12 +517,12 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -549,12 +549,12 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -568,7 +568,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "diag_name");
             if (localDB.Tables["diag_name"].Rows.Count == 0)
-            { MessageBox.Show("[localDB diag_name]" + Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[localDB diag_name]" + FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -585,12 +585,12 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -604,7 +604,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "diag_category");
             if (localDB.Tables["diag_category"].Rows.Count == 0)
-            { MessageBox.Show("[localDB diag_category]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[localDB diag_category]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
         #endregion
@@ -622,12 +622,12 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -641,7 +641,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "exam_status");
             if (localDB.Tables["exam_status"].Rows.Count == 0)
-            { MessageBox.Show("[exam_status]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[exam_status]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 
@@ -659,12 +659,12 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
             #endregion
@@ -674,7 +674,7 @@ namespace FindingsEdior
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(localDB, "words");
             if (localDB.Tables["words"].Rows.Count == 0)
-            { MessageBox.Show("[words]" + Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("[words]" + FindingsEditor.Properties.Resources.NoRecord, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             conn.Close();
         }
 

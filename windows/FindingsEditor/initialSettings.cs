@@ -23,9 +23,9 @@ namespace FindingsEdior
             this.tbDbID.Text = Settings.DBconnectID;
             //this.tbDBpw.Text = Settings.DBconnectPw; //I don't recomend to use this code.
             if (Settings.DBconnectPw == null)
-            { this.pwState.Text = Properties.Resources.pwUnconfigured; }
+            { this.pwState.Text = FindingsEditor.Properties.Resources.pwUnconfigured; }
             else
-            { this.pwState.Text = Properties.Resources.pwConfigured; }
+            { this.pwState.Text = FindingsEditor.Properties.Resources.pwConfigured; }
             this.tbDBpw.Visible = false;
 
             if (!String.IsNullOrWhiteSpace(Settings.figureFolder))
@@ -48,7 +48,7 @@ namespace FindingsEdior
             {
                 if (!Directory.Exists(tbFigureFolder.Text))
                 {
-                    MessageBox.Show("[Figure folder]" + Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("[Figure folder]" + FindingsEditor.Properties.Resources.FolderNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -69,26 +69,26 @@ namespace FindingsEdior
         private void btTestConnect_Click(object sender, EventArgs e)
         {
             if (testConnect())
-            { MessageBox.Show(Properties.Resources.ConnectSuccess, "Successfully connected.", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.ConnectSuccess, "Successfully connected.", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
         private Boolean testConnect()
         {
             if (this.tbDBSrv.Text.Length == 0)
             {
-                MessageBox.Show(Properties.Resources.ServerIP, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ServerIP, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
             if (this.tbDBsrvPort.Text.Length == 0)
             {
-                MessageBox.Show(Properties.Resources.portUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.portUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
             if (this.tbDbID.Text.Length == 0)
             {
-                MessageBox.Show(Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -98,7 +98,7 @@ namespace FindingsEdior
             {
                 if (this.tbDBpw.Text.Length == 0)
                 {
-                    MessageBox.Show(Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
 
@@ -108,7 +108,7 @@ namespace FindingsEdior
             {
                 if (Settings.DBconnectPw == null)
                 {
-                    MessageBox.Show(Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 temp_pw = Settings.DBconnectPw;
@@ -129,7 +129,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             #endregion
@@ -138,13 +138,13 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return false;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return false;
             }
@@ -156,7 +156,7 @@ namespace FindingsEdior
             }
             else
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return false;
             }
@@ -166,7 +166,7 @@ namespace FindingsEdior
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();  //Make instance of OpenFileDialog class
 
-            fbd.Description = Properties.Resources.SelectFolder; //Set description of dialog
+            fbd.Description = FindingsEditor.Properties.Resources.SelectFolder; //Set description of dialog
             fbd.RootFolder = Environment.SpecialFolder.Desktop; //Set root folder. Deault is desktop
             fbd.SelectedPath = @"C:\"; //Set default pass
             fbd.ShowNewFolderButton = true; //Allow user to make new folder. Default is true

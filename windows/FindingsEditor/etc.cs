@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -63,7 +62,7 @@ namespace FindingsEdior
             aes.Padding = PaddingMode.PKCS7;
 
             // Base64形式の文字列からバイト型配列に変換
-            byte[] src = System.Convert.FromBase64String(text);
+            byte[] src = Convert.FromBase64String(text);
 
             // 複号化する
             using (ICryptoTransform decrypt = aes.CreateDecryptor())
@@ -146,6 +145,8 @@ namespace FindingsEdior
                 bf2.Binder = iab;
                 //Open the file
                 System.IO.FileStream fs2 = new System.IO.FileStream(Settings.settingFile_location, System.IO.FileMode.Open);
+
+                bool settingFileError = false;
                 //Deserialize the binary file
                 try
                 {
@@ -154,21 +155,42 @@ namespace FindingsEdior
                 }
                 catch (InvalidOperationException)
                 {
-                    DialogResult ret;
-                    ret = MessageBox.Show(Properties.Resources.SettingFileBroken, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    settingFileError = true;
                     fs2.Close();
-                    if (ret == DialogResult.Yes)
-                    {
-                        file_control.delFile(Settings.settingFile_location);
-                    }
+                    deleteSettingFileOrShutdown();
+                }
+                catch (SerializationException)
+                {
+                    settingFileError = true;
+                    fs2.Close();
+                    deleteSettingFileOrShutdown();
                 }
 
-                Settings.DBSrvIP = st.DBSrvIP;
-                Settings.DBSrvPort = st.DBSrvPort;
-                Settings.DBconnectID = st.DBconnectID;
-                Settings.DBconnectPw = PasswordEncoder.Decrypt(st.DBconnectPw);
-                Settings.endoPrintFile = st.endoPrintFile;
-                Settings.figureFolder = st.figureFolder;
+                if (settingFileError == false)
+                {
+                    Settings.DBSrvIP = st.DBSrvIP;
+                    Settings.DBSrvPort = st.DBSrvPort;
+                    Settings.DBconnectID = st.DBconnectID;
+                    Settings.DBconnectPw = PasswordEncoder.Decrypt(st.DBconnectPw);
+                    Settings.endoPrintFile = st.endoPrintFile;
+                    Settings.figureFolder = st.figureFolder;
+                }
+            }
+        }
+
+        public static void deleteSettingFileOrShutdown()
+        {
+            DialogResult ret;
+            ret = MessageBox.Show(FindingsEditor.Properties.Resources.SettingFileBroken, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (ret == DialogResult.Yes)
+            {
+                file_control.delFile(settingFile_location);
+                Application.Restart();
+            }
+            else
+            {
+                MessageBox.Show(FindingsEditor.Properties.Resources.ShuttingDown, "Shutting down...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Environment.Exit(0);
             }
         }
 
@@ -222,16 +244,16 @@ namespace FindingsEdior
                 }
                 catch (System.IO.IOException)
                 {
-                    MessageBox.Show(Properties.Resources.FileBeingUsed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.FileBeingUsed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (System.UnauthorizedAccessException)
                 {
-                    MessageBox.Show(Properties.Resources.PermissionDenied, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.PermissionDenied, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show(Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -609,7 +631,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             #endregion
@@ -623,7 +645,7 @@ namespace FindingsEdior
             { da.Fill(dt); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return false;
             }
@@ -632,7 +654,7 @@ namespace FindingsEdior
 
             if (dt.Rows.Count == 0)
             {
-                MessageBox.Show(Properties.Resources.NoData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -668,10 +690,10 @@ namespace FindingsEdior
                 case uckyFunctions.functionResult.success:
                     return;
                 case uckyFunctions.functionResult.failed:
-                    MessageBox.Show(Properties.Resources.LockFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.LockFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 case uckyFunctions.functionResult.connectionError:
-                    MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
             }
         }
@@ -686,10 +708,10 @@ namespace FindingsEdior
                 case uckyFunctions.functionResult.success:
                     return;
                 case uckyFunctions.functionResult.failed:
-                    MessageBox.Show(Properties.Resources.LockFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.LockFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 case uckyFunctions.functionResult.connectionError:
-                    MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
             }
         }
@@ -723,20 +745,20 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             try
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
@@ -800,13 +822,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return idPwCheckResult.connectionError;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return idPwCheckResult.connectionError;
             }
@@ -821,7 +843,7 @@ namespace FindingsEdior
             if (dt.Rows.Count == 0)
             {
                 conn.Close();
-                MessageBox.Show(Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return idPwCheckResult.failed;
             }
             else
@@ -841,7 +863,7 @@ namespace FindingsEdior
                 else
                 {
                     conn.Close();
-                    MessageBox.Show(Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return idPwCheckResult.failed;
                 }
             }
@@ -882,7 +904,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -890,13 +912,13 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -910,7 +932,7 @@ namespace FindingsEdior
             if (dt.Rows.Count == 0)
             {
                 conn.Close();
-                MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -939,9 +961,9 @@ namespace FindingsEdior
         {
             string SQL = "UPDATE patient SET pt_memo=:p0 WHERE pt_id=:p1;";
             if (uckyFunctions.ExeNonQuery(SQL, pt_source.ptInfo, pt_source.ptID) == uckyFunctions.functionResult.success)
-            { MessageBox.Show(Properties.Resources.UpdateDone, "Successfully updated", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.UpdateDone, "Successfully updated", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
-            { MessageBox.Show(Properties.Resources.UpdateFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.UpdateFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         public uckyFunctions.functionResult writePtAllData(patient pt_source)
@@ -984,7 +1006,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
 
@@ -992,13 +1014,13 @@ namespace FindingsEdior
             { conn.Open(); }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
@@ -1020,10 +1042,10 @@ namespace FindingsEdior
             switch (numberOfPatients(patientID))
             {
                 case -1:
-                    MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return idDuplicateResult.Error;
                 case 0:
-                    //MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show(FindingsEditor.Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return idDuplicateResult.NotExist;
                 case 1:
                     return idDuplicateResult.None;
@@ -1043,7 +1065,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
 
@@ -1053,13 +1075,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
@@ -1115,7 +1137,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -1125,13 +1147,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -1147,7 +1169,7 @@ namespace FindingsEdior
             if (dt.Rows.Count == 0)
             {
                 conn.Close();
-                MessageBox.Show(Properties.Resources.NoData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -1182,7 +1204,7 @@ namespace FindingsEdior
 
             if (pw == null)
             {
-                MessageBox.Show(Properties.Resources.NoPw, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoPw, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return uckyFunctions.functionResult.failed;
             }
 
@@ -1235,7 +1257,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
 
@@ -1245,13 +1267,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
@@ -1278,7 +1300,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
 
@@ -1288,13 +1310,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return -1;
             }

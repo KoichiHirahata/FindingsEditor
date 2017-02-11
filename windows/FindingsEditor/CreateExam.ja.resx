@@ -229,4 +229,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>新規検査</value>
   </data>
+  <data name="btPtEdit.Text" xml:space="preserve">
+    <value>患者情報編集</value>
+  </data>
 </root>

@@ -49,7 +49,7 @@ namespace FindingsEdior
         {
             if (this.tbPtId.Text.Length == 0)
             {
-                MessageBox.Show(Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -104,15 +104,15 @@ namespace FindingsEdior
                                 {
                                     case "0":
                                         pt1.ptGender = patient.gender.female;
-                                        this.Pt_gender.Text = Properties.Resources.Female;
+                                        this.Pt_gender.Text = FindingsEditor.Properties.Resources.Female;
                                         break;
                                     case "1":
                                         pt1.ptGender = patient.gender.male;
-                                        this.Pt_gender.Text = Properties.Resources.Male;
+                                        this.Pt_gender.Text = FindingsEditor.Properties.Resources.Male;
                                         break;
                                     default:
                                         pt1.ptGender = patient.gender.male;
-                                        this.Pt_gender.Text = Properties.Resources.Male;
+                                        this.Pt_gender.Text = FindingsEditor.Properties.Resources.Male;
                                         break;
                                 }
                                 #endregion
@@ -122,21 +122,21 @@ namespace FindingsEdior
                                 if (save_res == uckyFunctions.functionResult.success)
                                 { break; }
                                 else if (save_res == uckyFunctions.functionResult.failed)
-                                { MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                                { MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                                 else if (save_res == uckyFunctions.functionResult.connectionError)
-                                { MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                                { MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                                 #endregion
                             }
                             else if (ptName == "")
-                            { MessageBox.Show(Properties.Resources.PluginCouldntGetPtName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                            { MessageBox.Show(FindingsEditor.Properties.Resources.PluginCouldntGetPtName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                             #endregion
                         }
                         else
-                        { MessageBox.Show(Properties.Resources.ProcedureCancelled); }
+                        { MessageBox.Show(FindingsEditor.Properties.Resources.ProcedureCancelled); }
                     }
 
                     // If plug-in procedure was canseled, or plug-in not exist, codes below will be run
-                    MessageBox.Show(Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.NoPatient, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     EditPt ep = new EditPt(this.tbPtId.Text, true, false);
                     ep.ShowDialog(this);
                     if (patient.numberOfPatients(this.tbPtId.Text) == 1)
@@ -147,14 +147,14 @@ namespace FindingsEdior
                     pt1.readPtData(pt1.ptID);
                     this.Pt_name.Text = pt1.ptName;
                     if (pt1.ptGender == patient.gender.female)
-                    { this.Pt_gender.Text = Properties.Resources.Female; }
+                    { this.Pt_gender.Text = FindingsEditor.Properties.Resources.Female; }
                     else
-                    { this.Pt_gender.Text = Properties.Resources.Male; }
+                    { this.Pt_gender.Text = FindingsEditor.Properties.Resources.Male; }
                     this.Pt_birthday.Text = pt1.ptBirthday.ToShortDateString();
                     this.Pt_age.Text = pt1.getPtAge().ToString();
                     break;
                 default:
-                    MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
         }
@@ -170,19 +170,19 @@ namespace FindingsEdior
             #region Error check
             if (this.tbPtId.Text.Length == 0)
             {
-                MessageBox.Show(Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (patient.numberOfPatients(this.tbPtId.Text) == 0)
             {
-                MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(cbExamType.Text))
             {
-                MessageBox.Show("[" + Properties.Resources.ExamType + "]" + Properties.Resources.NotSelected, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("[" + FindingsEditor.Properties.Resources.ExamType + "]" + FindingsEditor.Properties.Resources.NotSelected, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             #endregion
@@ -225,10 +225,10 @@ namespace FindingsEdior
                 this.cbExamType.SelectedValue.ToString()))
             {
                 case uckyFunctions.functionResult.connectionError:
-                    MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case uckyFunctions.functionResult.failed:
-                    MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case uckyFunctions.functionResult.success:
                     this.Close();
@@ -241,7 +241,7 @@ namespace FindingsEdior
             #region Error check
             if (this.tbPtId.Text.Length == 0)
             {
-                MessageBox.Show(Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             #endregion

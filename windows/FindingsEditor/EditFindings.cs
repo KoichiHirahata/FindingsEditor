@@ -66,22 +66,22 @@ namespace FindingsEdior
                 timer.Start();
 
                 if (!canEdit)
-                { MessageBox.Show(Properties.Resources.YouCanMakeChangesOnlyToPatho, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                { MessageBox.Show(FindingsEditor.Properties.Resources.YouCanMakeChangesOnlyToPatho, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             }
             else
             {
-                //MessageBox.Show(Properties.Resources.ReadOnlyMode + Environment.NewLine + Properties.Resources.ChangesWillLost, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(Properties.Resources.ReadOnlyMode, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(FindingsEditor.Properties.Resources.ReadOnlyMode + Environment.NewLine + FindingsEditor.Properties.Resources.ChangesWillLost, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ReadOnlyMode, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             #endregion
 
             #endregion
 
             #region Header
-            this.lbPatient.Text = "ID: " + exam.pt_id + "   " + Properties.Resources.Name + ": " + exam.pt_name;
+            this.lbPatient.Text = "ID: " + exam.pt_id + "   " + FindingsEditor.Properties.Resources.Name + ": " + exam.pt_name;
 
             if (!canEdit)
-            { btSaveClose.Text = Properties.Resources.Close; }
+            { btSaveClose.Text = FindingsEditor.Properties.Resources.Close; }
 
             //cbExamStatus initialization
             this.cbExamStatus.DataSource = CLocalDB.localDB.Tables["exam_status"];
@@ -94,8 +94,8 @@ namespace FindingsEdior
             #endregion
 
             #region information
-            this.lbDate.Text = Properties.Resources.Date + ": " + exam.exam_day.ToLongDateString()
-                + "    " + Properties.Resources.ExamType + ": " + exam.getExamTypeName();
+            this.lbDate.Text = FindingsEditor.Properties.Resources.Date + ": " + exam.exam_day.ToLongDateString()
+                + "    " + FindingsEditor.Properties.Resources.ExamType + ": " + exam.getExamTypeName();
 
             #region tbPurpose initialization
             this.tbPurpose.Text = exam.purpose;
@@ -294,9 +294,9 @@ namespace FindingsEdior
             if (canEdit)
             {
                 DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //Create DataGridViewButtonColumn
-                btDelColumn.Name = Properties.Resources.Delete;  //Set column name
+                btDelColumn.Name = FindingsEditor.Properties.Resources.Delete;  //Set column name
                 btDelColumn.UseColumnTextForButtonValue = true;  //Show text on the button
-                btDelColumn.Text = Properties.Resources.Delete;  //Set text on the button
+                btDelColumn.Text = FindingsEditor.Properties.Resources.Delete;  //Set text on the button
                 dgvDiagnoses.Columns.Add(btDelColumn);     //Add the button
             }
             #endregion
@@ -549,7 +549,7 @@ namespace FindingsEdior
             }
             catch (ArgumentException)
             {
-                MessageBox.Show(Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -558,13 +558,13 @@ namespace FindingsEdior
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show(Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
             catch (System.IO.IOException)
             {
-                MessageBox.Show(Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
                 return;
             }
@@ -602,7 +602,7 @@ namespace FindingsEdior
                     if (string.IsNullOrWhiteSpace(dr.Cells["suspect"].Value.ToString()))
                     { susp = ""; }
                     else if ((Boolean)dr.Cells["suspect"].Value)
-                    { susp = Properties.Resources.Suspect; }
+                    { susp = FindingsEditor.Properties.Resources.Suspect; }
                     else
                     { susp = ""; }
 
@@ -649,7 +649,7 @@ namespace FindingsEdior
 
                 newRow["suspect"] = ad.suspect;
                 if (ad.suspect)
-                { newRow["name"] = diagText + Properties.Resources.Suspect; }
+                { newRow["name"] = diagText + FindingsEditor.Properties.Resources.Suspect; }
                 else
                 { newRow["name"] = diagText; }
 
@@ -705,11 +705,11 @@ namespace FindingsEdior
             DataGridView temp_dgv = (DataGridView)sender;
             string sql;
             //Delete row
-            if (temp_dgv.Columns[e.ColumnIndex].Name == Properties.Resources.Delete)
+            if (temp_dgv.Columns[e.ColumnIndex].Name == FindingsEditor.Properties.Resources.Delete)
             {
                 if (!temp_dgv.Rows[e.RowIndex].IsNewRow)
                 {
-                    if (MessageBox.Show(Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show(FindingsEditor.Properties.Resources.ConfirmDel, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         edited = true;
                         if (string.IsNullOrWhiteSpace(temp_dgv.Rows[e.RowIndex].Cells["SQL_index"].Value.ToString()))//元からあった行を削除するSQLをstock
@@ -758,7 +758,7 @@ namespace FindingsEdior
 
             if (i == 0)
             {
-                MessageBox.Show(Properties.Resources.NoDiagnosis, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoDiagnosis, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -777,7 +777,7 @@ namespace FindingsEdior
         {
             if (canEditPatho && edited)
             {
-                if (MessageBox.Show(Properties.Resources.SaveChangesYN, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                if (MessageBox.Show(FindingsEditor.Properties.Resources.SaveChangesYN, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 { return; }
                 else
                 {
@@ -785,7 +785,7 @@ namespace FindingsEdior
 
                     if (cbExamStatus.SelectedValue.ToString() == "1")
                     {
-                        if (MessageBox.Show(Properties.Resources.StillDraft, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                        if (MessageBox.Show(FindingsEditor.Properties.Resources.StillDraft, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                         {
                             tcExam.SelectedTab = tpFindings;
                             btDiagnosed.Focus();
@@ -806,7 +806,7 @@ namespace FindingsEdior
 
                 if (cbExamStatus.SelectedValue.ToString() == "1")
                 {
-                    if (MessageBox.Show(Properties.Resources.StillDraft, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                    if (MessageBox.Show(FindingsEditor.Properties.Resources.StillDraft, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                     {
                         tcExam.SelectedTab = tpFindings;
                         btDiagnosed.Focus();
@@ -864,7 +864,7 @@ namespace FindingsEdior
             for (int i = 0; i < stockedSQLs.Rows.Count; i++)//Run all stocked SQLs for diagnoses.
             {
                 if (uckyFunctions.ExeNonQuery(stockedSQLs.Rows[i]["SQL"].ToString()) == uckyFunctions.functionResult.failed)
-                { MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                { MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
 
             exam.findings = tbFindings.Text;
@@ -997,7 +997,7 @@ namespace FindingsEdior
             }
             else
             {
-                if (MessageBox.Show(Properties.Resources.ConfirmChanging, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show(FindingsEditor.Properties.Resources.ConfirmChanging, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     edited = true;
                     cbDiagnosed.SelectedValue = db_operator.operatorID;
@@ -1016,7 +1016,7 @@ namespace FindingsEdior
             }
             else
             {
-                if (MessageBox.Show(Properties.Resources.ConfirmChanging, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show(FindingsEditor.Properties.Resources.ConfirmChanging, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     edited = true;
                     cbChecker.SelectedValue = db_operator.operatorID;
@@ -1229,13 +1229,13 @@ namespace FindingsEdior
             DataGridView dgv = (DataGridView)sender;
             if (tcExam.SelectedIndex == 2 || tcExam.SelectedIndex == 3)
             {
-                MessageBox.Show(Properties.Resources.ClickInsPosition, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ClickInsPosition, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (selectionStart == -1)
             {
-                MessageBox.Show(Properties.Resources.ClickInsPosition, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ClickInsPosition, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -1298,21 +1298,21 @@ namespace FindingsEdior
 
                 string opNames = getOperatorNames();
                 if (temp_op.op_name != opNames)
-                { str += "<" + Properties.Resources.Operators + ">" + opNames; }
+                { str += "<" + FindingsEditor.Properties.Resources.Operators + ">" + opNames; }
 
-                str += "<" + Properties.Resources.DiagnosedDr + ">" + temp_op.op_name + Environment.NewLine;
+                str += "<" + FindingsEditor.Properties.Resources.DiagnosedDr + ">" + temp_op.op_name + Environment.NewLine;
             }
             else
-            { str += "<" + Properties.Resources.Operators + ">" + getOperatorNames(); }
+            { str += "<" + FindingsEditor.Properties.Resources.Operators + ">" + getOperatorNames(); }
 
             if (!string.IsNullOrWhiteSpace(tbComment.Text.ToString()))
-            { str += Properties.Resources.Comment + ":" + Environment.NewLine + tbComment.Text.ToString() + Environment.NewLine; }
+            { str += FindingsEditor.Properties.Resources.Comment + ":" + Environment.NewLine + tbComment.Text.ToString() + Environment.NewLine; }
 
             if (!string.IsNullOrWhiteSpace(cbChecker.Text.ToString()))
             {
                 op_id = cbChecker.SelectedValue.ToString();
                 temp_op = new examOperator(op_id);
-                str += "<" + Properties.Resources.Checker + ">" + temp_op.op_name + Environment.NewLine;
+                str += "<" + FindingsEditor.Properties.Resources.Checker + ">" + temp_op.op_name + Environment.NewLine;
             }
 
             Clipboard.SetDataObject(str);

@@ -62,7 +62,7 @@ namespace FindingsEdior
         {
             if (string.IsNullOrWhiteSpace(tbPtID.Text))
             {
-                MessageBox.Show(Properties.Resources.NoID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace FindingsEdior
                 pm.ShowDialog(this);
             }
             else
-            { MessageBox.Show(Properties.Resources.OpenFormFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.OpenFormFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         #endregion
 
@@ -110,7 +110,7 @@ namespace FindingsEdior
             ExamList el = new ExamList(dt.ToString("yyyy-MM-dd"), dt.ToString("yyyy-MM-dd"), null, null, null, false);
 
             if (el.exam_list.Rows.Count == 0)//If there was no exam, dispose ExamList form.
-            { MessageBox.Show(Properties.Resources.NoExam, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.NoExam, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             { el.ShowDialog(this); }
             el.Dispose();
@@ -120,7 +120,7 @@ namespace FindingsEdior
         {
             ExamList el = new ExamList(dtpExamDate.Value.ToString("yyyy-MM-dd"), dtpExamDate.Value.ToString("yyyy-MM-dd"), null, null, null, false);
             if (el.exam_list.Rows.Count == 0)//If there was no exam, dispose ExamList form.
-            { MessageBox.Show(Properties.Resources.NoExam, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.NoExam, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             { el.ShowDialog(this); }
             el.Dispose();
@@ -212,7 +212,7 @@ namespace FindingsEdior
         #region Logout
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Properties.Resources.InformLogout, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show(FindingsEditor.Properties.Resources.InformLogout, "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             { initLogin(); }
         }
         #endregion

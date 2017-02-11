@@ -28,7 +28,7 @@ namespace FindingsEdior
             { ofd.InitialDirectory = Application.StartupPath; }
             ofd.Filter = "Exe file(*.exe)|*.exe|All files(*.*)|*.*";
             ofd.FilterIndex = 1;
-            ofd.Title = Properties.Resources.SelectFile;
+            ofd.Title = FindingsEditor.Properties.Resources.SelectFile;
 
             if (ofd.ShowDialog() == DialogResult.OK)
             { tbPtInfo.Text = ofd.FileName; }

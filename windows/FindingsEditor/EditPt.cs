@@ -30,7 +30,7 @@ namespace FindingsEdior
                 if (patient.numberOfPatients(PtID) == 1)
                 { readPtData(); }
                 else
-                { MessageBox.Show(Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                { MessageBox.Show(FindingsEditor.Properties.Resources.NoPatient, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
 
             if (ID_editable)
@@ -59,11 +59,11 @@ namespace FindingsEdior
             {
                 int ret = pt1.getNumOfExams();
                 if (ret == -1)
-                { MessageBox.Show(Properties.Resources.ProcedureCancelled, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                { MessageBox.Show(FindingsEditor.Properties.Resources.ProcedureCancelled, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 else if (ret == 0)
                 { savePt(); }
                 else if (ret > 0)
-                { MessageBox.Show(Properties.Resources.ExamsAlreadyExist + Properties.Resources.ProcedureCancelled, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                { MessageBox.Show(FindingsEditor.Properties.Resources.ExamsAlreadyExist + FindingsEditor.Properties.Resources.ProcedureCancelled, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -71,13 +71,13 @@ namespace FindingsEdior
         {
             if (this.tbPtID.Text.Length == 0)
             {
-                MessageBox.Show(Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if ((rbFemale.Checked == false) && (rbMale.Checked == false))
             {
-                MessageBox.Show(Properties.Resources.DetermineGender, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(FindingsEditor.Properties.Resources.DetermineGender, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -89,7 +89,7 @@ namespace FindingsEdior
                     switch (patient.checkIdDuplicate(this.tbPtID.Text))
                     {
                         case patient.idDuplicateResult.NotExist:
-                            if (MessageBox.Show(Properties.Resources.IDchanging, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                            if (MessageBox.Show(FindingsEditor.Properties.Resources.IDchanging, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                             {
                                 pt1.ptID = this.tbPtID.Text;
                                 pt1.ptName = this.tbPtName.Text;
@@ -106,11 +106,11 @@ namespace FindingsEdior
                                         break;
                                     case uckyFunctions.functionResult.failed:
                                         this.Close();
-                                        MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         break;
                                     case uckyFunctions.functionResult.connectionError:
                                         this.Close();
-                                        MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         break;
                                 }
                             }
@@ -118,19 +118,19 @@ namespace FindingsEdior
                                 return;
                             break;
                         case patient.idDuplicateResult.None:
-                            MessageBox.Show(Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(FindingsEditor.Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
                         case patient.idDuplicateResult.Duplicated:
-                            MessageBox.Show(Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(FindingsEditor.Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
                         case patient.idDuplicateResult.Error:
-                            MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
                     }
                 }
                 else
                 {
-                    MessageBox.Show(Properties.Resources.CanNotChangeId, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.CanNotChangeId, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.tbPtID.Text = pt1.ptID;
                 }
             }
@@ -149,11 +149,11 @@ namespace FindingsEdior
                         break;
                     case uckyFunctions.functionResult.failed:
                         this.Close();
-                        MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     case uckyFunctions.functionResult.connectionError:
                         this.Close();
-                        MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
             }
@@ -223,7 +223,7 @@ namespace FindingsEdior
             #endregion
             }
             else if (ptName == "")
-            { MessageBox.Show(Properties.Resources.PluginCouldntGetPtName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show(FindingsEditor.Properties.Resources.PluginCouldntGetPtName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void EditPt_Shown(object sender, EventArgs e)

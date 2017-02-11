@@ -70,37 +70,37 @@ namespace FindingsEdior
             #region Error check
             if (this.tbOperatorID.TextLength == 0)
             {
-                MessageBox.Show(Properties.Resources.NoID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (this.tbOperatorName.TextLength == 0)
             {
-                MessageBox.Show(Properties.Resources.NoName, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoName, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (this.cbCategory.SelectedValue == null)
             {
-                MessageBox.Show(Properties.Resources.NoCategory, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoCategory, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (this.cbDepartment.SelectedValue == null)
             {
-                MessageBox.Show(Properties.Resources.NoDepartment, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoDepartment, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (this.tbOperatorPw.Text != this.tbConfirmPw.Text)
             {
-                MessageBox.Show(Properties.Resources.ConfirmPwIsWrong, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.ConfirmPwIsWrong, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (this.tbOperatorPw.TextLength == 0)
             {
-                MessageBox.Show(Properties.Resources.NoPw, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(FindingsEditor.Properties.Resources.NoPw, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -108,7 +108,7 @@ namespace FindingsEdior
             {
                 if (examOperator.numberOfOperator(tbOperatorID.Text) != 0)
                 {
-                    MessageBox.Show(Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -116,7 +116,7 @@ namespace FindingsEdior
             {
                 if (examOperator.numberOfOperator(tbOperatorID.Text) > 1)
                 {
-                    MessageBox.Show(Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.IdDuplicated, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -130,10 +130,10 @@ namespace FindingsEdior
                     this.Close();
                     break;
                 case uckyFunctions.functionResult.failed:
-                    MessageBox.Show(Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case uckyFunctions.functionResult.connectionError:
-                    MessageBox.Show(Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
         }
