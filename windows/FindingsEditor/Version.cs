@@ -28,10 +28,5 @@ namespace FindingsEdior
             linkLabel1.LinkVisited = true;
             System.Diagnostics.Process.Start(linkLabel1.Text);
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

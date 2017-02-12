@@ -1,8 +1,8 @@
--- Database: "FindingsEditor"
+-- Database: "findings_db"
 
--- DROP DATABASE "FindingsEditor";
+-- DROP DATABASE "findings_db";
 
-CREATE DATABASE "FindingsEditor"
+CREATE DATABASE "findings_db"
   WITH OWNER = postgres
        ENCODING = 'UTF8'
        TABLESPACE = pg_default

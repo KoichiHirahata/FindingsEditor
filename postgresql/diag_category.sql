@@ -62,7 +62,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1000
     , 1000
     , 1000
@@ -81,7 +81,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1001
     , 1000
     , 1999
@@ -100,7 +100,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     2000
     , 2000
     , 2000
@@ -119,7 +119,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     2001
     , 2000
     , 2999
@@ -138,7 +138,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     3000
     , 3000
     , 3999
@@ -157,7 +157,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     4000
     , 4000
     , 4999
@@ -176,7 +176,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     5000
     , 5000
     , 5000
@@ -195,7 +195,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     5001
     , 5000
     , 5999
@@ -214,7 +214,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     6000
     , 6000
     , 6999
@@ -233,7 +233,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     7000
     , 7000
     , 7999
@@ -252,7 +252,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     10000
     , 10000
     , 10000
@@ -271,7 +271,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     10001
     , 10000
     , 10999
@@ -290,7 +290,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     20000
     , 20000
     , 20999
@@ -309,7 +309,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     30000
     , 30000
     , 30000
@@ -328,7 +328,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     30001
     , 30000
     , 39999
@@ -347,7 +347,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     40000
     , 40000
     , 40000
@@ -366,7 +366,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     40001
     , 40000
     , 49999
@@ -385,7 +385,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     50000
     , 50000
     , 59999
@@ -404,7 +404,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     60000
     , 60000
     , 69999
@@ -423,7 +423,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     70000
     , 70000
     , 70000
@@ -442,7 +442,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     70001
     , 70000
     , 79999
@@ -461,7 +461,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     100000
     , 100000
     , 100000
@@ -480,7 +480,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     100001
     , 100000
     , 109999
@@ -499,7 +499,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     200000
     , 200000
     , 200000
@@ -518,7 +518,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     200001
     , 200000
     , 299999
@@ -537,7 +537,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     300000
     , 300000
     , 300000
@@ -556,7 +556,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     300001
     , 300000
     , 399999
@@ -575,7 +575,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1000000
     , 1000000
     , 1000000
@@ -594,7 +594,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1010000
     , 1010001
     , 1019999
@@ -613,7 +613,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1020000
     , 1020001
     , 1029999
@@ -632,7 +632,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1030000
     , 1030001
     , 1039999
@@ -651,7 +651,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1040000
     , 1040001
     , 1049999
@@ -670,7 +670,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1050000
     , 1050001
     , 1059999
@@ -689,7 +689,7 @@ insert into diag_category(
     , name_jp
     , bt_order
     , visible)
-    value(
+    values(
     1060000
     , 1060001
     , 1069999

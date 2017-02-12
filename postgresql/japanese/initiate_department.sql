@@ -3,7 +3,7 @@ insert into department(
     , name1
     , dp_visible
     , dp_order)
-    value(
+    values(
     1
     , '“à‰È'
     , true
@@ -16,8 +16,8 @@ insert into department(
     , name1
     , dp_visible
     , dp_order)
-    value(
-    1
+    values(
+    2
     , 'ŠO‰È'
     , true
     , 2

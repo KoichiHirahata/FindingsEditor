@@ -1,3 +1,27 @@
+-- Table: public.patient
+
+-- DROP TABLE public.patient;
+
+CREATE TABLE public.patient
+(
+  pt_id character varying(100) NOT NULL,
+  pt_name text NOT NULL,
+  birthday date,
+  gender smallint,
+  pt_memo text,
+  lock_time timestamp without time zone,
+  terminal_ip character varying(40),
+  CONSTRAINT patient_pkey PRIMARY KEY (pt_id)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.patient
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.patient TO postgres;
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.patient TO db_users;
+
+
 -- Table: public.department
 
 -- DROP TABLE public.department;
@@ -19,6 +43,52 @@ ALTER TABLE public.department
   OWNER TO postgres;
 GRANT ALL ON TABLE public.department TO postgres;
 GRANT SELECT ON TABLE public.department TO not_login_role;
+
+
+-- Table: public.place
+
+-- DROP TABLE public.place;
+
+CREATE TABLE public.place
+(
+  place_no smallint NOT NULL,
+  name1 character varying(20),
+  name2 character varying(20),
+  place_order_endo smallint,
+  place_order_us smallint,
+  place_visible boolean,
+  CONSTRAINT room_pkey PRIMARY KEY (place_no),
+  CONSTRAINT no_check CHECK (0 > place_no OR 0 < place_no)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.place
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.place TO postgres;
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.place TO db_users;
+
+
+-- Table: public.op_category
+
+-- DROP TABLE public.op_category;
+
+CREATE TABLE public.op_category
+(
+  opc_no smallint NOT NULL,
+  opc_name character varying(15) NOT NULL,
+  opc_visible boolean,
+  opc_order smallint,
+  can_diag boolean,
+  CONSTRAINT op_category_pkey PRIMARY KEY (opc_no)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.op_category
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.op_category TO postgres;
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.op_category TO db_users;
 
 
 -- Table: public.operator
@@ -104,6 +174,142 @@ ALTER TABLE public.equipment
   OWNER TO postgres;
 GRANT ALL ON TABLE public.equipment TO postgres;
 GRANT SELECT ON TABLE public.equipment TO not_login_role;
+
+
+-- Table: public.status
+
+-- DROP TABLE public.status;
+
+CREATE TABLE public.status
+(
+  status_no smallint NOT NULL,
+  name_eng character varying(20),
+  name_jp character varying(20),
+  status_order smallint,
+  status_visible boolean,
+  name_ar character varying(20),
+  name_bg character varying(20),
+  name_hr character varying(20),
+  name_cs character varying(20),
+  name_da character varying(20),
+  name_nl character varying(20),
+  name_et character varying(20),
+  name_fi character varying(20),
+  name_fr character varying(20),
+  name_de character varying(20),
+  name_el character varying(20),
+  name_he character varying(20),
+  name_hu character varying(20),
+  name_it character varying(20),
+  name_ko character varying(20),
+  name_lv character varying(20),
+  name_lt character varying(20),
+  name_no character varying(20),
+  name_pl character varying(20),
+  name_pt_br character varying(20),
+  name_pt_pt character varying(20),
+  name_ro character varying(20),
+  name_ru character varying(20),
+  name_sr character varying(20),
+  name_han_s character varying(20),
+  name_sk character varying(20),
+  name_sl character varying(20),
+  name_es character varying(20),
+  name_sv character varying(20),
+  name_th character varying(20),
+  name_han_t character varying(20),
+  name_tr character varying(20),
+  name_uk character varying(20),
+  CONSTRAINT status_pkey PRIMARY KEY (status_no)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.status
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.status TO postgres;
+GRANT SELECT ON TABLE public.status TO db_users;
+
+
+insert into status(
+    status_no
+    , name_eng
+    , name_jp
+    , status_order
+    , status_visible
+    )
+    values(
+    0
+    , 'Blank'
+    , '–¢‹L“ü'
+    , 0
+    , true
+    )
+    ;
+
+insert into status(
+    status_no
+    , name_eng
+    , name_jp
+    , status_order
+    , status_visible
+    )
+    values(
+    1
+    , 'Draft'
+    , '‘e'
+    , 1
+    , true
+    )
+    ;
+
+insert into status(
+    status_no
+    , name_eng
+    , name_jp
+    , status_order
+    , status_visible
+    )
+    values(
+    2
+    , 'Done'
+    , '‚PŽŸ'
+    , 2
+    , true
+    )
+    ;
+
+insert into status(
+    status_no
+    , name_eng
+    , name_jp
+    , status_order
+    , status_visible
+    )
+    values(
+    3
+    , 'Checked'
+    , '‚QŽŸ'
+    , 3
+    , true
+    )
+    ;
+
+insert into status(
+    status_no
+    , name_eng
+    , name_jp
+    , status_order
+    , status_visible
+    )
+    values(
+    9
+    , 'Canceled'
+    , '–¢ŽÀŽ{'
+    , 9
+    , true
+    )
+    ;
 
 
 -- Table: public.exam_type
@@ -449,30 +655,6 @@ insert into exam_type(
    ;
 
 
--- Table: public.place
-
--- DROP TABLE public.place;
-
-CREATE TABLE public.place
-(
-  place_no smallint NOT NULL,
-  name1 character varying(20),
-  name2 character varying(20),
-  place_order_endo smallint,
-  place_order_us smallint,
-  place_visible boolean,
-  CONSTRAINT room_pkey PRIMARY KEY (place_no),
-  CONSTRAINT no_check CHECK (0 > place_no OR 0 < place_no)
-)
-WITH (
-  OIDS=TRUE
-);
-ALTER TABLE public.place
-  OWNER TO postgres;
-GRANT ALL ON TABLE public.place TO postgres;
-GRANT SELECT ON TABLE public.place TO not_login_role;
-
-
 -- Table: public.ward
 
 -- DROP TABLE public.ward;
@@ -494,20 +676,66 @@ GRANT ALL ON TABLE public.ward TO postgres;
 GRANT SELECT ON TABLE public.ward TO not_login_role;
 
 
+-- Table: public.words
+
+-- DROP TABLE public.words;
+
+CREATE TABLE public.words
+(
+  no serial,
+  words1 character varying(200),
+  words2 character varying(200),
+  words3 character varying(200),
+  operator character varying(20),
+  word_order smallint,
+  language character varying(5),
+  exam_type smallint,
+  CONSTRAINT words_pkey PRIMARY KEY (no)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.words
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.words TO postgres;
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.words TO db_users;
+
+
+-- Table: public.explanation
+
+-- DROP TABLE public.explanation;
+
+CREATE TABLE public.explanation
+(
+  no smallint NOT NULL,
+  explanation_status smallint,
+  status_order smallint,
+  status_visible boolean,
+  CONSTRAINT explanation_pkey PRIMARY KEY (no)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE public.explanation
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.explanation TO postgres;
+GRANT SELECT ON TABLE public.explanation TO db_users;
+
+
 -- Table: public.exam
 
 -- DROP TABLE public.exam;
 
 CREATE TABLE public.exam
 (
-  exam_id integer NOT NULL DEFAULT nextval('exam_exam_id_seq'::regclass),
-  pt_id character varying(100),
+  exam_id serial,
+  pt_id character varying(100) not null,
   purpose text,
   department smallint,
   order_dr character varying(45),
   ward_id character varying(5),
-  exam_day date,
-  exam_type smallint,
+  exam_day date not null,
+  exam_type smallint not null,
   pathology smallint,
   patho_no character varying(100),
   reply_patho smallint,
@@ -636,7 +864,7 @@ GRANT SELECT ON TABLE public.diag_name TO not_login_role;
 
 CREATE TABLE public.diag
 (
-  diag_no integer NOT NULL DEFAULT nextval('diag_diag_no_seq'::regclass),
+  diag_no serial,
   exam_no integer NOT NULL,
   diag_code integer NOT NULL,
   suspect boolean,
