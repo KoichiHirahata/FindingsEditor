@@ -49,10 +49,10 @@ namespace FindingsEdior
             InitializeComponent();
             add_diag = false;
             exam_id = _exam_id;
-            this.dgv.Font = new Font(dgv.Font.Name, 12);
-            this.dgv.DataSource = CLocalDB.localDB.Tables["diag_name"];
+            dgv.Font = new Font(dgv.Font.Name, 12);
+            dgv.DataSource = CLocalDB.localDB.Tables["diag_name"];
 
-            this.dgv.Columns[1].ReadOnly = true; //Switch name_jp or name_eng to read only.
+            dgv.Columns[1].ReadOnly = true; //Switch name_jp or name_eng to read only.
 
             #region Add chbSusp
             DataGridViewCheckBoxColumn chbSusp = new DataGridViewCheckBoxColumn();
@@ -190,7 +190,7 @@ namespace FindingsEdior
                     setButtonSettings(11, false);
                     setButtonSettings(12, false);
                     break;
-                #endregion
+                    #endregion
             }
         }
 
@@ -422,7 +422,7 @@ namespace FindingsEdior
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
-            
+
             DataRow newRow = dt.NewRow();
             newRow["key"] = "";
             newRow["premodifier"] = "";
@@ -572,7 +572,9 @@ namespace FindingsEdior
             startsOfButtons.Add(bt12start);
 
             startsOfButtons.RemoveAll(s => s == -1);
-            if (startsOfButtons.Min() > startOfTheRange || startsOfButtons.Count() == 0)
+            if (startsOfButtons.Count() == 0)
+            { return false; }
+            if (startsOfButtons.Min() > startOfTheRange)
             { return false; }
 
             List<int> endsOfButtons = new List<int>();
