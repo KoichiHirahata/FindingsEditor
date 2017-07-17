@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.Windows.Forms;
 using System.Data;
-using System.Net;
 using Npgsql;
 
 namespace FindingsEdior
@@ -43,8 +36,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -82,8 +74,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -122,8 +113,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -152,8 +142,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -183,8 +172,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -244,8 +232,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -274,8 +261,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -306,8 +292,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -336,8 +321,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -364,8 +348,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -392,8 +375,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -420,8 +402,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -448,8 +429,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }
@@ -478,8 +458,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             {
@@ -508,8 +487,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             {
@@ -540,8 +518,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             {
@@ -576,8 +553,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             {
@@ -613,8 +589,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             {
@@ -650,8 +625,7 @@ namespace FindingsEdior
         {
             #region Npgsql
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             {

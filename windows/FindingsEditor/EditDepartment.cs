@@ -45,8 +45,7 @@ namespace FindingsEdior
 
             try
             {
-                conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+                conn = new NpgsqlConnection(Settings.retConnStr());
             }
             catch (ArgumentException)
             {
@@ -122,8 +121,7 @@ namespace FindingsEdior
 
             try
             {
-                conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+                conn = new NpgsqlConnection(Settings.retConnStr());
             }
             catch (ArgumentException)
             {

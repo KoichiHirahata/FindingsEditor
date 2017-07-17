@@ -30,8 +30,8 @@ namespace FindingsEdior
             if (!db_operator.authDone)
             { Environment.Exit(0); }
 
-            this.Visible = true;
-            this.lbUserName.Text = db_operator.operatorName;
+            Visible = true;
+            lbUserName.Text = db_operator.operatorName;
 
             if (db_operator.admin_user)
             {
@@ -44,7 +44,7 @@ namespace FindingsEdior
                 pluginToolStripMenuItem.Visible = false;
             }
 
-            this.tbPtID.Text = "";
+            tbPtID.Text = "";
         }
         #endregion
 

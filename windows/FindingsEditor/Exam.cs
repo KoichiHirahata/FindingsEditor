@@ -57,8 +57,7 @@ namespace FindingsEdior
             NpgsqlConnection conn;
             try
             {
-                conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                    Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+                conn = new NpgsqlConnection(Settings.retConnStr());
             }
             catch (ArgumentException)
             {
@@ -560,8 +559,7 @@ namespace FindingsEdior
         {
             #region Npgsql connection
             NpgsqlConnection conn;
-            conn = new NpgsqlConnection("Server=" + Settings.DBSrvIP + ";Port=" + Settings.DBSrvPort + ";User Id=" +
-                Settings.DBconnectID + ";Password=" + Settings.DBconnectPw + ";Database=endoDB;" + Settings.sslSetting);
+            conn = new NpgsqlConnection(Settings.retConnStr());
 
             try
             { conn.Open(); }

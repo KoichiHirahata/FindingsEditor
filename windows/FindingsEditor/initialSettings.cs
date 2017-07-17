@@ -124,8 +124,7 @@ namespace FindingsEdior
             NpgsqlConnection conn;
             try
             {
-                conn = new NpgsqlConnection("Server=" + this.tbDBSrv.Text + ";Port=" + this.tbDBsrvPort.Text + ";User Id=" +
-                    this.tbDbID.Text + ";Password=" + temp_pw + ";Database=endoDB;" + Settings.sslSetting);
+                conn = new NpgsqlConnection(Settings.retConnStr());
             }
             catch (ArgumentException)
             {

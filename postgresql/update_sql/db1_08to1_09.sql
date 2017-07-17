@@ -1,6 +1,18 @@
 alter table patient add column furigana text;
 update db_version set db_version = '1.09';
 
+-- Role: func_owner
+
+-- DROP ROLE func_owner;
+
+CREATE ROLE func_owner
+  NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
+
+
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.patient TO func_owner;
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.operator TO func_owner;
+
+
 -- Function: get_pt_info_without_login(character varying)
 
 -- DROP FUNCTION get_pt_info_without_login(character varying);
