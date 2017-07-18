@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Npgsql;
@@ -53,7 +47,7 @@ namespace FindingsEdior
                 }
             }
 
-            if(testConnect())
+            if (testConnect())
             {
                 Settings.figureFolder = tbFigureFolder.Text;
                 Settings.DBSrvIP = this.tbDBSrv.Text;
@@ -74,19 +68,19 @@ namespace FindingsEdior
 
         private Boolean testConnect()
         {
-            if (this.tbDBSrv.Text.Length == 0)
+            if (tbDBSrv.Text.Length == 0)
             {
                 MessageBox.Show(FindingsEditor.Properties.Resources.ServerIP, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (this.tbDBsrvPort.Text.Length == 0)
+            if (tbDBsrvPort.Text.Length == 0)
             {
                 MessageBox.Show(FindingsEditor.Properties.Resources.portUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (this.tbDbID.Text.Length == 0)
+            if (tbDbID.Text.Length == 0)
             {
                 MessageBox.Show(FindingsEditor.Properties.Resources.NoID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -94,15 +88,15 @@ namespace FindingsEdior
 
             string temp_pw;
 
-            if (this.tbDBpw.Visible)
+            if (tbDBpw.Visible)
             {
-                if (this.tbDBpw.Text.Length == 0)
+                if (tbDBpw.Text.Length == 0)
                 {
                     MessageBox.Show(FindingsEditor.Properties.Resources.pwUnconfigured, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
 
-                temp_pw = this.tbDBpw.Text;
+                temp_pw = tbDBpw.Text;
             }
             else
             {
@@ -124,7 +118,8 @@ namespace FindingsEdior
             NpgsqlConnection conn;
             try
             {
-                conn = new NpgsqlConnection(Settings.retConnStr());
+                conn = new NpgsqlConnection("Host=" + tbDBSrv.Text + ";Port=" + tbDBsrvPort.Text + ";Username=" + tbDbID.Text + ";Password=" + ((tbDBpw.Visible) ? tbDBpw.Text : Settings.DBconnectPw)
+                + ";Database=" + Settings.DBname + ";" + Settings.sslSetting);
             }
             catch (ArgumentException)
             {
