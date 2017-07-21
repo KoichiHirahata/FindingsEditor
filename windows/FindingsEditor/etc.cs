@@ -99,7 +99,7 @@ namespace FindingsEdior
                 }
                 #endregion
 
-                NpgsqlTransaction transaction = conn.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
+                NpgsqlTransaction transaction = conn.BeginTransaction(IsolationLevel.ReadCommitted);
 
                 try
                 {
@@ -121,8 +121,9 @@ namespace FindingsEdior
                     //Commit transaction
                     transaction.Commit();
                 }
-                catch (System.Exception) // ex)
+                catch (Exception ex)
                 {
+                    MessageBox.Show("[ExeNonQuery]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //Roll back transaction
                     transaction.Rollback();
                     conn.Close();
