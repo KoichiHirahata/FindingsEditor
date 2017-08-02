@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace FindingsEdior
 {
@@ -37,7 +29,7 @@ namespace FindingsEdior
                 return;
             }
 
-            switch (db_operator.idPwCheck(this.tbID.Text, this.tbPass.Text))
+            switch (db_operator.idPwCheck(tbID.Text, tbPass.Text))
             {
                 case db_operator.idPwCheckResult.success:
                     this.Close();
