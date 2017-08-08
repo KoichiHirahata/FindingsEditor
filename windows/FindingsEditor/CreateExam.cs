@@ -203,7 +203,7 @@ namespace FindingsEdior
                         cmd.Parameters.AddWithValue("orderDr", cbOrderDr.Text);
                         cmd.Parameters.AddWithValue("e_day", dtpExamDate.Value);
                         cmd.Parameters.AddWithValue("e_type", cbExamType.SelectedValue);
-                        cmd.Parameters.AddWithValue("dep", (string.IsNullOrWhiteSpace(cbDepartment.Text)) ? DBNull.Value : cbExamType.SelectedValue);
+                        cmd.Parameters.AddWithValue("dep", (string.IsNullOrWhiteSpace(cbDepartment.Text)) ? DBNull.Value : cbDepartment.SelectedValue);
                         cmd.Parameters.AddWithValue("ward", (string.IsNullOrWhiteSpace(cbWard.Text)) ? DBNull.Value : cbWard.SelectedValue);
                         cmd.ExecuteNonQuery();
                         Close();
