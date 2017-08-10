@@ -85,7 +85,7 @@ smb.confの設定（以下の箇所だけ設定）
    interfaces = 0.0.0.0/0 eth0
    bind interfaces only = yes
 
-# 最下部に以下を追加
+#最下部に以下を追加
 [share]
 path=/home/pi/share
 read only=no
@@ -117,7 +117,7 @@ Select an editor.  To change later, run 'select-editor'.
   3. /usr/bin/vim.basic
   4. /usr/bin/vim.tiny
 
-# 最下部に以下を追記
+#最下部に以下を追記
 00 * * * * /bin/rm -rf /home/pi/share/*; /bin/cp -r /home/pi/share_bak/* /home/pi/share
 
 
@@ -134,7 +134,7 @@ listen_addresses = 'localhost'
 listen_addresses = '*' 
 
 vim /etc/postgresql/9.4/main/pg_hba.conf
-# IPv4 local connections:に以下を追記
+#IPv4 local connections:に以下を追記
 host    all             all             0.0.0.0/0               trust
 
 ３．PostgreSQLのconfファイルの確認
@@ -308,7 +308,7 @@ https://goo.gl/g6CSAL
 
 １．vim /etc/dhcpcd.conf
 ファイル末尾に以下を追記
-# static ip
+#static ip
 interface eth0
 static ip_address=192.168.11.199
 static routers=192.168.11.1
