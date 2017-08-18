@@ -675,12 +675,44 @@ namespace FindingsEdior
             else
             { gender = 1; }
 
-            if (this.newPt == true)
+            if (newPt == true)
             {
-                SQL = "INSERT INTO patient(pt_ID,pt_name,gender,birthday)"
-                    + "VALUES(:p0, :p1, :p2, :p3);";
+                try
+                {
+                    using (var conn = new NpgsqlConnection(Settings.retConnStr()))
+                    {
+                        conn.Open();
 
-                return uckyFunctions.ExeNonQuery(SQL, pt_source.ptID, pt_source.ptName, gender.ToString(), pt_source.ptBirthday.ToString());
+                        using (var cmd = new NpgsqlCommand())
+                        {
+                            cmd.Connection = conn;
+                            cmd.CommandText = "INSERT INTO patient(pt_ID, pt_name, gender, birthday) VALUES(@p_id, @p_name, @p_gender, @p_birthday);";
+                            cmd.Parameters.AddWithValue("p_id", pt_source.ptID);
+                            cmd.Parameters.AddWithValue("p_name", pt_source.ptName);
+                            cmd.Parameters.AddWithValue("p_gender", gender);
+                            cmd.Parameters.AddWithValue("p_birthday", pt_source.ptBirthday);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    MessageBox.Show("[Npgsql]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return uckyFunctions.functionResult.failed;
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return uckyFunctions.functionResult.failed;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return uckyFunctions.functionResult.failed;
+                }
+
+                return uckyFunctions.functionResult.success;
             }
             else
             {
