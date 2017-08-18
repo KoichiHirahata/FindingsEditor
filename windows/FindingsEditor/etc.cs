@@ -686,15 +686,15 @@ namespace FindingsEdior
                         using (var cmd = new NpgsqlCommand())
                         {
                             cmd.Connection = conn;
-                            cmd.CommandText = "INSERT INTO patient(pt_ID, pt_name, gender, birthday) VALUES(@p_id, @p_name, @p_gender, @p_birthday);";
+                            cmd.CommandText = "INSERT INTO patient(pt_id, pt_name, gender, birthday) VALUES(@p_id, @p_name, @p_gender, @p_birthday);";
                             cmd.Parameters.AddWithValue("p_id", pt_source.ptID);
                             cmd.Parameters.AddWithValue("p_name", pt_source.ptName);
                             cmd.Parameters.AddWithValue("p_gender", gender);
                             cmd.Parameters.AddWithValue("p_birthday", pt_source.ptBirthday);
 
                             cmd.ExecuteNonQuery();
-                            conn.Close();
                         }
+                        conn.Close();
                     }
                 }
                 catch (NpgsqlException ex)
