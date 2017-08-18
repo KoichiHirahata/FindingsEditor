@@ -693,6 +693,7 @@ namespace FindingsEdior
                             cmd.Parameters.AddWithValue("p_birthday", pt_source.ptBirthday);
 
                             cmd.ExecuteNonQuery();
+                            conn.Close();
                         }
                     }
                 }
