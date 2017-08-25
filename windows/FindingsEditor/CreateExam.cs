@@ -206,8 +206,9 @@ namespace FindingsEdior
                         cmd.Parameters.AddWithValue("dep", (string.IsNullOrWhiteSpace(cbDepartment.Text)) ? DBNull.Value : cbDepartment.SelectedValue);
                         cmd.Parameters.AddWithValue("ward", (string.IsNullOrWhiteSpace(cbWard.Text)) ? DBNull.Value : cbWard.SelectedValue);
                         cmd.ExecuteNonQuery();
-                        Close();
                     }
+                    conn.Close();
+                    Close();
                 }
             }
             catch (NpgsqlException nex)

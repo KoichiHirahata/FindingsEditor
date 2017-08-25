@@ -122,12 +122,12 @@ namespace FindingsEdior
             }
             #endregion
 
-            switch (examOp.saveOperatorData(this.tbOperatorID.Text, this.tbOperatorName.Text, (short)this.cbDepartment.SelectedValue,
-                this.tbOperatorPw.Text, this.cbAdminOp.Checked, (short)this.cbCategory.SelectedValue,
-                this.cbOperatorVisible.Checked, this.cbAllowFc.Checked, examOp.op_order))
+            switch (examOp.saveOperatorData(tbOperatorID.Text, tbOperatorName.Text, (short)cbDepartment.SelectedValue,
+                tbOperatorPw.Text, cbAdminOp.Checked, (short)cbCategory.SelectedValue,
+                cbOperatorVisible.Checked, cbAllowFc.Checked, examOp.op_order))
             {
                 case uckyFunctions.functionResult.success:
-                    this.Close();
+                    Close();
                     break;
                 case uckyFunctions.functionResult.failed:
                     MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

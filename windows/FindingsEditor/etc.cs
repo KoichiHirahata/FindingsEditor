@@ -930,7 +930,6 @@ namespace FindingsEdior
             Boolean admin_op, short op_category, Boolean op_visible, Boolean allow_fc, short op_order = 9999)
         {
             string sql;
-            uckyFunctions.functionResult thisFuncResult;
 
             if (pw == null)
             {
@@ -938,29 +937,65 @@ namespace FindingsEdior
                 return uckyFunctions.functionResult.failed;
             }
 
-            if (this.newOperator)
+            if (newOperator)
             {
                 sql = "INSERT INTO operator (operator_id, op_name, department, pw, admin_op, op_category, "
                     + "op_visible, allow_fc, op_order)"
-                    + " VALUES(:p0, :p1, :p2, :p3, :p4, "
-                    + ":p5, :p6, :p7, :p8);";
-
-                thisFuncResult = uckyFunctions.ExeNonQuery(sql, operator_id, op_name, department.ToString(), pw, admin_op.ToString(),
-                    op_category.ToString(), op_visible.ToString(), allow_fc.ToString(), op_order.ToString());
+                    + " VALUES(@op_id, @o_name, @dep, @o_pw, @adm, "
+                    + "@cat, @o_visible, @fc, @o_order);";
             }
             else
             {
-                sql = "UPDATE operator SET op_name=:p0, department=:p1, pw=:p2, "
-                    + "admin_op=:p3, op_category=:p4, op_visible=:p5, allow_fc=:p6, "
-                    + "op_order=:p7 "
-                    + "WHERE operator_id=:p8;";
-
-                thisFuncResult = uckyFunctions.ExeNonQuery(sql, op_name, department.ToString(), pw,
-                    admin_op.ToString(), op_category.ToString(), op_visible.ToString(), allow_fc.ToString(),
-                    op_order.ToString(), operator_id);
+                sql = "UPDATE operator SET op_name=@o_name, department=@dep, pw=@o_pw, "
+                    + "admin_op=@adm, op_category=@cat, op_visible=@o_visible, allow_fc=@fc, "
+                    + "op_order=@o_order "
+                    + "WHERE operator_id=@op_id;";
             }
 
-            return thisFuncResult;
+            try
+            {
+                using (var conn = new NpgsqlConnection(Settings.retConnStr()))
+                {
+                    conn.Open();
+
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = sql;
+                        cmd.Parameters.AddWithValue("op_id", operator_id);
+                        cmd.Parameters.AddWithValue("o_name", op_name);
+                        cmd.Parameters.AddWithValue("dep", department);
+                        cmd.Parameters.AddWithValue("o_pw", pw);
+                        cmd.Parameters.AddWithValue("adm", admin_op);
+                        cmd.Parameters.AddWithValue("cat", op_category);
+                        cmd.Parameters.AddWithValue("o_visible", op_visible);
+                        cmd.Parameters.AddWithValue("fc", allow_fc);
+                        cmd.Parameters.AddWithValue("o_order", op_order);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    conn.Close();
+                    return uckyFunctions.functionResult.success;
+                }
+            }
+            catch (NpgsqlException nex)
+            {
+                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError + "\r\n" + nex.Message
+                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return uckyFunctions.functionResult.failed;
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError + "\r\n" + ex.Message
+                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return uckyFunctions.functionResult.failed;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError + "\r\n" + ex.Message
+                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return uckyFunctions.functionResult.failed;
+            }
         }
 
         public static uckyFunctions.functionResult saveOrder(string operator_id, short op_order)
