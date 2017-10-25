@@ -487,12 +487,13 @@ namespace FindingsEdior
     #region db_operator //this class means user.
     public class db_operator
     {
-        public static string operatorID { get; set; }
-        public static string operatorName { get; set; }
-        public static Boolean admin_user { get; set; }
-        public static Boolean authDone { get; set; }
-        public static Boolean canDiag { get; set; }
-        public static Boolean allowFC { get; set; }
+        public static string operatorID { get; private set; }
+        public static string operatorPw { get; private set; }
+        public static string operatorName { get; private set; }
+        public static Boolean admin_user { get; private set; }
+        public static Boolean authDone { get; private set; }
+        public static Boolean canDiag { get; private set; }
+        public static Boolean allowFC { get; private set; }
 
         db_operator()
         {
@@ -501,73 +502,109 @@ namespace FindingsEdior
 
         public static void reset_op()
         {
-            db_operator.operatorID = "";
-            db_operator.operatorName = "";
-            db_operator.admin_user = false;
-            db_operator.authDone = false;
-            db_operator.canDiag = false;
-            db_operator.allowFC = false;
+            operatorID = "";
+            operatorPw = "";
+            operatorName = "";
+            admin_user = false;
+            authDone = false;
+            canDiag = false;
+            allowFC = false;
         }
 
         public enum idPwCheckResult { success, failed, connectionError };
 
         public static idPwCheckResult idPwCheck(string opId, string opPw)
         {
-            #region Npgsql
-            NpgsqlConnection conn;
-            conn = new NpgsqlConnection(Settings.retConnStr());
-
             try
             {
-                conn.Open();
-            }
-            catch (NpgsqlException)
-            {
-                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
-                return idPwCheckResult.connectionError;
-            }
-            catch (System.IO.IOException)
-            {
-                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
-                return idPwCheckResult.connectionError;
-            }
-            #endregion
-
-            string sql = "SELECT operator_id, op_name, pw, admin_op, allow_fc, can_diag FROM operator"
-                + " INNER JOIN op_category ON operator.op_category=op_category.opc_no WHERE operator_id='" + opId + "'";
-
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count == 0)
-            {
-                conn.Close();
-                MessageBox.Show(FindingsEditor.Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return idPwCheckResult.failed;
-            }
-            else
-            {
-                DataRow row = dt.Rows[0];
-                if (opPw == row["pw"].ToString())
+                using (var conn = new NpgsqlConnection(Settings.retConnStr()))
                 {
-                    db_operator.operatorID = opId;
-                    db_operator.operatorName = row["op_name"].ToString();
-                    db_operator.admin_user = (Boolean)row["admin_op"];
-                    db_operator.authDone = true;
-                    db_operator.canDiag = (Boolean)row["can_diag"];
-                    db_operator.allowFC = (Boolean)row["allow_fc"];
-                    conn.Close();
-                    return idPwCheckResult.success;
-                }
-                else
-                {
-                    conn.Close();
-                    MessageBox.Show(FindingsEditor.Properties.Resources.WrongIDorPW, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return idPwCheckResult.failed;
+                    #region Npgsql
+
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (NpgsqlException)
+                    {
+                        MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conn.Close();
+                        return idPwCheckResult.connectionError;
+                    }
+                    catch (System.IO.IOException)
+                    {
+                        MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conn.Close();
+                        return idPwCheckResult.connectionError;
+                    }
+                    #endregion
+
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = "SELECT * FROM is_correct_pw(@id, @pw)";
+                        cmd.Parameters.AddWithValue("id", opId);
+                        cmd.Parameters.AddWithValue("pw", opPw);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            reader.Read();
+                            if (reader["is_correct_pw"] == DBNull.Value)
+                            {
+                                conn.Close();
+                                MessageBox.Show("IDまたはパスワードが不正です", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return idPwCheckResult.failed;
+                            }
+                            else if (bool.Parse(reader["is_correct_pw"].ToString()))
+                            {
+                                operatorID = opId;
+                                operatorPw = opPw;
+                                authDone = true;
+
+                                //パスワードが正しければ、次のDB関数を実行へ。
+                            }
+                            else
+                            {
+                                conn.Close();
+                                MessageBox.Show("IDまたはパスワードが不正です", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return idPwCheckResult.failed;
+                            }
+                        }
+
+                        cmd.CommandText = "SELECT * FROM get_operator_info(@id, @pw)";
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            reader.Read();
+
+                            //返ってきているが利用していないデータ：department, op_category, op_category_name
+
+                            operatorName = reader["op_name"].ToString();
+                            admin_user = Boolean.Parse(reader["admin_op"].ToString());
+                            canDiag = Boolean.Parse(reader["can_diag"].ToString());
+                            allowFC = Boolean.Parse(reader["allow_fc"].ToString());
+
+                            conn.Close();
+
+                            return idPwCheckResult.success;
+                        }
+                    }
                 }
             }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show("[idPwCheck]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("[idPwCheck]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("[idPwCheck]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return idPwCheckResult.failed;
         }
 
     }

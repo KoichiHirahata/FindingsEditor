@@ -22,8 +22,8 @@ namespace FindingsEdior
         #region Login
         private void initLogin()
         {
-            this.Visible = false;
-            db_operator.authDone = false;
+            Visible = false;
+            db_operator.reset_op();
             StartForm stf = new StartForm();
             stf.ShowDialog(this);
             stf.Dispose();
