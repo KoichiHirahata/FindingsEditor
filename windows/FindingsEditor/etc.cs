@@ -513,7 +513,7 @@ namespace FindingsEdior
 
         public enum idPwCheckResult { success, failed, connectionError };
 
-        public static idPwCheckResult idPwCheck(string opId, string opPw)
+        public static idPwCheckResult IdPwCheck(string opId, string opPw)
         {
             try
             {

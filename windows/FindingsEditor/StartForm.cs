@@ -29,7 +29,7 @@ namespace FindingsEdior
                 return;
             }
 
-            switch (db_operator.idPwCheck(tbID.Text, tbPass.Text))
+            switch (db_operator.IdPwCheck(tbID.Text, tbPass.Text))
             {
                 case db_operator.idPwCheckResult.success:
                     this.Close();
