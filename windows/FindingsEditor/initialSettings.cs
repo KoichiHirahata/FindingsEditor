@@ -108,50 +108,55 @@ namespace FindingsEdior
                 temp_pw = Settings.DBconnectPw;
             }
 
-            #region Npgsql
-            // ログ取得を有効にする。
-            /*NpgsqlEventLog.Level = LogLevel.Debug;
-            NpgsqlEventLog.LogName = "NpgsqlTests.LogFile";
-            NpgsqlEventLog.EchoMessages = true;
-            */
-
-            NpgsqlConnection conn;
-            try
-            {
-                conn = new NpgsqlConnection("Host=" + tbDBSrv.Text + ";Port=" + tbDBsrvPort.Text + ";Username=" + tbDbID.Text + ";Password=" + ((tbDBpw.Visible) ? tbDBpw.Text : Settings.DBconnectPw)
-                + ";Database=" + Settings.DBname + ";" + Settings.sslSetting);
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            #endregion
 
             try
-            { conn.Open(); }
-            catch (NpgsqlException)
             {
-                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
-                return false;
-            }
-            catch (System.IO.IOException)
-            {
-                MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
-                return false;
-            }
+                using (var conn = new NpgsqlConnection("Host=" + tbDBSrv.Text + ";Port=" + tbDBsrvPort.Text + ";Username=" + tbDbID.Text + ";Password=" + ((tbDBpw.Visible) ? tbDBpw.Text : Settings.DBconnectPw)
+                + ";Database=" + Settings.DBname + ";" + Settings.sslSetting))
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (NpgsqlException)
+                    {
+                        MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conn.Close();
+                        return false;
+                    }
+                    catch (IOException)
+                    {
+                        MessageBox.Show(FindingsEditor.Properties.Resources.ConnClosed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conn.Close();
+                        return false;
+                    }
 
-            if (conn.State == ConnectionState.Open)
-            {
-                conn.Close();
-                return true;
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conn.Close();
+                        return false;
+                    }
+                }
             }
-            else
+            catch (NpgsqlException ex)
             {
-                MessageBox.Show(FindingsEditor.Properties.Resources.CouldntOpenConn, "Connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
+                MessageBox.Show("[idPwCheck]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("[idPwCheck]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("[idPwCheck]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
