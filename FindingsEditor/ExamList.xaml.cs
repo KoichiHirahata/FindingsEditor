@@ -4,7 +4,6 @@ using System.Data;
 using Npgsql;
 using System.Windows.Data;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.IO;
 
 namespace FindingsEditor

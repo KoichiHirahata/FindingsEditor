@@ -128,7 +128,13 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="618" Margin="260,50,0,0" VerticalAlignment="Top" Width="540">
             <TabItem Header="{x:Static properties:Resources.Findings}" FontSize="15">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dgDiagnoses" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="190" Width="320"/>
+                    <DataGrid x:Name="dgDiagnoses" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="190" Width="320"
+                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True">
+                        
+                        
+                        
+                        
+                    </DataGrid>
                     <Button x:Name="btAddNormal" Content="{x:Static properties:Resources.AddNormal}" HorizontalAlignment="Left" Height="25" Margin="350,20,0,0" VerticalAlignment="Top" Width="auto" MinWidth="130" FontSize="16" />
                     <Button x:Name="btAddDiagnosis" Content="{x:Static properties:Resources.AddDiagnosis}" HorizontalAlignment="Left" Height="25" Margin="350,55,0,0" VerticalAlignment="Top" Width="auto" MinWidth="130" FontSize="16" />
                     <Label x:Name="lbFindings" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Right" FontSize="15">
@@ -216,7 +222,6 @@
             </TabItem>
         </TabControl>
         <DataGrid x:Name="dgWords" HorizontalAlignment="Left" Margin="805,50,0,0" VerticalAlignment="Top" Height="617" Width="457"/>
-
 
     </Grid>
 </Window>

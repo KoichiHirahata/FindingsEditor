@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.IO;
 using System.Timers;
@@ -14,7 +15,8 @@ namespace FindingsEditor
         private Exam exam;
         private Boolean canEdit;
         private Boolean canEditPatho; //This will control the right of edit pathology results.
-        private DataTable dt = new DataTable();//Temporary datatable for diagnoses.
+        private ObservableCollection<DiagnosisOfExam> DiagnosesList { get; set; }
+        //private DataTable dt = new DataTable();//Temporary datatable for diagnoses.
         private DataTable stockedSQLs = new DataTable();
         private int no4SqlIndex = 0;
         //private Color currentColor = Color.Black;
@@ -273,6 +275,124 @@ namespace FindingsEditor
 
             #endregion
 
+            #region Findings
+
+            #region dgvDiagnoses initialization
+            dgDiagnoses.ItemsSource = DiagnosesList;
+            initiateDt();
+
+            #region Add btDelColumn
+            if (canEdit)
+            {
+                DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //Create DataGridViewButtonColumn
+                btDelColumn.Name = Properties.Resources.Delete;  //Set column name
+                btDelColumn.UseColumnTextForButtonValue = true;  //Show text on the button
+                btDelColumn.Text = Properties.Resources.Delete;  //Set text on the button
+                dgvDiagnoses.Columns.Add(btDelColumn);     //Add the button
+            }
+            #endregion
+
+            resizeColumns();
+
+            #region Set Visible to false
+            dgvDiagnoses.Columns["diag_no"].Visible = false;
+            dgvDiagnoses.Columns["diag_code"].Visible = false;
+            dgvDiagnoses.Columns["suspect"].Visible = false;
+            dgvDiagnoses.Columns["SQL_index"].Visible = false;
+            dgvDiagnoses.Columns["premodifier"].Visible = false;
+            dgvDiagnoses.Columns["postmodifier"].Visible = false;
+            #endregion
+            #endregion
+
+            #region Initialize buttons beside dgvDiagnoses
+            if (!canEdit)
+            {
+                btSetNormal.Visible = false;
+                btAddDiag.Visible = false;
+                btReverseOrder.Visible = false;
+                btCopyDiag.Visible = false;
+            }
+            #endregion
+
+            #region Initialize stockedSQLs
+            stockedSQLs.Columns.Add("SQL", System.Type.GetType("System.String"));
+            stockedSQLs.Columns.Add("index", System.Type.GetType("System.String"));
+            #endregion
+
+            #region tbFinding initialization
+            string sql;
+            if (string.IsNullOrWhiteSpace(exam.findings))
+            {
+                sql = "SELECT findings FROM default_findings WHERE exam_type=" + exam.exam_type.ToString();
+                tbFindings.Text = uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
+            }
+            else
+            { this.tbFindings.Text = exam.findings.Replace("\n", "\r\n").Replace("\r\r", "\r"); }//Replace code is necessary because we have data made with Linux machine.
+
+            if (canEdit)
+            { tbFindings.ReadOnly = false; }
+            else
+            { tbFindings.ReadOnly = true; }
+            #endregion
+
+            #region tbComment initialization
+            this.tbComment.Text = exam.comment.Replace("\n", "\r\n").Replace("\r\r", "\r");
+
+            if (canEdit)
+            { tbComment.ReadOnly = false; }
+            else
+            { tbComment.ReadOnly = true; }
+            #endregion
+
+            #region btDiagnosed initialization
+            if (db_operator.canDiag)
+            { btDiagnosed.Visible = true; }
+            else
+            { btDiagnosed.Visible = false; }
+
+            if (!canEdit)
+            { btDiagnosed.Visible = false; }
+            #endregion
+
+            #region cbDiagnosed initialization
+            this.cbDiagnosed.DataSource = CLocalDB.localDB.Tables["DiagDr"];
+            this.cbDiagnosed.ValueMember = "operator_id";
+            this.cbDiagnosed.DisplayMember = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.diag_dr))
+            { this.cbDiagnosed.SelectedIndex = -1; }
+            else
+            { this.cbDiagnosed.SelectedValue = exam.diag_dr; }
+            #endregion
+
+            #region btChecked initialization
+            if (db_operator.allowFC)
+            { btChecked.Visible = true; }
+            else
+            { btChecked.Visible = false; }
+
+            if (!canEdit)
+            { btChecked.Visible = false; }
+            #endregion
+
+            #region cbChecker initialization
+            this.cbChecker.DataSource = CLocalDB.localDB.Tables["Checker"];
+            this.cbChecker.ValueMember = "operator_id";
+            this.cbChecker.DisplayMember = "op_name";
+            if (string.IsNullOrWhiteSpace(exam.final_diag_dr))
+            { this.cbChecker.SelectedIndex = -1; }
+            else
+            { this.cbChecker.SelectedValue = exam.final_diag_dr; }
+            #endregion
+
+            #region tbPatho initialization
+            this.tbPatho.Text = exam.patho_result.Replace("\n", "\r\n").Replace("\r\r", "\r");
+
+            if (canEditPatho)
+            { tbPatho.ReadOnly = false; }
+            else
+            { tbPatho.ReadOnly = true; }
+            #endregion
+            #endregion
 
 
 
@@ -337,5 +457,14 @@ namespace FindingsEditor
             { feFunctions.delLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'"); }
         }
         #endregion
+    }
+
+    /// <summary>
+    /// 実際の検査の診断
+    /// Diagnosis of examination class
+    /// </summary>
+    public class DiagnosisOfExam
+    {
+
     }
 }
