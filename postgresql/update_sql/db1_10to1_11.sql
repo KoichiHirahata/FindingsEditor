@@ -1,5 +1,5 @@
 GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.op_category TO func_owner;
-
+update db_version set db_version = '1.11';
 
 -- Function: public.get_operator_info(text, text)
 

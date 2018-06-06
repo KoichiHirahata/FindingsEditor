@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -376,79 +377,64 @@ namespace FindingsEdior
                     if (string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["diag_visible"].Value.ToString()))
                     { dgv.Rows[e.RowIndex].Cells["diag_visible"].Value = false; }
 
-                    if (dgv.Rows[e.RowIndex].Cells["noInsert"].Value.ToString() == "True")
+                    try
                     {
-                        sql = "UPDATE diag_name SET ";
-                        if (!String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString()))
-                        { sql += "name_eng=:p0, "; }
-
-                        if (!String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString()))
-                        { sql += "name_jp=:p1, "; }
-
-                        if (!String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString()))
-                        { sql += "diag_order=:p2, "; }
-
-                        sql += "diag_visible=:p3 WHERE no=:p4"; //Exist of "no" has already checked above.
-
-                        switch (uckyFunctions.ExeNonQuery(sql, dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["diag_visible"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["no"].Value.ToString()))
+                        using (var conn = new NpgsqlConnection(Settings.retConnStr()))
                         {
-                            case uckyFunctions.functionResult.connectionError:
-                                MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                break;
-                            case uckyFunctions.functionResult.failed:
-                                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                break;
-                            case uckyFunctions.functionResult.success:
-                                dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = "";
-                                break;
+                            conn.Open();
+
+                            using (var cmd = new NpgsqlCommand())
+                            {
+                                cmd.Connection = conn;
+                                cmd.CommandText = "SELECT * FROM upsert_diag_name(@id, @pw, @no, @d_eng, @d_jp, @d_order, @d_visible)";
+                                cmd.Parameters.AddWithValue("id", db_operator.operatorID);
+                                cmd.Parameters.AddWithValue("pw", db_operator.operatorPw);
+                                cmd.Parameters.AddWithValue("no", NpgsqlTypes.NpgsqlDbType.Integer, int.Parse(dgv.Rows[e.RowIndex].Cells["no"].Value.ToString()));
+                                Debug.WriteLine(dgv.Rows[e.RowIndex].Cells["no"].Value.ToString());
+
+                                cmd.Parameters.AddWithValue("d_eng",
+                                    String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString()) ? "" : dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString());
+                                Debug.WriteLine(String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString()) ? "" : dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString());
+
+                                cmd.Parameters.AddWithValue("d_jp",
+                                    String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString()) ? "" : dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString());
+                                Debug.WriteLine(String.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString()) ? "" : dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString());
+
+                                cmd.Parameters.AddWithValue("d_order", NpgsqlTypes.NpgsqlDbType.Integer, int.Parse(dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString()));
+                                Debug.WriteLine(dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString());
+
+                                cmd.Parameters.AddWithValue("d_visible", NpgsqlTypes.NpgsqlDbType.Boolean , bool.Parse(dgv.Rows[e.RowIndex].Cells["diag_visible"].Value.ToString()));
+                                Debug.WriteLine(dgv.Rows[e.RowIndex].Cells["diag_visible"].Value.ToString());
+
+                                using (var reader = cmd.ExecuteReader())
+                                {
+                                    if (reader.Read())
+                                    {
+                                        if(bool.Parse(reader["upsert_diag_name"].ToString()))
+                                        {
+                                            dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = "";
+                                            dgv.Refresh();
+                                        }
+                                    }
+                                }
+                                conn.Close();
+                            }
                         }
                     }
-                    else
+                    #region catch
+                    catch (NpgsqlException ex)
                     {
-                        string sql1 = "INSERT INTO diag_name(no";
-                        string sql2 = "VALUES(:p0";
-
-                        if (!string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString()))
-                        {
-                            sql1 += ", name_eng";
-                            sql2 += ", :p1";
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString()))
-                        {
-                            sql1 += ", name_jp";
-                            sql2 += ", :p2";
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString()))
-                        {
-                            sql1 += ", diag_order";
-                            sql2 += ", :p3";
-                        }
-
-                        sql = sql1 + ", diag_visible) " + sql2 + ", :p4);";
-                        switch (uckyFunctions.ExeNonQuery(sql, dgv.Rows[e.RowIndex].Cells["no"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["name_eng"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["name_jp"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["diag_order"].Value.ToString(),
-                            dgv.Rows[e.RowIndex].Cells["diag_visible"].Value.ToString()))
-                        {
-                            case uckyFunctions.functionResult.connectionError:
-                                MessageBox.Show(FindingsEditor.Properties.Resources.ConnectFailed, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                break;
-                            case uckyFunctions.functionResult.failed:
-                                MessageBox.Show(FindingsEditor.Properties.Resources.DataBaseError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                break;
-                            case uckyFunctions.functionResult.success:
-                                dgv.Rows[e.RowIndex].Cells["tbUpdate"].Value = "";
-                                dgv.Refresh();
-                                break;
-                        }
+                        MessageBox.Show("[Click2Update]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    catch (InvalidOperationException ex)
+                    {
+                        MessageBox.Show("[Click2Update]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("[Click2Update]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    #endregion
                 }
             }
             #endregion
