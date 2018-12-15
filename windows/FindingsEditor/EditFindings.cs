@@ -36,462 +36,472 @@ namespace FindingsEdior
         public EditFindings(string _exam_id)
         {
             InitializeComponent();
-            exam = new Exam(_exam_id);
 
-            #region canEdit & Timer
-            canEdit = true;
-            canEditPatho = true;
-
-            #region editorial control
-            if (db_operator.canDiag == false)
-            { canEdit = false; }
-            else if (db_operator.allowFC == false && exam.exam_status == 3)
-            { canEdit = false; }
-            #endregion
-
-            #region Timer
-            //Check locktime after checking of editorial control above
-            canEditPatho = uckyFunctions.canEdit("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
-
-            if (canEdit)
-            { canEdit = canEditPatho; }
-
-            if (canEditPatho)
+            try
             {
-                uckyFunctions.updateLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
+                exam = new Exam(_exam_id);
 
-                //Timer procedure
-                timer.Interval = 30000;  //Unit is msec
-                timer.Tick += new EventHandler(timer_Tick);
-                timer.Start();
+                #region canEdit & Timer
+                canEdit = true;
+                canEditPatho = true;
+
+                #region editorial control
+                if (db_operator.canDiag == false)
+                { canEdit = false; }
+                else if (db_operator.allowFC == false && exam.exam_status == 3)
+                { canEdit = false; }
+                #endregion
+
+                #region Timer
+                //Check locktime after checking of editorial control above
+                canEditPatho = uckyFunctions.canEdit("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
+
+                if (canEdit)
+                { canEdit = canEditPatho; }
+
+                if (canEditPatho)
+                {
+                    uckyFunctions.updateLockTimeIP("exam", "exam_id", "=", "'" + exam.exam_id.ToString() + "'");
+
+                    //Timer procedure
+                    timer.Interval = 30000;  //Unit is msec
+                    timer.Tick += new EventHandler(timer_Tick);
+                    timer.Start();
+
+                    if (!canEdit)
+                    { MessageBox.Show(FindingsEditor.Properties.Resources.YouCanMakeChangesOnlyToPatho, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                }
+                else
+                {
+                    //MessageBox.Show(FindingsEditor.Properties.Resources.ReadOnlyMode + Environment.NewLine + FindingsEditor.Properties.Resources.ChangesWillLost, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(FindingsEditor.Properties.Resources.ReadOnlyMode, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                #endregion
+
+                #endregion
+
+                #region Header
+                this.lbPatient.Text = "ID: " + exam.pt_id + "   " + FindingsEditor.Properties.Resources.Name + ": " + exam.pt_name;
 
                 if (!canEdit)
-                { MessageBox.Show(FindingsEditor.Properties.Resources.YouCanMakeChangesOnlyToPatho, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                { btSaveClose.Text = FindingsEditor.Properties.Resources.Close; }
+
+                //cbExamStatus initialization
+                this.cbExamStatus.DataSource = CLocalDB.localDB.Tables["exam_status"];
+                this.cbExamStatus.ValueMember = "status_no";
+                this.cbExamStatus.DisplayMember = "status_name";
+                if (string.IsNullOrWhiteSpace(exam.exam_status.ToString()) || (exam.exam_status == 0))
+                { this.cbExamStatus.SelectedValue = 1; }
+                else
+                { this.cbExamStatus.SelectedValue = exam.exam_status; }
+                #endregion
+
+                #region information
+                this.lbDate.Text = FindingsEditor.Properties.Resources.Date + ": " + exam.exam_day.ToLongDateString()
+                    + "    " + FindingsEditor.Properties.Resources.ExamType + ": " + exam.getExamTypeName();
+
+                #region tbPurpose initialization
+                this.tbPurpose.Text = exam.purpose;
+                if (canEdit)
+                { tbPurpose.ReadOnly = false; }
+                else
+                { tbPurpose.ReadOnly = true; }
+                #endregion
+
+                #region cbDepartment initialization
+                this.cbDepartment.DataSource = CLocalDB.localDB.Tables["department"];
+                this.cbDepartment.ValueMember = "code";
+                this.cbDepartment.DisplayMember = "name1";
+                this.cbDepartment.SelectedValue = exam.department;
+                if (!canEdit)
+                { cbDepartment.Enabled = false; }
+                #endregion
+
+                #region cbOrderDr initialization
+                this.cbOrderDr.DataSource = CLocalDB.localDB.Tables["orderDr"];
+                this.cbOrderDr.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.order_dr))
+                { cbOrderDr.SelectedIndex = -1; }
+                else
+                {
+                    cbOrderDr.SelectedIndex = -1;//これをしないと項目にないテキストがちゃんと反映されない。
+                    this.cbOrderDr.Text = exam.order_dr;
+                }
+                if (!canEdit)
+                { cbOrderDr.Enabled = false; }
+                #endregion
+
+                #region cbWard initialization
+                this.cbWard.DataSource = CLocalDB.localDB.Tables["ward"];
+                this.cbWard.ValueMember = "ward_no";
+                this.cbWard.DisplayMember = "ward";
+                this.cbWard.SelectedValue = exam.ward_id;
+                if (!canEdit)
+                { cbWard.Enabled = false; }
+                #endregion
+
+                #region cbEquipment initialization
+                switch (exam.exam_type)
+                {
+                    case 1:
+                        this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentGF"];
+                        break;
+                    case 2:
+                        this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentCF"];
+                        break;
+                    case 3:
+                        this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentSV"];
+                        break;
+                    case 4:
+                        this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentS"];
+                        break;
+                    case 1001:
+                    case 1002:
+                    case 1003:
+                    case 1004:
+                    case 1005:
+                    case 1006:
+                    case 1007:
+                    case 1008:
+                    case 1009:
+                    case 1010:
+                    case 1011:
+                    case 1012:
+                        this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentUS"];
+                        break;
+                }
+                this.cbEquipment.ValueMember = "equipment_no";
+                this.cbEquipment.DisplayMember = "name";
+                this.cbEquipment.SelectedValue = exam.equipment;
+                if (!canEdit)
+                { cbEquipment.Enabled = false; }
+                #endregion
+
+                #region cbPlace initialization
+                switch (exam.exam_type)
+                {
+                    case 99:
+                        this.cbPlace.DataSource = CLocalDB.localDB.Tables["placeUS"];
+                        break;
+                    default:
+                        this.cbPlace.DataSource = CLocalDB.localDB.Tables["placeEndo"];
+                        break;
+                }
+                this.cbPlace.ValueMember = "place_no";
+                this.cbPlace.DisplayMember = "name1";
+                if (string.IsNullOrWhiteSpace(exam.place_no.ToString()))
+                { this.cbPlace.SelectedIndex = -1; }
+                else
+                { this.cbPlace.SelectedValue = exam.place_no; }
+                if (!canEdit)
+                { cbPlace.Enabled = false; }
+                #endregion
+
+                #region cbOperator1 initialization
+                this.cbOperator1.DataSource = CLocalDB.localDB.Tables["operator1"];
+                this.cbOperator1.ValueMember = "operator_id";
+                this.cbOperator1.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.operator1))
+                { this.cbOperator1.SelectedIndex = -1; }
+                else
+                { this.cbOperator1.SelectedValue = exam.operator1; }
+
+                if (!canEdit)
+                {
+                    cbOperator1.Enabled = false;
+                    btClearOp1.Visible = false;
+                }
+
+                if (shouldFillOperatorWithUser(canEdit, exam.exam_status))
+                { cbOperator1.SelectedValue = db_operator.operatorID; }
+                #endregion
+
+                #region cbOperator2 initialization
+                this.cbOperator2.DataSource = CLocalDB.localDB.Tables["operator2"];
+                this.cbOperator2.ValueMember = "operator_id";
+                this.cbOperator2.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.operator2))
+                { this.cbOperator2.SelectedIndex = -1; }
+                else
+                { this.cbOperator2.SelectedValue = exam.operator2; }
+
+                if (!canEdit)
+                {
+                    cbOperator2.Enabled = false;
+                    btClearOp2.Visible = false;
+                }
+                #endregion
+
+                #region cbOperator3 initialization
+                this.cbOperator3.DataSource = CLocalDB.localDB.Tables["operator3"];
+                this.cbOperator3.ValueMember = "operator_id";
+                this.cbOperator3.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.operator3))
+                { this.cbOperator3.SelectedIndex = -1; }
+                else
+                { this.cbOperator3.SelectedValue = exam.operator3; }
+
+                if (!canEdit)
+                {
+                    cbOperator3.Enabled = false;
+                    btClearOp3.Visible = false;
+                }
+                #endregion
+
+                #region cbOperator4 initialization
+                this.cbOperator4.DataSource = CLocalDB.localDB.Tables["operator4"];
+                this.cbOperator4.ValueMember = "operator_id";
+                this.cbOperator4.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.operator4))
+                { this.cbOperator4.SelectedIndex = -1; }
+                else
+                { this.cbOperator4.SelectedValue = exam.operator4; }
+
+                if (!canEdit)
+                {
+                    cbOperator4.Enabled = false;
+                    btClearOp4.Visible = false;
+                }
+                #endregion
+
+                #region cbOperator5 initialization
+                this.cbOperator5.DataSource = CLocalDB.localDB.Tables["operator5"];
+                this.cbOperator5.ValueMember = "operator_id";
+                this.cbOperator5.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.operator5))
+                { this.cbOperator5.SelectedIndex = -1; }
+                else
+                { this.cbOperator5.SelectedValue = exam.operator5; }
+
+                if (!canEdit)
+                {
+                    cbOperator5.Enabled = false;
+                    btClearOp5.Visible = false;
+                }
+                #endregion
+
+                if (!canEdit)
+                { btExamCanceled.Visible = false; }
+
+                #endregion
+
+                #region Findings
+
+                #region dgvDiagnoses initialization
+                this.dgvDiagnoses.Font = new Font(dgvDiagnoses.Font.Name, 12);
+                this.dgvDiagnoses.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                this.dgvDiagnoses.DataSource = dt;
+                initiateDt();
+
+                #region Add btDelColumn
+                if (canEdit)
+                {
+                    DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //Create DataGridViewButtonColumn
+                    btDelColumn.Name = FindingsEditor.Properties.Resources.Delete;  //Set column name
+                    btDelColumn.UseColumnTextForButtonValue = true;  //Show text on the button
+                    btDelColumn.Text = FindingsEditor.Properties.Resources.Delete;  //Set text on the button
+                    dgvDiagnoses.Columns.Add(btDelColumn);     //Add the button
+                }
+                #endregion
+
+                resizeColumns();
+
+                #region Set Visible to false
+                dgvDiagnoses.Columns["diag_no"].Visible = false;
+                dgvDiagnoses.Columns["diag_code"].Visible = false;
+                dgvDiagnoses.Columns["suspect"].Visible = false;
+                dgvDiagnoses.Columns["SQL_index"].Visible = false;
+                dgvDiagnoses.Columns["premodifier"].Visible = false;
+                dgvDiagnoses.Columns["postmodifier"].Visible = false;
+                #endregion
+                #endregion
+
+                #region Initialize buttons beside dgvDiagnoses
+                if (!canEdit)
+                {
+                    btSetNormal.Visible = false;
+                    btAddDiag.Visible = false;
+                    btReverseOrder.Visible = false;
+                    btCopyDiag.Visible = false;
+                }
+                #endregion
+
+                #region Initialize stockedSQLs
+                stockedSQLs.Columns.Add("SQL", System.Type.GetType("System.String"));
+                stockedSQLs.Columns.Add("index", System.Type.GetType("System.String"));
+                #endregion
+
+                #region tbFinding initialization
+                string sql;
+                if (string.IsNullOrWhiteSpace(exam.findings))
+                {
+                    sql = "SELECT findings FROM default_findings WHERE exam_type=" + exam.exam_type.ToString();
+                    tbFindings.Text = uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
+                }
+                else
+                { this.tbFindings.Text = exam.findings.Replace("\n", "\r\n").Replace("\r\r", "\r"); }//Replace code is necessary because we have data made with Linux machine.
+
+                if (canEdit)
+                { tbFindings.ReadOnly = false; }
+                else
+                { tbFindings.ReadOnly = true; }
+                #endregion
+
+                #region tbComment initialization
+                this.tbComment.Text = exam.comment.Replace("\n", "\r\n").Replace("\r\r", "\r");
+
+                if (canEdit)
+                { tbComment.ReadOnly = false; }
+                else
+                { tbComment.ReadOnly = true; }
+                #endregion
+
+                #region btDiagnosed initialization
+                if (db_operator.canDiag)
+                { btDiagnosed.Visible = true; }
+                else
+                { btDiagnosed.Visible = false; }
+
+                if (!canEdit)
+                { btDiagnosed.Visible = false; }
+                #endregion
+
+                #region cbDiagnosed initialization
+                this.cbDiagnosed.DataSource = CLocalDB.localDB.Tables["DiagDr"];
+                this.cbDiagnosed.ValueMember = "operator_id";
+                this.cbDiagnosed.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.diag_dr))
+                { this.cbDiagnosed.SelectedIndex = -1; }
+                else
+                { this.cbDiagnosed.SelectedValue = exam.diag_dr; }
+                #endregion
+
+                #region btChecked initialization
+                if (db_operator.allowFC)
+                { btChecked.Visible = true; }
+                else
+                { btChecked.Visible = false; }
+
+                if (!canEdit)
+                { btChecked.Visible = false; }
+                #endregion
+
+                #region cbChecker initialization
+                this.cbChecker.DataSource = CLocalDB.localDB.Tables["Checker"];
+                this.cbChecker.ValueMember = "operator_id";
+                this.cbChecker.DisplayMember = "op_name";
+                if (string.IsNullOrWhiteSpace(exam.final_diag_dr))
+                { this.cbChecker.SelectedIndex = -1; }
+                else
+                { this.cbChecker.SelectedValue = exam.final_diag_dr; }
+                #endregion
+
+                #region tbPatho initialization
+                this.tbPatho.Text = exam.patho_result.Replace("\n", "\r\n").Replace("\r\r", "\r");
+
+                if (canEditPatho)
+                { tbPatho.ReadOnly = false; }
+                else
+                { tbPatho.ReadOnly = true; }
+                #endregion
+                #endregion
+
+                #region Figure
+                checkFigureFolder(); //Check figure folder exist or not, and if folder not existed, create folder.
+                figureFileNameBase = Settings.figureFolder + @"\" + exam.exam_day.Year.ToString() + @"\" + exam.exam_id.ToString();
+
+                #region pbFigure1 initialization
+                if (!System.IO.File.Exists(figureFileNameBase + "_1.png"))//If there is no figure file, fill pbFigure1 with white.
+                { fillPicBoxWhite(pbFigure1); }
+                else
+                {
+                    fs = File.Open(figureFileNameBase + "_1.png", FileMode.Open, FileAccess.ReadWrite);
+                    pbFigure1.Image = System.Drawing.Image.FromStream(fs);
+                    fs.Close();
+                }
+
+                if (canEdit)
+                { pbFigure1.Enabled = true; }
+                else
+                { pbFigure1.Enabled = false; }
+                #endregion
+
+                #region pbFigure2 initialization
+                if (!System.IO.File.Exists(figureFileNameBase + "_2.png"))//If there is no figure file, fill pbFigure1 with white.
+                { fillPicBoxWhite(pbFigure2); }
+                else
+                {
+                    fs = File.Open(figureFileNameBase + "_2.png", FileMode.Open, FileAccess.ReadWrite);
+                    pbFigure2.Image = System.Drawing.Image.FromStream(fs);
+                    fs.Close();
+                }
+
+                if (canEdit)
+                { pbFigure2.Enabled = true; }
+                else
+                { pbFigure2.Enabled = false; }
+                #endregion
+
+                #region pbColor initialization
+                this.pbColor1.BackColor = currentColor;
+                this.pbColor2.BackColor = currentColor;
+                #endregion
+
+                #region cbBrushWidth initialization
+                DataTable dtBrushWidth = new DataTable();
+                dtBrushWidth.Columns.Add("width", Type.GetType("System.Int16"));
+                dtBrushWidth.Columns.Add("WidthStr", Type.GetType("System.String"));
+                for (int i = 2; i < 16; i++)
+                { dtBrushWidth.Rows.Add(i, i.ToString() + " px"); }
+                cbBrushWidth1.DataSource = dtBrushWidth;
+                cbBrushWidth2.DataSource = dtBrushWidth;
+                cbBrushWidth1.ValueMember = "width";
+                cbBrushWidth2.ValueMember = "width";
+                cbBrushWidth1.DisplayMember = "WidthStr";
+                cbBrushWidth2.DisplayMember = "WidthStr";
+                setPbBrushWidth();
+                #endregion
+
+                #endregion
+
+                #region Words
+                if (canEdit)
+                { dgvWords.Visible = true; }
+                else
+                { dgvWords.Visible = false; }
+
+                selectedTb = "";
+                switch (exam.exam_type)
+                {
+                    case 1:
+                        dvWords.RowFilter = "operator='Upper endoscopy' OR operator='" + db_operator.operatorID + "'";
+                        dvWords.Sort = "operator, word_order";
+                        break;
+                    case 2:
+                        dvWords.RowFilter = "operator='Colonoscopy' OR operator='" + db_operator.operatorID + "'";
+                        dvWords.Sort = "operator, word_order";
+                        break;
+                    default:
+                        dvWords.RowFilter = "operator='" + exam.getEnglishExamTypeName() + "' OR operator='" + db_operator.operatorID + "'";
+                        dvWords.Sort = "operator, word_order";
+                        break;
+                }
+                dgvWords.DataSource = dvWords;
+                dgvWords.Font = new Font(dgvWords.Font.Name, 12);
+                dgvWords.Columns["no"].Visible = false;
+                dgvWords.Columns["operator"].Visible = false;
+                dgvWords.Columns["word_order"].Visible = false;
+                #endregion
+
+                KeyPreview = true; //To detect keyboard input on the form.
+                edited = false;
             }
-            else
+            #region catch
+            catch (Exception ex)
             {
-                //MessageBox.Show(FindingsEditor.Properties.Resources.ReadOnlyMode + Environment.NewLine + FindingsEditor.Properties.Resources.ChangesWillLost, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(FindingsEditor.Properties.Resources.ReadOnlyMode, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("[EditFindings Constructor] " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             #endregion
-
-            #endregion
-
-            #region Header
-            this.lbPatient.Text = "ID: " + exam.pt_id + "   " + FindingsEditor.Properties.Resources.Name + ": " + exam.pt_name;
-
-            if (!canEdit)
-            { btSaveClose.Text = FindingsEditor.Properties.Resources.Close; }
-
-            //cbExamStatus initialization
-            this.cbExamStatus.DataSource = CLocalDB.localDB.Tables["exam_status"];
-            this.cbExamStatus.ValueMember = "status_no";
-            this.cbExamStatus.DisplayMember = "status_name";
-            if (string.IsNullOrWhiteSpace(exam.exam_status.ToString()) || (exam.exam_status == 0))
-            { this.cbExamStatus.SelectedValue = 1; }
-            else
-            { this.cbExamStatus.SelectedValue = exam.exam_status; }
-            #endregion
-
-            #region information
-            this.lbDate.Text = FindingsEditor.Properties.Resources.Date + ": " + exam.exam_day.ToLongDateString()
-                + "    " + FindingsEditor.Properties.Resources.ExamType + ": " + exam.getExamTypeName();
-
-            #region tbPurpose initialization
-            this.tbPurpose.Text = exam.purpose;
-            if (canEdit)
-            { tbPurpose.ReadOnly = false; }
-            else
-            { tbPurpose.ReadOnly = true; }
-            #endregion
-
-            #region cbDepartment initialization
-            this.cbDepartment.DataSource = CLocalDB.localDB.Tables["department"];
-            this.cbDepartment.ValueMember = "code";
-            this.cbDepartment.DisplayMember = "name1";
-            this.cbDepartment.SelectedValue = exam.department;
-            if (!canEdit)
-            { cbDepartment.Enabled = false; }
-            #endregion
-
-            #region cbOrderDr initialization
-            this.cbOrderDr.DataSource = CLocalDB.localDB.Tables["orderDr"];
-            this.cbOrderDr.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.order_dr))
-            { cbOrderDr.SelectedIndex = -1; }
-            else
-            {
-                cbOrderDr.SelectedIndex = -1;//これをしないと項目にないテキストがちゃんと反映されない。
-                this.cbOrderDr.Text = exam.order_dr;
-            }
-            if (!canEdit)
-            { cbOrderDr.Enabled = false; }
-            #endregion
-
-            #region cbWard initialization
-            this.cbWard.DataSource = CLocalDB.localDB.Tables["ward"];
-            this.cbWard.ValueMember = "ward_no";
-            this.cbWard.DisplayMember = "ward";
-            this.cbWard.SelectedValue = exam.ward_id;
-            if (!canEdit)
-            { cbWard.Enabled = false; }
-            #endregion
-
-            #region cbEquipment initialization
-            switch (exam.exam_type)
-            {
-                case 1:
-                    this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentGF"];
-                    break;
-                case 2:
-                    this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentCF"];
-                    break;
-                case 3:
-                    this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentSV"];
-                    break;
-                case 4:
-                    this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentS"];
-                    break;
-                case 1001:
-                case 1002:
-                case 1003:
-                case 1004:
-                case 1005:
-                case 1006:
-                case 1007:
-                case 1008:
-                case 1009:
-                case 1010:
-                case 1011:
-                case 1012:
-                    this.cbEquipment.DataSource = CLocalDB.localDB.Tables["equipmentUS"];
-                    break;
-            }
-            this.cbEquipment.ValueMember = "equipment_no";
-            this.cbEquipment.DisplayMember = "name";
-            this.cbEquipment.SelectedValue = exam.equipment;
-            if (!canEdit)
-            { cbEquipment.Enabled = false; }
-            #endregion
-
-            #region cbPlace initialization
-            switch (exam.exam_type)
-            {
-                case 99:
-                    this.cbPlace.DataSource = CLocalDB.localDB.Tables["placeUS"];
-                    break;
-                default:
-                    this.cbPlace.DataSource = CLocalDB.localDB.Tables["placeEndo"];
-                    break;
-            }
-            this.cbPlace.ValueMember = "place_no";
-            this.cbPlace.DisplayMember = "name1";
-            if (string.IsNullOrWhiteSpace(exam.place_no.ToString()))
-            { this.cbPlace.SelectedIndex = -1; }
-            else
-            { this.cbPlace.SelectedValue = exam.place_no; }
-            if (!canEdit)
-            { cbPlace.Enabled = false; }
-            #endregion
-
-            #region cbOperator1 initialization
-            this.cbOperator1.DataSource = CLocalDB.localDB.Tables["operator1"];
-            this.cbOperator1.ValueMember = "operator_id";
-            this.cbOperator1.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.operator1))
-            { this.cbOperator1.SelectedIndex = -1; }
-            else
-            { this.cbOperator1.SelectedValue = exam.operator1; }
-
-            if (!canEdit)
-            {
-                cbOperator1.Enabled = false;
-                btClearOp1.Visible = false;
-            }
-
-            if (shouldFillOperatorWithUser(canEdit, exam.exam_status))
-            { cbOperator1.SelectedValue = db_operator.operatorID; }
-            #endregion
-
-            #region cbOperator2 initialization
-            this.cbOperator2.DataSource = CLocalDB.localDB.Tables["operator2"];
-            this.cbOperator2.ValueMember = "operator_id";
-            this.cbOperator2.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.operator2))
-            { this.cbOperator2.SelectedIndex = -1; }
-            else
-            { this.cbOperator2.SelectedValue = exam.operator2; }
-
-            if (!canEdit)
-            {
-                cbOperator2.Enabled = false;
-                btClearOp2.Visible = false;
-            }
-            #endregion
-
-            #region cbOperator3 initialization
-            this.cbOperator3.DataSource = CLocalDB.localDB.Tables["operator3"];
-            this.cbOperator3.ValueMember = "operator_id";
-            this.cbOperator3.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.operator3))
-            { this.cbOperator3.SelectedIndex = -1; }
-            else
-            { this.cbOperator3.SelectedValue = exam.operator3; }
-
-            if (!canEdit)
-            {
-                cbOperator3.Enabled = false;
-                btClearOp3.Visible = false;
-            }
-            #endregion
-
-            #region cbOperator4 initialization
-            this.cbOperator4.DataSource = CLocalDB.localDB.Tables["operator4"];
-            this.cbOperator4.ValueMember = "operator_id";
-            this.cbOperator4.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.operator4))
-            { this.cbOperator4.SelectedIndex = -1; }
-            else
-            { this.cbOperator4.SelectedValue = exam.operator4; }
-
-            if (!canEdit)
-            {
-                cbOperator4.Enabled = false;
-                btClearOp4.Visible = false;
-            }
-            #endregion
-
-            #region cbOperator5 initialization
-            this.cbOperator5.DataSource = CLocalDB.localDB.Tables["operator5"];
-            this.cbOperator5.ValueMember = "operator_id";
-            this.cbOperator5.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.operator5))
-            { this.cbOperator5.SelectedIndex = -1; }
-            else
-            { this.cbOperator5.SelectedValue = exam.operator5; }
-
-            if (!canEdit)
-            {
-                cbOperator5.Enabled = false;
-                btClearOp5.Visible = false;
-            }
-            #endregion
-
-            if (!canEdit)
-            { btExamCanceled.Visible = false; }
-
-            #endregion
-
-            #region Findings
-
-            #region dgvDiagnoses initialization
-            this.dgvDiagnoses.Font = new Font(dgvDiagnoses.Font.Name, 12);
-            this.dgvDiagnoses.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDiagnoses.DataSource = dt;
-            initiateDt();
-
-            #region Add btDelColumn
-            if (canEdit)
-            {
-                DataGridViewButtonColumn btDelColumn = new DataGridViewButtonColumn(); //Create DataGridViewButtonColumn
-                btDelColumn.Name = FindingsEditor.Properties.Resources.Delete;  //Set column name
-                btDelColumn.UseColumnTextForButtonValue = true;  //Show text on the button
-                btDelColumn.Text = FindingsEditor.Properties.Resources.Delete;  //Set text on the button
-                dgvDiagnoses.Columns.Add(btDelColumn);     //Add the button
-            }
-            #endregion
-
-            resizeColumns();
-
-            #region Set Visible to false
-            dgvDiagnoses.Columns["diag_no"].Visible = false;
-            dgvDiagnoses.Columns["diag_code"].Visible = false;
-            dgvDiagnoses.Columns["suspect"].Visible = false;
-            dgvDiagnoses.Columns["SQL_index"].Visible = false;
-            dgvDiagnoses.Columns["premodifier"].Visible = false;
-            dgvDiagnoses.Columns["postmodifier"].Visible = false;
-            #endregion
-            #endregion
-
-            #region Initialize buttons beside dgvDiagnoses
-            if (!canEdit)
-            {
-                btSetNormal.Visible = false;
-                btAddDiag.Visible = false;
-                btReverseOrder.Visible = false;
-                btCopyDiag.Visible = false;
-            }
-            #endregion
-
-            #region Initialize stockedSQLs
-            stockedSQLs.Columns.Add("SQL", System.Type.GetType("System.String"));
-            stockedSQLs.Columns.Add("index", System.Type.GetType("System.String"));
-            #endregion
-
-            #region tbFinding initialization
-            string sql;
-            if (string.IsNullOrWhiteSpace(exam.findings))
-            {
-                sql = "SELECT findings FROM default_findings WHERE exam_type=" + exam.exam_type.ToString();
-                tbFindings.Text = uckyFunctions.getSelectString(sql, Settings.DBSrvIP, Settings.DBSrvPort, Settings.DBconnectID, Settings.DBconnectPw, Settings.DBname);
-            }
-            else
-            { this.tbFindings.Text = exam.findings.Replace("\n", "\r\n").Replace("\r\r", "\r"); }//Replace code is necessary because we have data made with Linux machine.
-
-            if (canEdit)
-            { tbFindings.ReadOnly = false; }
-            else
-            { tbFindings.ReadOnly = true; }
-            #endregion
-
-            #region tbComment initialization
-            this.tbComment.Text = exam.comment.Replace("\n", "\r\n").Replace("\r\r", "\r");
-
-            if (canEdit)
-            { tbComment.ReadOnly = false; }
-            else
-            { tbComment.ReadOnly = true; }
-            #endregion
-
-            #region btDiagnosed initialization
-            if (db_operator.canDiag)
-            { btDiagnosed.Visible = true; }
-            else
-            { btDiagnosed.Visible = false; }
-
-            if (!canEdit)
-            { btDiagnosed.Visible = false; }
-            #endregion
-
-            #region cbDiagnosed initialization
-            this.cbDiagnosed.DataSource = CLocalDB.localDB.Tables["DiagDr"];
-            this.cbDiagnosed.ValueMember = "operator_id";
-            this.cbDiagnosed.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.diag_dr))
-            { this.cbDiagnosed.SelectedIndex = -1; }
-            else
-            { this.cbDiagnosed.SelectedValue = exam.diag_dr; }
-            #endregion
-
-            #region btChecked initialization
-            if (db_operator.allowFC)
-            { btChecked.Visible = true; }
-            else
-            { btChecked.Visible = false; }
-
-            if (!canEdit)
-            { btChecked.Visible = false; }
-            #endregion
-
-            #region cbChecker initialization
-            this.cbChecker.DataSource = CLocalDB.localDB.Tables["Checker"];
-            this.cbChecker.ValueMember = "operator_id";
-            this.cbChecker.DisplayMember = "op_name";
-            if (string.IsNullOrWhiteSpace(exam.final_diag_dr))
-            { this.cbChecker.SelectedIndex = -1; }
-            else
-            { this.cbChecker.SelectedValue = exam.final_diag_dr; }
-            #endregion
-
-            #region tbPatho initialization
-            this.tbPatho.Text = exam.patho_result.Replace("\n", "\r\n").Replace("\r\r", "\r");
-
-            if (canEditPatho)
-            { tbPatho.ReadOnly = false; }
-            else
-            { tbPatho.ReadOnly = true; }
-            #endregion
-            #endregion
-
-            #region Figure
-            checkFigureFolder(); //Check figure folder exist or not, and if folder not existed, create folder.
-            figureFileNameBase = Settings.figureFolder + @"\" + exam.exam_day.Year.ToString() + @"\" + exam.exam_id.ToString();
-
-            #region pbFigure1 initialization
-            if (!System.IO.File.Exists(figureFileNameBase + "_1.png"))//If there is no figure file, fill pbFigure1 with white.
-            { fillPicBoxWhite(pbFigure1); }
-            else
-            {
-                fs = File.Open(figureFileNameBase + "_1.png", FileMode.Open, FileAccess.ReadWrite);
-                pbFigure1.Image = System.Drawing.Image.FromStream(fs);
-                fs.Close();
-            }
-
-            if (canEdit)
-            { pbFigure1.Enabled = true; }
-            else
-            { pbFigure1.Enabled = false; }
-            #endregion
-
-            #region pbFigure2 initialization
-            if (!System.IO.File.Exists(figureFileNameBase + "_2.png"))//If there is no figure file, fill pbFigure1 with white.
-            { fillPicBoxWhite(pbFigure2); }
-            else
-            {
-                fs = File.Open(figureFileNameBase + "_2.png", FileMode.Open, FileAccess.ReadWrite);
-                pbFigure2.Image = System.Drawing.Image.FromStream(fs);
-                fs.Close();
-            }
-
-            if (canEdit)
-            { pbFigure2.Enabled = true; }
-            else
-            { pbFigure2.Enabled = false; }
-            #endregion
-
-            #region pbColor initialization
-            this.pbColor1.BackColor = currentColor;
-            this.pbColor2.BackColor = currentColor;
-            #endregion
-
-            #region cbBrushWidth initialization
-            DataTable dtBrushWidth = new DataTable();
-            dtBrushWidth.Columns.Add("width", Type.GetType("System.Int16"));
-            dtBrushWidth.Columns.Add("WidthStr", Type.GetType("System.String"));
-            for (int i = 2; i < 16; i++)
-            { dtBrushWidth.Rows.Add(i, i.ToString() + " px"); }
-            cbBrushWidth1.DataSource = dtBrushWidth;
-            cbBrushWidth2.DataSource = dtBrushWidth;
-            cbBrushWidth1.ValueMember = "width";
-            cbBrushWidth2.ValueMember = "width";
-            cbBrushWidth1.DisplayMember = "WidthStr";
-            cbBrushWidth2.DisplayMember = "WidthStr";
-            setPbBrushWidth();
-            #endregion
-
-            #endregion
-
-            #region Words
-            if (canEdit)
-            { dgvWords.Visible = true; }
-            else
-            { dgvWords.Visible = false; }
-
-            selectedTb = "";
-            switch (exam.exam_type)
-            {
-                case 1:
-                    dvWords.RowFilter = "operator='Upper endoscopy' OR operator='" + db_operator.operatorID + "'";
-                    dvWords.Sort = "operator, word_order";
-                    break;
-                case 2:
-                    dvWords.RowFilter = "operator='Colonoscopy' OR operator='" + db_operator.operatorID + "'";
-                    dvWords.Sort = "operator, word_order";
-                    break;
-                default:
-                    dvWords.RowFilter = "operator='" + exam.getEnglishExamTypeName() + "' OR operator='" + db_operator.operatorID + "'";
-                    dvWords.Sort = "operator, word_order";
-                    break;
-            }
-            dgvWords.DataSource = dvWords;
-            dgvWords.Font = new Font(dgvWords.Font.Name, 12);
-            dgvWords.Columns["no"].Visible = false;
-            dgvWords.Columns["operator"].Visible = false;
-            dgvWords.Columns["word_order"].Visible = false;
-            #endregion
-
-            KeyPreview = true; //To detect keyboard input on the form.
-            edited = false;
         }
 
         #region information
@@ -1044,11 +1054,20 @@ namespace FindingsEdior
         /// <summary>Check figure folder exist or not, and if folder not existed, create folder.</summary>
         private void checkFigureFolder()
         {
-            string saveFolder = Settings.figureFolder + @"\" + exam.exam_day.Year.ToString();
-            if (!System.IO.Directory.Exists(saveFolder))
+            try
             {
-                System.IO.Directory.CreateDirectory(saveFolder);
+                string saveFolder = Settings.figureFolder + @"\" + exam.exam_day.Year.ToString();
+                if (Directory.Exists(saveFolder) == false)
+                {
+                    Directory.CreateDirectory(saveFolder);
+                }
             }
+            #region catch
+            catch (Exception ex)
+            {
+                MessageBox.Show("[checkFigureFolder]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            #endregion
         }
 
         /// <summary>Fill pbFigure with white.</summary>
@@ -1072,7 +1091,7 @@ namespace FindingsEdior
             if (uckyFunctions.ImageComp(_pb.Image, (Image)canvas))
             { return; }
 
-            if (!System.IO.File.Exists(figureFileNameBase + "_" + _number + ".png"))
+            if (!File.Exists(figureFileNameBase + "_" + _number + ".png"))
             {
                 _pb.Image.Save(figureFileNameBase + "_" + _number + ".png", System.Drawing.Imaging.ImageFormat.Png);
             }

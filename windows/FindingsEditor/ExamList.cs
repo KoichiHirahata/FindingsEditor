@@ -33,7 +33,7 @@ namespace FindingsEdior
             operator1 = _operator1;
             op1_5 = _op1_5;
 
-            searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
+            SearchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
 
             #region Add btSelect
             DataGridViewButtonColumn btSelect = new DataGridViewButtonColumn(); //DataGridViewButtonColumnの作成
@@ -103,68 +103,113 @@ namespace FindingsEdior
             resizeColumns();
         }
 
-        private void searchExam(string _date_from, string _date_to, string _pt_id, string _department, string _operator, Boolean _op1_5)
+        private void SearchExam(string _date_from, string _date_to, string _pt_id, string _department, string _operator, Boolean _op1_5)
         {
-            #region Npgsql connection
-            NpgsqlConnection conn;
-
             try
             {
-                conn = new NpgsqlConnection(Settings.retConnStr());
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            #endregion
-
-            string status_name;
-            string exam_type_name;
-            if (Settings.lang == "ja")
-            {
-                status_name = "name_jp";
-                exam_type_name = "name_jp";
-            }
-            else
-            {
-                status_name = "name_eng";
-                exam_type_name = "name_eng";
-            }
-            string sql =
-                "SELECT exam_id, exam.pt_id, pt_name, exam_day, exam_type." + exam_type_name + " AS exam_type_name, department.name1, ward, status."
-                + status_name
-                + " AS status_name, exam_status, exam_type.type_no AS exam_type_no, exam_type.name_eng AS type_name_en FROM exam" //"exam_type_no" and "type_name_en" are needed to use plugins
-                + " INNER JOIN patient ON exam.pt_id = patient.pt_id"
-                + " INNER JOIN exam_type ON exam.exam_type = exam_type.type_no"
-                + " LEFT JOIN department ON exam.department = department.code"
-                + " LEFT JOIN ward ON exam.ward_id = ward.ward_no"
-                + " INNER JOIN status ON exam.exam_status = status.status_no"
-                + " WHERE exam_visible = true";
-            if (_date_from != null)
-            { sql += " AND exam_day>='" + _date_from + "' AND exam_day<='" + _date_to + "'"; }
-            if (_pt_id != null)
-            { sql += " AND exam.pt_id='" + _pt_id + "'"; }
-            if (_department != null)
-            { sql += " AND exam.department='" + _department + "'"; }
-            if (_operator != null)
-            {
-                if (_op1_5)
+                #region Error Check
+                if(_date_from != null && DateTime.TryParse(_date_from,out DateTime dt) == false)
                 {
-                    sql += " AND (exam.operator1='" + _operator
-                        + "' OR exam.operator2='" + _operator
-                        + "' OR exam.operator3='" + _operator
-                        + "' OR exam.operator4='" + _operator
-                        + "' OR exam.operator5='" + _operator + "')";
+                    MessageBox.Show("[SearchExam] _date_from invalid:" + _date_from, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (_date_from != null && DateTime.TryParse(_date_to, out DateTime dt_to) == false)
+                {
+                    MessageBox.Show("[SearchExam] _date_to invalid:" + _date_to, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                #endregion
+
+                #region Npgsql connection
+                NpgsqlConnection conn;
+
+                try
+                {
+                    conn = new NpgsqlConnection(Settings.retConnStr());
+                }
+                catch (ArgumentException)
+                {
+                    MessageBox.Show(FindingsEditor.Properties.Resources.WrongConnectingString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                #endregion
+
+                string sql = "select * from get_exam_list(@uid, @upw, @lang, @date_from, @date_to, @p_id, @dep, @op, @op1_5);";
+                NpgsqlCommand command = new NpgsqlCommand(sql, conn);
+
+                #region Add Npgsql parameters
+                command.Parameters.AddWithValue("@uid", NpgsqlTypes.NpgsqlDbType.Text, db_operator.operatorID);
+                command.Parameters.AddWithValue("@upw", NpgsqlTypes.NpgsqlDbType.Text, db_operator.operatorPw);
+                command.Parameters.AddWithValue("@lang", NpgsqlTypes.NpgsqlDbType.Text, Settings.lang);
+
+                #region date_from
+                if(String.IsNullOrWhiteSpace(_date_from))
+                {
+                    command.Parameters.AddWithValue("@date_from", DBNull.Value);
                 }
                 else
-                { sql += " AND exam.operator1='" + _operator + "'"; }
+                {
+                    command.Parameters.AddWithValue("@date_from", NpgsqlTypes.NpgsqlDbType.Date, _date_from);
+                }
+                #endregion
+
+                #region date_to
+                if (String.IsNullOrWhiteSpace(_date_to))
+                {
+                    command.Parameters.AddWithValue("@date_to", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@date_to", NpgsqlTypes.NpgsqlDbType.Date, _date_to);
+                }
+                #endregion
+
+                #region pt_id
+                if (String.IsNullOrWhiteSpace(_pt_id))
+                {
+                    command.Parameters.AddWithValue("@p_id", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@p_id", _pt_id);
+                }
+                #endregion
+
+                #region department
+                if (String.IsNullOrWhiteSpace(_department))
+                {
+                    command.Parameters.AddWithValue("@dep", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@dep", NpgsqlTypes.NpgsqlDbType.Smallint,_department);
+                }
+                #endregion
+
+                #region operator
+                if (String.IsNullOrWhiteSpace(_operator))
+                {
+                    command.Parameters.AddWithValue("@op", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.AddWithValue("@op", _operator);
+                }
+                #endregion
+
+                command.Parameters.AddWithValue("@op1_5", NpgsqlTypes.NpgsqlDbType.Boolean,_op1_5);
+                #endregion
+
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(command);
+                da.Fill(exam_list);
             }
-
-            sql += " ORDER BY exam_id";
-
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
-            da.Fill(exam_list);
+            #region catch
+            catch (Exception ex)
+            {
+                MessageBox.Show("[SearchExam]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            #endregion
         }
 
         private void resizeColumns()
@@ -282,7 +327,7 @@ namespace FindingsEdior
                 { exam.makeInvisible(); }
 
                 exam_list.Rows.Clear();
-                searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
+                SearchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
                 resizeColumns();
             }
         }
@@ -387,7 +432,7 @@ namespace FindingsEdior
         private void refreshDgv()
         {
             exam_list.Rows.Clear();
-            searchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
+            SearchExam(dateFrom, dateTo, pt_id, department, operator1, op1_5);
             resizeColumns();
         }
     }

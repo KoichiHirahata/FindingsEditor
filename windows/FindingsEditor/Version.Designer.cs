@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.VerLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lbDbVersion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // VerLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(57, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Findings Editor Ver. 1.25.6";
+            this.VerLabel.AutoSize = true;
+            this.VerLabel.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.VerLabel.Location = new System.Drawing.Point(57, 38);
+            this.VerLabel.Name = "VerLabel";
+            this.VerLabel.Size = new System.Drawing.Size(167, 19);
+            this.VerLabel.TabIndex = 0;
+            this.VerLabel.Text = "Findings Editor Ver.";
             // 
             // label2
             // 
@@ -84,7 +84,7 @@
             this.Controls.Add(this.lbDbVersion);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.VerLabel);
             this.Name = "Version";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Version";
@@ -95,7 +95,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label VerLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lbDbVersion;

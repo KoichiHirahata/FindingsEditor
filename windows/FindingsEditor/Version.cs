@@ -21,6 +21,9 @@ namespace FindingsEdior
             { lbDbVersion.Text = "DataBase Version: " + db_version; }
             else
             { lbDbVersion.Text = ""; }
+
+            System.Reflection.Assembly asmb = System.Reflection.Assembly.GetExecutingAssembly();
+            VerLabel.Text = "Findings Editor Ver. " + asmb.GetName().Version;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
