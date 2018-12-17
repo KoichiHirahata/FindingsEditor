@@ -73,10 +73,10 @@ $BODY$BEGIN
                                                              else -32768
                                                          end
                   )
-              and exam.operator1 = case
+              and coalesce(exam.operator1,'') = case
                                        when op is not null
                                            and op1_5 <> true then op
-                                       else exam.operator1
+                                       else coalesce(exam.operator1,'')
                                    end
               and (coalesce(exam.operator1, '') = case
                                         when op is not null
