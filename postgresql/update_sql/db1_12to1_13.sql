@@ -6,6 +6,7 @@ GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE status TO func_owner;
 update db_version set db_version = '1.13';
 
 -- Function: public.get_exam_list(text, text, text, date, date, text, smallint, text, boolean)
+
 -- DROP FUNCTION public.get_exam_list(text, text, text, date, date, text, smallint, text, boolean);
 
 CREATE OR REPLACE FUNCTION public.get_exam_list(
@@ -79,10 +80,10 @@ $BODY$BEGIN
                                                              else -32768
                                                          end
                   )
-              and exam.operator1 = case
+              and coalesce(exam.operator1,'') = case
                                        when op is not null
                                            and op1_5 <> true then op
-                                       else exam.operator1
+                                       else coalesce(exam.operator1,'')
                                    end
               and (coalesce(exam.operator1, '') = case
                                         when op is not null
