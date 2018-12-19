@@ -20,9 +20,31 @@ namespace JedApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainWindowViewModel vm = new MainWindowViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = vm;
+            initLogin();
+
+            DB.DB_init();
+            DbOperator.SetOperatorInfo();
+            lbUserName.Content = DbOperator.operatorName;
+        }
+
+        private void initLogin()
+        {
+            Visibility = Visibility.Hidden;
+            DbOperator.AuthDone = false;
+            Login lg = new Login();
+            lg.ShowDialog();
+
+            if (!DbOperator.AuthDone)
+            { Environment.Exit(0); }
+
+            Visibility = Visibility.Visible;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace JedApp
         public static string sslSetting { get; set; } //SSL setting string
         public static string ptInfoPlugin { get; set; } //File location of the plug-in to get patient information
 
-        public static void initiateSettings()
+        public static void InitiateSettings()
         {
             string exePath = Environment.GetCommandLineArgs()[0];
             string exeFullPath = Path.GetFullPath(exePath);
@@ -141,7 +141,6 @@ namespace JedApp
             else
             { return ""; }
         }
-
 
         #region password
         public class PasswordEncoder
