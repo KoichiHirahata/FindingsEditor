@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,8 @@ namespace JedApp
             DB.DB_init();
             DbOperator.SetOperatorInfo();
             lbUserName.Content = DbOperator.operatorName;
+
+            vm.SetExamListWithDate(DateTime.Today, 0);
         }
 
         private void initLogin()
@@ -45,6 +48,11 @@ namespace JedApp
             { Environment.Exit(0); }
 
             Visibility = Visibility.Visible;
+        }
+
+        private void BtEdit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show((((Button)sender).Tag as Exam).exam_id.ToString());
         }
     }
 }

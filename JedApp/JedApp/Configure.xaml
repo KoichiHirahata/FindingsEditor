@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JedApp"
         mc:Ignorable="d"
-        Title="Configure" Height="450" Width="800">
+        Title="設定" Height="325" Width="350" ShowInTaskbar="False" ResizeMode="NoResize">
     <Grid>
-        
+        <Label Content="Server IP:" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="11"/>
+        <TextBox x:Name="tbSrvIP" HorizontalAlignment="Left" Height="20" Margin="81,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" FontFamily="Segoe UI" FontSize="11"/>
+        <Label Content="Server Port:" HorizontalAlignment="Left" Margin="15,45,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="11"/>
+        <TextBox x:Name="tbSrvPort" HorizontalAlignment="Left" Height="20" Margin="81,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" FontFamily="Segoe UI" FontSize="11"/>
+        <Label Content="User ID:" HorizontalAlignment="Left" Margin="15,75,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="11"/>
+        <TextBox x:Name="tbUserID" HorizontalAlignment="Left" Height="20" Margin="81,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" FontFamily="Segoe UI" FontSize="11"/>
+        <Label Name="pwState" Content="Password:" HorizontalAlignment="Left" Margin="15,105,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="11"/>
+        <TextBox x:Name="tbUserPw" HorizontalAlignment="Left" Height="20" Margin="94,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139" FontFamily="Segoe UI" FontSize="11"/>
+        <Button x:Name="btTestConnect" Content="Test Connect" HorizontalAlignment="Left" Margin="238,136,0,0" VerticalAlignment="Top" Width="92" Height="20" Click="btTestConnect_Click"/>
+        <Button x:Name="btChangePw" Content="Change Pw" HorizontalAlignment="Left" Margin="14,136,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="btChangePw_Click"/>
+        <Label Content="IDの長さ（固定でない場合は空欄）：" HorizontalAlignment="Left" Margin="15,168,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="11"/>
+        <TextBox x:Name="tbIdLength" HorizontalAlignment="Left" Height="20" Margin="200,171,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30" FontFamily="Segoe UI" FontSize="11"/>
+        <Label Content="Plugin:" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="11"/>
+        <TextBox x:Name="tbPlugin" HorizontalAlignment="Stretch" Height="20" Margin="65,210,15,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="Auto" FontFamily="Segoe UI" FontSize="11"/>
+        <Button x:Name="btSave" Content="Save" HorizontalAlignment="Left" Margin="135,0,0,15" VerticalAlignment="Bottom" Width="75" Height="20" Click="btSave_Click"/>
+        <Button x:Name="btCancel" Content="Cancel" HorizontalAlignment="Left" Margin="250,0,0,15" VerticalAlignment="Bottom" Width="75" Height="20" Click="btCancel_Click"/>
     </Grid>
 </Window>

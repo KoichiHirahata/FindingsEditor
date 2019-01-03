@@ -17,15 +17,25 @@
         </Menu>
 
         <Label Name="lbUserName" Content="UserName" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <DataGrid Name="dgRes" Height="Auto" Margin="100,50,10,10" Grid.Row="1" Width="Auto"
+        <DataGrid Name="dgExamList" Height="Auto" Margin="150,50,10,10" Grid.Row="1" Width="Auto"
                   CanUserAddRows="False" RowHeaderWidth="0" IsReadOnly="True" AutoGenerateColumns="False"
                   HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" HorizontalScrollBarVisibility="Auto"
                   VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto"
-                  ItemsSource="{Binding ResList}">
+                  ItemsSource="{Binding ExamList}">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="日付" Binding="{Binding exam_day, StringFormat=yyyy/MM/dd}"/>
                 <DataGridTextColumn Header="ID" Binding="{Binding pt_id}" />
                 <DataGridTextColumn Header="氏名" Binding="{Binding pt_name}" />
-                <DataGridTextColumn Header="メモ" Binding="{Binding pt_memo}"/>
+                <DataGridTextColumn Header="検査名" Binding="{Binding exam_type_name}"/>
+                <DataGridTextColumn Header="" Binding="{Binding ward}"/>
+                <DataGridTextColumn Header="" Binding="{Binding status_name}"/>
+                <DataGridTemplateColumn Header="">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btEdit" Content="編集" Tag="{Binding}" IsEnabled="{Binding Editable}" Click="BtEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

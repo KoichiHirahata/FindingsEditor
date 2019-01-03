@@ -14,13 +14,15 @@ namespace JedApp
         public static string DBSrvPort { get; set; } //Port number of DB server
         public static string DBconnectID { get; set; } //ID of DB user
         public static string DBconnectPw { get; set; } //Pw of DB user
+        public static string figureFolder { get; set; } //Root folder of figures.
+        public static string ptInfoPlugin { get; set; } //File location of the plug-in to get patient information
+        public static int? IdLength { get; set; }
         public static string DBname { get; set; }
         public static string StartupPath { get; set; }
         public static string settingFile_location { get; set; } //Config file path
         public static string endoPrintFile { get; set; } //Template xls file for endoscopy conclusion.
-        public static string figureFolder { get; set; } //Root folder of figures.
         public static string sslSetting { get; set; } //SSL setting string
-        public static string ptInfoPlugin { get; set; } //File location of the plug-in to get patient information
+        public static string lang { get { return "ja"; } }
 
         public static void InitiateSettings()
         {
@@ -50,6 +52,8 @@ namespace JedApp
             st.DBconnectID = DBconnectID;
             st.DBconnectPw = PasswordEncoder.Encrypt(DBconnectPw);
             st.figureFolder = figureFolder;
+            st.ptInfoPlugin = ptInfoPlugin;
+            st.IdLength = IdLength;
 
             //Write to a binary file
             //Create a BinaryFormatter object
@@ -103,8 +107,9 @@ namespace JedApp
                     DBSrvPort = st.DBSrvPort;
                     DBconnectID = st.DBconnectID;
                     DBconnectPw = PasswordEncoder.Decrypt(st.DBconnectPw);
-                    endoPrintFile = st.endoPrintFile;
                     figureFolder = st.figureFolder;
+                    ptInfoPlugin = st.ptInfoPlugin;
+                    IdLength = st.IdLength;
                 }
             }
         }

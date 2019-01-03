@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="DbOperator.cs" />
+    <Compile Include="Exam.cs" />
     <Compile Include="FileControl.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
