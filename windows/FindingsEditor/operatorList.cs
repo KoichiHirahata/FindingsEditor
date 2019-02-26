@@ -101,7 +101,7 @@ namespace FindingsEdior
             #endregion
 
             //ここから下がデータの読み込み部分。
-            string sql = "SELECT operator_id, op_name, department, op_category, allow_fc, admin_op, op_visible FROM operator ORDER BY op_order";
+            string sql = "SELECT operator_id, op_name, department.name1, op_category, allow_fc, admin_op, op_visible FROM operator INNER JOIN department ON operator.department = department.code ORDER BY op_order";
 
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
             da.Fill(opList);
