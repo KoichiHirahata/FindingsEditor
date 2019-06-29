@@ -2,6 +2,7 @@
 
 -- DROP FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text);
 
+-- 患者メモ（p_memo）などの引数でNULLを指定すると関数が実行されず、NULLが返される。
 CREATE OR REPLACE FUNCTION public.upsert_pt_info(
     u_id text
     , u_pw text
