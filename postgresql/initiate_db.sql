@@ -8,6 +8,9 @@ create table race_master (
 ) ;
 comment on table gene_race_master is 'race_master人種マスタ';
 comment on column gene_race_master.race_name is 'race_name人種名';
+ALTER TABLE public.patient
+  OWNER TO postgres;
+GRANT ALL ON TABLE public.race_master TO postgres;
 
 insert into race_master (race_id,race_name,race_order,race_visible) values(1,'American Indian or Alaska Native',1,true);
 insert into race_master (race_id,race_name,race_order,race_visible) values(2,'Asian',2,true);
@@ -41,9 +44,7 @@ ALTER TABLE public.patient
 GRANT ALL ON TABLE public.patient TO postgres;
 GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE public.patient TO db_users;
 
-
 -- Table: public.department
-
 -- DROP TABLE public.department;
 
 CREATE TABLE public.department
@@ -261,7 +262,7 @@ insert into status(
     values(
     0
     , 'Blank'
-    , '���L��'
+    , '未記入'
     , 0
     , true
     )
@@ -277,7 +278,7 @@ insert into status(
     values(
     1
     , 'Draft'
-    , '���e'
+    , '草稿'
     , 1
     , true
     )
@@ -293,7 +294,7 @@ insert into status(
     values(
     2
     , 'Done'
-    , '�P��'
+    , '１次'
     , 2
     , true
     )
@@ -309,7 +310,7 @@ insert into status(
     values(
     3
     , 'Checked'
-    , '�Q��'
+    , '２次'
     , 3
     , true
     )
@@ -325,7 +326,7 @@ insert into status(
     values(
     9
     , 'Canceled'
-    , '�����{'
+    , '未実施'
     , 9
     , true
     )
@@ -428,7 +429,7 @@ insert into exam_type(
    values(
    3
    , 'Side View'
-   , '������'
+   , '側視鏡'
    , 3
    , false
    )
@@ -460,7 +461,7 @@ insert into exam_type(
    values(
    5
    , 'Capsule'
-   , '�J�v�Z��������'
+   , 'カプセル内視鏡'
    , 5
    , false
    )
@@ -476,7 +477,7 @@ insert into exam_type(
    values(
    100
    , 'Broncho'
-   , '�J�v�Z��������'
+   , 'カプセル内視鏡'
    , 5
    , false
    )
@@ -492,7 +493,7 @@ insert into exam_type(
    values(
    1001
    , 'Abdomen US'
-   , '�����G�R�['
+   , '腹部エコー'
    , 1001
    , true
    )
@@ -508,7 +509,7 @@ insert into exam_type(
    values(
    1002
    , 'Thyroid US'
-   , '�b��B�G�R�['
+   , '甲状腺エコー'
    , 1002
    , true
    )
@@ -524,7 +525,7 @@ insert into exam_type(
    values(
    1003
    , 'Carotid US'
-   , '�z�����G�R�['
+   , '頚動脈エコー'
    , 1003
    , true
    )
@@ -540,7 +541,7 @@ insert into exam_type(
    values(
    1004
    , 'Breast US'
-   , '���B�G�R�['
+   , '乳腺エコー'
    , 1004
    , true
    )
@@ -556,7 +557,7 @@ insert into exam_type(
    values(
    1005
    , 'Cardiac US'
-   , '�S�G�R�['
+   , '心エコー'
    , 1005
    , true
    )
@@ -572,7 +573,7 @@ insert into exam_type(
    values(
    1006
    , 'Obstetric US'
-   , '�Y�ȃG�R�['
+   , '産科エコー'
    , 1006
    , false
    )
@@ -588,7 +589,7 @@ insert into exam_type(
    values(
    1007
    , 'Cranial US'
-   , '�����G�R�['
+   , '頭部エコー'
    , 1007
    , false
    )
@@ -604,7 +605,7 @@ insert into exam_type(
    values(
    1008
    , 'Musculoskeletal US'
-   , '�؍��i�G�R�['
+   , '筋骨格エコー'
    , 1008
    , false
    )
@@ -620,7 +621,7 @@ insert into exam_type(
    values(
    1009
    , 'Pelvic US'
-   , '���ՃG�R�['
+   , '骨盤エコー'
    , 1009
    , false
    )
@@ -636,7 +637,7 @@ insert into exam_type(
    values(
    1010
    , 'Urology US'
-   , '��A��G�R�['
+   , '泌尿器エコー'
    , 1010
    , true
    )
@@ -652,7 +653,7 @@ insert into exam_type(
    values(
    1011
    , 'Vascular US'
-   , '���ǃG�R�['
+   , '血管エコー'
    , 1011
    , false
    )
@@ -668,7 +669,7 @@ insert into exam_type(
    values(
    1012
    , 'Skin US'
-   , '�\�݃G�R�['
+   , '表在エコー'
    , 1012
    , true
    )

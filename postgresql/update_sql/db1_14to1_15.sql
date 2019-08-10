@@ -22,5 +22,6 @@ insert into race_master (race_id,race_name,race_order,race_visible) values(5,'Na
 insert into race_master (race_id,race_name,race_order,race_visible) values(6,'White',6,true);
 insert into race_master (race_id,race_name,race_order,race_visible) values(7,'Some Other Race',7,true);
 
+GRANT SELECT ON TABLE public.race_master TO func_owner;
 
 update db_version set db_version = '1.15';
