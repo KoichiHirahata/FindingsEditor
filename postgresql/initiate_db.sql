@@ -1,5 +1,23 @@
--- Table: public.patient
+-- race_masteräººç¨®ãƒã‚¹ã‚¿
+create table race_master (
+  race_id smallint
+  , race_name text not null
+  , race_order smallint
+  , race_visible boolean default true
+  , constraint gene_race_master_PKC primary key (race_id)
+) ;
+comment on table gene_race_master is 'race_masteräººç¨®ãƒã‚¹ã‚¿';
+comment on column gene_race_master.race_name is 'race_nameäººç¨®å';
 
+insert into race_master (race_id,race_name,race_order,race_visible) values(1,'American Indian or Alaska Native',1,true);
+insert into race_master (race_id,race_name,race_order,race_visible) values(2,'Asian',2,true);
+insert into race_master (race_id,race_name,race_order,race_visible) values(3,'Black or African American',3,true);
+insert into race_master (race_id,race_name,race_order,race_visible) values(4,'Hispanic or Latino',4,true);
+insert into race_master (race_id,race_name,race_order,race_visible) values(5,'Native Hawaiian or Other Pacific Islander',5,true);
+insert into race_master (race_id,race_name,race_order,race_visible) values(6,'White',6,true);
+insert into race_master (race_id,race_name,race_order,race_visible) values(7,'Some Other Race',7,true);
+
+-- Table: public.patient
 -- DROP TABLE public.patient;
 
 CREATE TABLE public.patient
@@ -9,6 +27,7 @@ CREATE TABLE public.patient
   furigana text,
   birthday date,
   gender smallint,
+  race_id smallint,
   pt_memo text,
   lock_time timestamp without time zone,
   terminal_ip character varying(40),
@@ -242,7 +261,7 @@ insert into status(
     values(
     0
     , 'Blank'
-    , '–¢‹L“ü'
+    , 'ï¿½ï¿½ï¿½Lï¿½ï¿½'
     , 0
     , true
     )
@@ -258,7 +277,7 @@ insert into status(
     values(
     1
     , 'Draft'
-    , '‘e'
+    , 'ï¿½ï¿½ï¿½e'
     , 1
     , true
     )
@@ -274,7 +293,7 @@ insert into status(
     values(
     2
     , 'Done'
-    , '‚PŸ'
+    , 'ï¿½Pï¿½ï¿½'
     , 2
     , true
     )
@@ -290,7 +309,7 @@ insert into status(
     values(
     3
     , 'Checked'
-    , '‚QŸ'
+    , 'ï¿½Qï¿½ï¿½'
     , 3
     , true
     )
@@ -306,7 +325,7 @@ insert into status(
     values(
     9
     , 'Canceled'
-    , '–¢À{'
+    , 'ï¿½ï¿½ï¿½ï¿½ï¿½{'
     , 9
     , true
     )
@@ -409,7 +428,7 @@ insert into exam_type(
    values(
    3
    , 'Side View'
-   , '‘¤‹‹¾'
+   , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'
    , 3
    , false
    )
@@ -441,7 +460,7 @@ insert into exam_type(
    values(
    5
    , 'Capsule'
-   , 'ƒJƒvƒZƒ‹“à‹‹¾'
+   , 'ï¿½Jï¿½vï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'
    , 5
    , false
    )
@@ -457,7 +476,7 @@ insert into exam_type(
    values(
    100
    , 'Broncho'
-   , 'ƒJƒvƒZƒ‹“à‹‹¾'
+   , 'ï¿½Jï¿½vï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'
    , 5
    , false
    )
@@ -473,7 +492,7 @@ insert into exam_type(
    values(
    1001
    , 'Abdomen US'
-   , '• •”ƒGƒR['
+   , 'ï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½Rï¿½['
    , 1001
    , true
    )
@@ -489,7 +508,7 @@ insert into exam_type(
    values(
    1002
    , 'Thyroid US'
-   , 'bó‘BƒGƒR['
+   , 'ï¿½bï¿½ï¿½Bï¿½Gï¿½Rï¿½['
    , 1002
    , true
    )
@@ -505,7 +524,7 @@ insert into exam_type(
    values(
    1003
    , 'Carotid US'
-   , 'Œz“®–¬ƒGƒR['
+   , 'ï¿½zï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½Rï¿½['
    , 1003
    , true
    )
@@ -521,7 +540,7 @@ insert into exam_type(
    values(
    1004
    , 'Breast US'
-   , '“û‘BƒGƒR['
+   , 'ï¿½ï¿½ï¿½Bï¿½Gï¿½Rï¿½['
    , 1004
    , true
    )
@@ -537,7 +556,7 @@ insert into exam_type(
    values(
    1005
    , 'Cardiac US'
-   , 'SƒGƒR['
+   , 'ï¿½Sï¿½Gï¿½Rï¿½['
    , 1005
    , true
    )
@@ -553,7 +572,7 @@ insert into exam_type(
    values(
    1006
    , 'Obstetric US'
-   , 'Y‰ÈƒGƒR['
+   , 'ï¿½Yï¿½ÈƒGï¿½Rï¿½['
    , 1006
    , false
    )
@@ -569,7 +588,7 @@ insert into exam_type(
    values(
    1007
    , 'Cranial US'
-   , '“ª•”ƒGƒR['
+   , 'ï¿½ï¿½ï¿½ï¿½ï¿½Gï¿½Rï¿½['
    , 1007
    , false
    )
@@ -585,7 +604,7 @@ insert into exam_type(
    values(
    1008
    , 'Musculoskeletal US'
-   , '‹ØœŠiƒGƒR['
+   , 'ï¿½Øï¿½ï¿½iï¿½Gï¿½Rï¿½['
    , 1008
    , false
    )
@@ -601,7 +620,7 @@ insert into exam_type(
    values(
    1009
    , 'Pelvic US'
-   , 'œ”ÕƒGƒR['
+   , 'ï¿½ï¿½ï¿½ÕƒGï¿½Rï¿½['
    , 1009
    , false
    )
@@ -617,7 +636,7 @@ insert into exam_type(
    values(
    1010
    , 'Urology US'
-   , '”å”AŠíƒGƒR['
+   , 'ï¿½ï¿½Aï¿½ï¿½Gï¿½Rï¿½['
    , 1010
    , true
    )
@@ -633,7 +652,7 @@ insert into exam_type(
    values(
    1011
    , 'Vascular US'
-   , 'ŒŒŠÇƒGƒR['
+   , 'ï¿½ï¿½ï¿½ÇƒGï¿½Rï¿½['
    , 1011
    , false
    )
@@ -649,7 +668,7 @@ insert into exam_type(
    values(
    1012
    , 'Skin US'
-   , '•\İƒGƒR['
+   , 'ï¿½\ï¿½İƒGï¿½Rï¿½['
    , 1012
    , true
    )
