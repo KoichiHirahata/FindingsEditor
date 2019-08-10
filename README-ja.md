@@ -124,6 +124,16 @@ PtGraViewerは検査リストの画像ボタンから起動可能です。
 　  
 「診療科」の登録の際、番号は-32767～32767で設定してください。なお、-32768に設定すると、検査一覧を表示する際、診療科を指定していない検査の診療科の表示に不具合が生じます。（仕様です。）
 
+研究用のデータベースとの接続を想定し、人種情報を入力できるようにするために人種マスタテーブル（race_master）を用意しました。人種のリストについては、 [AHRQ（アメリカ医療研究品質局）の資料](https://www.ahrq.gov/sites/default/files/publications/files/iomracereport.pdf) を参考にし、下記7種類としています。
+
+1. American Indian or Alaska Native
+1. Asian
+1. Black or African American
+1. Hispanic or Latino
+1. Native Hawaiian or Other Pacific Islander
+1. White
+1. Some Other Race
+
 ## 連絡先  
 ご不明な点、ご要望等ございましたら、こちらまでご連絡下さい。  
 URL: [http://www.madeinclinic.jp](http://www.madeinclinic.jp)
