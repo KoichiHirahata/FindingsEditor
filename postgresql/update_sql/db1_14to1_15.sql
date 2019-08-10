@@ -1,4 +1,4 @@
--- race_masteräººç¨®ãƒã‚¹ã‚¿
+-- race_masterlíƒ}ƒXƒ^
 create table race_master (
   race_id smallint
   , race_name text not null
@@ -6,8 +6,8 @@ create table race_master (
   , race_visible boolean default true
   , constraint gene_race_master_PKC primary key (race_id)
 ) ;
-comment on table gene_race_master is 'race_masteräººç¨®ãƒã‚¹ã‚¿';
-comment on column gene_race_master.race_name is 'race_nameäººç¨®å';
+comment on table gene_race_master is 'race_masterlíƒ}ƒXƒ^';
+comment on column gene_race_master.race_name is 'race_namelí–¼';
 
 alter table patient add column race_id smallint;
 alter table patient add constraint race_master foreign key (race_id)

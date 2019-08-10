@@ -1,7 +1,7 @@
 -- Function: public.get_race_master(text, text)
 
 -- DROP FUNCTION public.get_race_master(text, text);
---race_masterï¼ˆäººç¨®ãƒã‚¹ã‚¿ï¼‰ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰ã€äººç¨®ã®ä¸€è¦§ã‚’å–å¾—ã™ã‚‹ãŸã‚ã®é–¢æ•°ã€‚
+--race_masterilíƒ}ƒXƒ^jƒe[ƒuƒ‹‚©‚çAlí‚Ìˆê——‚ğæ“¾‚·‚é‚½‚ß‚ÌŠÖ”B
 CREATE OR REPLACE FUNCTION public.get_race_master(
     IN u_id text,
     IN u_pw text,
