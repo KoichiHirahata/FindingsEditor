@@ -1,7 +1,4 @@
--- Function: public.get_operators(text, text)
-
--- DROP FUNCTION public.get_operators(text, text);
-
+DROP FUNCTION public.get_operators(text, text);
 CREATE OR REPLACE FUNCTION public.get_operators(
     IN u_id text,
     IN u_pw text,
@@ -53,3 +50,7 @@ ALTER FUNCTION public.get_operators(text, text)
   OWNER TO func_owner;
 GRANT EXECUTE ON FUNCTION public.get_operators(text, text) TO public;
 REVOKE ALL ON FUNCTION public.get_operators(text, text) FROM func_owner;
+
+
+
+update db_version set db_version = '1.16';
