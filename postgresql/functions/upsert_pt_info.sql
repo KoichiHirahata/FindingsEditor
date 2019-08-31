@@ -1,7 +1,7 @@
--- Function: public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text)
+-- Function: public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint)
 
--- DROP FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text);
-
+-- DROP FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint);
+-- 患者情報を更新するための関数。
 -- 患者メモ（p_memo）などの引数でNULLを指定すると関数が実行されず、NULLが返される。
 CREATE OR REPLACE FUNCTION public.upsert_pt_info(
     u_id text
@@ -11,7 +11,9 @@ CREATE OR REPLACE FUNCTION public.upsert_pt_info(
     , p_birthday date
     , p_gender smallint
     , p_memo text
-    , p_furigana text)
+    , p_furigana text
+    , p_honorific text
+    , p_race_id smallint)
   RETURNS boolean AS
 $BODY$BEGIN
     if is_correct_pw(u_id, u_pw) then
@@ -25,6 +27,8 @@ $BODY$BEGIN
                     , gender = p_gender
                     , pt_memo = p_memo
                     , furigana = p_furigana
+                    , honorific = p_honorific
+                    , race_id = p_race_id
                 where
                     pt_id = p_id
                     ;
@@ -36,6 +40,8 @@ $BODY$BEGIN
                 , gender
                 , pt_memo
                 , furigana
+                , honorific
+                , race_id
                 )
                 values(
                     p_id
@@ -44,6 +50,8 @@ $BODY$BEGIN
                     , p_gender
                     , p_memo
                     , p_furigana
+                    , p_honorific
+                    , p_race_id
                 );
         end if;
         return true;
@@ -53,9 +61,9 @@ $BODY$BEGIN
 END$BODY$
   LANGUAGE plpgsql VOLATILE STRICT SECURITY DEFINER
   COST 100;
-ALTER FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text) SET search_path=public, pg_temp;
+ALTER FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint) SET search_path=public, pg_temp;
 
-ALTER FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text)
+ALTER FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint)
   OWNER TO func_owner;
-GRANT EXECUTE ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text) TO public;
-REVOKE ALL ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text) FROM func_owner;
+GRANT EXECUTE ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint) TO public;
+REVOKE ALL ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint) FROM func_owner;

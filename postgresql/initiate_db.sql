@@ -27,6 +27,7 @@ CREATE TABLE public.patient
 (
   pt_id character varying(100) NOT NULL,
   pt_name text NOT NULL,
+  honorific text,
   furigana text,
   birthday date,
   gender smallint,
