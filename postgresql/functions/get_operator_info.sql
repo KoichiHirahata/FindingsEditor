@@ -1,7 +1,6 @@
 -- Function: public.get_operator_info(text, text)
-
 -- DROP FUNCTION public.get_operator_info(text, text);
-
+-- ユーザー（operator）の情報を取得するための関数
 CREATE OR REPLACE FUNCTION public.get_operator_info(
     IN u_id text,
     IN u_pw text,
