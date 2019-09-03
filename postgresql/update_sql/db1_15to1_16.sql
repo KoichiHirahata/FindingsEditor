@@ -250,3 +250,8 @@ ALTER FUNCTION public.del_operator_info(text, text, text)
   OWNER TO func_owner;
 GRANT EXECUTE ON FUNCTION public.del_operator_info(text, text, text) TO public;
 REVOKE ALL ON FUNCTION public.del_operator_info(text, text, text) FROM func_owner;
+
+-- race_idにUnknown追加
+insert into race_master (race_id,race_name,race_order,race_visible) values(0,'Unknown',99,true);
+
+update db_version set db_version = '1.16';

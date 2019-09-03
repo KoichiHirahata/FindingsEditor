@@ -12,6 +12,7 @@ ALTER TABLE public.patient
   OWNER TO postgres;
 GRANT ALL ON TABLE public.race_master TO postgres;
 
+insert into race_master (race_id,race_name,race_order,race_visible) values(0,'Unknown',99,true);
 insert into race_master (race_id,race_name,race_order,race_visible) values(1,'American Indian or Alaska Native',1,true);
 insert into race_master (race_id,race_name,race_order,race_visible) values(2,'Asian',2,true);
 insert into race_master (race_id,race_name,race_order,race_visible) values(3,'Black or African American',3,true);
