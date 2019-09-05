@@ -188,8 +188,9 @@ $BODY$BEGIN
                     operator_id = o_id
                     ;
         else
-            insert into patient(
-                op_name
+            insert into operator(
+                operator_id
+                , op_name
                 , op_order
                 , department
                 , pw
@@ -199,7 +200,8 @@ $BODY$BEGIN
                 , allow_fc
                 )
                 values(
-                    o_name
+                    o_id
+                    , o_name
                     , o_order
                     , o_department
                     , o_pw
@@ -217,6 +219,7 @@ END$BODY$
   LANGUAGE plpgsql VOLATILE STRICT SECURITY DEFINER
   COST 100;
 ALTER FUNCTION public.upsert_operator_info(text, text, text, text, smallint, smallint, text, boolean, smallint, boolean, boolean) SET search_path=public, pg_temp;
+
 ALTER FUNCTION public.upsert_operator_info(text, text, text, text, smallint, smallint, text, boolean, smallint, boolean, boolean)
   OWNER TO func_owner;
 GRANT EXECUTE ON FUNCTION public.upsert_operator_info(text, text, text, text, smallint, smallint, text, boolean, smallint, boolean, boolean) TO public;

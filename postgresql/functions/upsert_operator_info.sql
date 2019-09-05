@@ -34,8 +34,9 @@ $BODY$BEGIN
                     operator_id = o_id
                     ;
         else
-            insert into patient(
-                op_name
+            insert into operator(
+                operator_id
+                , op_name
                 , op_order
                 , department
                 , pw
@@ -45,7 +46,8 @@ $BODY$BEGIN
                 , allow_fc
                 )
                 values(
-                    o_name
+                    o_id
+                    , o_name
                     , o_order
                     , o_department
                     , o_pw
