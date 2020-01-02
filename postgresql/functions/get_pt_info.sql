@@ -1,4 +1,3 @@
--- Function: public.get_pt_info(text, text, text)
 -- DROP FUNCTION public.get_pt_info(text, text, text);
 -- 患者情報を取得するための関数
 -- honorificは敬称。例：Mr.
@@ -13,6 +12,10 @@ CREATE OR REPLACE FUNCTION public.get_pt_info(
     OUT gender smallint,
     OUT race_id smallint,
     OUT race_name text,
+    OUT zip_code text,
+    OUT address text,
+    OUT phone text,
+    OUT fax text,
     OUT pt_memo text)
   RETURNS SETOF record AS
 $BODY$BEGIN
@@ -26,6 +29,10 @@ $BODY$BEGIN
               , patient.gender
               , patient.race_id
               , race_master.race_name
+              , patient.zip_code
+              , patient.address
+              , patient.phone
+              , patient.fax
               , patient.pt_memo
           from patient
               left join race_master using(race_id)
@@ -41,6 +48,10 @@ $BODY$BEGIN
               , patient.gender
               , patient.race_id
               , race_master.race_name
+              , patient.zip_code
+              , patient.address
+              , patient.phone
+              , patient.fax
               , patient.pt_memo
           from patient
               left join race_master using(race_id)
