@@ -1,4 +1,4 @@
--- race_masterlíƒ}ƒXƒ^
+-- race_masteräººç¨®ãƒã‚¹ã‚¿
 create table race_master (
   race_id smallint
   , race_name text not null
@@ -6,8 +6,8 @@ create table race_master (
   , race_visible boolean default true
   , constraint gene_race_master_PKC primary key (race_id)
 ) ;
-comment on table gene_race_master is 'race_masterlíƒ}ƒXƒ^';
-comment on column gene_race_master.race_name is 'race_namelí–¼';
+comment on table gene_race_master is 'race_masteräººç¨®ãƒã‚¹ã‚¿';
+comment on column gene_race_master.race_name is 'race_nameäººç¨®å';
 ALTER TABLE public.patient
   OWNER TO postgres;
 GRANT ALL ON TABLE public.race_master TO postgres;
@@ -268,7 +268,7 @@ insert into status(
     values(
     0
     , 'Blank'
-    , '–¢‹L“ü'
+    , 'æœªè¨˜å…¥'
     , 0
     , true
     )
@@ -284,7 +284,7 @@ insert into status(
     values(
     1
     , 'Draft'
-    , '‘e'
+    , 'è‰ç¨¿'
     , 1
     , true
     )
@@ -300,7 +300,7 @@ insert into status(
     values(
     2
     , 'Done'
-    , '‚PŸ'
+    , 'ï¼‘æ¬¡'
     , 2
     , true
     )
@@ -316,7 +316,7 @@ insert into status(
     values(
     3
     , 'Checked'
-    , '‚QŸ'
+    , 'ï¼’æ¬¡'
     , 3
     , true
     )
@@ -332,7 +332,7 @@ insert into status(
     values(
     9
     , 'Canceled'
-    , '–¢À{'
+    , 'æœªå®Ÿæ–½'
     , 9
     , true
     )
@@ -435,7 +435,7 @@ insert into exam_type(
    values(
    3
    , 'Side View'
-   , '‘¤‹‹¾'
+   , 'å´è¦–é¡'
    , 3
    , false
    )
@@ -467,7 +467,7 @@ insert into exam_type(
    values(
    5
    , 'Capsule'
-   , 'ƒJƒvƒZƒ‹“à‹‹¾'
+   , 'ã‚«ãƒ—ã‚»ãƒ«å†…è¦–é¡'
    , 5
    , false
    )
@@ -483,7 +483,7 @@ insert into exam_type(
    values(
    100
    , 'Broncho'
-   , 'ƒJƒvƒZƒ‹“à‹‹¾'
+   , 'ã‚«ãƒ—ã‚»ãƒ«å†…è¦–é¡'
    , 5
    , false
    )
@@ -499,7 +499,7 @@ insert into exam_type(
    values(
    1001
    , 'Abdomen US'
-   , '• •”ƒGƒR['
+   , 'è…¹éƒ¨ã‚¨ã‚³ãƒ¼'
    , 1001
    , true
    )
@@ -515,7 +515,7 @@ insert into exam_type(
    values(
    1002
    , 'Thyroid US'
-   , 'bó‘BƒGƒR['
+   , 'ç”²çŠ¶è…ºã‚¨ã‚³ãƒ¼'
    , 1002
    , true
    )
@@ -531,7 +531,7 @@ insert into exam_type(
    values(
    1003
    , 'Carotid US'
-   , 'Œz“®–¬ƒGƒR['
+   , 'é šå‹•è„ˆã‚¨ã‚³ãƒ¼'
    , 1003
    , true
    )
@@ -547,7 +547,7 @@ insert into exam_type(
    values(
    1004
    , 'Breast US'
-   , '“û‘BƒGƒR['
+   , 'ä¹³è…ºã‚¨ã‚³ãƒ¼'
    , 1004
    , true
    )
@@ -563,7 +563,7 @@ insert into exam_type(
    values(
    1005
    , 'Cardiac US'
-   , 'SƒGƒR['
+   , 'å¿ƒã‚¨ã‚³ãƒ¼'
    , 1005
    , true
    )
@@ -579,7 +579,7 @@ insert into exam_type(
    values(
    1006
    , 'Obstetric US'
-   , 'Y‰ÈƒGƒR['
+   , 'ç”£ç§‘ã‚¨ã‚³ãƒ¼'
    , 1006
    , false
    )
@@ -595,7 +595,7 @@ insert into exam_type(
    values(
    1007
    , 'Cranial US'
-   , '“ª•”ƒGƒR['
+   , 'é ­éƒ¨ã‚¨ã‚³ãƒ¼'
    , 1007
    , false
    )
@@ -611,7 +611,7 @@ insert into exam_type(
    values(
    1008
    , 'Musculoskeletal US'
-   , '‹ØœŠiƒGƒR['
+   , 'ç­‹éª¨æ ¼ã‚¨ã‚³ãƒ¼'
    , 1008
    , false
    )
@@ -627,7 +627,7 @@ insert into exam_type(
    values(
    1009
    , 'Pelvic US'
-   , 'œ”ÕƒGƒR['
+   , 'éª¨ç›¤ã‚¨ã‚³ãƒ¼'
    , 1009
    , false
    )
@@ -643,7 +643,7 @@ insert into exam_type(
    values(
    1010
    , 'Urology US'
-   , '”å”AŠíƒGƒR['
+   , 'æ³Œå°¿å™¨ã‚¨ã‚³ãƒ¼'
    , 1010
    , true
    )
@@ -659,7 +659,7 @@ insert into exam_type(
    values(
    1011
    , 'Vascular US'
-   , 'ŒŒŠÇƒGƒR['
+   , 'è¡€ç®¡ã‚¨ã‚³ãƒ¼'
    , 1011
    , false
    )
@@ -675,7 +675,7 @@ insert into exam_type(
    values(
    1012
    , 'Skin US'
-   , '•\İƒGƒR['
+   , 'è¡¨åœ¨ã‚¨ã‚³ãƒ¼'
    , 1012
    , true
    )
@@ -934,3 +934,27 @@ ALTER TABLE public.default_findings
   OWNER TO postgres;
 GRANT ALL ON TABLE public.default_findings TO postgres;
 GRANT SELECT ON TABLE public.default_findings TO not_login_role;
+
+-- hospital_master
+create table hospital_master (
+  hospital_id serial
+  , hospital_name text not null
+  , constraint hospital_master_PKC primary key (hospital_id)
+);
+GRANT select, insert, update, delete ON TABLE public.hospital_master TO not_login_role;
+grant all on sequence public.hospital_master_hospital_id_seq to not_login_role;
+
+-- hospital_patient_combination
+create table hospital_patient_combination (
+  pt_id varchar
+  , hospital_id integer not null
+  , local_pt_id text not null
+  , constraint hospital_patient_combination_PKC primary key (pt_id)
+  , constraint FK_hospital_id foreign key (hospital_id) 
+    references public.hospital_master (hospital_id)  ON DELETE No Action ON UPDATE No Action
+  , constraint FK_pt_id foreign key (pt_id) 
+    references public.patient (pt_id)  ON DELETE No Action ON UPDATE No Action
+);
+comment on column hospital_patient_combination.hospital_id is 'hospital_id æ–½è¨­ID';
+comment on column hospital_patient_combination.local_pt_id is 'local_pt_id å„æ–½è¨­ã§ã®å—è¨ºè€…ID';
+GRANT select, insert, update, delete ON TABLE public.hospital_patient_combination TO not_login_role;
