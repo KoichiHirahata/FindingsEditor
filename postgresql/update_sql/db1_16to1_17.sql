@@ -251,5 +251,29 @@ ALTER FUNCTION public.upsert_pt_info(text, text, character varying(100), text, d
 GRANT EXECUTE ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint, text, text, text, text) TO public;
 REVOKE ALL ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint, text, text, text, text) FROM func_owner;
 
+-- hospital_master
+create table hospital_master (
+  hospital_id serial
+  , hospital_name text not null
+  , constraint hospital_master_PKC primary key (hospital_id)
+);
+GRANT select, insert, update, delete ON TABLE public.hospital_master TO not_login_role;
+grant all on sequence public.hospital_master_hospital_id_seq to not_login_role;
+
+-- hospital_patient_combination
+create table hospital_patient_combination (
+  pt_id varchar
+  , hospital_id integer not null
+  , local_pt_id text not null
+  , constraint hospital_patient_combination_PKC primary key (pt_id)
+  , constraint FK_hospital_id foreign key (hospital_id) 
+    references public.hospital_master (hospital_id)  ON DELETE No Action ON UPDATE No Action
+  , constraint FK_pt_id foreign key (pt_id) 
+    references public.patient (pt_id)  ON DELETE No Action ON UPDATE No Action
+);
+comment on column hospital_patient_combination.hospital_id is 'hospital_id 施設ID';
+comment on column hospital_patient_combination.local_pt_id is 'local_pt_id 各施設での受診者ID';
+GRANT select, insert, update, delete ON TABLE public.hospital_patient_combination TO not_login_role;
+
 
 update db_version set db_version = '1.17';
