@@ -946,15 +946,18 @@ grant all on sequence public.hospital_master_hospital_id_seq to not_login_role;
 
 -- hospital_patient_combination
 create table hospital_patient_combination (
-  pt_id varchar
+  hospital_patient_combination_id serial
+  , pt_id varchar
   , hospital_id integer not null
   , local_pt_id text not null
-  , constraint hospital_patient_combination_PKC primary key (pt_id)
+  , constraint hospital_patient_combination_PKC primary key (hospital_patient_combination_id)
   , constraint FK_hospital_id foreign key (hospital_id) 
     references public.hospital_master (hospital_id)  ON DELETE No Action ON UPDATE No Action
   , constraint FK_pt_id foreign key (pt_id) 
     references public.patient (pt_id)  ON DELETE No Action ON UPDATE No Action
+  , constraint unique_hospital_patient_combination UNIQUE (hospital_id, local_pt_id)
 );
 comment on column hospital_patient_combination.hospital_id is 'hospital_id 施設ID';
 comment on column hospital_patient_combination.local_pt_id is 'local_pt_id 各施設での受診者ID';
 GRANT select, insert, update, delete ON TABLE public.hospital_patient_combination TO not_login_role;
+grant all on sequence public.hospital_patient_combination_hospital_patient_combination_i_seq to not_login_role;
