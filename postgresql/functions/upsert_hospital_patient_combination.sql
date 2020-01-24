@@ -29,7 +29,7 @@ BEGIN
             );
         else
             update hospital_patient_combination
-                set hospital_id = hospital_id_input
+                set pt_id = pt_id_input
                 where
                     hospital_id = hospital_id_input
                     and local_pt_id = local_pt_id_input
