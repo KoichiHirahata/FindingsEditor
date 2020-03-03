@@ -37,6 +37,8 @@ CREATE TABLE public.patient
   address text,
   phone text,
   fax text,
+  sms text,
+  email text,
   pt_memo text,
   lock_time timestamp without time zone,
   terminal_ip character varying(40),

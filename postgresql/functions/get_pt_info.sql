@@ -16,6 +16,8 @@ CREATE OR REPLACE FUNCTION public.get_pt_info(
     OUT address text,
     OUT phone text,
     OUT fax text,
+    OUT sms text,
+    OUT email text,
     OUT pt_memo text)
   RETURNS SETOF record AS
 $BODY$BEGIN
@@ -33,6 +35,8 @@ $BODY$BEGIN
               , patient.address
               , patient.phone
               , patient.fax
+              , patient.sms
+              , patient.email
               , patient.pt_memo
           from patient
               left join race_master using(race_id)
@@ -52,6 +56,8 @@ $BODY$BEGIN
               , patient.address
               , patient.phone
               , patient.fax
+              , patient.sms
+              , patient.email
               , patient.pt_memo
           from patient
               left join race_master using(race_id)
