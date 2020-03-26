@@ -1,8 +1,9 @@
 alter table patient add column email text;
 alter table patient add column sms text;
+
  DROP FUNCTION public.get_pt_info(text, text, text);
--- ���ҏ����擾���邽�߂̊֐�
--- honorific�͌h�́B��FMr.
+-- 患者情報を取得するための関数
+-- honorificは敬称。例：Mr.
 CREATE OR REPLACE FUNCTION public.get_pt_info(
     IN u_id text,
     IN u_pw text,
@@ -78,8 +79,8 @@ REVOKE ALL ON FUNCTION public.get_pt_info(text, text, text) FROM func_owner;
 
  DROP FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint, text, text, text, text);
 -- DROP FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint, text, text, text, text, text, text);
--- ���ҏ����X�V���邽�߂̊֐��B
--- ���҃����ip_memo�j�Ȃǂ̈�����NULL���w�肷��Ɗ֐������s���ꂸ�ANULL���Ԃ���邽�߁A�K�v�Ȏ��͋󔒕������g�����ƁB
+-- 患者情報を更新するための関数。
+-- 患者メモ（p_memo）などの引数でNULLを指定すると関数が実行されず、NULLが返されるため、必要な時は空白文字を使うこと。
 CREATE OR REPLACE FUNCTION public.upsert_pt_info(
     u_id text
     , u_pw text
@@ -168,6 +169,53 @@ ALTER FUNCTION public.upsert_pt_info(text, text, character varying(100), text, d
   OWNER TO func_owner;
 GRANT EXECUTE ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint, text, text, text, text, text, text) TO public;
 REVOKE ALL ON FUNCTION public.upsert_pt_info(text, text, character varying(100), text, date, smallint, text, text, text, smallint, text, text, text, text, text, text) FROM func_owner;
+
+
+-- DROP FUNCTION public.get_departments(text, text);
+-- 科をすべて取得する関数
+-- name1がフルの名前、name2が略称
+CREATE OR REPLACE FUNCTION public.get_departments(
+    IN u_id text,
+    IN u_pw text,
+    OUT code smallint,
+    OUT name1 varchar,
+    OUT name2 varchar,
+    OUT dp_visible boolean,
+    OUT dp_order smallint)
+  RETURNS SETOF record AS
+$BODY$BEGIN
+  if is_correct_pw(u_id, u_pw) then
+      return query
+          select
+              department.code
+              , department.name1
+              , department.name2
+              , department.dp_visible
+              , department.dp_order
+          from department
+          order by department.dp_order
+          ;
+  else
+      return query
+          select
+              department.code
+              , department.name1
+              , department.name2
+              , department.dp_visible
+              , department.dp_order
+          from department
+          where 1=0
+          ;
+  end if;
+END$BODY$
+  LANGUAGE plpgsql VOLATILE SECURITY DEFINER
+  COST 100;
+ALTER FUNCTION public.get_departments(text, text) SET search_path=public, pg_temp;
+
+ALTER FUNCTION public.get_departments(text, text)
+  OWNER TO func_owner;
+GRANT EXECUTE ON FUNCTION public.get_departments(text, text) TO public;
+REVOKE ALL ON FUNCTION public.get_departments(text, text) FROM func_owner;
 
 
 update db_version set db_version = '1.18';
