@@ -43,6 +43,7 @@ namespace FindingsEdior
         {
             this.tbPtID.Text = pt1.ptID;
             this.tbPtName.Text = pt1.ptName;
+            tbFurigana.Text = pt1.ptFurigana;
             if (pt1.ptGender == patient.gender.female)
             { this.rbFemale.Checked = true; }
             else
@@ -93,6 +94,7 @@ namespace FindingsEdior
                             {
                                 pt1.ptID = this.tbPtID.Text;
                                 pt1.ptName = this.tbPtName.Text;
+                                pt1.ptFurigana = tbFurigana.Text;
                                 if (this.rbFemale.Checked)
                                     pt1.ptGender = patient.gender.female;
                                 else if (this.rbMale.Checked)
@@ -137,6 +139,7 @@ namespace FindingsEdior
             else    //通常処理
             {
                 pt1.ptName = this.tbPtName.Text;
+                pt1.ptFurigana = tbFurigana.Text;
                 if (this.rbFemale.Checked)
                     pt1.ptGender = patient.gender.female;
                 else if (this.rbMale.Checked)

@@ -41,6 +41,8 @@
             this.lbBirthday = new System.Windows.Forms.Label();
             this.lbPatientID = new System.Windows.Forms.Label();
             this.btLoad = new System.Windows.Forms.Button();
+            this.tbFurigana = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btCancel
@@ -114,10 +116,22 @@
             this.btLoad.UseVisualStyleBackColor = true;
             this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
+            // tbFurigana
+            // 
+            resources.ApplyResources(this.tbFurigana, "tbFurigana");
+            this.tbFurigana.Name = "tbFurigana";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // EditPt
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tbFurigana);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btLoad);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btSave);
@@ -152,5 +166,7 @@
         private System.Windows.Forms.Label lbBirthday;
         private System.Windows.Forms.Label lbPatientID;
         private System.Windows.Forms.Button btLoad;
+        private System.Windows.Forms.TextBox tbFurigana;
+        private System.Windows.Forms.Label label1;
     }
 }

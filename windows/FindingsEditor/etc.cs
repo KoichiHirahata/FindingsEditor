@@ -615,7 +615,8 @@ namespace FindingsEdior
     {
         public string ptID;
         public string ptName;
-        public enum gender { male, female }
+        public string ptFurigana;
+        public enum gender : short { male=1, female=0 }
         public gender ptGender;
         public DateTime ptBirthday;
         public string ptInfo;
@@ -687,6 +688,7 @@ namespace FindingsEdior
                 }
                 if (row["birthday"] != null)
                     this.ptBirthday = (DateTime)row["birthday"];
+                this.ptFurigana= row["furigana"].ToString();
                 this.ptInfo = row["pt_memo"].ToString();
                 this.ptExist = true;
 
@@ -723,10 +725,11 @@ namespace FindingsEdior
                         using (var cmd = new NpgsqlCommand())
                         {
                             cmd.Connection = conn;
-                            cmd.CommandText = "INSERT INTO patient(pt_id, pt_name, gender, birthday) VALUES(@p_id, @p_name, @p_gender, @p_birthday);";
+                            cmd.CommandText = "INSERT INTO patient(pt_id, pt_name, furigana, gender, birthday) VALUES(@p_id, @p_name, @p_furigana, @p_gender, @p_birthday);";
                             cmd.Parameters.AddWithValue("p_id", pt_source.ptID);
                             cmd.Parameters.AddWithValue("p_name", pt_source.ptName);
-                            cmd.Parameters.AddWithValue("p_gender", gender);
+                            cmd.Parameters.AddWithValue("p_furigana", pt_source.ptFurigana);
+                            cmd.Parameters.AddWithValue("p_gender",gender);
                             cmd.Parameters.AddWithValue("p_birthday", pt_source.ptBirthday);
 
                             cmd.ExecuteNonQuery();
@@ -754,11 +757,45 @@ namespace FindingsEdior
             }
             else
             {
-                SQL = "UPDATE patient SET pt_name=:p0, gender=:p1, birthday=:p2, "
-                     + "pt_memo=:p3 WHERE pt_id=:p4;";
+                try
+                {
+                    using (var conn = new NpgsqlConnection(Settings.retConnStr()))
+                    {
+                        conn.Open();
 
-                return uckyFunctions.ExeNonQuery(SQL, pt_source.ptName, gender.ToString(), pt_source.ptBirthday.ToString(),
-                    pt_source.ptInfo, pt_source.ptID);
+                        using (var cmd = new NpgsqlCommand())
+                        {
+                            cmd.Connection = conn;
+                            cmd.CommandText = "UPDATE patient SET pt_name = @p_name, furigana= @p_furigana , gender = @p_gender, birthday = @p_birthday "
+                        + "WHERE pt_id= @p_id;"; 
+                            cmd.Parameters.AddWithValue("p_id", pt_source.ptID);
+                            cmd.Parameters.AddWithValue("p_name", pt_source.ptName);
+                            cmd.Parameters.AddWithValue("p_furigana", pt_source.ptFurigana);
+                            cmd.Parameters.AddWithValue("p_gender", gender);
+                            cmd.Parameters.AddWithValue("p_birthday", pt_source.ptBirthday);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                        conn.Close();
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    MessageBox.Show("[Npgsql]" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return uckyFunctions.functionResult.failed;
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return uckyFunctions.functionResult.failed;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return uckyFunctions.functionResult.failed;
+                }
+
+                return uckyFunctions.functionResult.success;
             }
         }
 
