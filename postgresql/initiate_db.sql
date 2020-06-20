@@ -43,6 +43,7 @@ CREATE TABLE public.patient
   lock_time timestamp without time zone,
   terminal_ip character varying(40),
   CONSTRAINT patient_pkey PRIMARY KEY (pt_id)
+  , CONSTRAINT check_pt_id CHECK (pt_id::text <> ''::text)
 )
 WITH (
   OIDS=TRUE
