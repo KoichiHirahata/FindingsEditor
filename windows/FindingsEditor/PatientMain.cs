@@ -244,7 +244,9 @@ namespace FindingsEdior
         private void printExam(string exam_id_str)
         {
             #region Error Check
-            if (!System.IO.File.Exists(Application.StartupPath + @"\result.html"))
+            var resultHtmlPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            resultHtmlPath = System.IO.Path.GetDirectoryName(resultHtmlPath);
+            if (!System.IO.File.Exists(resultHtmlPath + @"\result.html"))
             {
                 MessageBox.Show("[Result template file]" + FindingsEditor.Properties.Resources.FileNotExist, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
