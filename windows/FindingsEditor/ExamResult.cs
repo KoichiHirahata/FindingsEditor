@@ -20,7 +20,7 @@ namespace FindingsEdior
             webBrowser1.IsWebBrowserContextMenuEnabled = false;
             webBrowser1.WebBrowserShortcutsEnabled = false;
 
-            StreamReader sr = new StreamReader("result.html");
+            StreamReader sr = new StreamReader(Application.StartupPath + @"\result.html");
             html = sr.ReadToEnd();
             sr.Close();
 
